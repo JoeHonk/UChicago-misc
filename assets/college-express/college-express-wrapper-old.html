@@ -1,0 +1,41 @@
+<div id="myc_custom_form">***CONTENT***</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+function replaceText(nt,regStr,newText){
+    try {
+        var nt = nt;
+        var re = new RegExp(regStr,"g");
+        var textStr = newText;
+        var objX = document.getElementsByTagName(nt);
+        for (var x=0; x<objX.length; x++){
+            var str = objX[x].innerHTML;
+            if (re.test(str)){
+                var obj = objX[x];
+                obj.innerHTML = textStr;
+            }
+        }
+    } catch(err){}        
+}
+function setCustomPageFormat(){
+    try {
+        var obj = document.getElementById('myc_custom_form');
+        var obj_table = obj.getElementsByTagName('table');
+        var obj_cell = obj_table[1].getElementsByTagName('td')[0];
+        obj_cell.align = "left";
+    }catch(err){}
+}
+try {
+    var site = location.href;
+    var confirmation = site.toLowerCase().indexOf("donateok.asp");
+    if (confirmation  > 0){
+        setCustomPageFormat();
+        replaceText("font","^Confirmation","<h1>Confirmation</h1>");
+        replaceText("font","^University of Chicago contact information","");
+        replaceText("font","^Email Address","");
+        replaceText("font","^If you have technical questions regarding this website, please submit them",""); 
+    }
+}catch(err){}
+//-->
+</script>
+<script type="text/javascript" src="https://www.kintera.org/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/jquery.url.packed.JS"></script>
+<script type="text/javascript" src="https://www.kintera.org/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/custom-form-validation.JS"></script>

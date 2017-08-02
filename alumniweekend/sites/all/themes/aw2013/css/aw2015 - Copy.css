@@ -1,0 +1,721 @@
+.region-inner .region-front-second-inner {
+    background-color: #f7a11a;
+}
+
+#footer-social-icons li.sc-icon {
+    background-image: url("/sites/all/themes/aw2013/images/snapchat-logo.png");
+    background-repeat: no-repeat;
+}
+
+#footer-social-icons li.sc-icon:hover {
+    background-color: #d6d6ce;
+}
+
+
+/* 2015 EVENT/ITINERARY STYLES */
+
+
+/* -2015 EVENT/ITINERARY STYLES */
+
+
+/* Heading updates 20150116 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'ProximaNova-SemiBold';
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 24px;
+    color: #800000;
+}
+
+h3 {
+    color: #f7a11a;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+h4 a:link {
+    color: #0062A0;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+h4 {
+    margin-bottom: 0 !important;
+}
+
+body p {
+    font-size: 16px;
+}
+
+.region-front-second-inner {
+    background-color: #e7f0f5;
+    padding: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    padding-bottom: 20px;
+}
+
+#region-front-first h2 {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+#region-front-second h2.block-title {
+    font-style: normal;
+    text-transform: none;
+    font-size: 20px;
+    color: #800000;
+}
+
+#zone-content #page-title {
+    display: none;
+}
+
+.aw-events-page #zone-content {
+    min-height: 750px;
+}
+
+.searchtitle {
+    color: #000;
+    font-size: 24px;
+    /*display: block;*/
+}
+
+.view-events-filterable {
+    /*max-width: 800px;*/
+    background-color: #e7f0f5;
+    /*padding-bottom: 15px;*/
+    margin-bottom: 20px;
+}
+
+.view-events-filterable .views-row {
+    background-color: #fff;
+    padding: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    margin-left: 15px;
+    padding-bottom: 5px;
+}
+
+.view-events-filterable .views-field-term-node-tid {
+    text-align: right;
+    float: right;
+    color: #800000;
+}
+
+.view-events-filterable .view-content .item-list h3 {
+    text-align: center;
+}
+
+.view-events-filterable .views-field-field-end-time {
+    color: #666;
+}
+
+.view-events-filterable .views-field-title {
+    font-size: 20px;
+}
+
+.views-exposed-widget {
+    display: block;
+}
+
+#messages {
+    display: none;
+}
+
+.views-exposed-form .views-exposed-widget {
+    float: left;
+    width: 100%;
+    padding: .5em 1em 0 0;
+    padding-right: 0;
+}
+
+.views-exposed-widget label {
+    text-align: left;
+    color: #800000;
+}
+
+.page-itinerarypage #region-sidebar-second div.region-inner div.block div.block-inner {
+    background-color: #fff;
+    background-color: transparent;
+    padding: 10px 0 0 0;
+}
+
+#views-exposed-form-events-filterable-page-1 input,
+#views-exposed-form-events-filterable-page-1 button,
+#views-exposed-form-events-filterable-page-1 select,
+#views-exposed-form-events-filterable-page-1 textarea {
+    margin: 0;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.form-type-bef-checkbox {
+    display: inline;
+    float: left;
+    white-space: nowrap;
+}
+
+#views-exposed-form-events-filterable-page-1 input,
+#views-exposed-form-events-filterable-page-1 button,
+#views-exposed-form-events-filterable-page-1 select,
+#views-exposed-form-events-filterable-page-1 textarea {
+    margin: 0;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 15px;
+}
+
+.page-itinerarypage #region-sidebar-second div.region-inner section.block div.block-inner {
+    background-color: #fff;
+    padding: 2px 2px 2px 2px;
+}
+
+.page-itinerarypage #region-sidebar-second div.region-inner section.block div.block-inner h2 {
+    color: #000;
+    font-size: 24px;
+}
+
+#block-views-exp-events-filterable-page-1 #undefined-sticky-wrapper {
+    width: 100%;
+    /*width: 370px !important;*/
+}
+
+.sticky-wrapper .is-sticky {
+    width: 370px !important;
+}
+
+.aw-events-page .region-sidebar-second {
+    background-color: transparent;
+}
+
+.views-field-field-sponsoring-group-s- {
+    color: #800000;
+}
+
+h2.no-results {
+    padding: 20px;
+}
+
+.view-events-filterable h2.block-title {
+    /*background-color: #454444;*/
+    background-color: #800000;
+    padding-left: 8px;
+    padding-top: 2px;
+    /*margin-bottom: 15px;*/
+    margin-top: 0;
+    color: #f7a11a;
+    text-align: center;
+}
+
+.day-anchor-bar {
+    margin-top: -1px;
+}
+
+.day-anchor-sticky {
+    background-color: #454444;
+    /*padding-left: 8px;*/
+    padding-top: 0;
+    /*padding-bottom: 2px;*/
+    margin-bottom: 0px;
+    margin-top: 0;
+    color: #f7a11a;
+    text-align: center;
+}
+
+.day-anchor-sticky a {
+    color: #f7a11a;
+    font-size: 18px;
+    display: inline-block;
+    width: 25%;
+    font-weight: bold;
+}
+
+.day-anchor-sticky a.active {
+    color: #454444;
+    /*font-size: 18px;*/
+    display: inline-block;
+    width: 25%;
+    background-color: #f7a11a;
+    font-weight: bold;
+}
+
+.day-anchors {
+    text-align: right;
+    margin-top: -1px;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.day-anchor-bar a {
+    color: #f7a11a;
+}
+
+.day-anchor-bar a:hover {
+    color: #f7a11a;
+}
+
+.day-anchors a {
+    color: #fff;
+}
+
+.day-anchors {
+    color: #999;
+}
+
+.day-anchor-link {
+    visibility: hidden;
+    margin-top: 1px;
+}
+
+.form-type-bef-checkbox {
+    display: inline;
+    float: none;
+    white-space: nowrap;
+}
+
+.reg-pdf p {
+    text-align: left;
+}
+
+.twitter-block {
+    padding-right: 20px;
+}
+
+.views-exposed-widget label {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .reg-pdf {
+        display: none;
+    }
+    .searchtitle {
+        color: #000;
+        font-size: 24px;
+        /*display: block;*/
+        display: none;
+    }
+    .zone-postscript-wrapper {
+        display: none;
+    }
+}
+
+
+/*
+.views-exposed-widget .views-widget-filter-field_class_decade_tid{
+    display: none;
+}
+
+.views-exposed-widget .views-widget-filter-field_activities_tid{
+    display: none;
+}
+
+.views-exposed-widget .views-widget-filter-field_pass_type_tid{
+    display: none;
+}
+
+#edit-field-class-decade-tid-wrapper, #edit-field-activities-tid-wrapper, #edit-field-pass-type-tid-wrapper{
+    display: none;
+}
+
+*/
+
+@media (min-device-width: 980px) and (min-width: 980px),
+(max-device-width: 1024px) and (min-width: 1024px) and (orientation: landscape) {
+    .container-12 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 980px;
+    }
+    h3.open {
+        display: none;
+    }
+}
+
+.view-events-filterable .view-content {
+    height: 600px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.day-anchor-sticky {
+    width: 100%;
+    top: 0px;
+    /*position:absolute;*/
+}
+
+@media (max-width: 430px) {
+    .day-anchor-sticky a {
+        font-size: 0.95em;
+        height: 27px;
+        padding-top: 5px;
+    }
+    .day-anchor-sticky {
+        /*height: 27px;*/
+    }
+    .page-itinerarypage #region-sidebar-second div.region-inner section.block div.block-inner h2 {
+        color: #000;
+        font-size: 20px;
+    }
+    #zone-branding-wrapper {
+        height: 60px;
+        padding-top: 5px;
+    }
+    .logo-img img {
+        height: 50px;
+    }
+}
+
+.day-anchor-link .anchor {
+    display: block;
+    position: relative;
+    top: -30px;
+    visibility: hidden;
+}
+
+.view-events-filterable .view-content .item-list {
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.view-events-filterable .view-content {
+    /*padding-top: 26px;*/
+}
+
+.view-events-filterable .view-header {
+    /*margin-top:-40px;*/
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #800000;
+}
+
+#custom-show-hide-example h3 a {
+    background: url("/sites/all/themes/aw2013/images/sprite.png") 15px 13px no-repeat;
+    display: block;
+    padding: 5px;
+    padding-left: 32px;
+    margin: 0;
+    text-decoration: none;
+}
+
+#custom-show-hide-example h3.open a {
+    background-position: 13px -30px;
+}
+
+._71n7_modal_content {
+    font-family: 'ProximaNova-Regular' !important;
+}
+
+.region-front-second-inner {
+    background-color: #f7a11a;
+    margin-bottom: 20px;
+    padding-top: 5px;
+}
+
+.view-events-uncommoncore {
+    font-size: 16px;
+}
+
+.region-footer-second {
+    padding-top: 20px;
+}
+
+.tips,
+.description {
+    font-size: 12.5px;
+    color: #888888;
+    text-shadow: none;
+    outline-color: #fff;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.view-events-filterable .view-content {
+    -webkit-animation: fadein 1.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 1.5s;
+    /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+.searchtotal {
+    font-size: 24px;
+    font-weight: bold;
+    -webkit-animation: fadein 1.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 1.5s;
+    /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.view-display-id-page_5 .view-content {
+    height: inherit;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.view-display-id-page_6 .view-content {
+    height: inherit;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.view-display-id-page_7 .view-content {
+    height: inherit;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.view-display-id-page_8 .view-content {
+    height: inherit;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.print-content ul,
+.print-content li,
+.print-content span {
+    list-style-type: none !important;
+}
+
+.itinerarylinks {
+    font-size: 18px;
+    font-family: 'ProximaNova-SemiBold';
+}
+
+.view-itinerary-nid-block {
+    color: #800000;
+    font-size: 18px;
+    font-family: 'ProximaNova-SemiBold';
+}
+
+.bookmarknote {
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.page-itinerarypage #region-sidebar-second {
+    margin-bottom: 0;
+}
+
+.flag-itinerary {
+    font-family: 'ProximaNova-SemiBold';
+}
+
+.event-anchor {
+    padding-top: 200px;
+}
+
+.flag-itinerary a {
+    background-color: #0063a0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #0063a0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    /*font-family:Arial;*/
+    font-size: 16px;
+    /*font-weight:bold;*/
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    /*text-shadow:0px 1px 0px #2f6627;*/
+}
+
+.flag-itinerary:hover a {
+    background-color: #2083c0;
+}
+
+.flag-itinerary:active a {
+    position: relative;
+    /*top:1px;*/
+}
+
+.flag-itinerary a.unflag-action {
+    background-color: #800000;
+    border: 1px solid #800000;
+}
+
+.flag-itinerary:hover a.unflag-action {
+    background-color: #a02020;
+}
+
+p.plan {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+h2.plan {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.block-sharethis {
+    /* display: inline-block;*/
+}
+
+.block-sharethis {
+    padding-top: 15px;
+}
+
+@media (max-width: 480px) {
+    .reunion-buttons li.youngalumni {
+        width: 460px;
+        zoom: 70%;
+        background-image: url(https://alumniweekend.uchicago.edu/sites/all/themes/aw2013/images/wide-mask-corners_460.png);
+        background-color: #800000;
+    }
+}
+
+.chooseaffiliation {
+    background-color: #e7f0f5;
+    padding: 20px;
+    width: 90%;
+    max-width: 420px;
+}
+
+
+.clearfix,
+.container,
+.container-fluid,
+.form-horizontal .form-group,
+.modal-footer,
+.nav,
+.navbar,
+.navbar-collapse,
+.navbar-header,
+.pager,
+.panel-body,
+.row {
+    zoom: 1
+}
+
+.clearfix:after,
+.clearfix:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+    content: " ";
+    display: table
+}
+
+.clearfix:after,
+.container-fluid:after,
+.container:after,
+.form-horizontal .form-group:after,
+.modal-footer:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.pager:after,
+.panel-body:after,
+.row:after {
+    clear: both
+}

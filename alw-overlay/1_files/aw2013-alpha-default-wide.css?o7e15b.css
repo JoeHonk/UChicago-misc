@@ -1,0 +1,28 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+body {
+	background: url(../images/background1200.png) repeat-y center;
+	}
+
+#zone-menu-wrapper, #zone-header, #region-header-first, #zone-postscript, #zone-menu { width: 1220px; }
+
+img.page-header-image { width: 1220px; height: auto; }
+
+#flexslider-1 ul.slides li p {
+	margin-top: -118px;
+	font-size: 32px;
+	}
+	
+#flexslider-1 ul.slides li p span.big {
+	font-size: 92px;
+	}
+
+div.view-front-page-slides-post-event #flexslider-1 ul.slides li p {
+	margin-top: 2px;
+	margin-left: 20px;
+	margin-bottom: 4px;
+	text-transform: none;
+	color: #767676;
+	font-family: 'ProximaNova-Regular';
+	font-size: 13px;
+	}

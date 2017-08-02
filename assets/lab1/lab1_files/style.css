@@ -1,0 +1,136 @@
+.floatright {
+    float: right;
+}
+@media (max-width: 768px) {
+    .floatright {
+        float: none;
+    }
+}
+.main_content {
+    margin-bottom: 40px;
+}
+.main_content .col-sm-5 {
+    padding-top: 30px;
+}
+#contentArea {
+    padding-bottom: 60px;
+}
+.related-links {
+    min-width: 290px;
+}
+@media only screen and (max-width: 767px) {
+    footer.container-fluid .col-sm-4 {
+        width: 100%
+    }
+    .address.col-sm-8 ul.social-media {
+    	width: 100%
+    }
+}
+
+
+p{
+    line-height: 1.875em;
+}
+
+
+.togglePayOpt  label.control-label{
+    font-size: 12px;
+}
+
+#FormDonation h3{
+    /*white-space: nowrap;*/
+}
+
+#companyMatch .help-block{
+    display: none;
+}
+
+form b {
+font-weight: 700;
+color: #f00;
+}
+
+#oneTimeGift label.control-label{
+    font-size: 14px;
+}
+
+.goldbg{
+    background-color: #fba619;
+}
+
+.headingtext{
+    padding: 30px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #000;
+}
+
+.headingtext h3{
+    font-size: 22px;
+    color: #000;
+}
+
+.headingtext{
+    font-size: 12px;
+}
+
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+a#uchicago-wordmark {
+  display: block;
+  text-indent: -9999em;
+  width: 270px;
+  height: 56px;
+  background: transparent url(/i/template/uchicago_wordmark.png)0 0 no-repeat;
+  background-size: 100%;
+}
+
+.main_content p small{
+  line-height: 6px !important;
+  font-size: 80%
+}
+
+#CardExpmn{
+  margin-bottom: 15px;
+}
+
+.drawer-ribbon{
+  display: none;
+}
+
+.drawer{
+  display: none;
+}
+
+.drawer-trigger{
+  display: none;
+}
+
+input[type=checkbox] {
+
+    margin-top:0;
+    line-height: normal;
+    vertical-align: middle;
+}

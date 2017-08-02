@@ -1,0 +1,67 @@
+.navbar-toggle {
+    display: none;
+}
+.search-toggle {
+    visibility: hidden;
+    width: 0;
+}
+header#header .container > .search-form {
+    border-right: 1px solid #ededea;
+    border-left: 0px solid #ededea;
+    padding-right: 10px;
+    margin-left: 15px;
+    margin-right: 12px;
+    background: #fff;
+}
+@media only screen and (max-width: 540px) {
+    .pane-afb-1 table {
+        font-size: 0.94em;
+    }
+    .pane-content input {
+        width: 100%;
+        font-size: 1.05em;
+    }
+    .grey-stripe .col-sm-8 {
+        padding: 5px;
+    }
+    table th, table td {
+        padding: 5px;
+        line-height: 1.4;
+        text-align: left;
+        vertical-align: top;
+    }
+    table td:first-child {
+        width: 40%
+    }
+}
+@media only screen and (max-width: 767px) {
+    header#header.fixed-header .search-toggle-fixed {
+        display: none;
+        visibility: hidden;
+    }
+}
+table td {
+    border-top: none;
+}
+tr.CTodd, tr.CTeven {
+    border-top: 1px solid #ddd;
+}
+td.CTtitle {
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #141414;
+    font-size: 36px;
+
+}
+
+
+@media only screen and (max-width: 414px) {
+td.CTtitle {
+    font-size: 24px;
+}
+
+.page-header h1 {
+font-size: 24px;
+}
+}

@@ -1,0 +1,2740 @@
+/*** uncss> filename: https://identity.uchicago.edu/c/fonts/proximanova.css ***/
+
+@font-face {
+  font-family: 'ProximaNovaT-Thin';
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_0.eot');
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_0.eot?#iefix') format('embedded-opentype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_0.woff') format('woff'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_0.ttf') format('truetype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_0.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_1.eot');
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_1.eot?#iefix') format('embedded-opentype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_1.woff') format('woff'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_1.ttf') format('truetype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_1.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_2.eot');
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_2.eot?#iefix') format('embedded-opentype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_2.woff') format('woff'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_2.ttf') format('truetype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_2.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_3.eot');
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_3.eot?#iefix') format('embedded-opentype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_3.woff') format('woff'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_3.ttf') format('truetype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_3.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_4.eot');
+  src: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_4.eot?#iefix') format('embedded-opentype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_4.woff') format('woff'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_4.ttf') format('truetype'),url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/1415F2_4.svg#wf') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/system/system.base.css ***/
+
+/**
+ * @file
+ * Generic theme-independent base styles.
+ */
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+/* Suggestion list */
+
+/* Animated throbber */
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+
+/**
+ * Resizable textareas.
+ *
+ * @see textarea.js
+ */
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+
+/**
+ * TableHeader behavior.
+ *
+ * @see tableheader.js
+ */
+
+/**
+ * Progress behavior.
+ *
+ * @see progress.js
+ */
+
+/* Bar */
+
+/* Throbber */
+
+/**
+ * Inline items.
+ */
+
+/* Fieldset contents always need to be rendered as block. */
+
+/**
+ * Prevent text wrapping.
+ */
+
+/**
+ * For anything you want to hide on page load when JS is enabled, so
+ * that you can use the JS to control visibility and avoid flicker.
+ */
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user.
+ * "!important" is used to prevent unintentional overrides.
+ */
+
+/**
+ * The .element-focusable class extends the .element-invisible class to allow
+ * the element to be focusable when navigated to via the keyboard.
+ */
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* IE6 */
+
+/* IE7 */
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/system/system.messages.css ***/
+
+/**
+ * @file
+ * Styles for system messages.
+ */
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/system/system.theme.css ***/
+
+/**
+ * @file
+ * Basic styling for common markup.
+ */
+
+/**
+ * HTML elements.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Markup generated by theme_tablesort_indicator().
+ */
+
+/**
+ * Markup generated by theme_item_list().
+ */
+
+/**
+ * Markup generated by Form API.
+ */
+
+/**
+ * Inline items.
+ */
+
+/**
+ * Markup generated by theme_more_link().
+ */
+
+/**
+ * Markup generated by theme_more_help_link().
+ */
+
+/**
+ * Markup generated by theme_pager().
+ */
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+/* Suggestion list */
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+
+/**
+ * TableSelect behavior.
+ *
+ * @see tableselect.js
+*/
+
+/**
+ * Progress bar.
+ *
+ * @see progress.js
+ */
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/comment/comment.css ***/
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/date/date_api/date.css ***/
+
+/**
+ * @file
+ * Main stylesheet for Date module.
+ */
+
+/* Force start/end dates to float using inline-block, where it works, otherwise inline. */
+
+/* The exposed Views form doesn't need some of these styles */
+
+/* Fixes for date popup css so it will behave in Drupal */
+
+/* formatting for start/end dates in nodes and views */
+
+/* Add space between date option checkboxes ('All day' & 'Collect End Date') */
+
+/* Add space between the date and time portions of the date_select widget. */
+
+/* Calendar day css */
+
+/* Admin styling */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/date/date_popup/themes/datepicker.1.7.css ***/
+
+/* Datepicker
+----------------------------------*/
+
+/* with multiple calendars */
+
+/* RTL support */
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/field/theme/field.css ***/
+
+/* Field display */
+
+/* Form display */
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/node/node.css ***/
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/search/search.css ***/
+
+/*** uncss> filename: https://uei.uchicago.edu/modules/user/user.css ***/
+
+/**
+ * Override default textfield float to put the "Add role" button next to
+ * the input textfield.
+ */
+
+/**
+ * Password strength indicator.
+ */
+
+/* Generated by user.module but used by profile.module: */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/custom/video_filter/video_filter.css ***/
+
+/**
+ * Default alignment styles
+ */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/ckeditor/css/ckeditor.css ***/
+
+/* General indentation & positioning classes */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/ctools/css/ctools.css ***/
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/modules/custom/custom_functions/css/custom_functions.css ***/
+
+/* General */
+
+/* Topic Block */
+
+/* Facet API :: Filters */
+
+/* Main Content */
+
+/* Featured Block */
+
+/*****************************************/
+
+/* *********** Topics Search *********** */
+
+/*****************************************/
+
+/* Featured Content block */
+
+/* Media Types blocks */
+
+/* Primary and Secondary Topics blocks */
+
+/* Media Types blocks */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/tabs.css ***/
+
+/**
+ * @file
+ * Tabs Styling
+ *
+ * Adds styles for the primary and secondary tabs.
+ *
+ * Compare this with default CSS found in the system module's stylesheet (a copy
+ * of which is in drupal7-reference.css.)
+ */
+
+/*
+ * Basic positioning styles shared by primary and secondary tabs.
+ */
+
+/*
+ * Primary tabs
+ */
+
+/*
+ * Secondary tabs
+ */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/forms.css ***/
+
+/**
+ * @file
+ * Form Styling
+ */
+
+button {
+  font-weight: normal;
+  /*font-size: 1em;*/
+  /*line-height: 1.385em;*/
+}
+
+/* Submit buttons */
+
+/*
+ * Password confirmation
+ */
+
+/*
+ * Fieldsets
+ */
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+
+/*
+ * Drupal's default login form block
+ */
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in normalize.css, but restore them for the admin
+ * section of the site.
+ */
+
+/*form th {
+  text-align: left;
+  padding-right: 1em;
+  border-bottom: 3px solid #ccc;
+}
+form tbody {
+  border-top: 1px solid #ccc;
+}
+form tr.even {
+  background-color: #fff;
+}
+form table .item-list ul {
+  margin: 0;
+}*/
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/aggregator.css ***/
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/fonts.css ***/
+
+/* Symbolset * www.symbolset.com * Copyright © 2012 Oak Studios LLC */
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-social-circle.eot');
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-social-circle.eot?#iefix') format('embedded-opentype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-circle.woff') format('woff'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-circle.ttf') format('truetype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-circle.svg#SSSocialCircle') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SSSocial";
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-social-regular.eot');
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-social-regular.eot?#iefix') format('embedded-opentype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-regular.woff') format('woff'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-regular.ttf') format('truetype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-social-regular.svg#SSSocialRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon,
+[class^="ss-"]:before,
+[class*=" ss-"]:before,
+[class*=" ss-"][class*=" ss-social"]:before {
+  font-family: "SSSocial";
+  color: #767676;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.ss-facebook:before {
+  content: '';
+}
+
+.ss-twitter:before {
+  content: '';
+}
+
+.ss-flickr:before {
+  content: '';
+}
+
+@font-face {
+  font-family: "SSStandard";
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-standard.eot');
+  src: url('//www.uchicago.edu/c/fonts/symbolset/ss-standard.eot?#iefix') format('embedded-opentype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-standard.woff') format('woff'),url('//www.uchicago.edu/c/fonts/symbolset/ss-standard.ttf') format('truetype'),url('//www.uchicago.edu/c/fonts/symbolset/ss-standard.svg#SSStandard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/structure.css ***/
+
+/*!
+* Bootstrap v2.0.4
+* Copyright 2012 Twitter, Inc
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+* Designed and built with all the love in the world @twitter by @mdo and @fat.
+*/
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+img,
+strong,
+ul,
+li,
+article,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.push {
+  height: 100px;
+}
+
+/* Just some arbitrary space to add between footer and rest of the content, when they are close */
+
+/*Fix webkit font rendering problem */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  overflow-y: scroll;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Always force a scrollbar in non-IE */
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+article,
+footer,
+header,
+section {
+  display: block;
+}
+
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+body {
+  margin: 0;
+  font: normal 16px / 1.25em "ProximaNova-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #565656;
+  background-color: #fff;
+}
+
+a {
+  color: #670a0a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #633835;
+  text-decoration: underline;
+}
+
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+
+.row:before {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+[class*="column-width-"],
+.content-column {
+  float: left;
+  margin-left: 20px;
+}
+
+.container {
+  width: 940px;
+}
+
+.column-width-8 {
+  width: 620px;
+}
+
+.column-width-3 {
+  width: 220px;
+}
+
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+
+.row-fluid:before {
+  display: table;
+  content: "";
+}
+
+.row-fluid:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.row-fluid [class*="column-width-"] {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2.127659574%;
+  *margin-left: 2.0744680846382977%;
+}
+
+.row-fluid [class*="column-width-"]:first-child {
+  margin-left: 0;
+}
+
+.row-fluid .column-width-3 {
+  width: 23.404255317%;
+  *width: 23.3510638276383%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.container:before {
+  display: table;
+  content: "";
+}
+
+.container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.container-fluid {
+  *zoom: 1;
+}
+
+.container-fluid:before {
+  display: table;
+  content: "";
+}
+
+.container-fluid:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/tables.css ***/
+
+/* Drupal sortable tables */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/widgets.css ***/
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -ms-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/buttons.css ***/
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -ms-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(top, white, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:active {
+  background-color: #cccccc \9;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+button.btn {
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -ms-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/colorbox.css ***/
+
+/* $Id: colorbox_default_style.css,v 1.1.4.1 2010/11/29 09:42:07 frjo Exp $  */
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+  clear: left;
+}
+
+#cboxContent {
+  position: relative;
+  overflow: hidden;
+}
+
+#cboxTitle {
+  margin: 0;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow {
+  cursor: pointer;
+  border: none;
+}
+
+/* ----------------- Colorbox ----------------- */
+
+#cboxOverlay {
+  background: #000;
+}
+
+#cboxWrapper {
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#cboxTopLeft {
+  width: 15px;
+  height: 15px;
+}
+
+#cboxTopCenter {
+  height: 15px;
+}
+
+#cboxTopRight {
+  width: 15px;
+  height: 15px;
+}
+
+#cboxBottomLeft {
+  width: 15px;
+  height: 10px;
+}
+
+#cboxBottomCenter {
+  height: 10px;
+}
+
+#cboxBottomRight {
+  width: 15px;
+  height: 10px;
+}
+
+#cboxMiddleLeft {
+  width: 15px;
+}
+
+#cboxMiddleRight {
+  width: 15px;
+}
+
+#cboxContent {
+  background: #fff;
+  font: 12px Verdana, Arial, sans-serif;
+}
+
+#cboxTitle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  bottom: 28px;
+  left: 0;
+  color: #474740;
+  /* width: 100%; */
+  padding: 8px;
+}
+
+#cboxCurrent {
+  position: absolute;
+  bottom: 0px;
+  left: 55px;
+  color: #474740;
+}
+
+#cboxPrevious {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#cboxNext {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+#cboxLoadingOverlay {
+  background: #fff;
+}
+
+#cboxLoadingGraphic {
+  background: url(https://alumnidev.uchicago.edu/assets/psd/psd1_files/loading_animation.gif) center center no-repeat;
+}
+
+a.colorbox:focus img {
+  outline: 1px dashed black;
+}
+
+/* The following are fixes for IE. */
+
+#cboxNext,
+#cboxPrevious {
+  background-color: transparent;
+  background-image: url(https://alumnidev.uchicago.edu/assets/psd/psd1_files/slidecontrol.gif);
+  background-repeat: no-repeat;
+  display: block;
+  float: right;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999px;
+  width: 16px;
+  outline: none;
+}
+
+#cboxPrevious {
+  background-position: 0 0;
+  margin-right: 4px;
+}
+
+#cboxNext {
+  background-position: -16px 0;
+  margin-left: 4px;
+}
+
+#cboxPrevious:hover {
+  background-position: 0 -16px;
+}
+
+#cboxNext:hover {
+  background-position: -16px -16px;
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/modules.css ***/
+
+.module h2.pr {
+  background: #430d62;
+}
+
+.sidebar .module {
+  border-bottom: 1px solid #dad9d9;
+  font-size: .875em;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.sidebar .module h2 {
+  fon-weight: normal;
+  font-family: "ProximaNova-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #6c6d6d;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.sidebar .module h2 {
+  font-size: 1.142em;
+}
+
+.sidebar .module p,
+.sidebar .module ul {
+  margin-bottom: 1em;
+}
+
+.sidebar .module ul {
+  margin-left: 1em;
+}
+
+.sidebar .module ul > li {
+  list-style-image: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/greybullet.png");
+  margin: 0 0 .5em .8em;
+  padding-left: .4em;
+}
+
+.sidebar .module .block-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar .module .socialblock a {
+  padding-left: .875em;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: -1px;
+}
+
+.sidebar .module .socialblock ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.sidebar .module .socialblock ul li {
+  list-style-image: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.sidebar .module .socialblock ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar .module .socialblock ul li a:before {
+  color: #670a0a;
+}
+
+.sidebar .module .socialblock .field-content {
+  display: inline;
+}
+
+/* Homepage mini-features */
+
+/* Events block */
+
+/* AddThis */
+
+/* Photo Slideshow Module */
+
+#slideshow .slide {
+  max-width: 100%;
+}
+
+.sidebar .module h2.slideshow-head {
+  font: normal 1.3em/1.5em 'ProximaNova-Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: white;
+  padding: .1666em .3333em;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#slideshowwrap {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  max-width: 470px;
+  width: 100%;
+}
+
+p.slideshow.prev.ss-icon,
+p.slideshow.next.ss-icon {
+  color: inherit;
+  display: inline-block !important;
+  margin: 0 0 0 5px;
+  opacity: 1;
+  font-size: .75em;
+  position: relative;
+  height: auto;
+  background: none;
+  padding-top: 5px;
+}
+
+#slideshow a:hover,
+#slideshow a:focus {
+  text-decoration: none;
+}
+
+.slide p {
+  margin: .875em 0 0 0;
+}
+
+/* News block */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/base_styles.css ***/
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+.visible-phone {
+  display: none !important;
+}
+
+/* CUSTOM GLOBAL */
+
+body {
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Proxima Nova Light fix for Windows' terrible font handling */
+
+#skip {
+  position: absolute;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+  list-style: outside none;
+}
+
+#skip li {
+  list-style-type: none;
+}
+
+#skip a {
+  position: absolute;
+  left: -999em;
+  overflow: hidden;
+  top: 0;
+}
+
+#skip a:focus,
+#skip a:active {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1em;
+  padding: 1em 0;
+  text-decoration: none;
+  /* color information, edit this to suit the colors of your layout */
+  color: #fff;
+  background: #333;
+  background: -moz-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #2b2b2b));
+  background: -webkit-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -o-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -ms-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  border-bottom: 1px solid #0e0e0e;
+}
+
+/* Header & Home */
+
+.wordmark {
+  padding: 30px 0;
+  background: #7d0101;
+  background: -moz-linear-gradient(top, #7d0101 0%, #651110 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7d0101), color-stop(100%, #651110));
+  background: -webkit-linear-gradient(top, #7d0101 0%, #651110 100%);
+  background: -o-linear-gradient(top, #7d0101 0%, #651110 100%);
+  background: -ms-linear-gradient(top, #7d0101 0%, #651110 100%);
+  background: linear-gradient(top, #7d0101 0%, #651110 100%);
+  border-top: 1px solid #9e2121;
+  border-bottom: 1px solid #4a0404;
+  position: relative;
+}
+
+.wordmark a.site-name {
+  color: #fff;
+  display: block;
+  float: left;
+}
+
+.wordmark a.site-name:hover {
+  text-decoration: none;
+}
+
+.wordmark a.site-name h1 {
+  font: 2.8em/1em "ProximaNova-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* http://www.vanseodesign.com/css/vertical-centering/ */
+
+.row.wordmark {
+  margin-left: 0;
+}
+
+.row.wordmark .left-edge {
+  display: table;
+}
+
+.row.wordmark a.site-name {
+  float: none;
+  margin-left: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.row-fluid.wordmark.phone {
+  min-height: 40px;
+  padding: 20px 0;
+  display: none;
+  visibility: hidden;
+}
+
+.row-fluid.wordmark.phone h1 {
+  padding-top: 5px;
+}
+
+.left-edge {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.container.page .row,
+.container.page .row {
+  margin-left: 0;
+}
+
+/* Footer */
+
+footer {
+  background: #403f3f;
+  background: -moz-linear-gradient(top, #403f3f 0%, #383737 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #403f3f), color-stop(100%, #383737));
+  background: -webkit-linear-gradient(top, #403f3f 0%, #383737 100%);
+  background: -o-linear-gradient(top, #403f3f 0%, #383737 100%);
+  background: -ms-linear-gradient(top, #403f3f 0%, #383737 100%);
+  background: linear-gradient(top, #403f3f 0%, #383737 100%);
+}
+
+footer a {
+  color: #d3d1d1;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  opacity: 1;
+}
+
+footer .view-content {
+  font-size: .8125em;
+}
+
+footer p {
+  font-size: .8125em;
+}
+
+footer p,
+footer .views-row {
+  color: #d3d1d1;
+  padding-bottom: .5em;
+}
+
+footer #block-views-footer-socialmedia .view-content {
+  margin-top: 10px;
+}
+
+footer #block-views-footer-socialmedia .view-content .views-field {
+  float: left;
+  margin-right: 18px;
+}
+
+footer #block-views-footer-socialmedia .view-content .views-field a {
+  color: #afafaf;
+  text-indent: -9999px;
+  font-size: 1.5em;
+  vertical-align: baseline;
+}
+
+footer #block-views-footer-socialmedia .view-content .views-field a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .column-width-3 {
+  margin-bottom: 2em;
+}
+
+footer .right p,
+footer .right .view-content {
+  border-left: 1px solid #4f4e4e;
+  text-align: left;
+  padding-left: 1.25em;
+}
+
+footer .shield {
+  text-align: center;
+}
+
+footer .shield a {
+  text-indent: -9999em;
+  display: block;
+  width: 246px;
+  height: 51px;
+  background: transparent url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/uchicago.png") 0 0 no-repeat;
+  background-size: 100%;
+  margin: 0 0 .625em 0;
+  opacity: .6;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+footer .row-fluid:first-child {
+  border-bottom: 1px solid #1b1b1b;
+}
+
+.footer {
+  padding: 1.875em 0 0 0;
+}
+
+strong {
+  font-family: 'ProximaNova-Bold', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* Images */
+
+/* Miscellaneous */
+
+.container.page h1 {
+  font: normal 2.25em 'ProximaNova-Light', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  line-height: 1em;
+  color: #670a0a;
+  margin: .833em 0;
+}
+
+#leftcol.column-width-3 {
+  margin-left: 0;
+}
+
+.maincontent,
+.sidebar {
+  margin-bottom: 10em;
+}
+
+/* Wide page styles */
+
+/* Main content typography */
+
+.maincontent h2,
+.maincontent h3 {
+  font-weight: normal;
+  line-height: 1.25em;
+  font-family: 'ProximaNova-Light', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin-bottom: 1em;
+}
+
+.maincontent h2 {
+  font-size: 1.5em;
+  color: #896137;
+}
+
+.maincontent h3 {
+  color: #484747;
+}
+
+.maincontent h3 {
+  font-size: 1.375em;
+}
+
+.maincontent p {
+  line-height: 1.875em;
+  margin-bottom: 1.0em;
+}
+
+.maincontent ul {
+  line-height: 1.5em;
+  margin: 0 0 1.875em 1.4em;
+}
+
+.maincontent ul > li {
+  list-style-image: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/greybullet.png");
+  margin: 0 0 .5em .8em;
+  padding-left: .4em;
+}
+
+.maincontent li {
+  line-height: 1.875em;
+}
+
+/* Blockquotes */
+
+/* Fieldsets */
+
+/* Helper links */
+
+/* Directories */
+
+.view-directory .views-row position:relative
+.helper-links {
+  left: auto;
+  right: 0px;
+  z-index: 100;
+}
+
+/* Blogs */
+
+/* hide advanced search so we can use the blog-only search */
+
+/* Taxonomy */
+
+/* Comments */
+
+/* Videos */
+
+/* Maintenance page */
+
+/* Contextual Links */
+
+/* we have to override a few block styles for contextual links */
+
+/* Drupal overrides */
+
+/* Prevent FUOC */
+
+html.js #slideshowwrap {
+  display: none;
+}
+
+/* IE FIXES */
+
+/* svg Replacements */
+
+html.svg footer .shield a {
+  background-image: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/sprite_v2.svg");
+}
+
+html.svg .maincontent ul > li {
+  list-style-image: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/greybullet.svg");
+}
+
+html.svg .mobile-branding .uc-wordmark-mobile {
+  background: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/shield.svg") no-repeat;
+  background-size: 8%;
+}
+
+/* Hide inline svg images (png versions are inline in html via conditional comment) */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/features.css ***/
+
+/* Previous & Next */
+
+p.prev.ss-icon,
+p.next.ss-icon {
+  color: #fff;
+  font-size: 1.8125em;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
+  z-index: 11;
+}
+
+p.prev.ss-icon:hover,
+p.next.ss-icon:hover {
+  opacity: 1;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.prev {
+  left: 0;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, transparent));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000',GradientType=1 );
+  /* IE6-8 */
+}
+
+.next {
+  right: 0;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC41Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.5)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000',GradientType=1 );
+  /* IE6-8 */
+}
+
+/* Gallery image slideshows */
+
+/* IE Fixes */
+
+/* LEFT HEADLINES */
+
+/* No JS */
+
+/* Feature Preview Ribbon */
+
+/* Override some style for homepage feature node pages */
+
+/*
+ * Hero Features
+ */
+
+/* Single column format */
+
+/* Phones */
+
+/* Small desktop */
+
+/* Medium desktop */
+
+/* Large desktop */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/nav.css ***/
+
+.navbar {
+  *position: relative;
+  *z-index: 2;
+  overflow: visible;
+}
+
+.navbar-inner {
+  min-height: 40px;
+  background: #333;
+  background-color: #333;
+  background: -moz-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #2b2b2b));
+  background: -webkit-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -o-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: -ms-linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  background: linear-gradient(top, #333333 0%, #2b2b2b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#2B2B2B', GradientType=0);
+}
+
+.nav-collapse {
+  float: none;
+  margin: 0;
+}
+
+.nav-collapse.collapse {
+  height: auto;
+}
+
+.navbar {
+  color: #999999;
+}
+
+.navbar .btn {
+  margin-top: 5px;
+}
+
+.navbar .btn {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  margin: 5px 5px 6px;
+  line-height: 18px;
+}
+
+.container.page .btn-subnavbar {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  margin: 5px 5px 6px;
+  line-height: 18px;
+}
+
+.navbar .btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -ms-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(top, #333333, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #222222;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+.container.page .btn-subnavbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -ms-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(top, #333333, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #222222;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active {
+  background-color: #222222;
+  *background-color: #151515;
+}
+
+.navbar .btn-navbar:active {
+  background-color: #080808 \9;
+}
+
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+.container.page .btn-subnavbar {
+  margin-top: -32px;
+  right: 2%;
+  background-color: #DAD9D9;
+  background-image: none;
+  border: none;
+}
+
+.container.page .btn-subnavbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+.container.page .btn-subnavbar:active {
+  background-color: #DAD9D9 \9;
+}
+
+.container.page .btn-subnavbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #3E769A;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+#leftnav {
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 0.875em;
+  margin-bottom: 1.875em;
+}
+
+#leftnav ul {
+  list-style-type: none;
+  background: #f7f7f7;
+}
+
+#leftnav ul li:first-child a {
+  border-bottom: none;
+}
+
+#leftnav ul li a {
+  display: block;
+  padding: .4375em .625em;
+  color: #3e769a;
+  background: #f7f7f7;
+  border-top: 1px solid #d9d9d9;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+#leftnav ul li a:hover,
+#leftnav ul li a:focus {
+  color: #fff;
+  background: #3e769a;
+  text-decoration: none;
+}
+
+.topnav {
+  height: 5px;
+  white-space: nowrap;
+}
+
+.topnav .mobile-branding {
+  float: left;
+  width: 250px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.topnav .mobile-branding .uc-wordmark-mobile {
+  margin-top: 8px;
+  display: block;
+  background: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/mobile_header_crest.png") no-repeat;
+  padding-top: 4px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+/*
+ * TOP NAV STYLES
+ * Borrowed from the plaisance_topnav subtheme.
+ */
+
+#topnav {
+  background: #6A0909;
+  background-color: #6A0909;
+  background: -moz-linear-gradient(top, #6A0909 0%, #651110 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6A0909), color-stop(100%, #651110));
+  background: -webkit-linear-gradient(top, #6A0909 0%, #651110 100%);
+  background: -o-linear-gradient(top, #6A0909 0%, #651110 100%);
+  background: -ms-linear-gradient(top, #6A0909 0%, #651110 100%);
+  background: linear-gradient(top, #6A0909 0%, #651110 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6A0909', endColorstr='#651110', GradientType=0);
+  border-top: 1px solid #7D1717;
+}
+
+#topnav > ul {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+#topnav > ul > li {
+  display: inline-block;
+}
+
+#topnav > ul > li a {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  display: inline-block;
+  color: #fff;
+  padding: 0.625em 2.2em;
+}
+
+#topnav > ul > li > a {
+  margin-top: -1px;
+}
+
+#topnav > ul > li > ul.menu {
+  display: block;
+  opacity: 0;
+}
+
+#topnav > ul li.active-trail a,
+#topnav > ul li:hover a,
+#topnav > ul li a:hover,
+#topnav > ul li:focus a,
+#topnav > ul li a:focus {
+  background: white;
+  color: #670A0A !important;
+  text-decoration: none;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+
+/* Hide dropdowns in IE 8 */
+
+/*
+ * Responsive
+ */
+
+@media only screen and (min-width: 768px) {
+  /* Ensure that #features-outer is always visible on big screens after it's collapsed in small screen view. Yuck, this is hacky. */
+}
+
+/* Single column format */
+
+@media only screen and (max-width: 767px) {
+  .toggle-subnav-container {
+    border-bottom: 1px solid #DAD9D9;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Collapsible top nav */
+
+  .nav-collapse ul {
+    line-height: 1.5em;
+  }
+
+  .nav-collapse ul li {
+    margin-bottom: 8px !important;
+  }
+
+  .nav-collapse ul li a {
+    font-size: 14px !important;
+    line-height: 1.25em !important;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-collapse ul li a:hover {
+    color: #800000;
+  }
+
+  .nav-collapse .menu {
+    margin: 0;
+  }
+
+  .nav-collapse .menu > li > a:hover,
+  .nav-collapse .menu > li > a:focus {
+    /*color: #fff!important;*/
+    text-decoration: underline !important;
+  }
+
+  .nav-collapse .menu > li > a:visited {
+    color: #fff !important;
+  }
+
+  #topnav > ul > li {
+    display: block;
+  }
+}
+
+/* Small desktop */
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .nav-collapse {
+    float: none;
+    margin: 0;
+    height: auto;
+  }
+
+  #topnav ul {
+    min-width: 775px;
+  }
+
+  #topnav ul li a {
+    padding: 0.625em 1.1em;
+    font-size: .9em;
+  }
+}
+
+/* Medium desktop */
+
+@media only screen and (min-width: 980px) and (max-width: 1249px) {
+  #topnav ul li a {
+    padding: .625em 1.467em;
+  }
+}
+
+/* Large desktop */
+
+/* A random rule to always keep the left column visible for everything above the single column breakpoint */
+
+@media only screen and (min-width: 768px) {
+  #topnav.nav-collapse.collapse {
+    height: auto !important;
+  }
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/views.css ***/
+
+/* Homepage news and announcements */
+
+/* Directories */
+
+/* A hack to hide the blurb about compact directories */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/responsive.css ***/
+
+@media (max-width: 767px) {
+  .visible-phone {
+    display: inherit !important;
+  }
+
+  .hidden-phone {
+    display: none !important;
+  }
+}
+
+/* Single column format */
+
+@media only screen and (max-width: 767px) {
+  .container.page {
+    width: auto;
+  }
+
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .row-fluid {
+    width: 100%;
+  }
+
+  [class*="column-width-"],
+  .row-fluid [class*="column-width-"],
+  .content-column {
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+
+  body {
+    padding-top: 0;
+    font-size: 90%;
+  }
+
+  .navbar .container-fluid {
+    width: auto;
+    padding: 0;
+  }
+
+  .nav-collapse,
+  .subnav-collapse {
+    clear: both;
+  }
+
+  .nav-collapse .menu {
+    float: none;
+    margin: 0 0 9px;
+  }
+
+  .nav-collapse .menu > li {
+    float: none;
+  }
+
+  .nav-collapse .menu > li > a {
+    margin-bottom: 2px;
+  }
+
+  .nav-collapse,
+  .subnav-collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .navbar .btn-navbar,
+  .container.page .btn-subnavbar {
+    display: block;
+  }
+
+  .navbar-inner {
+    padding: 0 4%;
+    height: 40px;
+  }
+
+  #topnav > ul > li ul.menu {
+    display: none;
+  }
+
+  .wordmark {
+    display: none;
+    visibility: hidden;
+  }
+
+  .wordmark a.site-name h1.large {
+    font-size: 2.0625em;
+  }
+
+  .row-fluid.wordmark.phone {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-collapse ul {
+    line-height: 1.5em;
+  }
+
+  .nav-collapse ul li {
+    margin-bottom: 8px !important;
+  }
+
+  .nav-collapse ul li a {
+    font-size: 14px !important;
+    line-height: 1.25em !important;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-collapse .menu {
+    margin: 0;
+  }
+
+  .nav-collapse .menu > li > a:hover,
+  .nav-collapse .menu > li > a:focus {
+    color: white !important;
+    text-decoration: underline !important;
+  }
+
+  .container.page,
+  .left-edge {
+    width: 96%;
+    padding: 0 2%;
+  }
+
+  .container.page h1 {
+    font-size: 24px;
+    /*margin: .833em 50px 0 0;*/
+  }
+
+  .container.page #leftcol div:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+  }
+
+  .row {
+    margin-left: 0;
+  }
+
+  .maincontent {
+    margin-bottom: 20px;
+  }
+
+  .maincontent h2,
+  .maincontent h3 {
+    margin-bottom: .5em;
+  }
+
+  .maincontent p {
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    margin-bottom: 20px;
+  }
+
+  .region-sidebar-second.sidebar {
+    width: 464px;
+    margin: 0 auto 20px auto;
+  }
+
+  .region-sidebar-second.sidebar .module {
+    clear: none;
+    float: left;
+    width: 220px;
+    margin: 0 20px 20px 0;
+  }
+
+  .region-sidebar-second.sidebar .module:nth-child(even) {
+    margin: 0 0 20px 0;
+  }
+
+  .sidebar .module img {
+    width: 100%;
+  }
+
+  #slideshowwrap {
+    max-width: 100%;
+  }
+
+  .footer [class*="column-width-"]:first-child {
+    text-align: center;
+  }
+
+  .footer #block-views-footer-socialmedia div {
+    display: inline;
+    float: none !important;
+  }
+
+  footer p {
+    font-size: 11px;
+    line-height: 2em;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    min-height: inherit;
+  }
+
+  footer .shield a {
+    height: 51px;
+    margin: 0 auto 1.5em auto;
+  }
+
+  /* Blog styles */
+
+  /* Form elements */
+}
+
+/* Phones */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .region-sidebar-second.sidebar {
+    width: auto;
+  }
+
+  .region-sidebar-second.sidebar .module {
+    float: none;
+    width: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  .sidebar {
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* All desktops */
+
+@media only screen and (min-width: 768px) {
+  #topnav {
+    overflow: visible;
+  }
+
+  #topnav > ul > li {
+    position: relative;
+  }
+
+  #topnav > ul > li > ul.menu {
+    border-bottom: 1px solid #d9d9d9;
+    display: block;
+    position: absolute;
+    width: 250px;
+    -webkit-transition: opacity 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+    z-index: -100;
+  }
+
+  #topnav > ul > li > ul.menu li {
+    display: block;
+    font-size: .875em;
+  }
+
+  #topnav > ul > li > ul.menu li a {
+    background: white;
+    background: rgba(255, 255, 255, 0.95);
+    color: #670a0a !important;
+    padding: 0.4285em 2.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    -webkit-transition: all 0s ease-in-out;
+    -moz-transition: all 0s ease-in-out;
+    -o-transition: all 0s ease-in-out;
+    transition: all 0s ease-in-out;
+  }
+
+  #topnav > ul > li > ul.menu li a:hover {
+    text-decoration: underline;
+  }
+
+  #topnav > ul > li > ul.menu li.first a {
+    padding-top: .857em;
+  }
+
+  #topnav > ul > li > ul.menu li.last a {
+    padding-bottom: .857em;
+  }
+
+  #topnav > ul > li:hover > ul.menu,
+  #topnav > ul > li:focus > ul.menu {
+    z-index: 100;
+    opacity: 1;
+  }
+}
+
+/* Small desktop */
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  body.two-sidebars #primary-column {
+    width: 352px;
+  }
+
+  .row {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+
+  .row:before {
+    display: table;
+    content: "";
+  }
+
+  .row:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  [class*="column-width-"],
+  .content-column {
+    float: left;
+    margin-left: 20px;
+  }
+
+  .nav-collapse {
+    float: none;
+    margin: 0;
+  }
+
+  .container,
+  .left-edge {
+    width: 724px;
+  }
+
+  .column-width-8 {
+    width: 476px;
+  }
+
+  .column-width-3 {
+    width: 166px;
+  }
+
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+
+  .row-fluid:before {
+    display: table;
+    content: "";
+  }
+
+  .row-fluid:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  .row-fluid [class*="column-width-"] {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.762430939%;
+    *margin-left: 2.709239449638298%;
+  }
+
+  .row-fluid [class*="column-width-"]:first-child {
+    margin-left: 0;
+  }
+
+  .row-fluid .column-width-3 {
+    width: 22.928176794%;
+    *width: 22.874985304638297%;
+  }
+
+  body {
+    font-size: 90%;
+  }
+
+  .wordmark a.site-name h1.large {
+    font-size: 2.0625em;
+  }
+
+  #topnav ul {
+    max-width: 724px;
+  }
+
+  .module .socialblock {
+    font-size: 90%;
+  }
+
+  .sidebar .module {
+    padding-bottom: 20px;
+  }
+
+  .maincontent p {
+    margin-bottom: 20px;
+  }
+
+  footer p {
+    font-size: .8125em;
+  }
+
+  footer .shield a {
+    width: 166px;
+    height: 34px;
+  }
+}
+
+/* Medium desktop */
+
+@media only screen and (min-width: 980px) and (max-width: 1249px) {
+  body.two-sidebars #primary-column {
+    width: 460px;
+  }
+
+  body {
+    font-size: 95%;
+  }
+
+  footer .shield a {
+    width: 220px;
+    height: 45px;
+  }
+
+  .wordmark a.site-name h1.large {
+    font-size: 2.5em;
+  }
+
+  #topnav ul {
+    max-width: 940px;
+  }
+
+  .maincontent p {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large desktop */
+
+@media only screen and (min-width: 1250px) {
+  body.two-sidebars #primary-column {
+    width: 570px;
+  }
+
+  .row {
+    margin-left: -30px;
+    *zoom: 1;
+  }
+
+  .row:before {
+    display: table;
+    content: "";
+  }
+
+  .row:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  [class*="column-width-"],
+  .content-column {
+    float: left;
+    margin-left: 30px;
+  }
+
+  .nav-collapse {
+    float: none;
+    margin: 0;
+  }
+
+  .container.page,
+  .left-edge {
+    width: 1230px;
+  }
+
+  .container {
+    width: 1170px;
+  }
+
+  .container.page #leftcol.column-width-3,
+  .container.page #rightcol.column-width-3 {
+    width: 300px;
+  }
+
+  .column-width-8 {
+    width: 770px;
+  }
+
+  .column-width-3 {
+    width: 270px;
+  }
+
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+
+  .row-fluid:before {
+    display: table;
+    content: "";
+  }
+
+  .row-fluid:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  .row-fluid [class*="column-width-"] {
+    display: block;
+    width: 100%;
+    min-height: 28px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.564102564%;
+    *margin-left: 2.510911074638298%;
+  }
+
+  .row-fluid [class*="column-width-"]:first-child {
+    margin-left: 0;
+  }
+
+  .row-fluid .column-width-3 {
+    width: 23.076923077%;
+    *width: 23.0237315876383%;
+  }
+
+  /* Blog styles */
+}
+
+/* A couple of randome size rules */
+
+@media only screen and (min-width: 1224px) {
+  /*only display the hover effect on desktops/laptops*/
+}
+
+/* A random rule to always keep the left column visible for everything above the single column breakpoint */
+
+/* iPads (landscape) ----------- */
+
+/* iPads (portrait) ----------- */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/sandbox.css ***/
+
+/* Sandbox Overrides for Plaisance */
+
+/* Masthead UEI Logo */
+
+.wordmark a.site-name h1 {
+  /*background: url("https://alumnidev.uchicago.edu/assets/psd/psd1_files/UEI_small.svg") no-repeat scroll 0 0 transparent;
+  width: 280px;
+  height: 90px;
+  text-indent: -9999px;*/
+}
+
+@media (max-width: 767px) {
+  .wordmark a.site-name h1 {
+    height: 68px;
+  }
+}
+
+/* Nav Styles */
+
+#topnav > ul > li > ul.menu {
+  display: none;
+}
+
+/* Homepage Styles */
+
+/* Large Desktop */
+
+/* Phone */
+
+/* Misc. Views styles */
+
+/* .view .node-article .field-type-image img, */
+
+@media (max-width: 767px) {
+  /* 	.view .node-article .field-type-image img, */
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* 	.view .node-article .field-type-image img, */
+}
+
+@media (min-width: 980px) and (max-width: 1249px) {
+  /* 	.view .node-article .field-type-image img, */
+}
+
+/* Taxonomy Listings */
+
+/* Staff Styles */
+
+/* Staff Listing Styles */
+
+/* Feature/Press Release Styles */
+
+/* Spotlight Styles */
+
+/* News Listings  */
+
+/* Stat Images */
+
+/* Share This */
+
+/* Quick Links */
+
+/* Text Styles */
+
+.large-link {
+  font-size: 1.6em;
+  font-family: 'ProximaNova-Bold';
+}
+
+/* Footer Styles */
+
+html.svg footer .shield a {
+  background-image: url('https://alumnidev.uchicago.edu/assets/psd/psd1_files/UEI-UC.svg');
+}
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/see3.css ***/
+
+/* See3 Overrides for Plaisance */
+
+/*** uncss> filename: https://uei.uchicago.edu/sites/all/themes/plaisance/css/ie.css ***/
+
+/* IE FIXES */
+
+/* upgrade bar */
+
+/* placeholder text */
+
+/* profile fix */
+
+
+
+#leftcol{
+  display: none;
+}
+
+#page-title{
+
+}
+
+@media only screen and (min-width: 1250px){
+body.two-sidebars #primary-column {
+  width: 870px;
+}
+}
+
+
+@media only screen and (max-width: 1249px) and (min-width: 980px){
+body.two-sidebars #primary-column {
+  width: 660px;
+}
+}
+
+
+@media only screen and (max-width: 979px) and (min-width: 768px){
+body.two-sidebars #primary-column {
+  width: 492px;
+}
+
+}
+
+
+#rightcol{
+  padding-left: 0;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 767px){
+.region-sidebar-second.sidebar .module {
+  clear: none;
+  float: left;
+  width: 100%;
+  margin: 0 20px 20px 0;
+}
+
+#rightcol{
+  padding-left: 0;
+  padding-top: 30px;
+}
+
+
+
+}
+
+#CardType{
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.btn-subnavbar{
+  display: none;
+}
+
+
+#oneTimeGift{
+  margin-right: 15px;
+}
+
+
+html.svg .wordmark a.uc-wordmark, html.svg footer .shield a, html.svg #social li a {
+    background-image: url(https://alumnidev.uchicago.edu/assets/psd/psd1_files/sprite_v2.svg);
+}
+.wordmark a.uc-wordmark {
+    display: block;
+    text-indent: -9999em;
+    width: 313px;
+    height: 63px;
+    background: transparent url(https://alumnidev.uchicago.edu/assets/psd/psd1_files/sprite_v2.png) 0 0 no-repeat;
+    background-size: 100%;
+    float: right;
+}
+
+.wordmark a.site-name h1.medium {
+    font-size: 2.4em;
+}

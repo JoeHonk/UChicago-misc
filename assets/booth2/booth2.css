@@ -1,0 +1,61 @@
+input[type=checkbox] {
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+#BeneficiaryID {
+    /*display: none;*/
+}
+
+
+
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    #BeneficiaryID{
+    	width: 75%;
+    }
+
+    #Amount{
+    	width:33%;
+    }
+
+    #Textarea2{
+    	width: 100%;
+    }
+
+    #CardName, #billaddress1, #billaddress2 , #bcity, #bzip, #BillState, #BillCountry, #Country{
+    	width: 100%
+    }
+
+    select[multiple], select[size] {
+  height: auto;
+  width: 100%;
+}
+
+#newAmount{
+    min-width: 50px;
+}
+}
+
+
+@media (max-width: 900px) {
+ #BeneficiaryID{
+    width: 90%;
+ }
+}
+
+.related-links{
+  pointer-events: none;
+}
+
+.main_content{
+  pointer-events: none;
+}
+
+.bonus{
+  font-size: 12px;
+  font-style: italic;
+}

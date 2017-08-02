@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://alumnidev.uchicago.edu/aa10/aa10.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" class="js js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://alumniandfriendsdev.uchicago.edu/sites/all/themes/aff/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://alumniandfriendsdev.uchicago.edu/" />
+<link rel="shortlink" href="https://alumniandfriendsdev.uchicago.edu/" />
+<meta property="og:site_name" content="Alumni Association: Alumni, Parents, Families &amp; Friends" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://alumniandfriendsdev.uchicago.edu/" />
+<meta property="og:title" content="Alumni Association: Alumni, Parents, Families &amp; Friends" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://alumniandfriendsdev.uchicago.edu/" />
+<meta name="twitter:title" content="Alumni Association: Alumni, Parents, Families &amp; Friends" />
+  <title>Alumni Association: Alumni, Parents, Families & Friends</title>
+  <link rel="stylesheet" type="text/css" href="https://www.kintera.org/atf/cf/%7B10e0f431-a3ae-435b-976b-b63f250ea585%7D/FONTS.CSS">
+  <link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/ss-social-regular.css">
+  <link rel="stylesheet" type="text/css" href="https://alumnidev.uchicago.edu/assets/aa1/fonts.css">
+  <link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/ss-social-regular.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/chosen.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/chosen-drupal.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/field.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/radix_layouts.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/location.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/radix-livestyle.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/labaw/screen.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/print.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/labaw/style.css">
+  <script type="text/javascript" async="" src="https://alumnidev.uchicago.edu/assets/aa1/ga.js"></script><script type="text/javascript" async="" src="https://alumnidev.uchicago.edu/assets/aa1/ga(1).js"></script><script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.js"></script><style type="text/css"></style><style type="text/css"></style>
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.once.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/drupal.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.core.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.tabs.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.accordion.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.timeentry.pack.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.form.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/vertical-tabs.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/states.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/form.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/ajax.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-admin.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-magic.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-accordion.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/caption-filter.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/tabledrag.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/uchicago_admin_date_popup.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.timepicker.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/date_popup.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/location_autocomplete.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/progress.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/modal.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/location_gmap_find_address.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/autocomplete.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/text.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/filter.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/tableheader.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/textarea.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/collapse.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/field_group.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/googleanalytics.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/chosen.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/modernizr.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-script.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/script.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-progress.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-modal.js"></script>
+
+  <!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4248 node-type-panopoly-page region-content">
+
+
+<div id="main-wrapper">
+  <div id="main" class="main">
+    <div class="container">                
+            <div id="page-header">
+                  <div class="page-header">
+             <img src="https://alumnidev.uchicago.edu/assets/labaw/labawheader1.png">
+<!-- TOP CONTENT 
+            <h1 class="title">Submit an Event</h1>
+          </div>
+                                      </div>
+    </div>
+    <div id="content" class="">
+        <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="panel-display aff-landing-page clearfix aff-landing-page" id="page-page">
+  
+
+<div id="top-content">
+
+</div>
+  <div class="grey-stripe">
+	  <div class="container">  
+	    <div class="row">
+		  <div class="col-sm-8 col-sm-push-4 content panel-panel">
+	        <div class="panel-panel-inner">
+	          <div class="panel-pane pane-block pane-afb-1">
+  <div class="pane-content"> -->
+      
+<kintera:webFeature  />
+       </div>
+
+  
+  </div>
+	        </div>
+	      </div>
+	      
+	    </div>
+	       
+	    <div class="row">
+	      <div class="col-sm-8 col-sm-push-4 content panel-panel">
+	        <div class="panel-panel-inner">
+	          	        </div>
+	      </div>
+	      <div class="col-sm-4 col-sm-pull-8 sidebar panel-panel">
+	        <div class="panel-panel-inner">
+	          	        </div>
+	      </div>
+	    </div>
+	<img width="100%" src="https://alumnidev.uchicago.edu/assets/labaw/labawfooter1.png">
+	  </div>    
+  </div><!-- /.grey-stripe -->
+ 
+</div><!-- /.aff-landing-page -->
+  </div>
+</div>
+  </div>
+
+    </div>
+  </div> <!-- /#main -->
+</div> <!-- /#main-wrapper -->
+
+</body></html>

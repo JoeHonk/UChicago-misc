@@ -1,0 +1,50 @@
+body {}
+
+#network_member_history{width:500px}
+#network_member_header{font-size:1.0 em; font-weight:bold;margin:5px 0px 10px 0px; padding:5px 0px 5px 0px; border-bottom:5px solid #f5f5f5;}
+
+.network_member_container{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;}
+.network_member_container {list-style-type:none; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;}
+.network_member_container li {}
+.network_member_hr {clear:both; width:100%; height:5px; color:#f5f5f5; background-color:#f5f5f5; border:1px solid #f5f5f5; margin:15px 0px 15px 0px; padding:0px 0px 0px 0px;}
+
+.network_member_icon{float:left; margin-right:5px;}
+.network_member_icon_arrow{float:left;clear:left;}
+.network_member_utilities{float:right;}
+     .network_member_indexName
+        {
+          float:right;
+          clear:right;
+        }
+.network_member_username{margin:0px 0px 0px 74px;}
+        .network_member_detail
+        {
+            margin: 0px 0px 0px 74px;
+        }
+
+.nm_user_icon{border:1px solid black; width:64px; height:64px;}
+.pageLink{ margin:2px 3px;}
+.nm_email{}
+.nm_delete{}
+
+#user_activity_history{width:500px} 
+#user_activity_header{font-size:1.0 em; font-weight:bold;margin:5px 0px 10px 0px; padding:5px 0px 5px 0px; border-bottom:5px solid #f5f5f5;} 
+
+.user_activity_container{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;} 
+.user_activity_container {list-style-type:none; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px;} 
+.user_activity_container li {margin-top:0px;margin-bottom:0px;} 
+.user_activity_hr {clear:both; width:100%; height:5px; color:#f5f5f5; background-color:#f5f5f5; border:1px solid #f5f5f5; margin:15px 0px 15px 0px; padding:0px 0px 0px 0px;} 
+
+.user_activity_icon{float:left; margin-right:5px;} 
+.user_activity_username{float:left;} 
+.user_activity_relationship_type{float:left;} 
+.user_activity_status{float:left;} 
+.user_activity_time{} 
+.user_activity_description{} 
+.user_activity_date{} 
+.user_activity_snippet{margin:5px 0px 0px 74px;} 
+
+.ac_user_icon{border:1px solid black; width:64px; height:64px;} 
+.ac_user_name{} 
+.ac_description{} 
+

@@ -1,0 +1,76 @@
+h1, h2, * {
+  font-family: 'ProximaNova-Regular';
+}
+
+.site-heading h1 {
+  word-wrap: break-word;
+}
+
+.post-preview .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.navbar-default .navbar-nav> .active> a {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav> .active> a:focus, .navbar-default .navbar-nav> .active> a:hover {
+  color: rgba(255, 255, 255, .8);
+  background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: transparent;
+}
+
+.site-heading {}
+
+.intro-header {
+  background-color: #808080;
+  background: no-repeat center top;
+  background-attachment: scroll;
+  /*  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;*/
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -o-background-size: contain;
+  margin-bottom: 50px;
+}
+
+.site-heading {
+  padding-top: 60px;
+}
+
+img#footerimg {
+  width: 100%;
+}
+
+footer {
+  padding: 0;
+  background: #800000;
+}
+
+.navbar {
+  background: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading {
+    padding: 200px 0;
+  }
+}
+
+.intro-header{
+  background: #000000;
+  background-color:
+}
+
+img#heroimage{
+  width: 100%;
+}

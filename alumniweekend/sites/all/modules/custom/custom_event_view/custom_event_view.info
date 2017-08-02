@@ -1,0 +1,4 @@
+name = "Custom Event View"
+description = "Custom View for Alumni Weekend Events"
+core = 7.x
+package = "Alumni Weekend 2013"

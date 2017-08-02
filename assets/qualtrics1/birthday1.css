@@ -1,0 +1,164 @@
+*{
+  font-family: 'ProximaNova-Regular' !important;
+  font-weight: normal !important;
+  color: #fff;
+}
+
+h2.noStyle {
+    display: none;
+}
+
+#Plug {
+    display: none !important;
+}
+
+.Skin .QuestionBody {
+    color: #43464d;
+    font-size: inherit;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0 10px 10px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.Skin .MC .QuestionBody {
+    padding: 10px 10px !important;
+    padding-top: 0 !important;
+}
+
+div.QuestionBody{
+  padding-top: 0 !important;
+}
+
+
+
+.Skin select, .Skin textarea {
+    border: 1px solid #d2d2d6;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+body {
+    background: #3e92a3 !important;
+    background-color: #3e92a3 !important;
+    color: #fff !important;
+}
+
+.css-input,
+input,
+select,
+textarea {
+    padding: 3px !important;
+    font-size: 16px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #ffffff !important;
+    background-color: #3e92a3 !important;
+    color: #ffffff !important;
+    font-size: 20px  !important;
+}
+
+p{
+  color: #ffffff !important;
+  font-size: 18px  !important;
+  font-family: 'ProximaNova-Regular' !important;
+  font-weight: normal !important;
+  color: #fff;
+}
+
+.css-input:focus {
+    outline: none;
+}
+
+.Skin .MC .QuestionBody {
+    padding-left: 10px;
+
+}
+
+option{
+  padding-left: 0;
+}
+
+.Skin #Buttons {
+    text-align: center;
+    padding: 10px;
+    margin-top: 0;
+
+}
+
+#NextButton{
+  width: 100%
+}
+
+
+
+
+.Skin .QuestionOuter.Highlight .Inner {
+    background: none !important;
+}
+
+#Plug, .Skin #Plug .Skin #Plug a, #PushStickyFooter{
+                display:none !important;
+                height:0px !important;
+                width:0px !important;
+                padding:0px !important;
+                margin:0px !important;
+                z-index:-9999 !important;
+                position:absolute !important;
+                margin-left:-1000px !important;
+                color:#ffffff !important;
+
+
+}
+
+.Skin .SkinInner {
+    max-width: none;
+    margin: 0 auto;
+    background: none !important;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+
+}
+
+
+@media (max-width: 991px){
+.Skin .TE .SL .InputText,
+.css-input,
+input,
+select,
+textarea {
+    width: 100% !important;
+}
+}
+
+.row{
+  border: 1px solid;
+}
+
+#COL2{
+  padding: 0;
+  margin: 0;
+}
+
+#COL2.col-md-6{
+  padding: 0;
+  margin: 0;
+position: relative;
+min-height: 200px;
+
+}
+
+
+
+
+#cakes{
+background-image: url("https://alumnidev.uchicago.edu/assets/boyer-birthday/Boyer-cake-Bike.png");
+}

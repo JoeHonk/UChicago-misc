@@ -1,0 +1,847 @@
+/* @override http://smartmuseumstage.uchicago.edu/_css/styles.css */
+
+/* rewrite blueprint */
+
+.hide{
+  text-indent:-9999px;
+  outline:0;
+  display:block;
+}
+.caps{
+  text-transform:uppercase;
+}
+.container{
+  font-size:0.9em;
+  padding:30px 0 0;
+}
+
+.exhibition_list img {
+  width: 130px;
+  float: left;
+  display: inline;
+  border: 1px solid #ccc;
+  margin: 5px 15px 10px 0px;
+  padding: 5px;
+}
+
+.exhibition {
+  clear: left;
+  padding:10px 0;
+}
+
+#content{
+  color:#333;
+}
+
+a {outline: none;}
+
+/* layout *********************************/
+h1,h2,h3,h4,h5,h6 {color:#333;}
+h1 {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+body {
+  font-family: verdana, 'lucida grande', arial, sans-serif;
+  color: #333;
+}
+
+#center_column {
+  margin-bottom: 40px;
+}
+
+#center_column p, #wide_column p{ font-size:11px; line-height:18px;}
+
+#center_column ul, #wide_column ul {
+  margin: 0px 0px 30px 10px;
+  padding: 0px;
+  list-style: none;
+}
+
+#center_column ol, #wide_column ol {
+  list-style-position: inside;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+}
+
+#center_column ul li, #wide_column ul li {
+  font-size:.9em;
+  line-height:16px;
+  padding: 2px 0px 2px 16px;
+  background:url(img/bullet-square.gif) no-repeat 0 7px;
+}
+
+#center_column ol li, #wide_column ol li {
+  font-size:.9em;
+  margin:5px 0;
+  padding:0 0 0 15px;
+}
+
+#center_column ul li ul, #wide_column ul li ul {
+  margin: 0px 0px 0px 25px;
+  padding: 0px;
+}
+
+#center_column ol li ul, #wide_column ol li ul {
+  margin: 0px 0px 0px 25px;
+  padding: 0px;
+}
+
+#center_column ul li ol li, #wide_column ul li ol li {
+  background: none;
+}
+
+#center_column h1, #wide_column h1 {
+  font-family: 'GothamBold','Helvetica Neue Bold', helvetica, arial, sans-serif;
+  font-size: 21px;
+  font-weight: normal;
+}
+#center_column h2, #wide_column h2 {
+  font-size: 1.5em;
+  line-height: 20px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom:5px;
+  font-family: 'GothamBold','Helvetica Neue Bold', helvetica, arial, sans-serif;
+}
+#center_column h3, #wide_column h3 {
+  font-size: 1.4em;
+  font-weight: normal !important;
+  margin: 24px 0px 12px 0px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 4px;
+  clear:both;
+}
+#sub_content #center_column .exhibition h3{
+  border:0;
+  font:bold 1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  clear:none;
+  line-height:1.3;
+  margin:0;
+}
+.exhibition p{
+  margin:10px 0;
+}
+
+#center_column h4, #wide_column h4 {
+  font-family: 'helvetica neue', 'lucida grande', arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 20px;
+  margin-bottom: 18px;
+  clear: both;
+}
+
+#center_column h4, #wide_column h4 {
+  font-family: 'lucida grande', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 20px;
+  margin: 5px 0px;
+}
+
+#center_column h5, #wide_column h5 {
+  font-family: 'lucida grande', verdana, arial, sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 20px;
+  margin: 5px 0px;
+}
+
+#center_column h6, #wide_column h6 {
+  font-family: verdana, arial, sans-serif;
+  font-weight: normal;
+  font-size: .8em;
+  line-height: 14px;
+  margin: 5px 0px;
+}
+
+
+#center_column blockquote p, #wide_column blockquote p {
+  font-size: 1.3em;
+  color: #777;
+  line-height: 20px;
+  font-family: Georgia, 'lucida grande', arial, sans-serif;
+  }
+
+
+/* common *********************************/
+a:link, a:visited{
+  color:#ee3224;
+  text-decoration:none;
+}
+a:hover, a:active{
+  text-decoration:underline;
+  color: #e17729;
+}
+
+/* header *********************************/
+#logo, #logo a{
+  height:73px;
+  background:url(http://smartmuseum.uchicago.edu/_img/smart-logo.jpg) no-repeat 0 0;
+  margin:0 21px 0 0;
+  padding:0;
+  float:left;
+}
+#logo a{
+  margin:0;
+  width:100%;
+}
+#header{
+  margin-bottom:30px;
+}
+#search{
+  color:#808080;
+  font-size:.9em;
+}
+#search label{
+  font-family:"GothamBook", "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: 0px;
+
+}
+#txtSearch{
+  padding:4px 5px;
+  width:205px;
+  border:1px solid #ddd;
+  -webkit-box-shadow: 0 1px 1px #ddd;
+  -moz-box-shadow: 0 1px 1px #ddd;
+  box-shadow: 0 1px 1px #ddd;
+  font-size:1em;
+  float:left;
+  margin:0;
+}
+
+#btnSearch{
+  width: 30px;
+  background-color: #fff;
+  border: 0 none;
+  padding: 0;
+  height: 21px;
+  float: left;
+  margin: 1px 0 0px 5px;
+  -webkit-box-shadow: 0 1px 1px #ddd;
+  -moz-box-shadow: 0 1px 1px #ddd;
+  box-shadow: 0 1px 1px #ddd;
+}
+
+#btnSearch img {
+  height: auto;
+  width: auto;
+  margin: 0 !important;
+  padding: 0;
+}
+
+/* nav *********************************/
+#nav, #nav li, #nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+#nav{
+  height:31px;
+  padding:10px 0 0;
+  border-top:2px solid #000;
+}
+#nav ul{
+  background:#000;
+  background:rgba(0,0,0,0.8);
+  position:absolute;
+  top:31px;
+  left:0;
+  width:150px;
+  z-index:99;
+  display:none;
+  padding:5px 0;
+}
+
+#nav li{
+  float:left;
+  position:relative;
+  z-index:1000;
+}
+#nav ul li{
+  float:none;
+}
+#nav a{
+  background:url(http://smartmuseum.uchicago.edu/_img/smart-navigation.gif) no-repeat 0 -10px;
+  height:31px;
+}
+#nav ul a{
+  display:block;
+  height:auto;
+  background:0;
+  color:#fff;
+  padding:5px 10px;
+  margin:0 5px;
+}
+#nav ul a:hover{
+  background:#fff;
+  color:#000;
+  background:rgba(255,255,255,0.8);
+  text-decoration:none;
+}
+a#home{
+  width:74px;
+  margin-right:22px;
+  background-position:-1px -10px;
+}
+a#visit{
+  width:71px;
+  margin-right:24px;
+  background-position:-97px -10px;
+}
+a#onview{
+  width:90px;
+  margin-right:20px;
+  background-position:-192px -10px;
+}
+a#calendar{
+  width:102px;
+  margin-right:20px;
+  background-position:-302px -10px;
+}
+a#collections{
+  width:117px;
+  margin-right:21px;
+  background-position:-424px -10px;
+}
+a#learn{
+  width:77px;
+  margin-right:22px;
+  background-position:-562px -10px;
+}
+a#news{
+  width:93px;
+  margin-right:21px;
+  background-position:-661px -10px;
+}
+a#about{
+  width:80px;
+  margin-right:20px;
+  background-position:-775px -10px;
+}
+a#contact{
+  width:93px;
+  background-position:-875px -10px;
+}
+/* hover state ***********************/
+a#home:hover{
+  background-position:-1px -71px;
+}
+a#visit:hover{
+  background-position:-97px -71px;
+}
+a#onview:hover{
+  background-position:-192px -71px;
+}
+a#calendar:hover{
+  background-position:-302px -71px;
+}
+a#collections:hover{
+  background-position:-424px -71px;
+}
+a#learn:hover{
+  background-position:-562px -71px;
+}
+a#news:hover{
+  background-position:-661px -71px;
+}
+a#about:hover{
+  background-position:-775px -71px;
+}
+a#contact:hover{
+  background-position:-875px -71px;
+}
+/* active state ***********************/
+a#home.here{
+  background-position:-1px -131px;
+}
+a#visit.here{
+  background-position:-97px -131px;
+}
+a#onview.here{
+  background-position:-192px -131px;
+}
+a#calendar.here{
+  background-position:-302px -131px;
+}
+a#collections.here{
+  background-position:-424px -131px;
+}
+a#learn.here{
+  background-position:-562px -131px;
+}
+a#news.here{
+  background-position:-661px -131px;
+}
+a#about.here{
+  background-position:-775px -131px;
+}
+a#contact.here{
+  background-position:-875px -131px;
+}
+
+/* content *********************************/
+
+
+
+#promo{
+  position:relative;
+  height:410px;
+  margin:10px 0 0;
+  z-index:1;
+  border:solid #ddd;
+  border-width:0 1px;
+
+}
+#promo h2{
+  margin:0;
+  padding:0;
+}
+#promo h2 a{
+  width:114px;
+  height:155px;
+  background:url(http://smartmuseum.uchicago.edu/_img/promo-be-part-of-the-smart.png) no-repeat 0 0;
+  position:absolute;
+  top:-5px;
+  right:40px;
+  z-index:10;
+}
+#promo h2 a:hover{
+/*  background-position: 0 0;*/
+}
+
+#switcher{
+  position:absolute;
+  top:60px;
+  left:-16px;
+  list-style:none;
+  padding:0;
+  margin:0;
+  width:14px;
+  height:400px;
+  z-index:9;
+}
+#switcher li{
+  margin:5px 0;
+}
+#switcher a{
+  display:block;
+  height:24px;
+  width:14px;
+  background:#ee3224;
+  border:solid #680f10;
+  border-width:2px 0 2px 2px;
+}
+#switcher a:hover {
+  background-color: #222;
+  border-color: #000;
+}
+#switcher a.active{
+  background:#e17729;
+  border-color:#c16622;
+}
+#promo_images{
+  position:relative;
+  overflow:hidden;
+  height:410px;
+}
+#promo img{
+  position:absolute;
+  left:0;
+  margin:0;
+  padding:0;
+  z-index:1;
+}
+#promo img.active{
+  left:0;
+  z-index:2;
+}
+
+#promo_content{
+  position:absolute;
+  top:45px;
+  left:0;
+  width:360px;
+  height:275px;
+  z-index:10;
+  overflow:hidden;
+  padding:0;
+}
+#promo_content_bg{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:969px;
+  height:13px;
+  background:url(http://smartmuseum.uchicago.edu/_css/img/promo_content_bg.png) no-repeat;
+  z-index:10;
+}
+
+#promo_content div.promo{
+  background:url(http://smartmuseum.uchicago.edu/_css/img/promo-bg.png);
+  position:absolute;
+  top:0;
+  left:-360px;
+  width:360px;
+  color:#fff;
+  height:100%;
+  overflow:hidden;
+}
+.scrollpane{
+  height:235px;
+  width:320px;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.promo small{
+  display:block;
+}
+
+#promo_content div.promo h3{
+  color:#fffffd;
+  font-size:1.2em;
+  border-bottom:1px solid #62615f;
+}
+
+#promo_content div.promo h3{
+  padding-bottom:5px;
+}
+
+#promo_content div.promo h4{
+  color:#c16622;
+  font-size:1.5em;
+  margin:0;
+}
+
+#promo_content div.promo p{
+  margin:10px 0;
+  line-height: 18px;
+}
+
+#promo_content div.promo a{
+ color:#fff;
+}
+#promo_content div.promo h4 a{
+ color:#e17729;
+}
+#promo_content div.promo h4 a:hover {
+  color: #c16622;
+}
+#promo_content div.promo h3 a{
+ color:#ddd;
+}
+#promo_content div.promo h3 a:hover {
+ color:#fff;
+}
+
+#promo_content div.promo a.learn_more{
+  display:block;
+  width:100px;
+  padding:5px 10px;
+  background-color: #444;
+  background-color: rgba(255,255,255,.2);
+  color:#fff;
+  margin:10px 0;
+  text-decoration:none;
+}
+#promo_content div.promo a.learn_more:hover{
+  background-color: #e17729;
+  background-color: rgba(255,119,41, .4);
+  color: #fff;
+  color: rgba(255,255,255,.8);
+  text-shadow: 0 1px 0 #333;
+}
+
+#promo_content div.promo a:hover{text-decoration:none;}
+
+#promo_content div.promo.show{
+  left:0;
+}
+
+#content{
+  border:solid #ddd;
+  border-width:0 1px;
+  padding:10px 0;
+}
+
+#events, #events dt{
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size:1em;
+}
+#events a {
+  color: #ee3224;
+  text-decoration: none;
+}
+#events a:hover {
+  color: #e17729;
+  text-decoration: none;
+}
+#events dt{
+  clear:both;
+  font-family:'GothamBold', Gotham, 'helvetica neue bold', helvetica, arial, sans-serif;
+  font-weight:normal !important;
+  font-size: 13px;
+  padding:10px 0 0;
+}
+#events dt.firstevent{
+  padding:0;
+  font-family:'GothamBold', Gotham, 'helvetica neue bold', helvetica, arial, sans-serif;
+  font-weight:normal !important;
+}
+#events dd{
+  padding:0 0 5px;
+  border:1px solid #fff;
+  border-bottom:1px dashed #ddd;
+  margin:5px 0 0;
+  overflow:hidden;
+  background:#fff;
+}
+#events dd.room{
+  display:none;
+}
+
+#events dd.date{
+  width:40px;
+  padding:5px;
+  margin:0 5px 0 0;
+  border:1px solid #ddd;
+  float:left;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+}
+.desc{
+  margin-left:90px;
+}
+
+
+#events dd.date:hover{
+  border-color:#f2f2f2;
+  color:#bf0c2c;
+}
+
+#content h2{
+  padding:0;
+  font-size:1.3em;
+  margin:15px 0 5px;
+}
+
+#content .span-12 h2{
+  padding-left:21px;
+}
+
+#content .span-3 img{
+  padding:2px;
+  border:1px solid #ddd;
+  background:#fefefe;
+  margin:0 0 0 21px;
+}
+
+.addthis_toolbox  {
+  background-color:#F3F3F3;
+  font-size:0.9em;
+  padding:1em;
+  width:140px;
+}
+.addthis_toolbox span {margin: 0px 4px 0px 0px;}
+/* footer *********************************/
+
+#branding{
+  background:#F2F2F2 url(http://smartmuseum.uchicago.edu/_img/branding_shadow.gif) repeat-x;
+  border:solid #f2f2f2;
+  border-width:0 1px;
+  padding:16px 0;
+}
+#branding a{
+  display:table-cell;
+  padding:0 21px;
+  vertical-align:middle;
+}
+#footer{
+  position:relative;
+  background:#dadada url(http://smartmuseum.uchicago.edu/_css/img/footer_bg.gif) repeat-x;
+  color:#ddd;
+  height:140px;
+  border:solid #ddd;
+  border-width:0 1px 1px;
+  font-family:"Gotham Book", "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size:1.1em;
+}
+
+#footer p:first-child{
+  margin-top:21px;
+}
+
+#footer p{
+  padding:5px 0;
+  margin:0 0 0 15px;
+  font-size: 12px;
+  font-family:"GothamBook", "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #555;
+}
+#footer p strong {
+  font-family:"GothamBold", "helvetica neue bold", Helvetica, Arial, sans-serif;
+  font-weight: normal !important;
+}
+
+#footer p span{
+  display:inline-block;
+  margin:0px 0px 0px 15px;
+}
+
+#footer p a{
+  color:#555;
+  text-decoration: none;
+}
+#footer p a:hover {
+  color:#7f1416;
+  text-decoration: none;
+}
+
+#footer ul, #footer ul li{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-family:"GothamBook", "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+#footer ul{
+  margin:6px 0 0 15px;
+}
+#footer #connect ul{
+  margin:0;
+}
+#footer ul li{
+  margin:0 8px 0 0;
+  float:left;
+  font-size:1em;
+}
+#footer ul li a{
+  display:block;
+  padding:3px 10px;
+  background-color:#aaa;
+  color:#fff;
+  text-decoration:none;
+  text-shadow: 0 1px 0 #000;
+}
+#footer ul li a:hover{
+  background-color: #ee3224;
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+}
+
+#footer #connect{
+  position:absolute;
+  top:15px;
+  right:-5px;
+  width:180px;
+  background:#fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: -1px 1px 1px #bbb;
+  -moz-box-shadow: -1px 1px 1px #bbb;
+  box-shadow: -1px 1px 1px #bbb;
+  padding:10px;
+  font-size:1em;
+}
+#footer #connect h3{
+  font-size: 14px;
+  font-family: 'GothamBook', Gotham, 'helvetica neue bold', helvetica, arial, sans-serif;
+  font-weight: normal !important;
+  color: #555;
+  margin: 3px 0 8px;
+  padding:0;
+}
+#footer #connect span{
+  display:block;
+  position:absolute;
+  width:5px;
+  height:4px;
+  background:url(http://smartmuseum.uchicago.edu/_img/corner1.png) no-repeat;
+  bottom:-4px;
+  right:0px;
+}
+#footer #connect ul li{
+  font-family: 'GothamBook', verdana, arial, sans-serif;
+  margin:5px 0;
+  font-weight: normal !important;
+  font-size:.9em;
+  width:50%;
+}
+#footer #connect ul li a{
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #ee3224;
+  padding-left:25px;
+  line-height:15px;
+  text-shadow: none;
+}
+#footer #connect ul li a#newsletter{
+  background:url(http://smartmuseum.uchicago.edu/_img/newsletter2.png) no-repeat;
+}
+#footer #connect ul li a#twitter{
+  background:url(http://smartmuseum.uchicago.edu/_img/twitter.png) no-repeat;
+  margin-left:10px;
+}
+#footer #connect ul li a#facebook{
+  background:url(http://smartmuseum.uchicago.edu/_img/facebook.png) no-repeat;
+}
+
+#footer #connect ul li a#rss{
+  background:url(http://smartmuseum.uchicago.edu/_img/rss.png) no-repeat;
+  margin-left:10px;
+}
+#footer #connect ul li a:hover {
+  color: #be5a5c;
+  text-decoration: none;
+  }
+
+
+/*Search Results **********************/
+.search-results h4 {
+  margin-bottom: .25em;
+}
+
+.search-result {
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 1.5em;
+  padding-bottom: 1px;
+}
+
+
+/* == Fonts == */
+.univers-std a:hover{
+  text-decoration:none !important;
+}
+
+.univers-std, #content h3.univers-std{
+  font-family:'GothamBold', Gotham, 'helvetica neue bold', helvetica, arial, sans-serif;
+}
+.univers-std.boldcn{
+  font-family:'GothamBook', 'helvetica neue', helvetica, arial, sans-serif;
+  font-weight:normal !important;
+}
+.univers-std.light, #content h3, #sub_content h3{
+  font-family:'GothamBook', 'helvetica neue', helvetica, arial, sans-serif;
+  font-weight:normal !important;
+}
+/*
+@font-face{
+  font-family:'UniversLTStdBold';
+  src: url('fonts/UniversLTStd-Bold.otf') format('opentype');
+}
+@font-face{
+  font-family:'UniversLTStdBoldCn';
+  src: url('fonts/UniversLTStd-BoldCn.otf') format('opentype');
+}
+@font-face{
+  font-family:'UniversLTStdLight';
+  src: url('fonts/UniversLTStd-Light.otf') format('opentype');
+}*/

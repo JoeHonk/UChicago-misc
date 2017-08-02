@@ -1,0 +1,42 @@
+.breadcrumb .bc_wrapper span.last {
+    color: #b30343;
+    font-weight: 700;
+}
+
+
+.main_content h1 {
+    font: normal 300 2.92857143em 'Gotham SSm A','Gotham SSm B',Helvetica,Arial,sans-serif;
+    color: #b30343;
+}
+
+
+#contentArea h3 {
+    border-bottom: 0 none;
+    color: #b30343 !important;
+    font: 300 1.85714em'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+form#FormDonation legend {
+    font: normal 300 1.85714286em 'Gotham SSm A','Gotham SSm B',Helvetica,Arial,sans-serif;
+      color: #b30343 !important;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 0;
+}
+
+
+#contentArea input.btn {
+    background: #7dd2f7 !important;
+    border-color: #587abc !important;
+    color: #b30343 !important;
+    padding: 15px 20px;
+}
+
+a {
+    color: #b30343 !important;
+    text-decoration: none;
+}

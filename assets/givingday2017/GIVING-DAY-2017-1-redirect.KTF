@@ -1,0 +1,7 @@
+<a href="https://givingday.uchicago.edu/">Javascript is disabled. Click here.</a>
+<script type="text/javascript">
+window.onload = function (){
+window.location = "https://givingday.uchicago.edu/";
+}
+</script>
+<kintera:webFeature />

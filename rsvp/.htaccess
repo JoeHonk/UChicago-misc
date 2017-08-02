@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Restricted"
+AuthUserFile /vhosts/alumnidev/sphereapi/.htpasswd
+#Require valid-user
+
+
+
+Header set Access-Control-Allow-Origin "*"

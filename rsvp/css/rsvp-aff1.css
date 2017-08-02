@@ -1,0 +1,74 @@
+.look-whos-coming .light-gradient {
+    background: -webkit-linear-gradient(90deg, #ededea 0, rgba(237, 237, 234, 0) 100%);
+    background: -moz-linear-gradient(0deg, #ededea 0, rgba(237, 237, 234, 0) 100%);
+    background: linear-gradient(0deg, #ededea 0%, rgba(237, 237, 234, 0) 100%);
+}
+
+.look-whos-coming .light-gradient {
+    bottom: 35px;
+    right: 15px;
+}
+
+.look-whos-coming{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-y: auto;
+    min-height: 80px;
+    max-height: 220px;
+    padding-bottom: 20px;
+}
+
+.look-whos-coming .light-gradient {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    color: rgba(0, 0, 0, 0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: -webkit-linear-gradient(90deg, white 0, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(0deg, white 0, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+    position: absolute;
+    bottom: 1px;
+    left: 16px;
+    right: 16px;
+    z-index: 800;
+    display: block;
+    height: 50px;
+}
+
+.look-whos-coming li{
+    font-size: 14px;
+    line-height: 20px;
+    list-style-type: none;
+    font-weight: normal;
+    color: #3C3C3C;
+
+}
+
+
+.look-whos-coming ul{
+    padding-left: 0;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+.not-logged-in .pane-bundle-text {
+display: none;
+}
+
+.showlwc{
+    display: block !important;
+}
+

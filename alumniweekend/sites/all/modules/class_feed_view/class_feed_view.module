@@ -1,0 +1,165 @@
+<?php
+/**
+* Implements hook_views_pre_view.
+*/
+function class_feed_view_views_views_api() {
+  return array(
+    'api' => 3, 
+ );
+}
+
+
+//function class_feed_view_node_view_alter($node, $view_mode, $langcode) {
+//  if (isset($node->field_reunion_class_year['und'][0]['tid'])); {
+ //   $nodeterm = $node->field_reunion_class_year['und'][0]['tid'];
+//    if ($nodeterm == 47) {
+//		echo '<h1>SUCCESS</h1>';
+		
+	//}
+//  }
+//}
+
+function class_feed_view__module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'views_pre_view') {
+    // Move class_feed_view to the end of the list. module_implements()
+    
+    $group = $implementations['class_feed_view'];
+    unset($implementations['class_feed_view']);
+    $implementations['class_feed_view'] = $group;
+  }
+}
+
+function class_feed_view_node_view($node, $view_mode, $varresult = NULL){
+ $varresult = &drupal_static('class_feed_view_node_view');
+  $nodethis = $node->vid;
+  $result = db_query('SELECT field_reunion_class_year_tid FROM {field_revision_field_reunion_class_year} WHERE entity_id = :nid', array(':nid' => $nodethis))->fetchField();
+$varresult = $result; 
+return $varresult;
+
+$varresult = &drupal_static('class_feed_view_node_view');
+}
+
+function class_feed_view_views_pre_view(&$view, &$display_id, &$args) {
+drupal_add_library('system', 'ui');
+drupal_add_library('system', 'ui.draggable');
+$varresult = drupal_static('class_feed_view_node_view');
+
+if ($varresult == 1){
+
+  $f = 'emeriti';
+ }
+ 
+ if ($varresult == 2){
+
+  $f = '63';
+ }
+ 
+ if ($varresult == 3){
+
+  $f = '68';
+ }
+ 
+ if ($varresult == 4){
+
+  $f = '73';
+ }
+ 
+ if ($varresult == 5){
+
+  $f = '78';
+ }
+ 
+ if ($varresult == 6){
+
+  $f = '83';
+ }
+ 
+ if ($varresult == 7){
+
+  $f = '88';
+ }
+ 
+ if ($varresult == 8){
+
+  $f = '93';
+ }
+ 
+ if ($varresult == 9){
+
+  $f = '98';
+ }
+ 
+ if ($varresult == 10){
+
+  $f = '03';
+ }
+ 
+ if ($varresult == 11){
+
+  $f = '04';
+ }
+ 
+ if ($varresult == 12){
+
+  $f = '05';
+ }
+ 
+ if ($varresult == 13){
+
+  $f = '06';
+ }
+ 
+ if ($varresult == 14){
+
+  $f = '07';
+ }
+ 
+ if ($varresult == 15){
+
+  $f = '08';
+ }
+ 
+ if ($varresult == 16){
+
+  $f = '09';
+ }
+ 
+ if ($varresult == 17){
+
+  $f = '10';
+ }
+ 
+ if ($varresult == 18){
+
+  $f = '11';
+ }
+ 
+ if ($varresult == 19){
+
+  $f = '12';
+ }
+ 
+				
+
+
+if (isset($f)){
+
+  			if (
+    		$view->name == 'alumni_feed_test_block' 
+  				) {
+    			 $view->display['default']->handler->options['filters']['field_year_degree_value']['value'] = $f;
+  				}	  
+ 
+}
+drupal_static_reset('class_feed_view_node_view');
+}
+	
+
+
+
+
+
+
+
+
+?>

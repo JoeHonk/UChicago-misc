@@ -1,0 +1,358 @@
+h1, h2, * {
+  font-family: 'ProximaNova-Regular' !important;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+img#heroimage {
+  width: 100%;
+}
+
+img#footerimg {
+  width: 100%;
+}
+
+.footer {
+  background-color: #800000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.region-footer {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+  white-space: nowrap;
+}
+
+body.navbar-is-fixed-top {
+  padding-top: 100px;
+}
+
+
+/*
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+
+/*
+body {
+  overflow-x: hidden;
+}
+*/
+
+
+/*
+.container {
+  max-width: 80%;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+*/
+
+
+/*
+header {
+  height: 50px;
+  background: #663399;
+}
+*/
+
+#herodiv {
+  /*height: 100px;*/
+  position: relative;
+}
+
+#herodiv:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: #000;
+  z-index: -1;
+}
+
+
+/*
+footer {
+  height: 50px;
+  background: #bada55;
+}
+*/
+
+.navbar-default {
+  background-color: #800000;
+  border-color: #800000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:hover, .navbar-default .navbar-nav> .active> a:focus {
+  color: #800000;
+  background-color: #ffa319;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-default .navbar-nav> li> a {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus {
+  color: #800000;
+  background-color: #ffa319;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer {
+  margin-top: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: none;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffa319;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer {
+  /*box-shadow: 0px 600px 0px 500px #800000;*/
+  color: #fff;
+}
+
+.footercontent {
+  color: #fff;
+  font-size: 16px;
+  padding-bottom: 60px;
+}
+
+.footercontent a {
+  color: #fff;
+}
+
+
+/*
+.navbar-collapse.collapse.in {
+    background: #800000 !important;
+    border: none;
+    float: right;
+    width: 100%;
+}
+*/
+
+.page-header {
+  /*margin-top: 0;*/
+}
+
+.main-container{
+padding-top:100px;
+}
+
+
+.front .main-container{
+padding-top:0;
+}
+
+
+
+#navbar .container {
+  background-image: url(https://crowdfunding.uchicago.edu/sites/all/themes/bootstrap/img/Crowdfunding-header.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.navbar-toggle {
+  position: relative;
+  top: 0;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: right !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #navbar .container {
+    background-image: none;
+  }
+  .navbar-header {
+    background-image: url(https://crowdfunding.uchicago.edu/sites/all/themes/bootstrap/img/Crowdfunding-header.jpg);
+    background-size: cover;
+  }
+
+  body.navbar-is-fixed-top {
+    padding-top: 56px;
+  }
+
+}
+
+.region-footer {
+  padding-top: 60px;
+}
+
+.footerlogo {
+  margin-left: -3px;
+  margin-bottom: 5px;
+  width: 100%;
+  max-width: 321px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #e7e7e7;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    min-height: 100px;
+  }
+  .logo {
+    padding-top: 22px;
+    margin-left: 110px;
+  }
+  .navbar-nav> li {
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+#cf-project #cf-project-stats #project-success-message, #cf-project #cf-project-stats #project-unsuccessful-message {
+  background: #800000;
+  font-family: 'ProximaNova-Regular';
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 0 10px 30px;
+  text-align: left;
+  position: relative;
+  margin: 20px -30px 0;
+  color: #fff;
+}
+
+.page-header {
+  /*visibility: hidden;*/
+}
+
+.front .page-header {
+visibility: hidden;
+}
+
+.region-content{
+  min-height: 500px;
+}
+
+
+#empowered-by-cf .project-card {
+    float: left;
+    margin: 20px 1%;
+    /* max-width: 285px; */
+    width: 100% !important;
+    max-width: initial;
+}
+
+#project-categories, #explore-projects-aux-nav{
+  display: none;
+}
+
+
+#page-header{
+  display: none;
+}
+
+
+
+#herocontainer {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+
+  #empowered-by-pinned-icons #empowered-by-pinned-icons-inner {
+    background-color: #f5f5f5;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    padding: 5px;
+    width: 42px !important;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    z-index: 999;
+    border-width: 1px 1px 1px 0;
+    border-color: #dbdbdb;
+    border-style: dotted;
+    -webkit-box-shadow: 2px 2px 8px #666666;
+    box-shadow: 2px 2px 8px #666666;
+}
+
+
+#cf-project .btn-success {
+    color: #fff;
+    background-color: #800000 !important;
+    border-color: #800000  !important;
+}
+
+#cf-project .btn-success:hover{
+/*color: #ffa319;
+background-color: #ffa319;
+text-transform: uppercase;
+-webkit-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+*/
+}
+
+
+@media (min-width: 768px){
+.navbar {
+    border-radius: 0 !important;
+}
+}
+
+.page-node-5 .page-header{
+  display:none;
+}

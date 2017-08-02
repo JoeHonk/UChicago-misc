@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    max-width: initial;
+}
+
+
+/*
+*{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+*/
+
+p{
+
+  line-height: 20px;
+
+}
+/*
+
+a{
+  font-weight: bold;
+  color: #3E7C97;
+  text-decoration: none;
+}
+h1{
+  color: #800000;
+  font-size: 25px;
+}
+
+a:hover{
+  text-decoration: underline;
+    color: #3E7C97;
+}
+
+*/
+    .img-responsive {
+        display: block;
+        margin: auto;
+    }
+    .content {
+        display: block;
+        margin: auto;
+        max-width: 600px;
+    }
+    .mktoGen.mktoImg {
+        display: block !important;
+        line-height: 0;
+    }
+
+
+.lpimg{
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.bodyText{
+  line-height: 24px;
+}
+
+.nopad{
+  margin:0;
+  padding: 0;
+}

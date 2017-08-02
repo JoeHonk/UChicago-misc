@@ -1,0 +1,155 @@
+.floatright {
+    float: right;
+}
+@media (max-width: 768px) {
+    .floatright {
+        float: none;
+    }
+}
+.main_content {
+    margin-bottom: 40px;
+}
+.main_content .col-sm-5 {
+    padding-top: 30px;
+}
+#contentArea {
+    padding-bottom: 60px;
+}
+.related-links {
+    min-width: 290px;
+}
+@media only screen and (max-width: 767px) {
+    footer.container-fluid .col-sm-4 {
+        width: 100%
+    }
+    .address.col-sm-8 ul.social-media {
+    	width: 100%
+    }
+}
+
+
+p{
+    line-height: 1.875em;
+}
+
+
+.togglePayOpt  label.control-label{
+    font-size: 12px;
+}
+
+#FormDonation h3{
+    /*white-space: nowrap;*/
+}
+
+#companyMatch .help-block{
+    display: none;
+}
+
+form b {
+font-weight: 700;
+color: #f00;
+}
+
+#oneTimeGift label.control-label{
+    font-size: 14px;
+}
+
+.goldbg{
+    background-color: #fba619;
+}
+
+.headingtext{
+    padding: 30px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #000;
+}
+
+.headingtext h3{
+    font-size: 22px;
+    color: #000;
+}
+
+.headingtext{
+    font-size: 12px;
+}
+
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+a#uchicago-wordmark {
+  display: block;
+  text-indent: -9999em;
+  width: 270px;
+  height: 56px;
+  background: transparent url(/i/template/uchicago_wordmark.png)0 0 no-repeat;
+  background-size: 100%;
+}
+
+.main_content p small{
+  line-height: 6px !important;
+  font-size: 80%
+}
+
+/*
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+     padding-left: 15px;
+    padding-right: 15px;
+}
+*/
+
+
+
+input[type="radio"] {
+  background: #000000 !important;
+  margin-top: 2px !important;
+}
+
+
+
+input[type="radio"] {
+  background: #000000 !important;
+  margin-top: 2px;
+}
+
+
+
+.row {
+ margin-left: 0;
+    margin-right: 0;
+}
+
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12_, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.main_content{
+  padding-right: 30px;
+}

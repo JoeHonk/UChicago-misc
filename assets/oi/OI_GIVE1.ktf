@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<!--<![endif]-->
+
+<head>
+    <link href="https://www.kintera.org/site/layout/default.css" rel="stylesheet" type="text/css">
+    <link href="https://www.kintera.org/site/layout/content.css" rel="stylesheet" type="text/css">
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="https://oi.uchicago.edu/sites/oi.uchicago.edu/themes/oi/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta name="description" content="We hope you have enjoyed visiting the Oriental Institute web site and Virtual Museum. We would welcome your support, and hope you will consider a donation to the Oriental Institute. You may use our online donor form or print and fax or mail the paper project checklist and contribution form; you may contact us directly for information on securities transfers, multi-year pledges, and other giving options."
+    />
+    <title>Make a Gift | The Oriental Institute of the University of Chicago</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <link href="https://campaign.uchicago.edu/css/site.css" rel="stylesheet" media="screen">
+    <link href="https://alumnidev.uchicago.edu/ktf/socks1/style.css" rel="stylesheet" media="screen">
+
+    <!--[if lt IE 9]>
+  <script src="https://oi.uchicago.edu/sites/oi.uchicago.edu/themes/zen/js/respond.js"></script>
+  <![endif]-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://alumnidev.uchicago.edu/assets/oi/OI_2.CSS" rel="stylesheet" />
+
+    <!--
+  /**
+   * @license
+   * MyFonts Webfont Build ID 2820740, 2014-05-30T11:22:32-0400
+   *
+   * The fonts listed in this notice are subject to the End User License
+   * Agreement(s) entered into by the website owner. All other parties are
+   * explicitly restricted from using the Licensed Webfonts(s).
+   *
+   * You may obtain a valid license at the URLs below.
+   *
+   * Webfont: Proxima Nova Light by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light/
+   *
+   * Webfont: Proxima Nova Regular by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+   *
+   * Webfont: Proxima Nova Bold by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+   *
+   *
+   * License: http://www.myfonts.com/viewlicense?type=web&buildid=2820740
+   * Licensed pageviews: 20,000,000
+   * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+   *
+   * © 2014 MyFonts Inc
+  */
+  -->
+
+
+</head>
+
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node">
+    <p id="skip-link">
+        <a href="#main-content">Skip to main content</a>
+        <a href="#left-nav">Skip to internal navigation</a>
+    </p>
+
+    <div class="header-container">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="mobile-branding">
+                    <div class="uc-wordmark-mobile">The University of Chicago</div>
+                </div>
+                <button type="button" class="btn btn-navbar nav-button" title="Toggle Sub-navigation"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <div class="mobile-top-nav-container">
+                    <ul class="mobile-top-nav">
+                        <li><a href="http://oi.uchicago.edu/visit">Plan Your Visit</a></li>
+                        <li><a href="http://oi.uchicago.edu/programs-events">Programs &amp; Events</a></li>
+                        <li><a href="http://oi.uchicago.edu/museum-exhibits">Museum &amp; Exhibits</a></li>
+                        <li><a href="http://oi.uchicago.edu/collections">Collections</a></li>
+                        <li><a href="http://oi.uchicago.edu/research">Research</a></li>
+                        <li><a href="http://oi.uchicago.edu/support-us">Support Us</a></li>
+                        <li><a href="http://oi.uchicago.eduabout">About</a></li>
+                        <li><a href="http://oi.uchicago.edu/contact">Contact</a></li>
+                    </ul>
+                    <form method="get" class="mobile-search" action="https://oi.uchicago.edu/search">
+                        <input type="text" size="15" name="GSAq" placeholder="Search" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="region region-utility-nav">
+            <div id="block-block-7" class="block block-block first odd">
+
+
+                <ul>
+                    <li><a href="http://oi.uchicago.edu/visit/museum-shop-suq">Museum Shop</a></li>
+                    <li><a href="http://oi.uchicago.edu/programs-events">Events</a></li>
+                    <li><a href="http://oi.uchicago.edu/visit/educators">For Educators</a></li>
+                </ul>
+            </div>
+            <div id="block-block-8" class="block block-block last even">
+
+
+                <ul>
+                    <li><a href="http://oi.uchicago.edu/contact">Contact</a></li>
+                    <li><a href="http://oi.uchicago.edu/about">About</a></li>
+                    <li><a href="http://oi.uchicago.edu/support/become-member">Membership</a></li>
+                </ul>
+            </div>
+        </div>
+        <header class="header" id="header" role="banner">
+            <h1 id="site-name">
+      <a href="http://oi.uchicago.edu/" title="Home" rel="home"><span>The Oriental Institute of the University of Chicago</span></a>
+    </h1>
+            <a href="http://www.uchicago.edu" class="uc-wordmark">University of Chicago</a>
+        </header>
+    </div>
+
+    <div class="top-nav-container clear264" role="navigation">
+        <div class="top-nav-inner">
+            <ul class="top-nav">
+                <li><a href="http://oi.uchicago.edu/visit" id="nav-visit">Plan Your Visit</a></li>
+                <li><a href="http://oi.uchicago.edu/programs-events" id="nav-programs-events">Programs &amp; Events</a></li>
+                <li><a href="http://oi.uchicago.edu/museum-exhibits" id="nav-galleries-exhibits">Museum &amp; Exhibits</a></li>
+                <li><a href="http://oi.uchicago.edu/collections" id="nav-collections">Collections</a></li>
+                <li><a href="http://oi.uchicago.edu/research" id="nav-research">Research</a></li>
+                <li><a href="http://oi.uchicago.edu/support-us" id="nav-support-us">Support Us</a></li>
+            </ul>
+            <form method="get" id="search" action="https://oi.uchicago.edu/search">
+                <input type="text" size="15" id="searchterm" name="GSAq" placeholder="Search" />
+            </form>
+        </div>
+    </div>
+
+    <div id="page">
+        <div id="main">
+
+            <div id="content-top">
+                <h1 class="page__title title" id="page-title">Make a Gift</h1>
+                <nav class="breadcrumb" role="navigation">
+                    <h2 class="element-invisible">You are here</h2>
+                    <ol>
+                        <li><a href="http://oi.uchicago.edu/">Home</a> / </li>
+                        <li><a href="http://oi.uchicago.edu/support-us">Support Us</a> / </li>
+                        <li>How to Give</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <aside class="sidebars">
+                <a id="left-nav"></a>
+                <div class="mobile-section-navigation"><a href="#">Section Navigation <span class="ss-icon ss-standard">&#8250;</span></a></div>
+                <section class="region region-sidebar-first column sidebar">
+                    <div id="block-menu-block-3" class="block block-menu-block first last odd" role="navigation">
+
+
+                        <div class="menu-block-wrapper menu-block-3 menu-name-menu-support-us parent-mlid-0 menu-level-2">
+                            <ul class="menu">
+                                <li class="menu__item first"><a href="http://oi.uchicago.edu/support/become-member" class="menu__link">Become a Member</a></li>
+                                <li class="menu__item"><a href="http://oi.uchicago.edu/support/oriental-institute-volunteer-program" class="menu__link">Become a Volunteer</a></li>
+                                <li class="menu__item is-active is-active-trail active-trail active"><a href="http://oi.uchicago.edu/support/how-give" title="" class="menu__link is-active-trail active-trail active">Make a Gift</a></li>
+                                <li class="menu__item"><a href="http://oi.uchicago.edu/support/adopt-dig" class="menu__link">Adopt-a-Dig</a></li>
+                                <li class="menu__item last"><a href="http://oi.uchicago.edu/support/research-archives-adopt-journal-campaign" class="menu__link">Adopt-a-Journal</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+            </aside>
+
+            <a id="main-content"></a>
+            <div id="content" class="column" role="main">
+
+                <!-- BEGIN GIVING FORM -->
+<kintera:webFeature/>
+
+                <!-- END GIVING FORM -->
+    </div>
+    </div>
+
+    <div class="footer-container">
+        <footer id="footer">
+            <div class="region region-footer-first">
+                <div id="block-block-2" class="block block-block first last odd">
+
+
+                    <p>Museum:
+                        <br />(773) 702-9520
+                        <br /><a href="mailto:oi-museum@uchicago.edu">oi-museum@uchicago.edu</a></p>
+                    <p>Administration:
+                        <br />(773) 702-9514
+                        <br /><a href="mailto:oi-administration@uchicago.edu">oi-administration@uchicago.edu</a></p>
+                </div>
+            </div>
+            <div class="region region-footer-second">
+                <div id="block-block-3" class="block block-block first last odd">
+
+
+                    <p><a href="http://oi.uchicago.edu/visit">Plan Your Visit</a>
+                        <br /><a href="http://oi.uchicago.edu/programs-events">Programs &amp; Events</a>
+                        <br /><a href="http://oi.uchicago.edu/museum-exhibits">Museum &amp; Exhibits</a>
+                        <br /><a href="http://oi.uchicago.edu/collections">Collections</a>
+                        <br /><a href="http://oi.uchicago.edu/research">Research</a>
+                        <br /><a href="http://oi.uchicago.edu/support-us">Support Us</a></p>
+                </div>
+            </div>
+            <div class="region region-footer-third">
+                <div id="block-block-4" class="block block-block first last odd">
+
+                </div>
+            </div>
+            <div class="region region-footer-fourth">
+                <div id="block-block-5" class="block block-block first last odd">
+
+
+                    <p><a href="http://oi.uchicago.edu/visit/museum-shop-suq">Museum Shop</a>
+                        <br /><a href="http://oi.uchicago.edu/programs-events">Events</a>
+                        <br /><a href="http://oi.uchicago.edu/visit/educators">For Educators</a>
+                        <br /><a href="http://oi.uchicago.edu/support/become-member">Membership</a>
+                        <br /><a href="http://oi.uchicago.edu/about">About</a>
+                        <br /><a href="http://oi.uchicago.edu/contact">Contact</a></p>
+                </div>
+            </div>
+            <div class="region region-footer-fifth">
+                <div id="block-block-6" class="block block-block first odd">
+
+
+                    <p><a href="http://oi.uchicago.edu/visit/admission-hours">Museum Hours</a>
+                        <br /><a href="http://oi.uchicago.edu/visit/directions-parking">Map &amp; Directions</a></p>
+                </div>
+                <div id="block-block-10" class="block block-block last even">
+
+
+                    <p><a href="http://oi.uchicago.edu/user?destination=node/3017" class="login-link">&copy;</a> 2014 The Oriental Institute of
+                        <br />The University of Chicago
+                        <br />1155 E 58th St.
+                        <br />Chicago, IL 60637</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-3572058-1"]);
+        _gaq.push(["_trackPageview"]);
+        _gaq.push(['_setDomainName', '.oi.uchicago.edu']);
+        _gaq.push(['_setAllowAnchor', true]);
+        _gaq.push(['secondTracker._setAccount', 'UA-5133947-1']);
+        _gaq.push(['secondTracker._trackPageview']);
+        _gaq.push(['secondTracker._setDomainName', '.oi.uchicago.edu']);
+        _gaq.push(['secondTracker._setAllowAnchor', true]);
+        (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript";
+            ga.async = true;
+            ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script src="https://oi.uchicago.edu/sites/oi.uchicago.edu/themes/oi/js/script.js"></script>
+</body>
+
+</html>

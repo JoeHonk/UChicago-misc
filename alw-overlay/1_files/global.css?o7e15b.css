@@ -1,0 +1,707 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+@charset "UTF-8";
+
+body, p {
+	font-family: 'ProximaNova-Regular';
+	font-weight: normal;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'ProximaNova-SemiBold';
+	font-weight: normal;
+	}
+
+h1#page-title {
+	text-transform: uppercase;
+	}
+
+h3 {
+	color: #f7a11a;
+	font-size: 18px;
+	margin-bottom: 4px;
+	}
+
+body {
+	/*background-color: #fbfbf7;*/
+	background-color: #fff;
+	}
+
+a:link, a:visited { text-decoration: none; }
+
+img {
+	max-width: 100%;
+	}
+
+div.logo-img {margin-bottom: 20px;}
+
+#zone-menu-wrapper { background-color: #333; margin-left: auto; margin-right: auto; }
+#region-header-first { margin: 0; }
+#zone-branding-wrapper { padding-top: 20px; margin-bottom: 0px; }
+#region-sidebar-second { margin-bottom: 20px; }
+
+#block-block-93 div.block-inner div.content p { text-align: right; }
+
+#breadcrumb, #first-time, #region-branding-second { display: none; } /* hide some stuff */
+
+body.context-event #page-title {
+	display: block;
+	font-family: 'ProximaNova-SemiBold';
+	font-size: 22px;
+	color: #f7a11a;
+	}
+
+/* much ado about menus */
+
+#region-menu { margin-left: 4px; }
+
+
+#block-system-main-menu div.block-inner div.content ul.menu {
+	min-height: 32px;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 6px 8px;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li a {
+	font-family: 'ProximaNova-Semibold';
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0px;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li ul {
+	display: none; /* hides the submenu */
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li:hover a, #block-system-main-menu div.block-inner div.content ul.menu li:hover ul li:hover a, #block-system-main-menu div.block-inner div.content ul.menu li.active-trail {
+	color: #f7a11a;
+	}
+
+/* main nav submenu */
+
+
+
+#block-system-main-menu div.block-inner div.content ul.menu li ul {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	background-color: #333333;
+	width: 260px;
+	margin: 0 0 0 -10px;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li ul li { display: block; }
+
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul li a {
+	color: #ffffff;
+	}
+
+/* hide the 3rd level nav items from the main nav */
+	ul.menu li ul.menu li ul.menu { display: none; }
+
+/* headers */
+
+
+/* global register/gift stuff */
+
+#global-register, #global-makeagift {
+	padding: 0;
+	margin: 0 20px;
+}
+
+#global-register a, #global-makeagift a {
+	display: block;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'ProximaNova-SemiBold';
+	background-color: #f7a11a;
+	}
+
+
+
+#global-makeagift a {
+	background-color: #800000;
+	}
+
+/* footer stuff */
+#zone-postscript {
+	background-color: #313131;
+	color: #ffffff;
+	font-size: 12px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+
+#zone-postscript a {
+	color: #ffffff;
+	}
+
+#zone-postscript a:hover {
+	border-bottom: 1px dotted #ffffff; }
+
+#block-block-5 h4 {
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	font-size: 14px;
+	}
+
+#block-block-5 p { margin-bottom: 10px; }
+
+#zone-postscript ul { list-style-type: none; margin-bottom: 0px }
+
+#region-postscript-third a {
+	font-family: 'ProximaNova-Bold';
+	}
+
+ul#footer-action-items li a {
+	display: block;
+	text-align: left;
+	padding: 5px 0px;;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'ProximaNova-SemiBold';
+	}
+
+
+
+ul#footer-action-items li a:hover { border-bottom: none;}
+
+#block-block-7 {margin-top: 0px; margin-bottom: 20px;}
+
+#block-block-7 div.block-inner h2.block-title {
+	font-size: 14px;
+	margin-top: 0px;
+	width: 100%;
+	}
+
+#footer-social-icons ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	}
+
+#footer-social-icons li {
+	display: block;
+	margin: 0px 16px 0px 0px;
+	padding: 0px;
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+	float: left;
+	background-color: #d6d6ce;
+	}
+
+#footer-social-icons li a {
+	display: block;
+	height: 32px;
+	width: 32px;
+	padding-left: 200px;
+	}
+
+#footer-social-icons li:hover {
+	background-color: #ffffff;
+	}
+
+#footer-social-icons li.tw-icon {
+    background-image: url("../images/icon-twitter.png");
+    background-repeat: no-repeat;
+	}
+
+#footer-social-icons li.fb-icon {
+    background-image: url("../images/icon-facebook.png");
+    background-repeat: no-repeat;
+	}
+
+#footer-social-icons li.ig-icon {
+    background-image: url("../images/icon-instagram.png");
+    background-repeat: no-repeat;
+	}
+
+	#footer-social-icons li.sc-icon {
+    background-image: url("../images/snapchat-logo.png");
+    background-repeat: no-repeat;
+	}
+
+#block-block-92 { margin-top: 20px; }
+
+
+/*styling event listings*/
+
+/*body.context-events div.item-list ul li.views-row,*/ body.context-reunions div.item-list ul li.views-row, body.context-reunion div.item-list ul li.views-row/*, body.context-event div.item-list ul li.views-row, /*body.context-schedule div.item-list ul li.views-row*/ {
+	margin-left: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	}
+
+div.view-alumni-feed-test-block div.view-content div.item-list ul li.views-row {
+	margin-bottom: 0px;
+	border: none;
+	}
+
+div.view-alumni-feed-test-block div.view-content div.item-list ul li.views-row p.whos_coming_p {
+	margin-bottom: 0px;
+	}
+
+div.view-alumni-feed-test-block, div.slimScrollDiv {
+	/*margin-bottom: 20px;*/
+	}
+
+/*body.context-events li div.views-field-title,*/ body.context-reunions li div.views-field-title, body.context-reunion li div.views-field-title /*, body.context-event li div.views-field-title, body.context-schedule li div.views-field-title*/ {
+	font-family: 'ProximaNova-Semibold';
+	font-size: 15px;
+	color: #800000;
+	}
+
+/*body.context-events #zone-content-wrapper h2.block-title, body.context-schedule #zone-content-wrapper h2.block-title, body.context-event #zone-content-wrapper h2.block-title,*/ body.context-reunion #zone-content-wrapper h2.block-title {
+	text-transform: none;
+	color: #f7a11a;
+	font-family: 'ProximaNova-Semibold';
+	font-size: 18px;
+	}
+
+/*body.context-events div.view-header, */body.context-reunions div.view-header, body.context-reunion div.view-header /*,body.context-event div.view-header, body.context-schedule div.view-header*/ {
+	text-align: right;
+	margin-top: -44px;
+	}
+
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 h2.block-title, #block-views-all-events-thursday-block h2.block-title, #block-views-all-events-friday-block h2.block-title, #block-views-all-events-sunday-block h2.block-title {
+	background-color: #454444;
+	padding-left: 4px;
+	padding-top: 2px;
+	}
+
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p, #block-views-all-events-thursday-block div.view-header p, #block-views-all-events-friday-block div.view-header p, #block-views-all-events-sunday-block div.view-header p {
+	color: #999;
+	padding-right: 10px;
+	}
+
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p a, #block-views-all-events-thursday-block div.view-header p a, #block-views-all-events-friday-block div.view-header p a, #block-views-all-events-sunday-block div.view-header p a {
+	color: #ffffff;
+	text-decoration: none;
+	}
+
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p a:hover, #block-views-all-events-thursday-block div.view-header p a:hover, #block-views-all-events-friday-block div.view-header p a:hover, #block-views-all-events-sunday-block div.view-header p a:hover {
+	border-bottom: #ffffff 1px dotted;
+	}
+
+/* blue sidebars */
+#region-sidebar-second div.region-inner section.block div.block-inner, #region-sidebar-second div.region-inner div.block div.block-inner {
+	background-color: #e7f0f5;
+	padding: 20px 20px 0 20px;
+	}
+
+#block-block-85 {
+	padding-top: 0px;
+	background-color: #e7f0f5;
+	}
+
+#block-block-122 h2.block-title, #block-block-122 p {
+	margin-bottom: 10px;
+	}
+
+/*Event key styles */
+#block-block-84 table {
+	border: none;
+	border-spacing: 2px;
+	border-collapse: separate;
+	}
+
+#block-block-84 table td {
+	vertical-align: top;
+	padding: 2px;
+	}
+
+#block-block-84 table tr:hover td {
+	background-color: inherit;
+	}
+
+#block-block-84 table td.event-key-box {
+	text-align: center;
+	/*border: 1px #666666 solid;*/
+	background-color: #ffffff;
+	}
+
+
+/* reunion class year buttons on front page */
+
+
+ul.reunion-buttons {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+ul.reunion-buttons li {
+	display: block;
+	float: left;
+	/*width: 102px;
+
+	margin: 0 4px 4px 0;
+	padding: 0;*/
+	text-align: center;
+	/*border: 3px solid #eaeae6;
+	border-right: 5px solid #eaeae6;*/
+	}
+
+ul.reunion-buttons li a {
+	/*display: block;
+	text-decoration: none;
+	background-color: #d6d6ce;
+	padding: 4px 0;
+	margin: 0;
+	width: 100%;
+	color: #800000;
+	font-size: 16px;
+	font-family: 'ProximaNova-Semibold';
+	border: 1px solid #cdcdcd;*/
+	}
+
+ul.reunion-buttons li a:hover {
+	/*color: #d6d6ce;
+	background-color: #800000;*/
+	}
+
+#zone-preface-wrapper {margin-bottom: 20px;}
+
+/* weekend highlights stuff */
+
+body.context-weekend-highlights h3 {
+	border-top: 1px #767676 solid;
+	padding-top: 12px;
+}
+
+p.standout {
+	color: #800000;
+	font-family: 'ProximaNova-SemiBold';
+}
+
+body.context-weekend-highlights div#region-content p, body.context-plan-your-trip div#region-content p, body.context-faq div#region-content p {
+	padding-right: 20px;
+}
+
+/* reunion class pages */
+
+body.context-reunions #zone-content-wrapper h2, body.context-reunions #zone-content-wrapper h4, body.front h2.block-title, body.context-reunion #zone-preface h2, body.context-reunion #block-views-events-grad-prof-block h2.block-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #454545;
+	}
+
+body.context-reunion #block-views-events-grad-prof-block h2.block-title {
+	line-height: 1.2em;
+	width: 80%;
+}
+
+p.reunion-committee { margin-bottom: 0;}
+
+
+body.context-reunions ul.committee-leaders, body.context-reunions ul.reunion-committee {
+	list-style-type: none;
+	padding: 0;
+	}
+
+body.context-reunions ul.committee-leaders li, body.context-reunions ul.reunion-committee li{
+	margin: 0;
+	padding: 0;
+	}
+
+/*body.context-reunions ul.reunion-committee li {width: 50%; float: left;}*/
+
+
+#region-sidebar-second p { margin-bottom: 0;}
+
+#region-sidebar-second ul li {
+	list-style-type: none;
+	padding: 0;
+	}
+
+
+#region-sidebar-second ul li{
+	margin: 0;
+	padding: 0;
+	}
+
+#region-sidebar-second ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+/*#region-sidebar-second ul li {width: 50%; float: left;}*/
+
+
+/* turning things on/off for smallest display */
+
+#region-header-first, #region-header-second h2 {display: none;}
+
+#global-register, #global-makeagift {
+	margin: 0;
+	text-align: center;
+	}
+
+#block-block-114, #block-block-115, #block-block-123, #block-block-124, #block-block-125 {
+	width: 50%;
+	float: left;
+}
+
+
+/* styling special for post event display */
+/*#block-block-115 {width: 100%;} ######## Turn this back on for post-event display!! ########*/
+
+#region-header-second {
+	margin-left: 0;
+	margin-right: 0;
+	}
+
+	/* class goal stuff */
+
+#class-goal-box {
+	border-bottom: 1px solid #767676;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	}
+
+#class-goal-box h2 {
+	line-height: 1.1em;
+	margin-bottom: 10px;
+	}
+
+#class-goal-box p.goal-number {
+	font-size: 150px;
+	color: #f7a11a;
+	line-height: 0.8em;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	}
+
+#class-goal-box p.goal-donors, #class-goal-box p.goal-number span.goal-percent {
+	color: #767676;
+	font-size: 50px;
+	line-height: 0.5em;
+	}
+
+#class-goal-box p.goal-donors {
+	text-indent: 0.125em;
+	}
+
+#class-goal-box p.goal-number span.goal-percent {
+	font-size: 100px;
+	}
+
+#class-goal-box p.honor-roll-link {
+	font-family: 'ProximaNova-SemiBold';
+	margin-bottom: 10px;
+	}
+
+#region-front-second ul {
+	list-style-position: inside;
+	}
+
+.block-reunion-challenge-block-1 h2.block-title {
+  font-size: 24px;
+  margin: 0 0 1rem;
+  color: maroon;
+}
+.block-reunion-challenge-block-1 .block-inner, .block-block-179 .block-inner {
+  background-color: #eeedec!important;
+  margin-bottom: 30px;
+}
+.challenge-image-block {
+  width: 48%;
+  margin: 1rem 2% 1rem 0;
+  float: left;
+}
+.challenge-image-block.last {
+  margin-right: 0;
+}
+.challenge-image-link {
+  display: block;
+}
+img + .challenge-image-link {
+  margin: .5rem 0 0 0;
+}
+#class-challenge-image {
+  margin: 0 0 1rem 0;
+}
+.sharethis-wrapper {
+  margin-bottom: 1rem;
+}
+.block-block-175 .block-inner {
+  background-color: transparent!important;
+  padding: 0!important;
+}
+
+/* Progress Bars */
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.progress {
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 15px;
+  background-color: #cfcfcf;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+.progress-bar {
+  float: left;
+  width: 0%;
+  min-width: 1%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #800000;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  background-image: -webkit-linear-gradient(top, #8D0000 0%, #640000 100%);
+  background-image: linear-gradient(to bottom, #8D0000 0%, #640000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8D0000', endColorstr='#ff640000', GradientType=0);
+}
+.progress-bar-text {
+  float: left;
+  font-size: 16px;
+  color: #333;
+  line-height: 40px;
+  padding: 0 16px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+}
+h6.progress-bar-text {
+  padding-left: 15px;
+  font-size: 1.4em;
+  width: 25%;
+  line-height: 16px;
+  margin-top: 15px;
+}
+
+.view-reunion-challenge{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.progress-bar .progress-bar-text {
+  width: 100%;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.progress-bar-text span {
+  margin: 0 0 0 16px;
+}
+.progress-bar .progress-bar-text span {
+  float: right;
+}
+.progress-striped .progress-bar {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+.current .progress-bar {
+  background-color: #f7a11a;
+}
+.progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.views-field-editablefield .form-required {
+  display: none;
+}
+a.large-gift {
+  line-height: 70px;
+  font-size: 34px;
+  color: white;
+  display: block;
+  width: 100%;
+  background-color: maroon;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 0 0 0;
+  font-family: 'ProximaNovaT-Thin';
+}
+a.large-gift:hover {
+  background-color: #f7a11a;
+}
+
+body.context-primary-text-showdown #zone-branding-wrapper, body.context-college-class-challenge #zone-branding-wrapper {
+  display: none;
+}
+body.context-primary-text-showdown #region-header-first, body.context-college-class-challenge #region-header-first {
+  margin-top: 0;
+  display: block;
+}
+body.context-primary-text-showdown #page-title, body.context-college-class-challenge #page-title{
+  display: none;
+}
+
+.reunion-buttons li.youngalumni {
+  width: 460px;
+  background-image: url(../images/wide-mask-corners_460.png);
+  background-color: #800000;
+}
+
+.reunion-buttons li.reunions {
+  width: 460px;
+  background-image: url(../images/wide-mask-corners_460.png);
+  background-color: #800000;
+}
+
+
+.reunion-buttons li.youngalumni a:hover {
+background-image: url(../images/wide-mask-corners_460.png);
+padding-bottom: 12px;
+}
+
+.reunion-list{
+display: block;
+float: left;
+}
+
+.class-list{
+	display: block;
+	float: left;
+}
+a.emeriti-button {
+
+  font-size: 1.4em !important;
+  height: 32px;
+  padding-top: 16px !important;
+
+}
+
+sup {
+    vertical-align: super;
+    font-size: small;
+}

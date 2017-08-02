@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*-- Tempalte Style ------------------------------------------------------------------------------------------------*/
+
+/* Editorial Links */
+
+
+.email_icon {position:relative; top:3px; }
+.print_icon {position:relative; top:3px; }
+#email_text {margin-right:24px;margin-left:4px; }
+#print_text {margin-right:24px;margin-left:4px; }
+
+#editorial_links { border-top: 1px solid rgb(234, 232, 208); margin-top: 14px; padding-top: 8px; width:460px; } 
+

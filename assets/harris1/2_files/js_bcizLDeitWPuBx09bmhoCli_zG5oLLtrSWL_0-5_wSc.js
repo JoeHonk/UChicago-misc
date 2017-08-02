@@ -1,0 +1,5503 @@
+/* global a2a*/
+(function (Drupal) {
+  'use strict';
+
+  Drupal.behaviors.addToAny = {
+    attach: function (context, settings) {
+      // If not the full document (it's probably AJAX), and window.a2a exists
+      if (context !== document && window.a2a) {
+        a2a.init_all('page'); // Init all uninitiated AddToAny instances
+      }
+    }
+  };
+
+})(Drupal);
+;
+/*!
+ * jQuery UI Tabs 1.11.4
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/tabs/
+ */(function(e){typeof define=="function"&&define.amd?define(["jquery","./core","./widget"],e):e(jQuery)})(function(e){return e.widget("ui.tabs",{version:"1.11.4",delay:300,options:{active:null,collapsible:!1,event:"click",heightStyle:"content",hide:null,show:null,activate:null,beforeActivate:null,beforeLoad:null,load:null},_isLocal:function(){var e=/#.*$/;return function(t){var n,r;t=t.cloneNode(!1),n=t.href.replace(e,""),r=location.href.replace(e,"");try{n=decodeURIComponent(n)}catch(i){}try{r=decodeURIComponent(r)}catch(i){}return t.hash.length>1&&n===r}}(),_create:function(){var t=this,n=this.options;this.running=!1,this.element.addClass("ui-tabs ui-widget ui-widget-content ui-corner-all").toggleClass("ui-tabs-collapsible",n.collapsible),this._processTabs(),n.active=this._initialActive(),e.isArray(n.disabled)&&(n.disabled=e.unique(n.disabled.concat(e.map(this.tabs.filter(".ui-state-disabled"),function(e){return t.tabs.index(e)}))).sort()),this.options.active!==!1&&this.anchors.length?this.active=this._findActive(n.active):this.active=e(),this._refresh(),this.active.length&&this.load(n.active)},_initialActive:function(){var t=this.options.active,n=this.options.collapsible,r=location.hash.substring(1);if(t===null){r&&this.tabs.each(function(n,i){if(e(i).attr("aria-controls")===r)return t=n,!1}),t===null&&(t=this.tabs.index(this.tabs.filter(".ui-tabs-active")));if(t===null||t===-1)t=this.tabs.length?0:!1}return t!==!1&&(t=this.tabs.index(this.tabs.eq(t)),t===-1&&(t=n?!1:0)),!n&&t===!1&&this.anchors.length&&(t=0),t},_getCreateEventData:function(){return{tab:this.active,panel:this.active.length?this._getPanelForTab(this.active):e()}},_tabKeydown:function(t){var n=e(this.document[0].activeElement).closest("li"),r=this.tabs.index(n),i=!0;if(this._handlePageNav(t))return;switch(t.keyCode){case e.ui.keyCode.RIGHT:case e.ui.keyCode.DOWN:r++;break;case e.ui.keyCode.UP:case e.ui.keyCode.LEFT:i=!1,r--;break;case e.ui.keyCode.END:r=this.anchors.length-1;break;case e.ui.keyCode.HOME:r=0;break;case e.ui.keyCode.SPACE:t.preventDefault(),clearTimeout(this.activating),this._activate(r);return;case e.ui.keyCode.ENTER:t.preventDefault(),clearTimeout(this.activating),this._activate(r===this.options.active?!1:r);return;default:return}t.preventDefault(),clearTimeout(this.activating),r=this._focusNextTab(r,i),!t.ctrlKey&&!t.metaKey&&(n.attr("aria-selected","false"),this.tabs.eq(r).attr("aria-selected","true"),this.activating=this._delay(function(){this.option("active",r)},this.delay))},_panelKeydown:function(t){if(this._handlePageNav(t))return;t.ctrlKey&&t.keyCode===e.ui.keyCode.UP&&(t.preventDefault(),this.active.focus())},_handlePageNav:function(t){if(t.altKey&&t.keyCode===e.ui.keyCode.PAGE_UP)return this._activate(this._focusNextTab(this.options.active-1,!1)),!0;if(t.altKey&&t.keyCode===e.ui.keyCode.PAGE_DOWN)return this._activate(this._focusNextTab(this.options.active+1,!0)),!0},_findNextTab:function(t,n){function i(){return t>r&&(t=0),t<0&&(t=r),t}var r=this.tabs.length-1;while(e.inArray(i(),this.options.disabled)!==-1)t=n?t+1:t-1;return t},_focusNextTab:function(e,t){return e=this._findNextTab(e,t),this.tabs.eq(e).focus(),e},_setOption:function(e,t){if(e==="active"){this._activate(t);return}if(e==="disabled"){this._setupDisabled(t);return}this._super(e,t),e==="collapsible"&&(this.element.toggleClass("ui-tabs-collapsible",t),!t&&this.options.active===!1&&this._activate(0)),e==="event"&&this._setupEvents(t),e==="heightStyle"&&this._setupHeightStyle(t)},_sanitizeSelector:function(e){return e?e.replace(/[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g,"\\$&"):""},refresh:function(){var t=this.options,n=this.tablist.children(":has(a[href])");t.disabled=e.map(n.filter(".ui-state-disabled"),function(e){return n.index(e)}),this._processTabs(),t.active===!1||!this.anchors.length?(t.active=!1,this.active=e()):this.active.length&&!e.contains(this.tablist[0],this.active[0])?this.tabs.length===t.disabled.length?(t.active=!1,this.active=e()):this._activate(this._findNextTab(Math.max(0,t.active-1),!1)):t.active=this.tabs.index(this.active),this._refresh()},_refresh:function(){this._setupDisabled(this.options.disabled),this._setupEvents(this.options.event),this._setupHeightStyle(this.options.heightStyle),this.tabs.not(this.active).attr({"aria-selected":"false","aria-expanded":"false",tabIndex:-1}),this.panels.not(this._getPanelForTab(this.active)).hide().attr({"aria-hidden":"true"}),this.active.length?(this.active.addClass("ui-tabs-active ui-state-active").attr({"aria-selected":"true","aria-expanded":"true",tabIndex:0}),this._getPanelForTab(this.active).show().attr({"aria-hidden":"false"})):this.tabs.eq(0).attr("tabIndex",0)},_processTabs:function(){var t=this,n=this.tabs,r=this.anchors,i=this.panels;this.tablist=this._getList().addClass("ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all").attr("role","tablist").delegate("> li","mousedown"+this.eventNamespace,function(t){e(this).is(".ui-state-disabled")&&t.preventDefault()}).delegate(".ui-tabs-anchor","focus"+this.eventNamespace,function(){e(this).closest("li").is(".ui-state-disabled")&&this.blur()}),this.tabs=this.tablist.find("> li:has(a[href])").addClass("ui-state-default ui-corner-top").attr({role:"tab",tabIndex:-1}),this.anchors=this.tabs.map(function(){return e("a",this)[0]}).addClass("ui-tabs-anchor").attr({role:"presentation",tabIndex:-1}),this.panels=e(),this.anchors.each(function(n,r){var i,s,o,u=e(r).uniqueId().attr("id"),a=e(r).closest("li"),f=a.attr("aria-controls");t._isLocal(r)?(i=r.hash,o=i.substring(1),s=t.element.find(t._sanitizeSelector(i))):(o=a.attr("aria-controls")||e({}).uniqueId()[0].id,i="#"+o,s=t.element.find(i),s.length||(s=t._createPanel(o),s.insertAfter(t.panels[n-1]||t.tablist)),s.attr("aria-live","polite")),s.length&&(t.panels=t.panels.add(s)),f&&a.data("ui-tabs-aria-controls",f),a.attr({"aria-controls":o,"aria-labelledby":u}),s.attr("aria-labelledby",u)}),this.panels.addClass("ui-tabs-panel ui-widget-content ui-corner-bottom").attr("role","tabpanel"),n&&(this._off(n.not(this.tabs)),this._off(r.not(this.anchors)),this._off(i.not(this.panels)))},_getList:function(){return this.tablist||this.element.find("ol,ul").eq(0)},_createPanel:function(t){return e("<div>").attr("id",t).addClass("ui-tabs-panel ui-widget-content ui-corner-bottom").data("ui-tabs-destroy",!0)},_setupDisabled:function(t){e.isArray(t)&&(t.length?t.length===this.anchors.length&&(t=!0):t=!1);for(var n=0,r;r=this.tabs[n];n++)t===!0||e.inArray(n,t)!==-1?e(r).addClass("ui-state-disabled").attr("aria-disabled","true"):e(r).removeClass("ui-state-disabled").removeAttr("aria-disabled");this.options.disabled=t},_setupEvents:function(t){var n={};t&&e.each(t.split(" "),function(e,t){n[t]="_eventHandler"}),this._off(this.anchors.add(this.tabs).add(this.panels)),this._on(!0,this.anchors,{click:function(e){e.preventDefault()}}),this._on(this.anchors,n),this._on(this.tabs,{keydown:"_tabKeydown"}),this._on(this.panels,{keydown:"_panelKeydown"}),this._focusable(this.tabs),this._hoverable(this.tabs)},_setupHeightStyle:function(t){var n,r=this.element.parent();t==="fill"?(n=r.height(),n-=this.element.outerHeight()-this.element.height(),this.element.siblings(":visible").each(function(){var t=e(this),r=t.css("position");if(r==="absolute"||r==="fixed")return;n-=t.outerHeight(!0)}),this.element.children().not(this.panels).each(function(){n-=e(this).outerHeight(!0)}),this.panels.each(function(){e(this).height(Math.max(0,n-e(this).innerHeight()+e(this).height()))}).css("overflow","auto")):t==="auto"&&(n=0,this.panels.each(function(){n=Math.max(n,e(this).height("").height())}).height(n))},_eventHandler:function(t){var n=this.options,r=this.active,i=e(t.currentTarget),s=i.closest("li"),o=s[0]===r[0],u=o&&n.collapsible,a=u?e():this._getPanelForTab(s),f=r.length?this._getPanelForTab(r):e(),l={oldTab:r,oldPanel:f,newTab:u?e():s,newPanel:a};t.preventDefault();if(s.hasClass("ui-state-disabled")||s.hasClass("ui-tabs-loading")||this.running||o&&!n.collapsible||this._trigger("beforeActivate",t,l)===!1)return;n.active=u?!1:this.tabs.index(s),this.active=o?e():s,this.xhr&&this.xhr.abort(),!f.length&&!a.length&&e.error("jQuery UI Tabs: Mismatching fragment identifier."),a.length&&this.load(this.tabs.index(s),t),this._toggle(t,l)},_toggle:function(t,n){function o(){r.running=!1,r._trigger("activate",t,n)}function u(){n.newTab.closest("li").addClass("ui-tabs-active ui-state-active"),i.length&&r.options.show?r._show(i,r.options.show,o):(i.show(),o())}var r=this,i=n.newPanel,s=n.oldPanel;this.running=!0,s.length&&this.options.hide?this._hide(s,this.options.hide,function(){n.oldTab.closest("li").removeClass("ui-tabs-active ui-state-active"),u()}):(n.oldTab.closest("li").removeClass("ui-tabs-active ui-state-active"),s.hide(),u()),s.attr("aria-hidden","true"),n.oldTab.attr({"aria-selected":"false","aria-expanded":"false"}),i.length&&s.length?n.oldTab.attr("tabIndex",-1):i.length&&this.tabs.filter(function(){return e(this).attr("tabIndex")===0}).attr("tabIndex",-1),i.attr("aria-hidden","false"),n.newTab.attr({"aria-selected":"true","aria-expanded":"true",tabIndex:0})},_activate:function(t){var n,r=this._findActive(t);if(r[0]===this.active[0])return;r.length||(r=this.active),n=r.find(".ui-tabs-anchor")[0],this._eventHandler({target:n,currentTarget:n,preventDefault:e.noop})},_findActive:function(t){return t===!1?e():this.tabs.eq(t)},_getIndex:function(e){return typeof e=="string"&&(e=this.anchors.index(this.anchors.filter("[href$='"+e+"']"))),e},_destroy:function(){this.xhr&&this.xhr.abort(),this.element.removeClass("ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-collapsible"),this.tablist.removeClass("ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all").removeAttr("role"),this.anchors.removeClass("ui-tabs-anchor").removeAttr("role").removeAttr("tabIndex").removeUniqueId(),this.tablist.unbind(this.eventNamespace),this.tabs.add(this.panels).each(function(){e.data(this,"ui-tabs-destroy")?e(this).remove():e(this).removeClass("ui-state-default ui-state-active ui-state-disabled ui-corner-top ui-corner-bottom ui-widget-content ui-tabs-active ui-tabs-panel").removeAttr("tabIndex").removeAttr("aria-live").removeAttr("aria-busy").removeAttr("aria-selected").removeAttr("aria-labelledby").removeAttr("aria-hidden").removeAttr("aria-expanded").removeAttr("role")}),this.tabs.each(function(){var t=e(this),n=t.data("ui-tabs-aria-controls");n?t.attr("aria-controls",n).removeData("ui-tabs-aria-controls"):t.removeAttr("aria-controls")}),this.panels.show(),this.options.heightStyle!=="content"&&this.panels.css("height","")},enable:function(t){var n=this.options.disabled;if(n===!1)return;t===undefined?n=!1:(t=this._getIndex(t),e.isArray(n)?n=e.map(n,function(e){return e!==t?e:null}):n=e.map(this.tabs,function(e,n){return n!==t?n:null})),this._setupDisabled(n)},disable:function(t){var n=this.options.disabled;if(n===!0)return;if(t===undefined)n=!0;else{t=this._getIndex(t);if(e.inArray(t,n)!==-1)return;e.isArray(n)?n=e.merge([t],n).sort():n=[t]}this._setupDisabled(n)},load:function(t,n){t=this._getIndex(t);var r=this,i=this.tabs.eq(t),s=i.find(".ui-tabs-anchor"),o=this._getPanelForTab(i),u={tab:i,panel:o},a=function(e,t){t==="abort"&&r.panels.stop(!1,!0),i.removeClass("ui-tabs-loading"),o.removeAttr("aria-busy"),e===r.xhr&&delete r.xhr};if(this._isLocal(s[0]))return;this.xhr=e.ajax(this._ajaxSettings(s,n,u)),this.xhr&&this.xhr.statusText!=="canceled"&&(i.addClass("ui-tabs-loading"),o.attr("aria-busy","true"),this.xhr.done(function(e,t,i){setTimeout(function(){o.html(e),r._trigger("load",n,u),a(i,t)},1)}).fail(function(e,t){setTimeout(function(){a(e,t)},1)}))},_ajaxSettings:function(t,n,r){var i=this;return{url:t.attr("href"),beforeSend:function(t,s){return i._trigger("beforeLoad",n,e.extend({jqXHR:t,ajaxSettings:s},r))}}},_getPanelForTab:function(t){var n=e(t).attr("aria-controls");return this.element.find(this._sanitizeSelector("#"+n))}})});;
+/*jshint browser:true */
+/*!
+* FitVids 1.1
+*
+* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+*/
+
+;(function( $ ){
+
+  'use strict';
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null,
+      ignore: null
+    };
+
+    if(!document.getElementById('fit-vids-style')) {
+      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+      var head = document.head || document.getElementsByTagName('head')[0];
+      var css = '.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}';
+      var div = document.createElement("div");
+      div.innerHTML = '<p>x</p><style id="fit-vids-style">' + css + '</style>';
+      head.appendChild(div.childNodes[1]);
+    }
+
+    if ( options ) {
+      $.extend( settings, options );
+    }
+
+    return this.each(function(){
+      var selectors = [
+        'iframe[src*="player.vimeo.com"]',
+        'iframe[src*="youtube.com"]',
+        'iframe[src*="youtube-nocookie.com"]',
+        'iframe[src*="kickstarter.com"][src*="video.html"]',
+        'object',
+        'embed'
+      ];
+
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+
+      var ignoreList = '.fitvidsignore';
+
+      if(settings.ignore) {
+        ignoreList = ignoreList + ', ' + settings.ignore;
+      }
+
+      var $allVideos = $(this).find(selectors.join(','));
+      $allVideos = $allVideos.not('object object'); // SwfObj conflict patch
+      $allVideos = $allVideos.not(ignoreList); // Disable FitVids on this video.
+
+      $allVideos.each(function(){
+        var $this = $(this);
+        if($this.parents(ignoreList).length > 0) {
+          return; // Disable FitVids on this video.
+        }
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        if ((!$this.css('height') && !$this.css('width')) && (isNaN($this.attr('height')) || isNaN($this.attr('width'))))
+        {
+          $this.attr('height', 9);
+          $this.attr('width', 16);
+        }
+        var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
+            width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
+            aspectRatio = height / width;
+        if(!$this.attr('name')){
+          var videoName = 'fitvid' + $.fn.fitVids._count;
+          $this.attr('name', videoName);
+          $.fn.fitVids._count++;
+        }
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+'%');
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  };
+  
+  // Internal counter for unique video names.
+  $.fn.fitVids._count = 0;
+  
+// Works with either jQuery or Zepto
+})( window.jQuery || window.Zepto );
+;
+/*!
+Chosen, a Select Box Enhancer for jQuery and Prototype
+by Patrick Filler for Harvest, http://getharvest.com
+
+Version 1.6.2
+Full source at https://github.com/harvesthq/chosen
+Copyright (c) 2011-2016 Harvest http://getharvest.com
+
+MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
+This file is generated by `grunt build`, do not edit it by hand.
+*/
+
+(function() {
+  var $, AbstractChosen, Chosen, SelectParser, _ref,
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  SelectParser = (function() {
+    function SelectParser() {
+      this.options_index = 0;
+      this.parsed = [];
+    }
+
+    SelectParser.prototype.add_node = function(child) {
+      if (child.nodeName.toUpperCase() === "OPTGROUP") {
+        return this.add_group(child);
+      } else {
+        return this.add_option(child);
+      }
+    };
+
+    SelectParser.prototype.add_group = function(group) {
+      var group_position, option, _i, _len, _ref, _results;
+      group_position = this.parsed.length;
+      this.parsed.push({
+        array_index: group_position,
+        group: true,
+        label: this.escapeExpression(group.label),
+        title: group.title ? group.title : void 0,
+        children: 0,
+        disabled: group.disabled,
+        classes: group.className
+      });
+      _ref = group.childNodes;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        option = _ref[_i];
+        _results.push(this.add_option(option, group_position, group.disabled));
+      }
+      return _results;
+    };
+
+    SelectParser.prototype.add_option = function(option, group_position, group_disabled) {
+      if (option.nodeName.toUpperCase() === "OPTION") {
+        if (option.text !== "") {
+          if (group_position != null) {
+            this.parsed[group_position].children += 1;
+          }
+          this.parsed.push({
+            array_index: this.parsed.length,
+            options_index: this.options_index,
+            value: option.value,
+            text: option.text,
+            html: option.innerHTML,
+            title: option.title ? option.title : void 0,
+            selected: option.selected,
+            disabled: group_disabled === true ? group_disabled : option.disabled,
+            group_array_index: group_position,
+            group_label: group_position != null ? this.parsed[group_position].label : null,
+            classes: option.className,
+            style: option.style.cssText
+          });
+        } else {
+          this.parsed.push({
+            array_index: this.parsed.length,
+            options_index: this.options_index,
+            empty: true
+          });
+        }
+        return this.options_index += 1;
+      }
+    };
+
+    SelectParser.prototype.escapeExpression = function(text) {
+      var map, unsafe_chars;
+      if ((text == null) || text === false) {
+        return "";
+      }
+      if (!/[\&\<\>\"\'\`]/.test(text)) {
+        return text;
+      }
+      map = {
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#x27;",
+        "`": "&#x60;"
+      };
+      unsafe_chars = /&(?!\w+;)|[\<\>\"\'\`]/g;
+      return text.replace(unsafe_chars, function(chr) {
+        return map[chr] || "&amp;";
+      });
+    };
+
+    return SelectParser;
+
+  })();
+
+  SelectParser.select_to_array = function(select) {
+    var child, parser, _i, _len, _ref;
+    parser = new SelectParser();
+    _ref = select.childNodes;
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      child = _ref[_i];
+      parser.add_node(child);
+    }
+    return parser.parsed;
+  };
+
+  AbstractChosen = (function() {
+    function AbstractChosen(form_field, options) {
+      this.form_field = form_field;
+      this.options = options != null ? options : {};
+      if (!AbstractChosen.browser_is_supported()) {
+        return;
+      }
+      this.is_multiple = this.form_field.multiple;
+      this.set_default_text();
+      this.set_default_values();
+      this.setup();
+      this.set_up_html();
+      this.register_observers();
+      this.on_ready();
+    }
+
+    AbstractChosen.prototype.set_default_values = function() {
+      var _this = this;
+      this.click_test_action = function(evt) {
+        return _this.test_active_click(evt);
+      };
+      this.activate_action = function(evt) {
+        return _this.activate_field(evt);
+      };
+      this.active_field = false;
+      this.mouse_on_container = false;
+      this.results_showing = false;
+      this.result_highlighted = null;
+      this.allow_single_deselect = (this.options.allow_single_deselect != null) && (this.form_field.options[0] != null) && this.form_field.options[0].text === "" ? this.options.allow_single_deselect : false;
+      this.disable_search_threshold = this.options.disable_search_threshold || 0;
+      this.disable_search = this.options.disable_search || false;
+      this.enable_split_word_search = this.options.enable_split_word_search != null ? this.options.enable_split_word_search : true;
+      this.group_search = this.options.group_search != null ? this.options.group_search : true;
+      this.search_contains = this.options.search_contains || false;
+      this.single_backstroke_delete = this.options.single_backstroke_delete != null ? this.options.single_backstroke_delete : true;
+      this.max_selected_options = this.options.max_selected_options || Infinity;
+      this.inherit_select_classes = this.options.inherit_select_classes || false;
+      this.display_selected_options = this.options.display_selected_options != null ? this.options.display_selected_options : true;
+      this.display_disabled_options = this.options.display_disabled_options != null ? this.options.display_disabled_options : true;
+      this.include_group_label_in_selected = this.options.include_group_label_in_selected || false;
+      this.max_shown_results = this.options.max_shown_results || Number.POSITIVE_INFINITY;
+      return this.case_sensitive_search = this.options.case_sensitive_search || false;
+    };
+
+    AbstractChosen.prototype.set_default_text = function() {
+      if (this.form_field.getAttribute("data-placeholder")) {
+        this.default_text = this.form_field.getAttribute("data-placeholder");
+      } else if (this.is_multiple) {
+        this.default_text = this.options.placeholder_text_multiple || this.options.placeholder_text || AbstractChosen.default_multiple_text;
+      } else {
+        this.default_text = this.options.placeholder_text_single || this.options.placeholder_text || AbstractChosen.default_single_text;
+      }
+      return this.results_none_found = this.form_field.getAttribute("data-no_results_text") || this.options.no_results_text || AbstractChosen.default_no_result_text;
+    };
+
+    AbstractChosen.prototype.choice_label = function(item) {
+      if (this.include_group_label_in_selected && (item.group_label != null)) {
+        return "<b class='group-name'>" + item.group_label + "</b>" + item.html;
+      } else {
+        return item.html;
+      }
+    };
+
+    AbstractChosen.prototype.mouse_enter = function() {
+      return this.mouse_on_container = true;
+    };
+
+    AbstractChosen.prototype.mouse_leave = function() {
+      return this.mouse_on_container = false;
+    };
+
+    AbstractChosen.prototype.input_focus = function(evt) {
+      var _this = this;
+      if (this.is_multiple) {
+        if (!this.active_field) {
+          return setTimeout((function() {
+            return _this.container_mousedown();
+          }), 50);
+        }
+      } else {
+        if (!this.active_field) {
+          return this.activate_field();
+        }
+      }
+    };
+
+    AbstractChosen.prototype.input_blur = function(evt) {
+      var _this = this;
+      if (!this.mouse_on_container) {
+        this.active_field = false;
+        return setTimeout((function() {
+          return _this.blur_test();
+        }), 100);
+      }
+    };
+
+    AbstractChosen.prototype.results_option_build = function(options) {
+      var content, data, data_content, shown_results, _i, _len, _ref;
+      content = '';
+      shown_results = 0;
+      _ref = this.results_data;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        data = _ref[_i];
+        data_content = '';
+        if (data.group) {
+          data_content = this.result_add_group(data);
+        } else {
+          data_content = this.result_add_option(data);
+        }
+        if (data_content !== '') {
+          shown_results++;
+          content += data_content;
+        }
+        if (options != null ? options.first : void 0) {
+          if (data.selected && this.is_multiple) {
+            this.choice_build(data);
+          } else if (data.selected && !this.is_multiple) {
+            this.single_set_selected_text(this.choice_label(data));
+          }
+        }
+        if (shown_results >= this.max_shown_results) {
+          break;
+        }
+      }
+      return content;
+    };
+
+    AbstractChosen.prototype.result_add_option = function(option) {
+      var classes, option_el;
+      if (!option.search_match) {
+        return '';
+      }
+      if (!this.include_option_in_results(option)) {
+        return '';
+      }
+      classes = [];
+      if (!option.disabled && !(option.selected && this.is_multiple)) {
+        classes.push("active-result");
+      }
+      if (option.disabled && !(option.selected && this.is_multiple)) {
+        classes.push("disabled-result");
+      }
+      if (option.selected) {
+        classes.push("result-selected");
+      }
+      if (option.group_array_index != null) {
+        classes.push("group-option");
+      }
+      if (option.classes !== "") {
+        classes.push(option.classes);
+      }
+      option_el = document.createElement("li");
+      option_el.className = classes.join(" ");
+      option_el.style.cssText = option.style;
+      option_el.setAttribute("data-option-array-index", option.array_index);
+      option_el.innerHTML = option.search_text;
+      if (option.title) {
+        option_el.title = option.title;
+      }
+      return this.outerHTML(option_el);
+    };
+
+    AbstractChosen.prototype.result_add_group = function(group) {
+      var classes, group_el;
+      if (!(group.search_match || group.group_match)) {
+        return '';
+      }
+      if (!(group.active_options > 0)) {
+        return '';
+      }
+      classes = [];
+      classes.push("group-result");
+      if (group.classes) {
+        classes.push(group.classes);
+      }
+      group_el = document.createElement("li");
+      group_el.className = classes.join(" ");
+      group_el.innerHTML = group.search_text;
+      if (group.title) {
+        group_el.title = group.title;
+      }
+      return this.outerHTML(group_el);
+    };
+
+    AbstractChosen.prototype.results_update_field = function() {
+      this.set_default_text();
+      if (!this.is_multiple) {
+        this.results_reset_cleanup();
+      }
+      this.result_clear_highlight();
+      this.results_build();
+      if (this.results_showing) {
+        return this.winnow_results();
+      }
+    };
+
+    AbstractChosen.prototype.reset_single_select_options = function() {
+      var result, _i, _len, _ref, _results;
+      _ref = this.results_data;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        result = _ref[_i];
+        if (result.selected) {
+          _results.push(result.selected = false);
+        } else {
+          _results.push(void 0);
+        }
+      }
+      return _results;
+    };
+
+    AbstractChosen.prototype.results_toggle = function() {
+      if (this.results_showing) {
+        return this.results_hide();
+      } else {
+        return this.results_show();
+      }
+    };
+
+    AbstractChosen.prototype.results_search = function(evt) {
+      if (this.results_showing) {
+        return this.winnow_results();
+      } else {
+        return this.results_show();
+      }
+    };
+
+    AbstractChosen.prototype.winnow_results = function() {
+      var escapedSearchText, option, regex, results, results_group, searchText, startpos, text, zregex, _i, _len, _ref;
+      this.no_results_clear();
+      results = 0;
+      searchText = this.get_search_text();
+      escapedSearchText = searchText.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+      zregex = new RegExp(escapedSearchText, 'i');
+      regex = this.get_search_regex(escapedSearchText);
+      _ref = this.results_data;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        option = _ref[_i];
+        option.search_match = false;
+        results_group = null;
+        if (this.include_option_in_results(option)) {
+          if (option.group) {
+            option.group_match = false;
+            option.active_options = 0;
+          }
+          if ((option.group_array_index != null) && this.results_data[option.group_array_index]) {
+            results_group = this.results_data[option.group_array_index];
+            if (results_group.active_options === 0 && results_group.search_match) {
+              results += 1;
+            }
+            results_group.active_options += 1;
+          }
+          option.search_text = option.group ? option.label : option.html;
+          if (!(option.group && !this.group_search)) {
+            option.search_match = this.search_string_match(option.search_text, regex);
+            if (option.search_match && !option.group) {
+              results += 1;
+            }
+            if (option.search_match) {
+              if (searchText.length) {
+                startpos = option.search_text.search(zregex);
+                text = option.search_text.substr(0, startpos + searchText.length) + '</em>' + option.search_text.substr(startpos + searchText.length);
+                option.search_text = text.substr(0, startpos) + '<em>' + text.substr(startpos);
+              }
+              if (results_group != null) {
+                results_group.group_match = true;
+              }
+            } else if ((option.group_array_index != null) && this.results_data[option.group_array_index].search_match) {
+              option.search_match = true;
+            }
+          }
+        }
+      }
+      this.result_clear_highlight();
+      if (results < 1 && searchText.length) {
+        this.update_results_content("");
+        return this.no_results(searchText);
+      } else {
+        this.update_results_content(this.results_option_build());
+        return this.winnow_results_set_highlight();
+      }
+    };
+
+    AbstractChosen.prototype.get_search_regex = function(escaped_search_string) {
+      var regex_anchor, regex_flag;
+      regex_anchor = this.search_contains ? "" : "^";
+      regex_flag = this.case_sensitive_search ? "" : "i";
+      return new RegExp(regex_anchor + escaped_search_string, regex_flag);
+    };
+
+    AbstractChosen.prototype.search_string_match = function(search_string, regex) {
+      var part, parts, _i, _len;
+      if (regex.test(search_string)) {
+        return true;
+      } else if (this.enable_split_word_search && (search_string.indexOf(" ") >= 0 || search_string.indexOf("[") === 0)) {
+        parts = search_string.replace(/\[|\]/g, "").split(" ");
+        if (parts.length) {
+          for (_i = 0, _len = parts.length; _i < _len; _i++) {
+            part = parts[_i];
+            if (regex.test(part)) {
+              return true;
+            }
+          }
+        }
+      }
+    };
+
+    AbstractChosen.prototype.choices_count = function() {
+      var option, _i, _len, _ref;
+      if (this.selected_option_count != null) {
+        return this.selected_option_count;
+      }
+      this.selected_option_count = 0;
+      _ref = this.form_field.options;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        option = _ref[_i];
+        if (option.selected) {
+          this.selected_option_count += 1;
+        }
+      }
+      return this.selected_option_count;
+    };
+
+    AbstractChosen.prototype.choices_click = function(evt) {
+      evt.preventDefault();
+      if (!(this.results_showing || this.is_disabled)) {
+        return this.results_show();
+      }
+    };
+
+    AbstractChosen.prototype.keyup_checker = function(evt) {
+      var stroke, _ref;
+      stroke = (_ref = evt.which) != null ? _ref : evt.keyCode;
+      this.search_field_scale();
+      switch (stroke) {
+        case 8:
+          if (this.is_multiple && this.backstroke_length < 1 && this.choices_count() > 0) {
+            return this.keydown_backstroke();
+          } else if (!this.pending_backstroke) {
+            this.result_clear_highlight();
+            return this.results_search();
+          }
+          break;
+        case 13:
+          evt.preventDefault();
+          if (this.results_showing) {
+            return this.result_select(evt);
+          }
+          break;
+        case 27:
+          if (this.results_showing) {
+            this.results_hide();
+          }
+          return true;
+        case 9:
+        case 38:
+        case 40:
+        case 16:
+        case 91:
+        case 17:
+        case 18:
+          break;
+        default:
+          return this.results_search();
+      }
+    };
+
+    AbstractChosen.prototype.clipboard_event_checker = function(evt) {
+      var _this = this;
+      return setTimeout((function() {
+        return _this.results_search();
+      }), 50);
+    };
+
+    AbstractChosen.prototype.container_width = function() {
+      if (this.options.width != null) {
+        return this.options.width;
+      } else {
+        return "" + this.form_field.offsetWidth + "px";
+      }
+    };
+
+    AbstractChosen.prototype.include_option_in_results = function(option) {
+      if (this.is_multiple && (!this.display_selected_options && option.selected)) {
+        return false;
+      }
+      if (!this.display_disabled_options && option.disabled) {
+        return false;
+      }
+      if (option.empty) {
+        return false;
+      }
+      return true;
+    };
+
+    AbstractChosen.prototype.search_results_touchstart = function(evt) {
+      this.touch_started = true;
+      return this.search_results_mouseover(evt);
+    };
+
+    AbstractChosen.prototype.search_results_touchmove = function(evt) {
+      this.touch_started = false;
+      return this.search_results_mouseout(evt);
+    };
+
+    AbstractChosen.prototype.search_results_touchend = function(evt) {
+      if (this.touch_started) {
+        return this.search_results_mouseup(evt);
+      }
+    };
+
+    AbstractChosen.prototype.outerHTML = function(element) {
+      var tmp;
+      if (element.outerHTML) {
+        return element.outerHTML;
+      }
+      tmp = document.createElement("div");
+      tmp.appendChild(element);
+      return tmp.innerHTML;
+    };
+
+    AbstractChosen.browser_is_supported = function() {
+      if ("Microsoft Internet Explorer" === window.navigator.appName) {
+        return document.documentMode >= 8;
+      }
+      if (/iP(od|hone)/i.test(window.navigator.userAgent) || /IEMobile/i.test(window.navigator.userAgent) || /Windows Phone/i.test(window.navigator.userAgent) || /BlackBerry/i.test(window.navigator.userAgent) || /BB10/i.test(window.navigator.userAgent) || /Android.*Mobile/i.test(window.navigator.userAgent)) {
+        return false;
+      }
+      return true;
+    };
+
+    AbstractChosen.default_multiple_text = "Select Some Options";
+
+    AbstractChosen.default_single_text = "Select an Option";
+
+    AbstractChosen.default_no_result_text = "No results match";
+
+    return AbstractChosen;
+
+  })();
+
+  $ = jQuery;
+
+  $.fn.extend({
+    chosen: function(options) {
+      if (!AbstractChosen.browser_is_supported()) {
+        return this;
+      }
+      return this.each(function(input_field) {
+        var $this, chosen;
+        $this = $(this);
+        chosen = $this.data('chosen');
+        if (options === 'destroy') {
+          if (chosen instanceof Chosen) {
+            chosen.destroy();
+          }
+          return;
+        }
+        if (!(chosen instanceof Chosen)) {
+          $this.data('chosen', new Chosen(this, options));
+        }
+      });
+    }
+  });
+
+  Chosen = (function(_super) {
+    __extends(Chosen, _super);
+
+    function Chosen() {
+      _ref = Chosen.__super__.constructor.apply(this, arguments);
+      return _ref;
+    }
+
+    Chosen.prototype.setup = function() {
+      this.form_field_jq = $(this.form_field);
+      this.current_selectedIndex = this.form_field.selectedIndex;
+      return this.is_rtl = this.form_field_jq.hasClass("chosen-rtl");
+    };
+
+    Chosen.prototype.set_up_html = function() {
+      var container_classes, container_props;
+      container_classes = ["chosen-container"];
+      container_classes.push("chosen-container-" + (this.is_multiple ? "multi" : "single"));
+      if (this.inherit_select_classes && this.form_field.className) {
+        container_classes.push(this.form_field.className);
+      }
+      if (this.is_rtl) {
+        container_classes.push("chosen-rtl");
+      }
+      container_props = {
+        'class': container_classes.join(' '),
+        'style': "width: " + (this.container_width()) + ";",
+        'title': this.form_field.title
+      };
+      if (this.form_field.id.length) {
+        container_props.id = this.form_field.id.replace(/[^\w]/g, '_') + "_chosen";
+      }
+      this.container = $("<div />", container_props);
+      if (this.is_multiple) {
+        this.container.html('<ul class="chosen-choices"><li class="search-field"><input type="text" value="' + this.default_text + '" class="default" autocomplete="off" style="width:25px;" /></li></ul><div class="chosen-drop"><ul class="chosen-results"></ul></div>');
+      } else {
+        this.container.html('<a class="chosen-single chosen-default"><span>' + this.default_text + '</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" /></div><ul class="chosen-results"></ul></div>');
+      }
+      this.form_field_jq.hide().after(this.container);
+      this.dropdown = this.container.find('div.chosen-drop').first();
+      this.search_field = this.container.find('input').first();
+      this.search_results = this.container.find('ul.chosen-results').first();
+      this.search_field_scale();
+      this.search_no_results = this.container.find('li.no-results').first();
+      if (this.is_multiple) {
+        this.search_choices = this.container.find('ul.chosen-choices').first();
+        this.search_container = this.container.find('li.search-field').first();
+      } else {
+        this.search_container = this.container.find('div.chosen-search').first();
+        this.selected_item = this.container.find('.chosen-single').first();
+      }
+      this.results_build();
+      this.set_tab_index();
+      return this.set_label_behavior();
+    };
+
+    Chosen.prototype.on_ready = function() {
+      return this.form_field_jq.trigger("chosen:ready", {
+        chosen: this
+      });
+    };
+
+    Chosen.prototype.register_observers = function() {
+      var _this = this;
+      this.container.bind('touchstart.chosen', function(evt) {
+        _this.container_mousedown(evt);
+        return evt.preventDefault();
+      });
+      this.container.bind('touchend.chosen', function(evt) {
+        _this.container_mouseup(evt);
+        return evt.preventDefault();
+      });
+      this.container.bind('mousedown.chosen', function(evt) {
+        _this.container_mousedown(evt);
+      });
+      this.container.bind('mouseup.chosen', function(evt) {
+        _this.container_mouseup(evt);
+      });
+      this.container.bind('mouseenter.chosen', function(evt) {
+        _this.mouse_enter(evt);
+      });
+      this.container.bind('mouseleave.chosen', function(evt) {
+        _this.mouse_leave(evt);
+      });
+      this.search_results.bind('mouseup.chosen', function(evt) {
+        _this.search_results_mouseup(evt);
+      });
+      this.search_results.bind('mouseover.chosen', function(evt) {
+        _this.search_results_mouseover(evt);
+      });
+      this.search_results.bind('mouseout.chosen', function(evt) {
+        _this.search_results_mouseout(evt);
+      });
+      this.search_results.bind('mousewheel.chosen DOMMouseScroll.chosen', function(evt) {
+        _this.search_results_mousewheel(evt);
+      });
+      this.search_results.bind('touchstart.chosen', function(evt) {
+        _this.search_results_touchstart(evt);
+      });
+      this.search_results.bind('touchmove.chosen', function(evt) {
+        _this.search_results_touchmove(evt);
+      });
+      this.search_results.bind('touchend.chosen', function(evt) {
+        _this.search_results_touchend(evt);
+      });
+      this.form_field_jq.bind("chosen:updated.chosen", function(evt) {
+        _this.results_update_field(evt);
+      });
+      this.form_field_jq.bind("chosen:activate.chosen", function(evt) {
+        _this.activate_field(evt);
+      });
+      this.form_field_jq.bind("chosen:open.chosen", function(evt) {
+        _this.container_mousedown(evt);
+      });
+      this.form_field_jq.bind("chosen:close.chosen", function(evt) {
+        _this.input_blur(evt);
+      });
+      this.search_field.bind('blur.chosen', function(evt) {
+        _this.input_blur(evt);
+      });
+      this.search_field.bind('keyup.chosen', function(evt) {
+        _this.keyup_checker(evt);
+      });
+      this.search_field.bind('keydown.chosen', function(evt) {
+        _this.keydown_checker(evt);
+      });
+      this.search_field.bind('focus.chosen', function(evt) {
+        _this.input_focus(evt);
+      });
+      this.search_field.bind('cut.chosen', function(evt) {
+        _this.clipboard_event_checker(evt);
+      });
+      this.search_field.bind('paste.chosen', function(evt) {
+        _this.clipboard_event_checker(evt);
+      });
+      if (this.is_multiple) {
+        return this.search_choices.bind('click.chosen', function(evt) {
+          _this.choices_click(evt);
+        });
+      } else {
+        return this.container.bind('click.chosen', function(evt) {
+          evt.preventDefault();
+        });
+      }
+    };
+
+    Chosen.prototype.destroy = function() {
+      $(this.container[0].ownerDocument).unbind("click.chosen", this.click_test_action);
+      if (this.search_field[0].tabIndex) {
+        this.form_field_jq[0].tabIndex = this.search_field[0].tabIndex;
+      }
+      this.container.remove();
+      this.form_field_jq.removeData('chosen');
+      return this.form_field_jq.show();
+    };
+
+    Chosen.prototype.search_field_disabled = function() {
+      this.is_disabled = this.form_field_jq[0].disabled;
+      if (this.is_disabled) {
+        this.container.addClass('chosen-disabled');
+        this.search_field[0].disabled = true;
+        if (!this.is_multiple) {
+          this.selected_item.unbind("focus.chosen", this.activate_action);
+        }
+        return this.close_field();
+      } else {
+        this.container.removeClass('chosen-disabled');
+        this.search_field[0].disabled = false;
+        if (!this.is_multiple) {
+          return this.selected_item.bind("focus.chosen", this.activate_action);
+        }
+      }
+    };
+
+    Chosen.prototype.container_mousedown = function(evt) {
+      if (!this.is_disabled) {
+        if (evt && evt.type === "mousedown" && !this.results_showing) {
+          evt.preventDefault();
+        }
+        if (!((evt != null) && ($(evt.target)).hasClass("search-choice-close"))) {
+          if (!this.active_field) {
+            if (this.is_multiple) {
+              this.search_field.val("");
+            }
+            $(this.container[0].ownerDocument).bind('click.chosen', this.click_test_action);
+            this.results_show();
+          } else if (!this.is_multiple && evt && (($(evt.target)[0] === this.selected_item[0]) || $(evt.target).parents("a.chosen-single").length)) {
+            evt.preventDefault();
+            this.results_toggle();
+          }
+          return this.activate_field();
+        }
+      }
+    };
+
+    Chosen.prototype.container_mouseup = function(evt) {
+      if (evt.target.nodeName === "ABBR" && !this.is_disabled) {
+        return this.results_reset(evt);
+      }
+    };
+
+    Chosen.prototype.search_results_mousewheel = function(evt) {
+      var delta;
+      if (evt.originalEvent) {
+        delta = evt.originalEvent.deltaY || -evt.originalEvent.wheelDelta || evt.originalEvent.detail;
+      }
+      if (delta != null) {
+        evt.preventDefault();
+        if (evt.type === 'DOMMouseScroll') {
+          delta = delta * 40;
+        }
+        return this.search_results.scrollTop(delta + this.search_results.scrollTop());
+      }
+    };
+
+    Chosen.prototype.blur_test = function(evt) {
+      if (!this.active_field && this.container.hasClass("chosen-container-active")) {
+        return this.close_field();
+      }
+    };
+
+    Chosen.prototype.close_field = function() {
+      $(this.container[0].ownerDocument).unbind("click.chosen", this.click_test_action);
+      this.active_field = false;
+      this.results_hide();
+      this.container.removeClass("chosen-container-active");
+      this.clear_backstroke();
+      this.show_search_field_default();
+      return this.search_field_scale();
+    };
+
+    Chosen.prototype.activate_field = function() {
+      this.container.addClass("chosen-container-active");
+      this.active_field = true;
+      this.search_field.val(this.search_field.val());
+      return this.search_field.focus();
+    };
+
+    Chosen.prototype.test_active_click = function(evt) {
+      var active_container;
+      active_container = $(evt.target).closest('.chosen-container');
+      if (active_container.length && this.container[0] === active_container[0]) {
+        return this.active_field = true;
+      } else {
+        return this.close_field();
+      }
+    };
+
+    Chosen.prototype.results_build = function() {
+      this.parsing = true;
+      this.selected_option_count = null;
+      this.results_data = SelectParser.select_to_array(this.form_field);
+      if (this.is_multiple) {
+        this.search_choices.find("li.search-choice").remove();
+      } else if (!this.is_multiple) {
+        this.single_set_selected_text();
+        if (this.disable_search || this.form_field.options.length <= this.disable_search_threshold) {
+          this.search_field[0].readOnly = true;
+          this.container.addClass("chosen-container-single-nosearch");
+        } else {
+          this.search_field[0].readOnly = false;
+          this.container.removeClass("chosen-container-single-nosearch");
+        }
+      }
+      this.update_results_content(this.results_option_build({
+        first: true
+      }));
+      this.search_field_disabled();
+      this.show_search_field_default();
+      this.search_field_scale();
+      return this.parsing = false;
+    };
+
+    Chosen.prototype.result_do_highlight = function(el) {
+      var high_bottom, high_top, maxHeight, visible_bottom, visible_top;
+      if (el.length) {
+        this.result_clear_highlight();
+        this.result_highlight = el;
+        this.result_highlight.addClass("highlighted");
+        maxHeight = parseInt(this.search_results.css("maxHeight"), 10);
+        visible_top = this.search_results.scrollTop();
+        visible_bottom = maxHeight + visible_top;
+        high_top = this.result_highlight.position().top + this.search_results.scrollTop();
+        high_bottom = high_top + this.result_highlight.outerHeight();
+        if (high_bottom >= visible_bottom) {
+          return this.search_results.scrollTop((high_bottom - maxHeight) > 0 ? high_bottom - maxHeight : 0);
+        } else if (high_top < visible_top) {
+          return this.search_results.scrollTop(high_top);
+        }
+      }
+    };
+
+    Chosen.prototype.result_clear_highlight = function() {
+      if (this.result_highlight) {
+        this.result_highlight.removeClass("highlighted");
+      }
+      return this.result_highlight = null;
+    };
+
+    Chosen.prototype.results_show = function() {
+      if (this.is_multiple && this.max_selected_options <= this.choices_count()) {
+        this.form_field_jq.trigger("chosen:maxselected", {
+          chosen: this
+        });
+        return false;
+      }
+      this.container.addClass("chosen-with-drop");
+      this.results_showing = true;
+      this.search_field.focus();
+      this.search_field.val(this.search_field.val());
+      this.winnow_results();
+      return this.form_field_jq.trigger("chosen:showing_dropdown", {
+        chosen: this
+      });
+    };
+
+    Chosen.prototype.update_results_content = function(content) {
+      return this.search_results.html(content);
+    };
+
+    Chosen.prototype.results_hide = function() {
+      if (this.results_showing) {
+        this.result_clear_highlight();
+        this.container.removeClass("chosen-with-drop");
+        this.form_field_jq.trigger("chosen:hiding_dropdown", {
+          chosen: this
+        });
+      }
+      return this.results_showing = false;
+    };
+
+    Chosen.prototype.set_tab_index = function(el) {
+      var ti;
+      if (this.form_field.tabIndex) {
+        ti = this.form_field.tabIndex;
+        this.form_field.tabIndex = -1;
+        return this.search_field[0].tabIndex = ti;
+      }
+    };
+
+    Chosen.prototype.set_label_behavior = function() {
+      var _this = this;
+      this.form_field_label = this.form_field_jq.parents("label");
+      if (!this.form_field_label.length && this.form_field.id.length) {
+        this.form_field_label = $("label[for='" + this.form_field.id + "']");
+      }
+      if (this.form_field_label.length > 0) {
+        return this.form_field_label.bind('click.chosen', function(evt) {
+          if (_this.is_multiple) {
+            return _this.container_mousedown(evt);
+          } else {
+            return _this.activate_field();
+          }
+        });
+      }
+    };
+
+    Chosen.prototype.show_search_field_default = function() {
+      if (this.is_multiple && this.choices_count() < 1 && !this.active_field) {
+        this.search_field.val(this.default_text);
+        return this.search_field.addClass("default");
+      } else {
+        this.search_field.val("");
+        return this.search_field.removeClass("default");
+      }
+    };
+
+    Chosen.prototype.search_results_mouseup = function(evt) {
+      var target;
+      target = $(evt.target).hasClass("active-result") ? $(evt.target) : $(evt.target).parents(".active-result").first();
+      if (target.length) {
+        this.result_highlight = target;
+        this.result_select(evt);
+        return this.search_field.focus();
+      }
+    };
+
+    Chosen.prototype.search_results_mouseover = function(evt) {
+      var target;
+      target = $(evt.target).hasClass("active-result") ? $(evt.target) : $(evt.target).parents(".active-result").first();
+      if (target) {
+        return this.result_do_highlight(target);
+      }
+    };
+
+    Chosen.prototype.search_results_mouseout = function(evt) {
+      if ($(evt.target).hasClass("active-result" || $(evt.target).parents('.active-result').first())) {
+        return this.result_clear_highlight();
+      }
+    };
+
+    Chosen.prototype.choice_build = function(item) {
+      var choice, close_link,
+        _this = this;
+      choice = $('<li />', {
+        "class": "search-choice"
+      }).html("<span>" + (this.choice_label(item)) + "</span>");
+      if (item.disabled) {
+        choice.addClass('search-choice-disabled');
+      } else {
+        close_link = $('<a />', {
+          "class": 'search-choice-close',
+          'data-option-array-index': item.array_index
+        });
+        close_link.bind('click.chosen', function(evt) {
+          return _this.choice_destroy_link_click(evt);
+        });
+        choice.append(close_link);
+      }
+      return this.search_container.before(choice);
+    };
+
+    Chosen.prototype.choice_destroy_link_click = function(evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      if (!this.is_disabled) {
+        return this.choice_destroy($(evt.target));
+      }
+    };
+
+    Chosen.prototype.choice_destroy = function(link) {
+      if (this.result_deselect(link[0].getAttribute("data-option-array-index"))) {
+        this.show_search_field_default();
+        if (this.is_multiple && this.choices_count() > 0 && this.search_field.val().length < 1) {
+          this.results_hide();
+        }
+        link.parents('li').first().remove();
+        return this.search_field_scale();
+      }
+    };
+
+    Chosen.prototype.results_reset = function() {
+      this.reset_single_select_options();
+      this.form_field.options[0].selected = true;
+      this.single_set_selected_text();
+      this.show_search_field_default();
+      this.results_reset_cleanup();
+      this.form_field_jq.trigger("change");
+      if (this.active_field) {
+        return this.results_hide();
+      }
+    };
+
+    Chosen.prototype.results_reset_cleanup = function() {
+      this.current_selectedIndex = this.form_field.selectedIndex;
+      return this.selected_item.find("abbr").remove();
+    };
+
+    Chosen.prototype.result_select = function(evt) {
+      var high, item;
+      if (this.result_highlight) {
+        high = this.result_highlight;
+        this.result_clear_highlight();
+        if (this.is_multiple && this.max_selected_options <= this.choices_count()) {
+          this.form_field_jq.trigger("chosen:maxselected", {
+            chosen: this
+          });
+          return false;
+        }
+        if (this.is_multiple) {
+          high.removeClass("active-result");
+        } else {
+          this.reset_single_select_options();
+        }
+        high.addClass("result-selected");
+        item = this.results_data[high[0].getAttribute("data-option-array-index")];
+        item.selected = true;
+        this.form_field.options[item.options_index].selected = true;
+        this.selected_option_count = null;
+        if (this.is_multiple) {
+          this.choice_build(item);
+        } else {
+          this.single_set_selected_text(this.choice_label(item));
+        }
+        if (!((evt.metaKey || evt.ctrlKey) && this.is_multiple)) {
+          this.results_hide();
+        }
+        this.show_search_field_default();
+        if (this.is_multiple || this.form_field.selectedIndex !== this.current_selectedIndex) {
+          this.form_field_jq.trigger("change", {
+            'selected': this.form_field.options[item.options_index].value
+          });
+        }
+        this.current_selectedIndex = this.form_field.selectedIndex;
+        evt.preventDefault();
+        return this.search_field_scale();
+      }
+    };
+
+    Chosen.prototype.single_set_selected_text = function(text) {
+      if (text == null) {
+        text = this.default_text;
+      }
+      if (text === this.default_text) {
+        this.selected_item.addClass("chosen-default");
+      } else {
+        this.single_deselect_control_build();
+        this.selected_item.removeClass("chosen-default");
+      }
+      return this.selected_item.find("span").html(text);
+    };
+
+    Chosen.prototype.result_deselect = function(pos) {
+      var result_data;
+      result_data = this.results_data[pos];
+      if (!this.form_field.options[result_data.options_index].disabled) {
+        result_data.selected = false;
+        this.form_field.options[result_data.options_index].selected = false;
+        this.selected_option_count = null;
+        this.result_clear_highlight();
+        if (this.results_showing) {
+          this.winnow_results();
+        }
+        this.form_field_jq.trigger("change", {
+          deselected: this.form_field.options[result_data.options_index].value
+        });
+        this.search_field_scale();
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    Chosen.prototype.single_deselect_control_build = function() {
+      if (!this.allow_single_deselect) {
+        return;
+      }
+      if (!this.selected_item.find("abbr").length) {
+        this.selected_item.find("span").first().after("<abbr class=\"search-choice-close\"></abbr>");
+      }
+      return this.selected_item.addClass("chosen-single-with-deselect");
+    };
+
+    Chosen.prototype.get_search_text = function() {
+      return $('<div/>').text($.trim(this.search_field.val())).html();
+    };
+
+    Chosen.prototype.winnow_results_set_highlight = function() {
+      var do_high, selected_results;
+      selected_results = !this.is_multiple ? this.search_results.find(".result-selected.active-result") : [];
+      do_high = selected_results.length ? selected_results.first() : this.search_results.find(".active-result").first();
+      if (do_high != null) {
+        return this.result_do_highlight(do_high);
+      }
+    };
+
+    Chosen.prototype.no_results = function(terms) {
+      var no_results_html;
+      no_results_html = $('<li class="no-results">' + this.results_none_found + ' "<span></span>"</li>');
+      no_results_html.find("span").first().html(terms);
+      this.search_results.append(no_results_html);
+      return this.form_field_jq.trigger("chosen:no_results", {
+        chosen: this
+      });
+    };
+
+    Chosen.prototype.no_results_clear = function() {
+      return this.search_results.find(".no-results").remove();
+    };
+
+    Chosen.prototype.keydown_arrow = function() {
+      var next_sib;
+      if (this.results_showing && this.result_highlight) {
+        next_sib = this.result_highlight.nextAll("li.active-result").first();
+        if (next_sib) {
+          return this.result_do_highlight(next_sib);
+        }
+      } else {
+        return this.results_show();
+      }
+    };
+
+    Chosen.prototype.keyup_arrow = function() {
+      var prev_sibs;
+      if (!this.results_showing && !this.is_multiple) {
+        return this.results_show();
+      } else if (this.result_highlight) {
+        prev_sibs = this.result_highlight.prevAll("li.active-result");
+        if (prev_sibs.length) {
+          return this.result_do_highlight(prev_sibs.first());
+        } else {
+          if (this.choices_count() > 0) {
+            this.results_hide();
+          }
+          return this.result_clear_highlight();
+        }
+      }
+    };
+
+    Chosen.prototype.keydown_backstroke = function() {
+      var next_available_destroy;
+      if (this.pending_backstroke) {
+        this.choice_destroy(this.pending_backstroke.find("a").first());
+        return this.clear_backstroke();
+      } else {
+        next_available_destroy = this.search_container.siblings("li.search-choice").last();
+        if (next_available_destroy.length && !next_available_destroy.hasClass("search-choice-disabled")) {
+          this.pending_backstroke = next_available_destroy;
+          if (this.single_backstroke_delete) {
+            return this.keydown_backstroke();
+          } else {
+            return this.pending_backstroke.addClass("search-choice-focus");
+          }
+        }
+      }
+    };
+
+    Chosen.prototype.clear_backstroke = function() {
+      if (this.pending_backstroke) {
+        this.pending_backstroke.removeClass("search-choice-focus");
+      }
+      return this.pending_backstroke = null;
+    };
+
+    Chosen.prototype.keydown_checker = function(evt) {
+      var stroke, _ref1;
+      stroke = (_ref1 = evt.which) != null ? _ref1 : evt.keyCode;
+      this.search_field_scale();
+      if (stroke !== 8 && this.pending_backstroke) {
+        this.clear_backstroke();
+      }
+      switch (stroke) {
+        case 8:
+          this.backstroke_length = this.search_field.val().length;
+          break;
+        case 9:
+          if (this.results_showing && !this.is_multiple) {
+            this.result_select(evt);
+          }
+          this.mouse_on_container = false;
+          break;
+        case 13:
+          if (this.results_showing) {
+            evt.preventDefault();
+          }
+          break;
+        case 32:
+          if (this.disable_search) {
+            evt.preventDefault();
+          }
+          break;
+        case 38:
+          evt.preventDefault();
+          this.keyup_arrow();
+          break;
+        case 40:
+          evt.preventDefault();
+          this.keydown_arrow();
+          break;
+      }
+    };
+
+    Chosen.prototype.search_field_scale = function() {
+      var div, f_width, h, style, style_block, styles, w, _i, _len;
+      if (this.is_multiple) {
+        h = 0;
+        w = 0;
+        style_block = "position:absolute; left: -1000px; top: -1000px; display:none;";
+        styles = ['font-size', 'font-style', 'font-weight', 'font-family', 'line-height', 'text-transform', 'letter-spacing'];
+        for (_i = 0, _len = styles.length; _i < _len; _i++) {
+          style = styles[_i];
+          style_block += style + ":" + this.search_field.css(style) + ";";
+        }
+        div = $('<div />', {
+          'style': style_block
+        });
+        div.text(this.search_field.val());
+        $('body').append(div);
+        w = div.width() + 25;
+        div.remove();
+        f_width = this.container.outerWidth();
+        if (w > f_width - 10) {
+          w = f_width - 10;
+        }
+        return this.search_field.css({
+          'width': w + 'px'
+        });
+      }
+    };
+
+    return Chosen;
+
+  })(AbstractChosen);
+
+}).call(this);
+;
+/**
+* jquery-match-height master by @liabru
+* http://brm.io/jquery-match-height/
+* License: MIT
+*/
+
+;(function(factory) { // eslint-disable-line no-extra-semi
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['jquery'], factory);
+    } else if (typeof module !== 'undefined' && module.exports) {
+        // CommonJS
+        module.exports = factory(require('jquery'));
+    } else {
+        // Global
+        factory(jQuery);
+    }
+})(function($) {
+    /*
+    *  internal
+    */
+
+    var _previousResizeWidth = -1,
+        _updateTimeout = -1;
+
+    /*
+    *  _parse
+    *  value parse utility function
+    */
+
+    var _parse = function(value) {
+        // parse value and convert NaN to 0
+        return parseFloat(value) || 0;
+    };
+
+    /*
+    *  _rows
+    *  utility function returns array of jQuery selections representing each row
+    *  (as displayed after float wrapping applied by browser)
+    */
+
+    var _rows = function(elements) {
+        var tolerance = 1,
+            $elements = $(elements),
+            lastTop = null,
+            rows = [];
+
+        // group elements by their top position
+        $elements.each(function(){
+            var $that = $(this),
+                top = $that.offset().top - _parse($that.css('margin-top')),
+                lastRow = rows.length > 0 ? rows[rows.length - 1] : null;
+
+            if (lastRow === null) {
+                // first item on the row, so just push it
+                rows.push($that);
+            } else {
+                // if the row top is the same, add to the row group
+                if (Math.floor(Math.abs(lastTop - top)) <= tolerance) {
+                    rows[rows.length - 1] = lastRow.add($that);
+                } else {
+                    // otherwise start a new row group
+                    rows.push($that);
+                }
+            }
+
+            // keep track of the last row top
+            lastTop = top;
+        });
+
+        return rows;
+    };
+
+    /*
+    *  _parseOptions
+    *  handle plugin options
+    */
+
+    var _parseOptions = function(options) {
+        var opts = {
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+        };
+
+        if (typeof options === 'object') {
+            return $.extend(opts, options);
+        }
+
+        if (typeof options === 'boolean') {
+            opts.byRow = options;
+        } else if (options === 'remove') {
+            opts.remove = true;
+        }
+
+        return opts;
+    };
+
+    /*
+    *  matchHeight
+    *  plugin definition
+    */
+
+    var matchHeight = $.fn.matchHeight = function(options) {
+        var opts = _parseOptions(options);
+
+        // handle remove
+        if (opts.remove) {
+            var that = this;
+
+            // remove fixed height from all selected elements
+            this.css(opts.property, '');
+
+            // remove selected elements from all groups
+            $.each(matchHeight._groups, function(key, group) {
+                group.elements = group.elements.not(that);
+            });
+
+            // TODO: cleanup empty groups
+
+            return this;
+        }
+
+        if (this.length <= 1 && !opts.target) {
+            return this;
+        }
+
+        // keep track of this group so we can re-apply later on load and resize events
+        matchHeight._groups.push({
+            elements: this,
+            options: opts
+        });
+
+        // match each element's height to the tallest element in the selection
+        matchHeight._apply(this, opts);
+
+        return this;
+    };
+
+    /*
+    *  plugin global options
+    */
+
+    matchHeight.version = 'master';
+    matchHeight._groups = [];
+    matchHeight._throttle = 80;
+    matchHeight._maintainScroll = false;
+    matchHeight._beforeUpdate = null;
+    matchHeight._afterUpdate = null;
+    matchHeight._rows = _rows;
+    matchHeight._parse = _parse;
+    matchHeight._parseOptions = _parseOptions;
+
+    /*
+    *  matchHeight._apply
+    *  apply matchHeight to given elements
+    */
+
+    matchHeight._apply = function(elements, options) {
+        var opts = _parseOptions(options),
+            $elements = $(elements),
+            rows = [$elements];
+
+        // take note of scroll position
+        var scrollTop = $(window).scrollTop(),
+            htmlHeight = $('html').outerHeight(true);
+
+        // get hidden parents
+        var $hiddenParents = $elements.parents().filter(':hidden');
+
+        // cache the original inline style
+        $hiddenParents.each(function() {
+            var $that = $(this);
+            $that.data('style-cache', $that.attr('style'));
+        });
+
+        // temporarily must force hidden parents visible
+        $hiddenParents.css('display', 'block');
+
+        // get rows if using byRow, otherwise assume one row
+        if (opts.byRow && !opts.target) {
+
+            // must first force an arbitrary equal height so floating elements break evenly
+            $elements.each(function() {
+                var $that = $(this),
+                    display = $that.css('display');
+
+                // temporarily force a usable display value
+                if (display !== 'inline-block' && display !== 'flex' && display !== 'inline-flex') {
+                    display = 'block';
+                }
+
+                // cache the original inline style
+                $that.data('style-cache', $that.attr('style'));
+
+                $that.css({
+                    'display': display,
+                    'padding-top': '0',
+                    'padding-bottom': '0',
+                    'margin-top': '0',
+                    'margin-bottom': '0',
+                    'border-top-width': '0',
+                    'border-bottom-width': '0',
+                    'height': '100px',
+                    'overflow': 'hidden'
+                });
+            });
+
+            // get the array of rows (based on element top position)
+            rows = _rows($elements);
+
+            // revert original inline styles
+            $elements.each(function() {
+                var $that = $(this);
+                $that.attr('style', $that.data('style-cache') || '');
+            });
+        }
+
+        $.each(rows, function(key, row) {
+            var $row = $(row),
+                targetHeight = 0;
+
+            if (!opts.target) {
+                // skip apply to rows with only one item
+                if (opts.byRow && $row.length <= 1) {
+                    $row.css(opts.property, '');
+                    return;
+                }
+
+                // iterate the row and find the max height
+                $row.each(function(){
+                    var $that = $(this),
+                        style = $that.attr('style'),
+                        display = $that.css('display');
+
+                    // temporarily force a usable display value
+                    if (display !== 'inline-block' && display !== 'flex' && display !== 'inline-flex') {
+                        display = 'block';
+                    }
+
+                    // ensure we get the correct actual height (and not a previously set height value)
+                    var css = { 'display': display };
+                    css[opts.property] = '';
+                    $that.css(css);
+
+                    // find the max height (including padding, but not margin)
+                    if ($that.outerHeight(false) > targetHeight) {
+                        targetHeight = $that.outerHeight(false);
+                    }
+
+                    // revert styles
+                    if (style) {
+                        $that.attr('style', style);
+                    } else {
+                        $that.css('display', '');
+                    }
+                });
+            } else {
+                // if target set, use the height of the target element
+                targetHeight = opts.target.outerHeight(false);
+            }
+
+            // iterate the row and apply the height to all elements
+            $row.each(function(){
+                var $that = $(this),
+                    verticalPadding = 0;
+
+                // don't apply to a target
+                if (opts.target && $that.is(opts.target)) {
+                    return;
+                }
+
+                // handle padding and border correctly (required when not using border-box)
+                if ($that.css('box-sizing') !== 'border-box') {
+                    verticalPadding += _parse($that.css('border-top-width')) + _parse($that.css('border-bottom-width'));
+                    verticalPadding += _parse($that.css('padding-top')) + _parse($that.css('padding-bottom'));
+                }
+
+                // set the height (accounting for padding and border)
+                $that.css(opts.property, (targetHeight - verticalPadding) + 'px');
+            });
+        });
+
+        // revert hidden parents
+        $hiddenParents.each(function() {
+            var $that = $(this);
+            $that.attr('style', $that.data('style-cache') || null);
+        });
+
+        // restore scroll position if enabled
+        if (matchHeight._maintainScroll) {
+            $(window).scrollTop((scrollTop / htmlHeight) * $('html').outerHeight(true));
+        }
+
+        return this;
+    };
+
+    /*
+    *  matchHeight._applyDataApi
+    *  applies matchHeight to all elements with a data-match-height attribute
+    */
+
+    matchHeight._applyDataApi = function() {
+        var groups = {};
+
+        // generate groups by their groupId set by elements using data-match-height
+        $('[data-match-height], [data-mh]').each(function() {
+            var $this = $(this),
+                groupId = $this.attr('data-mh') || $this.attr('data-match-height');
+
+            if (groupId in groups) {
+                groups[groupId] = groups[groupId].add($this);
+            } else {
+                groups[groupId] = $this;
+            }
+        });
+
+        // apply matchHeight to each group
+        $.each(groups, function() {
+            this.matchHeight(true);
+        });
+    };
+
+    /*
+    *  matchHeight._update
+    *  updates matchHeight on all current groups with their correct options
+    */
+
+    var _update = function(event) {
+        if (matchHeight._beforeUpdate) {
+            matchHeight._beforeUpdate(event, matchHeight._groups);
+        }
+
+        $.each(matchHeight._groups, function() {
+            matchHeight._apply(this.elements, this.options);
+        });
+
+        if (matchHeight._afterUpdate) {
+            matchHeight._afterUpdate(event, matchHeight._groups);
+        }
+    };
+
+    matchHeight._update = function(throttle, event) {
+        // prevent update if fired from a resize event
+        // where the viewport width hasn't actually changed
+        // fixes an event looping bug in IE8
+        if (event && event.type === 'resize') {
+            var windowWidth = $(window).width();
+            if (windowWidth === _previousResizeWidth) {
+                return;
+            }
+            _previousResizeWidth = windowWidth;
+        }
+
+        // throttle updates
+        if (!throttle) {
+            _update(event);
+        } else if (_updateTimeout === -1) {
+            _updateTimeout = setTimeout(function() {
+                _update(event);
+                _updateTimeout = -1;
+            }, matchHeight._throttle);
+        }
+    };
+
+    /*
+    *  bind events
+    */
+
+    // apply on DOM ready event
+    $(matchHeight._applyDataApi);
+
+    // update heights on load and resize events
+    $(window).bind('load', function(event) {
+        matchHeight._update(false, event);
+    });
+
+    // throttled update heights on resize events
+    $(window).bind('resize orientationchange', function(event) {
+        matchHeight._update(true, event);
+    });
+
+});
+;
+/*!
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ *
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+})( window );
+
+
+(function() {
+  // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+  if (!String.prototype.trim) {
+    (function() {
+      // Make sure we trim BOM and NBSP
+      var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+      String.prototype.trim = function() {
+        return this.replace(rtrim, '');
+      };
+    })();
+  }
+
+  [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+    // in case the input is already filled..
+    if( inputEl.value.trim() !== '' ) {
+      classie.add( inputEl.parentNode, 'input--filled' );
+    }
+
+    // events:
+    inputEl.addEventListener( 'focus', onInputFocus );
+    inputEl.addEventListener( 'blur', onInputBlur );
+  } );
+
+  function onInputFocus( ev ) {
+    classie.add( ev.target.parentNode, 'input--filled' );
+  }
+
+  function onInputBlur( ev ) {
+    if( ev.target.value.trim() === '' ) {
+      classie.remove( ev.target.parentNode, 'input--filled' );
+    }
+  }
+})();
+;
+(function (Drupal) {
+
+	'use strict';
+
+	window.onload = function() {
+		var closeInfo = document.querySelector('.info-dropdown-target');
+		var closer = document.querySelector('.closer');
+		var normalInfo = document.querySelector('.normal-menu');
+		var closeMenu = document.querySelector('.title-center-menu');
+		var barOne = document.querySelector('.bar-one');
+		var barTwo = document.querySelector('.bar-two');
+		var barThree = document.querySelector('.bar-three');
+
+
+		if (closeMenu) {
+			closeMenu.addEventListener('click', function () {
+				//If the 'Info For' menu is open then this will close it to avoid having both menys open simultaneously.
+				if (closeInfo.classList.contains('info-open')) {
+					closeInfo.classList.remove('info-open');
+					closer.classList.add('show-hide');
+					normalInfo.classList.remove('show-hide');
+					document.querySelector('.mobile-menu-info').classList.remove('mobile-info-slide-down');
+				}
+
+				//If the menu dropdown is closed then this opens it. If it's already open then it closes it.
+				if (!closeMenu.classList.contains('menu-open')) {
+					document.querySelector('.mobile-dropdown-target').innerHTML = "CLOSE";
+					closeMenu.classList.add('menu-open');
+					barTwo.classList.add('bar-hide');
+					barOne.classList.add('rotateDown');
+					barThree.classList.add('rotateUp');
+					document.querySelector('.mobile-menu-menu').classList.add('mobile-menu-slide-down');
+				} else {
+					document.querySelector('.mobile-dropdown-target').innerHTML = "MENU";
+					closeMenu.classList.remove('menu-open');
+					barTwo.classList.remove('bar-hide');
+					barOne.classList.remove('rotateDown');
+					barThree.classList.remove('rotateUp');
+					document.querySelector('.mobile-menu-menu').classList.remove('mobile-menu-slide-down');
+				}
+			})
+		}
+
+		if (closeInfo) {
+			closeInfo.addEventListener('click', function () {
+				//if the main menu is open then this will close it.
+				if (closeMenu.classList.contains('menu-open')) {
+					document.querySelector('.mobile-dropdown-target').innerHTML = "MENU";
+					closeMenu.classList.remove('menu-open');
+					barTwo.classList.remove('bar-hide');
+					barOne.classList.remove('rotateDown');
+					barThree.classList.remove('rotateUp');
+					document.querySelector('.mobile-menu-menu').classList.remove('mobile-menu-slide-down');
+				}
+
+				//This changes the innerhtml of the info menu in order to show the close button.
+				if (!closeInfo.classList.contains('info-open')) {
+					normalInfo.classList.add('show-hide');
+					closeInfo.classList.add('info-open');
+					closer.classList.remove('show-hide');
+					document.querySelector('.mobile-menu-info').classList.add('mobile-info-slide-down');
+					closer.innerHTML =
+						"<div class='title-center-menu menu-open'>" +
+						"<span class='mobile-info-target'>CLOSE</span>" +
+						"<div class='mobile-menu-icon'>" +
+						"<div class='bar bar-one-2 rotateDown'></div>" +
+						"<div class='bar bar-two-2 bar-hide'></div>" +
+						"<div class='bar bar-three-2 rotateUp'></div>" +
+						"</div>" +
+						"</div>"
+					document.querySelector('.bar-one-2').classList.add('rotateDown');
+					document.querySelector('.bar-two-2').classList.add('bar-hide');
+					document.querySelector('.bar-three-2').classList.add('rotateUp');
+				} else {
+					closeInfo.classList.remove('info-open');
+					closer.classList.add('show-hide');
+					normalInfo.classList.remove('show-hide');
+					document.querySelector('.mobile-menu-info').classList.remove('mobile-info-slide-down');
+				}
+			})
+		}
+  };
+
+	// Toggle accordion drawers
+	var accordionTitle = '.field--name-field-question, .node--content--accordion .field__label';
+	var accordionContent = '.field--name-field-answer, .field__items, .field__item';
+
+	jQuery(accordionTitle).click(function(e) {
+	  jQuery(this).siblings(accordionContent).slideToggle('fast');
+	  jQuery(this).toggleClass('is-expanded');
+	  e.preventDefault();
+	});
+
+	// Initiate chosen select field styling
+	jQuery('select').chosen({disable_search_threshold: 100});
+
+	// Trigger page scroll to load hero grid items
+	var heroGrid = jQuery(".node--hero--grid");
+
+	jQuery(window).scroll(function() {
+	  if( jQuery(heroGrid).length > 0 ) {
+	    var elementTopToPageTop = jQuery(heroGrid).offset().top;
+	    var windowTopToPageTop = jQuery(window).scrollTop();
+	    var windowInnerHeight = window.innerHeight;
+	    var elementTopToWindowTop = elementTopToPageTop - windowTopToPageTop;
+	    var elementTopToWindowBottom = windowInnerHeight - elementTopToWindowTop;
+	    var distanceFromBottomToAppear = 400;
+
+	    if(elementTopToWindowBottom > distanceFromBottomToAppear) {
+	      jQuery(heroGrid).addClass('js-node--hero--grid--show');
+	    }
+	  }
+	});
+
+
+  // --------------------------------------------------------------------------------------------------------
+  // Start search page fieldset change.
+  // --------------------------------------------------------------------------------------------------------
+
+  // Add wrapper and remove the legend.
+  jQuery('#views-exposed-form-search-content-search-content-page fieldset.fieldgroup').wrapInner('<div class="filters filter-wrap container fieldset-wrapper"></div>');
+
+  // Move search filters above and out of the filters wrapper.
+  var selector_fieldset = '#block-exposedformsearch-contentsearch-content-page fieldset.fieldgroup.form-wrapper';
+  var selector_input = '#block-exposedformsearch-contentsearch-content-page div.filters div.js-form-item.form-item';
+  var fieldset_obj = jQuery(selector_fieldset).detach();
+  fieldset_obj.insertBefore(selector_input).addClass('js-search-filter-block');
+
+  // --------------------------------------------------------------------------------------------------------
+  // End search page fieldset change.
+  // --------------------------------------------------------------------------------------------------------
+
+
+	// Initiate fitvids
+	jQuery('.node--content--main--video').fitVids();
+
+  jQuery(document).ready(function() {
+    // Hide Secondary menu children that are not in active trail.
+    jQuery('.secondary-nav__child-link.is-active').parentsUntil('.secondary-nav__item').addClass('in-active-trail');
+    jQuery('.secondary-nav__item-link.is-active').next('.secondary-nav__children').addClass('in-active-trail');
+    jQuery('.view-page--filters .bef-toggle').click(function(e) {
+      jQuery('.view-page--filters .form-submit').trigger("click");
+    });
+  });
+
+  // Mobile toggle
+  var chevron = '.chevron';
+
+  jQuery(chevron).click(function(e) {
+      jQuery(this).parent().siblings().toggleClass('is-expanded');
+      jQuery(this).parent().parent().siblings().toggleClass('is-expanded');
+      jQuery(this).toggleClass('bottom');
+      e.preventDefault();
+  });
+
+  jQuery('.view-page--filters input[type=checkbox]').click(function(e) {
+      jQuery('.view-page--filters .form-submit').trigger("click");
+  });
+  jQuery('.view-page--filters input[type=text]').blur(function() {
+      jQuery('.view-page--filters .form-submit').click();
+  });
+
+  jQuery('.view-page--filters .bef-toggle').click(function(e) {
+      console.log('I click');
+      jQuery('.view-page--filters .form-submit').trigger("click");
+  });
+
+	// Set height for you might also be interested in block
+	jQuery('.view-interested-in .node--related-content-teaser').matchHeight();
+
+
+	// Responsive tables
+	var tableContainer = jQuery('.l-main').width();
+
+	// Add class to tables that are too wide.
+	jQuery('.l-main table').each(function() {
+	  if ( jQuery(this).width() > tableContainer) {
+	    jQuery(this).addClass('too-wide');
+	  }
+	});
+
+	jQuery('th').each(function () {
+	  var eq = jQuery(this).index();
+	  var child = eq + 1;
+	  var label = jQuery(this).text();
+	  jQuery('td:nth-child(' + child + ')').append('&nbsp;').attr('data-title', label).addClass('responsive');
+	});
+
+	jQuery('.menu-button').on('click', function(){
+		jQuery(this).toggleClass('open');
+    if (jQuery('.main-navigation__wrap').hasClass('open')) {
+      jQuery('.main-navigation__wrap').removeClass('open');
+      jQuery('.main-navigation__wrap').removeClass('sub-menu');
+      jQuery('.back-item').remove();
+    }else {
+      jQuery('.main-navigation__wrap').addClass('open');
+    }
+  });
+
+
+	jQuery('.main-navigation__item-link').on('click', function(e){
+    // responsive menu is being used when window is less than 900px wide,
+
+    if (jQuery('.main-navigation__wrap').hasClass('sub-menu')) {
+    	// allow clicks on full sized menu to go to the link.
+    } else {
+    	if(jQuery(window).width() < 900) {
+    		// makes the primary nav open the submenu instead of going to the page
+    		e.preventDefault();
+  		}
+
+      //console.log(jQuery(this));
+      jQuery(this).next().addClass('active-submenu');
+      jQuery(this).parent().addClass('keep-visible').parent().prepend('<li class="back-item"><a>Back</a></li>');
+      jQuery('.main-navigation__wrap').addClass('sub-menu');
+    }
+  });
+
+
+	jQuery(document).on('click', '.back-item', function(e){
+    e.preventDefault();
+    jQuery('.main-navigation__wrap').removeClass('sub-menu');
+    jQuery('.main-navigation__child-container').removeClass('active-submenu');
+		jQuery('.main-navigation__item').removeClass('keep-visible');
+    jQuery('.back-item').remove();
+  });
+
+
+	jQuery('.search-block form input#edit-keys').attr("placeholder", "Search...");
+	jQuery('.search-link').on('click', function(e){
+      e.preventDefault();
+      if (jQuery('.search-block').hasClass('open')) {
+        jQuery(this).removeClass('active');
+        jQuery('.search-block').removeClass('open');
+      }else {
+        jQuery(this).addClass('active');
+        jQuery('.search-block').addClass('open');
+	  }
+    });
+    // hide search box if active and clicked outside
+	jQuery(document).click(function(e) {
+		var container = jQuery('.search-block'),
+			link = jQuery('.search-link');
+		// if the clicked element is not the link (or any element inside it) or the search box (or any element inside)
+		// and the search box is open
+		if (!container.is(e.target) && !container.has(e.target).length > 0 && !link.is(e.target) && !link.has(e.target).length > 0 && container.hasClass('open')) {
+			link.removeClass('active');
+			container.removeClass('open');
+		}
+	});
+	// Add has-children class to utility nav parent
+	jQuery('.header .utility-navigation__item:has(div)').addClass('has-children').append('<span class="arrow-utility"></span>');
+
+	jQuery('.header .utility-navigation__item .arrow-utility').on('click', function(e){
+    jQuery(this).siblings('.utility-navigation__child-container').toggle();
+    jQuery(this).toggleClass('is-open');
+	});
+
+jQuery(document).ready(function($){
+  // browser window scroll (in pixels) after which the "back to top" link is shown
+  var offset = 300,
+    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    offset_opacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scroll_top_duration = 700,
+    //grab the "back to top" link
+    $back_to_top = $('.cd-top');
+
+  //hide or show the "back to top" link
+  $(window).scroll(function(){
+    ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+    if( $(this).scrollTop() > offset_opacity ) {
+      $back_to_top.addClass('cd-fade-out');
+    }
+  });
+
+  //smooth scroll to top
+  $back_to_top.on('click', function(event){
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0 ,
+      }, scroll_top_duration
+    );
+  });
+
+	// Move the results counter below the search input on results page
+	jQuery('.view-search-content .view-header').appendTo('#block-exposedformsearch-contentsearch-content-page .form-type-textfield');
+
+  //Detect if upcoming events and recent news are present
+  if ($('.node--content--bottom').length > 0) {
+    var amount = 0;
+    amount = ($('.node--content--upcoming-events').length + $('.node--content--expanded-recent-news').length);
+    switch(amount) {
+      case 2:
+          $('.node--content--bottom').addClass('both');
+          break;
+      case 1:
+          $('.node--content--bottom').addClass('single');
+          break;
+      default:
+          $('.node--content--bottom').addClass('none');
+    }
+  }
+
+
+
+});
+
+// if URL contains string mark news-link as active
+	jQuery(document).ready(function () {
+		if (window.location.href.indexOf("profile") > -1) {
+			jQuery(".news-links__item").eq(1).addClass("is-active");
+		} else if (window.location.href.indexOf("research") > -1) {
+			jQuery(".news-links__item").eq(2).addClass("is-active");
+		} else if (window.location.href.indexOf("in-the-news") > -1) {
+			jQuery(".news-links__item").eq(3).addClass("is-active");
+        } else if (window.location.href.indexOf("visiting-speakers") > -1) {
+            jQuery(".news-links__item").eq(5).addClass("is-active");
+        } else if (window.location.href.indexOf("academic-conferences") > -1) {
+            jQuery(".news-links__item").eq(0).addClass("is-active");
+        } else if (window.location.href.indexOf("admissions") > -1) {
+            jQuery(".news-links__item").eq(1).addClass("is-active");
+        } else if (window.location.href.indexOf("alumni") > -1) {
+            jQuery(".news-links__item").eq(2).addClass("is-active");
+        } else if (window.location.href.indexOf("students") > -1) {
+            jQuery(".news-links__item").eq(3).addClass("is-active");
+        } else if (window.location.href.indexOf("special-events") > -1) {
+            jQuery(".news-links__item").eq(4).addClass("is-active");
+        } else if (window.location.href.indexOf("/news-events/news") > -1) {
+            jQuery(".news-links__item").eq(0).addClass("is-active");
+        } else if (window.location.href.indexOf("/news-events/events") > -1) {
+            jQuery(".news-links__item").eq(0).removeClass("is-active");
+		}
+	});
+
+// if current page is a news page of one of the types, move the view heading to the top of the page
+	if (window.location.href.indexOf("profile") > -1 || window.location.href.indexOf("research") > -1 || window.location.href.indexOf("in-the-news") > -1 || window.location.href.indexOf("news") > -1){
+		jQuery(".view--content--news .views-element-container h2").appendTo(".news-view-heading");
+	}
+	
+	// if user clicks search icon redirect cursor to the search input
+  var searchLink = '.search-link.utility-navigation__item';
+  var searchInput = '.search-block.open input#edit-keys';
+
+  jQuery(searchLink).click(function(e) {
+    jQuery(searchInput).focus();
+    e.preventDefault();
+  });
+
+
+
+})(Drupal);
+;
+(function ($, Drupal, window, document) {
+
+  Drupal.behaviors.basic = {
+    attach: function (context, settings) {
+      $(window).load(function () {
+
+
+		    $('.tab_content').each(function(i) {
+		    	var harris_index = i + 1;
+				  var tabname = "tab-" + harris_index;
+		  		$(this).attr("id", tabname );
+				});
+
+				$( ".node--content--tabs" ).tabs({ });
+			  $( ".node--content--tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+			  $( ".node--content--tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+
+
+
+			  $('.slideshow').slick(
+				{
+					slidesToScroll: 1,
+					centerMode: true,
+					slidesToShow: 1,
+					// variableWidth: true,
+					infinite: false,
+					appendArrows: $('.arrow_container'),
+					centerPadding: '0px',
+    			adaptiveHeight: true,
+    			dots: true,
+    			dotsClass: 'custom_paging',
+      		customPaging: function (slider, i) {
+    				return  (i + 1) + ' of ' + slider.slideCount;
+  				}
+				});
+
+		 	if( $('ul.secondary-nav__great-grandchildren').hasClass('in-active-trail')){
+		 		$('li.top-level__item').siblings().find('.secondary-nav__item-link').addClass('demoted_family_links');
+		 		$('li.secondary-nav__child-item').siblings().find('.child').addClass('demoted_family_links');
+		 		$('ul.secondary-nav__grandchildren').addClass('elevated');
+			}
+
+		 	if( $('ul.secondary-nav__grandchildren').hasClass('in-active-trail')){
+		 		$('li.top-level__item').siblings().find('.secondary-nav__item-link').addClass('demoted_family_links');
+		 		$('ul.secondary-nav__children').addClass('elevated');
+			}
+
+			if( $('ul.secondary-nav__children li.secondary-nav__child-item').hasClass('in-active-trail')){
+		 		$('li.top-level__item').siblings().find('.secondary-nav__item-link').addClass('demoted_family_links');
+		 		$('ul.secondary-nav__children').addClass('elevated');
+			}
+
+
+		  });
+
+    }
+  };
+
+} (jQuery, Drupal, this, this.document));
+;
+/*
+     _ _      _       _
+ ___| (_) ___| | __  (_)___
+/ __| | |/ __| |/ /  | / __|
+\__ \ | | (__|   < _ | \__ \
+|___/_|_|\___|_|\_(_)/ |___/
+                   |__/
+
+ Version: 1.6.0
+  Author: Ken Wheeler
+ Website: http://kenwheeler.github.io
+    Docs: http://kenwheeler.github.io/slick
+    Repo: http://github.com/kenwheeler/slick
+  Issues: http://github.com/kenwheeler/slick/issues
+
+ */
+/* global window, document, define, jQuery, setInterval, clearInterval */
+(function(factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof exports !== 'undefined') {
+        module.exports = factory(require('jquery'));
+    } else {
+        factory(jQuery);
+    }
+
+}(function($) {
+    'use strict';
+    var Slick = window.Slick || {};
+
+    Slick = (function() {
+
+        var instanceUid = 0;
+
+        function Slick(element, settings) {
+
+            var _ = this, dataSettings;
+
+            _.defaults = {
+                accessibility: true,
+                adaptiveHeight: false,
+                appendArrows: $(element),
+                appendDots: $(element),
+                arrows: true,
+                asNavFor: null,
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
+                autoplay: false,
+                autoplaySpeed: 3000,
+                centerMode: false,
+                centerPadding: '50px',
+                cssEase: 'ease',
+                customPaging: function(slider, i) {
+                    return $('<button type="button" data-role="none" role="button" tabindex="0" />').text(i + 1);
+                },
+                dots: false,
+                dotsClass: 'slick-dots',
+                draggable: true,
+                easing: 'linear',
+                edgeFriction: 0.35,
+                fade: false,
+                focusOnSelect: false,
+                infinite: true,
+                initialSlide: 0,
+                lazyLoad: 'ondemand',
+                mobileFirst: false,
+                pauseOnHover: true,
+                pauseOnFocus: true,
+                pauseOnDotsHover: false,
+                respondTo: 'window',
+                responsive: null,
+                rows: 1,
+                rtl: false,
+                slide: '',
+                slidesPerRow: 1,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 500,
+                swipe: true,
+                swipeToSlide: false,
+                touchMove: true,
+                touchThreshold: 5,
+                useCSS: true,
+                useTransform: true,
+                variableWidth: false,
+                vertical: false,
+                verticalSwiping: false,
+                waitForAnimate: true,
+                zIndex: 1000
+            };
+
+            _.initials = {
+                animating: false,
+                dragging: false,
+                autoPlayTimer: null,
+                currentDirection: 0,
+                currentLeft: null,
+                currentSlide: 0,
+                direction: 1,
+                $dots: null,
+                listWidth: null,
+                listHeight: null,
+                loadIndex: 0,
+                $nextArrow: null,
+                $prevArrow: null,
+                slideCount: null,
+                slideWidth: null,
+                $slideTrack: null,
+                $slides: null,
+                sliding: false,
+                slideOffset: 0,
+                swipeLeft: null,
+                $list: null,
+                touchObject: {},
+                transformsEnabled: false,
+                unslicked: false
+            };
+
+            $.extend(_, _.initials);
+
+            _.activeBreakpoint = null;
+            _.animType = null;
+            _.animProp = null;
+            _.breakpoints = [];
+            _.breakpointSettings = [];
+            _.cssTransitions = false;
+            _.focussed = false;
+            _.interrupted = false;
+            _.hidden = 'hidden';
+            _.paused = true;
+            _.positionProp = null;
+            _.respondTo = null;
+            _.rowCount = 1;
+            _.shouldClick = true;
+            _.$slider = $(element);
+            _.$slidesCache = null;
+            _.transformType = null;
+            _.transitionType = null;
+            _.visibilityChange = 'visibilitychange';
+            _.windowWidth = 0;
+            _.windowTimer = null;
+
+            dataSettings = $(element).data('slick') || {};
+
+            _.options = $.extend({}, _.defaults, settings, dataSettings);
+
+            _.currentSlide = _.options.initialSlide;
+
+            _.originalSettings = _.options;
+
+            if (typeof document.mozHidden !== 'undefined') {
+                _.hidden = 'mozHidden';
+                _.visibilityChange = 'mozvisibilitychange';
+            } else if (typeof document.webkitHidden !== 'undefined') {
+                _.hidden = 'webkitHidden';
+                _.visibilityChange = 'webkitvisibilitychange';
+            }
+
+            _.autoPlay = $.proxy(_.autoPlay, _);
+            _.autoPlayClear = $.proxy(_.autoPlayClear, _);
+            _.autoPlayIterator = $.proxy(_.autoPlayIterator, _);
+            _.changeSlide = $.proxy(_.changeSlide, _);
+            _.clickHandler = $.proxy(_.clickHandler, _);
+            _.selectHandler = $.proxy(_.selectHandler, _);
+            _.setPosition = $.proxy(_.setPosition, _);
+            _.swipeHandler = $.proxy(_.swipeHandler, _);
+            _.dragHandler = $.proxy(_.dragHandler, _);
+            _.keyHandler = $.proxy(_.keyHandler, _);
+
+            _.instanceUid = instanceUid++;
+
+            // A simple way to check for HTML strings
+            // Strict HTML recognition (must start with <)
+            // Extracted from jQuery v1.11 source
+            _.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/;
+
+
+            _.registerBreakpoints();
+            _.init(true);
+
+        }
+
+        return Slick;
+
+    }());
+
+    Slick.prototype.activateADA = function() {
+        var _ = this;
+
+        _.$slideTrack.find('.slick-active').attr({
+            'aria-hidden': 'false'
+        }).find('a, input, button, select').attr({
+            'tabindex': '0'
+        });
+
+    };
+
+    Slick.prototype.addSlide = Slick.prototype.slickAdd = function(markup, index, addBefore) {
+
+        var _ = this;
+
+        if (typeof(index) === 'boolean') {
+            addBefore = index;
+            index = null;
+        } else if (index < 0 || (index >= _.slideCount)) {
+            return false;
+        }
+
+        _.unload();
+
+        if (typeof(index) === 'number') {
+            if (index === 0 && _.$slides.length === 0) {
+                $(markup).appendTo(_.$slideTrack);
+            } else if (addBefore) {
+                $(markup).insertBefore(_.$slides.eq(index));
+            } else {
+                $(markup).insertAfter(_.$slides.eq(index));
+            }
+        } else {
+            if (addBefore === true) {
+                $(markup).prependTo(_.$slideTrack);
+            } else {
+                $(markup).appendTo(_.$slideTrack);
+            }
+        }
+
+        _.$slides = _.$slideTrack.children(this.options.slide);
+
+        _.$slideTrack.children(this.options.slide).detach();
+
+        _.$slideTrack.append(_.$slides);
+
+        _.$slides.each(function(index, element) {
+            $(element).attr('data-slick-index', index);
+        });
+
+        _.$slidesCache = _.$slides;
+
+        _.reinit();
+
+    };
+
+    Slick.prototype.animateHeight = function() {
+        var _ = this;
+        if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
+            var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
+            _.$list.animate({
+                height: targetHeight
+            }, _.options.speed);
+        }
+    };
+
+    Slick.prototype.animateSlide = function(targetLeft, callback) {
+
+        var animProps = {},
+            _ = this;
+
+        _.animateHeight();
+
+        if (_.options.rtl === true && _.options.vertical === false) {
+            targetLeft = -targetLeft;
+        }
+        if (_.transformsEnabled === false) {
+            if (_.options.vertical === false) {
+                _.$slideTrack.animate({
+                    left: targetLeft
+                }, _.options.speed, _.options.easing, callback);
+            } else {
+                _.$slideTrack.animate({
+                    top: targetLeft
+                }, _.options.speed, _.options.easing, callback);
+            }
+
+        } else {
+
+            if (_.cssTransitions === false) {
+                if (_.options.rtl === true) {
+                    _.currentLeft = -(_.currentLeft);
+                }
+                $({
+                    animStart: _.currentLeft
+                }).animate({
+                    animStart: targetLeft
+                }, {
+                    duration: _.options.speed,
+                    easing: _.options.easing,
+                    step: function(now) {
+                        now = Math.ceil(now);
+                        if (_.options.vertical === false) {
+                            animProps[_.animType] = 'translate(' +
+                                now + 'px, 0px)';
+                            _.$slideTrack.css(animProps);
+                        } else {
+                            animProps[_.animType] = 'translate(0px,' +
+                                now + 'px)';
+                            _.$slideTrack.css(animProps);
+                        }
+                    },
+                    complete: function() {
+                        if (callback) {
+                            callback.call();
+                        }
+                    }
+                });
+
+            } else {
+
+                _.applyTransition();
+                targetLeft = Math.ceil(targetLeft);
+
+                if (_.options.vertical === false) {
+                    animProps[_.animType] = 'translate3d(' + targetLeft + 'px, 0px, 0px)';
+                } else {
+                    animProps[_.animType] = 'translate3d(0px,' + targetLeft + 'px, 0px)';
+                }
+                _.$slideTrack.css(animProps);
+
+                if (callback) {
+                    setTimeout(function() {
+
+                        _.disableTransition();
+
+                        callback.call();
+                    }, _.options.speed);
+                }
+
+            }
+
+        }
+
+    };
+
+    Slick.prototype.getNavTarget = function() {
+
+        var _ = this,
+            asNavFor = _.options.asNavFor;
+
+        if ( asNavFor && asNavFor !== null ) {
+            asNavFor = $(asNavFor).not(_.$slider);
+        }
+
+        return asNavFor;
+
+    };
+
+    Slick.prototype.asNavFor = function(index) {
+
+        var _ = this,
+            asNavFor = _.getNavTarget();
+
+        if ( asNavFor !== null && typeof asNavFor === 'object' ) {
+            asNavFor.each(function() {
+                var target = $(this).slick('getSlick');
+                if(!target.unslicked) {
+                    target.slideHandler(index, true);
+                }
+            });
+        }
+
+    };
+
+    Slick.prototype.applyTransition = function(slide) {
+
+        var _ = this,
+            transition = {};
+
+        if (_.options.fade === false) {
+            transition[_.transitionType] = _.transformType + ' ' + _.options.speed + 'ms ' + _.options.cssEase;
+        } else {
+            transition[_.transitionType] = 'opacity ' + _.options.speed + 'ms ' + _.options.cssEase;
+        }
+
+        if (_.options.fade === false) {
+            _.$slideTrack.css(transition);
+        } else {
+            _.$slides.eq(slide).css(transition);
+        }
+
+    };
+
+    Slick.prototype.autoPlay = function() {
+
+        var _ = this;
+
+        _.autoPlayClear();
+
+        if ( _.slideCount > _.options.slidesToShow ) {
+            _.autoPlayTimer = setInterval( _.autoPlayIterator, _.options.autoplaySpeed );
+        }
+
+    };
+
+    Slick.prototype.autoPlayClear = function() {
+
+        var _ = this;
+
+        if (_.autoPlayTimer) {
+            clearInterval(_.autoPlayTimer);
+        }
+
+    };
+
+    Slick.prototype.autoPlayIterator = function() {
+
+        var _ = this,
+            slideTo = _.currentSlide + _.options.slidesToScroll;
+
+        if ( !_.paused && !_.interrupted && !_.focussed ) {
+
+            if ( _.options.infinite === false ) {
+
+                if ( _.direction === 1 && ( _.currentSlide + 1 ) === ( _.slideCount - 1 )) {
+                    _.direction = 0;
+                }
+
+                else if ( _.direction === 0 ) {
+
+                    slideTo = _.currentSlide - _.options.slidesToScroll;
+
+                    if ( _.currentSlide - 1 === 0 ) {
+                        _.direction = 1;
+                    }
+
+                }
+
+            }
+
+            _.slideHandler( slideTo );
+
+        }
+
+    };
+
+    Slick.prototype.buildArrows = function() {
+
+        var _ = this;
+
+        if (_.options.arrows === true ) {
+
+            _.$prevArrow = $(_.options.prevArrow).addClass('slick-arrow');
+            _.$nextArrow = $(_.options.nextArrow).addClass('slick-arrow');
+
+            if( _.slideCount > _.options.slidesToShow ) {
+
+                _.$prevArrow.removeClass('slick-hidden').removeAttr('aria-hidden tabindex');
+                _.$nextArrow.removeClass('slick-hidden').removeAttr('aria-hidden tabindex');
+
+                if (_.htmlExpr.test(_.options.prevArrow)) {
+                    _.$prevArrow.prependTo(_.options.appendArrows);
+                }
+
+                if (_.htmlExpr.test(_.options.nextArrow)) {
+                    _.$nextArrow.appendTo(_.options.appendArrows);
+                }
+
+                if (_.options.infinite !== true) {
+                    _.$prevArrow
+                        .addClass('slick-disabled')
+                        .attr('aria-disabled', 'true');
+                }
+
+            } else {
+
+                _.$prevArrow.add( _.$nextArrow )
+
+                    .addClass('slick-hidden')
+                    .attr({
+                        'aria-disabled': 'true',
+                        'tabindex': '-1'
+                    });
+
+            }
+
+        }
+
+    };
+
+    Slick.prototype.buildDots = function() {
+
+        var _ = this,
+            i, dot;
+
+        if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
+
+            _.$slider.addClass('slick-dotted');
+
+            dot = $('<ul />').addClass(_.options.dotsClass);
+
+            for (i = 0; i <= _.getDotCount(); i += 1) {
+                dot.append($('<li />').append(_.options.customPaging.call(this, _, i)));
+            }
+
+            _.$dots = dot.appendTo(_.options.appendDots);
+
+            _.$dots.find('li').first().addClass('slick-active').attr('aria-hidden', 'false');
+
+        }
+
+    };
+
+    Slick.prototype.buildOut = function() {
+
+        var _ = this;
+
+        _.$slides =
+            _.$slider
+                .children( _.options.slide + ':not(.slick-cloned)')
+                .addClass('slick-slide');
+
+        _.slideCount = _.$slides.length;
+
+        _.$slides.each(function(index, element) {
+            $(element)
+                .attr('data-slick-index', index)
+                .data('originalStyling', $(element).attr('style') || '');
+        });
+
+        _.$slider.addClass('slick-slider');
+
+        _.$slideTrack = (_.slideCount === 0) ?
+            $('<div class="slick-track"/>').appendTo(_.$slider) :
+            _.$slides.wrapAll('<div class="slick-track"/>').parent();
+
+        _.$list = _.$slideTrack.wrap(
+            '<div aria-live="polite" class="slick-list"/>').parent();
+        _.$slideTrack.css('opacity', 0);
+
+        if (_.options.centerMode === true || _.options.swipeToSlide === true) {
+            _.options.slidesToScroll = 1;
+        }
+
+        $('img[data-lazy]', _.$slider).not('[src]').addClass('slick-loading');
+
+        _.setupInfinite();
+
+        _.buildArrows();
+
+        _.buildDots();
+
+        _.updateDots();
+
+
+        _.setSlideClasses(typeof _.currentSlide === 'number' ? _.currentSlide : 0);
+
+        if (_.options.draggable === true) {
+            _.$list.addClass('draggable');
+        }
+
+    };
+
+    Slick.prototype.buildRows = function() {
+
+        var _ = this, a, b, c, newSlides, numOfSlides, originalSlides,slidesPerSection;
+
+        newSlides = document.createDocumentFragment();
+        originalSlides = _.$slider.children();
+
+        if(_.options.rows > 1) {
+
+            slidesPerSection = _.options.slidesPerRow * _.options.rows;
+            numOfSlides = Math.ceil(
+                originalSlides.length / slidesPerSection
+            );
+
+            for(a = 0; a < numOfSlides; a++){
+                var slide = document.createElement('div');
+                for(b = 0; b < _.options.rows; b++) {
+                    var row = document.createElement('div');
+                    for(c = 0; c < _.options.slidesPerRow; c++) {
+                        var target = (a * slidesPerSection + ((b * _.options.slidesPerRow) + c));
+                        if (originalSlides.get(target)) {
+                            row.appendChild(originalSlides.get(target));
+                        }
+                    }
+                    slide.appendChild(row);
+                }
+                newSlides.appendChild(slide);
+            }
+
+            _.$slider.empty().append(newSlides);
+            _.$slider.children().children().children()
+                .css({
+                    'width':(100 / _.options.slidesPerRow) + '%',
+                    'display': 'inline-block'
+                });
+
+        }
+
+    };
+
+    Slick.prototype.checkResponsive = function(initial, forceUpdate) {
+
+        var _ = this,
+            breakpoint, targetBreakpoint, respondToWidth, triggerBreakpoint = false;
+        var sliderWidth = _.$slider.width();
+        var windowWidth = window.innerWidth || $(window).width();
+
+        if (_.respondTo === 'window') {
+            respondToWidth = windowWidth;
+        } else if (_.respondTo === 'slider') {
+            respondToWidth = sliderWidth;
+        } else if (_.respondTo === 'min') {
+            respondToWidth = Math.min(windowWidth, sliderWidth);
+        }
+
+        if ( _.options.responsive &&
+            _.options.responsive.length &&
+            _.options.responsive !== null) {
+
+            targetBreakpoint = null;
+
+            for (breakpoint in _.breakpoints) {
+                if (_.breakpoints.hasOwnProperty(breakpoint)) {
+                    if (_.originalSettings.mobileFirst === false) {
+                        if (respondToWidth < _.breakpoints[breakpoint]) {
+                            targetBreakpoint = _.breakpoints[breakpoint];
+                        }
+                    } else {
+                        if (respondToWidth > _.breakpoints[breakpoint]) {
+                            targetBreakpoint = _.breakpoints[breakpoint];
+                        }
+                    }
+                }
+            }
+
+            if (targetBreakpoint !== null) {
+                if (_.activeBreakpoint !== null) {
+                    if (targetBreakpoint !== _.activeBreakpoint || forceUpdate) {
+                        _.activeBreakpoint =
+                            targetBreakpoint;
+                        if (_.breakpointSettings[targetBreakpoint] === 'unslick') {
+                            _.unslick(targetBreakpoint);
+                        } else {
+                            _.options = $.extend({}, _.originalSettings,
+                                _.breakpointSettings[
+                                    targetBreakpoint]);
+                            if (initial === true) {
+                                _.currentSlide = _.options.initialSlide;
+                            }
+                            _.refresh(initial);
+                        }
+                        triggerBreakpoint = targetBreakpoint;
+                    }
+                } else {
+                    _.activeBreakpoint = targetBreakpoint;
+                    if (_.breakpointSettings[targetBreakpoint] === 'unslick') {
+                        _.unslick(targetBreakpoint);
+                    } else {
+                        _.options = $.extend({}, _.originalSettings,
+                            _.breakpointSettings[
+                                targetBreakpoint]);
+                        if (initial === true) {
+                            _.currentSlide = _.options.initialSlide;
+                        }
+                        _.refresh(initial);
+                    }
+                    triggerBreakpoint = targetBreakpoint;
+                }
+            } else {
+                if (_.activeBreakpoint !== null) {
+                    _.activeBreakpoint = null;
+                    _.options = _.originalSettings;
+                    if (initial === true) {
+                        _.currentSlide = _.options.initialSlide;
+                    }
+                    _.refresh(initial);
+                    triggerBreakpoint = targetBreakpoint;
+                }
+            }
+
+            // only trigger breakpoints during an actual break. not on initialize.
+            if( !initial && triggerBreakpoint !== false ) {
+                _.$slider.trigger('breakpoint', [_, triggerBreakpoint]);
+            }
+        }
+
+    };
+
+    Slick.prototype.changeSlide = function(event, dontAnimate) {
+
+        var _ = this,
+            $target = $(event.currentTarget),
+            indexOffset, slideOffset, unevenOffset;
+
+        // If target is a link, prevent default action.
+        if($target.is('a')) {
+            event.preventDefault();
+        }
+
+        // If target is not the <li> element (ie: a child), find the <li>.
+        if(!$target.is('li')) {
+            $target = $target.closest('li');
+        }
+
+        unevenOffset = (_.slideCount % _.options.slidesToScroll !== 0);
+        indexOffset = unevenOffset ? 0 : (_.slideCount - _.currentSlide) % _.options.slidesToScroll;
+
+        switch (event.data.message) {
+
+            case 'previous':
+                slideOffset = indexOffset === 0 ? _.options.slidesToScroll : _.options.slidesToShow - indexOffset;
+                if (_.slideCount > _.options.slidesToShow) {
+                    _.slideHandler(_.currentSlide - slideOffset, false, dontAnimate);
+                }
+                break;
+
+            case 'next':
+                slideOffset = indexOffset === 0 ? _.options.slidesToScroll : indexOffset;
+                if (_.slideCount > _.options.slidesToShow) {
+                    _.slideHandler(_.currentSlide + slideOffset, false, dontAnimate);
+                }
+                break;
+
+            case 'index':
+                var index = event.data.index === 0 ? 0 :
+                    event.data.index || $target.index() * _.options.slidesToScroll;
+
+                _.slideHandler(_.checkNavigable(index), false, dontAnimate);
+                $target.children().trigger('focus');
+                break;
+
+            default:
+                return;
+        }
+
+    };
+
+    Slick.prototype.checkNavigable = function(index) {
+
+        var _ = this,
+            navigables, prevNavigable;
+
+        navigables = _.getNavigableIndexes();
+        prevNavigable = 0;
+        if (index > navigables[navigables.length - 1]) {
+            index = navigables[navigables.length - 1];
+        } else {
+            for (var n in navigables) {
+                if (index < navigables[n]) {
+                    index = prevNavigable;
+                    break;
+                }
+                prevNavigable = navigables[n];
+            }
+        }
+
+        return index;
+    };
+
+    Slick.prototype.cleanUpEvents = function() {
+
+        var _ = this;
+
+        if (_.options.dots && _.$dots !== null) {
+
+            $('li', _.$dots)
+                .off('click.slick', _.changeSlide)
+                .off('mouseenter.slick', $.proxy(_.interrupt, _, true))
+                .off('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+        }
+
+        _.$slider.off('focus.slick blur.slick');
+
+        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+            _.$prevArrow && _.$prevArrow.off('click.slick', _.changeSlide);
+            _.$nextArrow && _.$nextArrow.off('click.slick', _.changeSlide);
+        }
+
+        _.$list.off('touchstart.slick mousedown.slick', _.swipeHandler);
+        _.$list.off('touchmove.slick mousemove.slick', _.swipeHandler);
+        _.$list.off('touchend.slick mouseup.slick', _.swipeHandler);
+        _.$list.off('touchcancel.slick mouseleave.slick', _.swipeHandler);
+
+        _.$list.off('click.slick', _.clickHandler);
+
+        $(document).off(_.visibilityChange, _.visibility);
+
+        _.cleanUpSlideEvents();
+
+        if (_.options.accessibility === true) {
+            _.$list.off('keydown.slick', _.keyHandler);
+        }
+
+        if (_.options.focusOnSelect === true) {
+            $(_.$slideTrack).children().off('click.slick', _.selectHandler);
+        }
+
+        $(window).off('orientationchange.slick.slick-' + _.instanceUid, _.orientationChange);
+
+        $(window).off('resize.slick.slick-' + _.instanceUid, _.resize);
+
+        $('[draggable!=true]', _.$slideTrack).off('dragstart', _.preventDefault);
+
+        $(window).off('load.slick.slick-' + _.instanceUid, _.setPosition);
+        $(document).off('ready.slick.slick-' + _.instanceUid, _.setPosition);
+
+    };
+
+    Slick.prototype.cleanUpSlideEvents = function() {
+
+        var _ = this;
+
+        _.$list.off('mouseenter.slick', $.proxy(_.interrupt, _, true));
+        _.$list.off('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+    };
+
+    Slick.prototype.cleanUpRows = function() {
+
+        var _ = this, originalSlides;
+
+        if(_.options.rows > 1) {
+            originalSlides = _.$slides.children().children();
+            originalSlides.removeAttr('style');
+            _.$slider.empty().append(originalSlides);
+        }
+
+    };
+
+    Slick.prototype.clickHandler = function(event) {
+
+        var _ = this;
+
+        if (_.shouldClick === false) {
+            event.stopImmediatePropagation();
+            event.stopPropagation();
+            event.preventDefault();
+        }
+
+    };
+
+    Slick.prototype.destroy = function(refresh) {
+
+        var _ = this;
+
+        _.autoPlayClear();
+
+        _.touchObject = {};
+
+        _.cleanUpEvents();
+
+        $('.slick-cloned', _.$slider).detach();
+
+        if (_.$dots) {
+            _.$dots.remove();
+        }
+
+
+        if ( _.$prevArrow && _.$prevArrow.length ) {
+
+            _.$prevArrow
+                .removeClass('slick-disabled slick-arrow slick-hidden')
+                .removeAttr('aria-hidden aria-disabled tabindex')
+                .css('display','');
+
+            if ( _.htmlExpr.test( _.options.prevArrow )) {
+                _.$prevArrow.remove();
+            }
+        }
+
+        if ( _.$nextArrow && _.$nextArrow.length ) {
+
+            _.$nextArrow
+                .removeClass('slick-disabled slick-arrow slick-hidden')
+                .removeAttr('aria-hidden aria-disabled tabindex')
+                .css('display','');
+
+            if ( _.htmlExpr.test( _.options.nextArrow )) {
+                _.$nextArrow.remove();
+            }
+
+        }
+
+
+        if (_.$slides) {
+
+            _.$slides
+                .removeClass('slick-slide slick-active slick-center slick-visible slick-current')
+                .removeAttr('aria-hidden')
+                .removeAttr('data-slick-index')
+                .each(function(){
+                    $(this).attr('style', $(this).data('originalStyling'));
+                });
+
+            _.$slideTrack.children(this.options.slide).detach();
+
+            _.$slideTrack.detach();
+
+            _.$list.detach();
+
+            _.$slider.append(_.$slides);
+        }
+
+        _.cleanUpRows();
+
+        _.$slider.removeClass('slick-slider');
+        _.$slider.removeClass('slick-initialized');
+        _.$slider.removeClass('slick-dotted');
+
+        _.unslicked = true;
+
+        if(!refresh) {
+            _.$slider.trigger('destroy', [_]);
+        }
+
+    };
+
+    Slick.prototype.disableTransition = function(slide) {
+
+        var _ = this,
+            transition = {};
+
+        transition[_.transitionType] = '';
+
+        if (_.options.fade === false) {
+            _.$slideTrack.css(transition);
+        } else {
+            _.$slides.eq(slide).css(transition);
+        }
+
+    };
+
+    Slick.prototype.fadeSlide = function(slideIndex, callback) {
+
+        var _ = this;
+
+        if (_.cssTransitions === false) {
+
+            _.$slides.eq(slideIndex).css({
+                zIndex: _.options.zIndex
+            });
+
+            _.$slides.eq(slideIndex).animate({
+                opacity: 1
+            }, _.options.speed, _.options.easing, callback);
+
+        } else {
+
+            _.applyTransition(slideIndex);
+
+            _.$slides.eq(slideIndex).css({
+                opacity: 1,
+                zIndex: _.options.zIndex
+            });
+
+            if (callback) {
+                setTimeout(function() {
+
+                    _.disableTransition(slideIndex);
+
+                    callback.call();
+                }, _.options.speed);
+            }
+
+        }
+
+    };
+
+    Slick.prototype.fadeSlideOut = function(slideIndex) {
+
+        var _ = this;
+
+        if (_.cssTransitions === false) {
+
+            _.$slides.eq(slideIndex).animate({
+                opacity: 0,
+                zIndex: _.options.zIndex - 2
+            }, _.options.speed, _.options.easing);
+
+        } else {
+
+            _.applyTransition(slideIndex);
+
+            _.$slides.eq(slideIndex).css({
+                opacity: 0,
+                zIndex: _.options.zIndex - 2
+            });
+
+        }
+
+    };
+
+    Slick.prototype.filterSlides = Slick.prototype.slickFilter = function(filter) {
+
+        var _ = this;
+
+        if (filter !== null) {
+
+            _.$slidesCache = _.$slides;
+
+            _.unload();
+
+            _.$slideTrack.children(this.options.slide).detach();
+
+            _.$slidesCache.filter(filter).appendTo(_.$slideTrack);
+
+            _.reinit();
+
+        }
+
+    };
+
+    Slick.prototype.focusHandler = function() {
+
+        var _ = this;
+
+        _.$slider
+            .off('focus.slick blur.slick')
+            .on('focus.slick blur.slick',
+                '*:not(.slick-arrow)', function(event) {
+
+            event.stopImmediatePropagation();
+            var $sf = $(this);
+
+            setTimeout(function() {
+
+                if( _.options.pauseOnFocus ) {
+                    _.focussed = $sf.is(':focus');
+                    _.autoPlay();
+                }
+
+            }, 0);
+
+        });
+    };
+
+    Slick.prototype.getCurrent = Slick.prototype.slickCurrentSlide = function() {
+
+        var _ = this;
+        return _.currentSlide;
+
+    };
+
+    Slick.prototype.getDotCount = function() {
+
+        var _ = this;
+
+        var breakPoint = 0;
+        var counter = 0;
+        var pagerQty = 0;
+
+        if (_.options.infinite === true) {
+            while (breakPoint < _.slideCount) {
+                ++pagerQty;
+                breakPoint = counter + _.options.slidesToScroll;
+                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+            }
+        } else if (_.options.centerMode === true) {
+            pagerQty = _.slideCount;
+        } else if(!_.options.asNavFor) {
+            pagerQty = 1 + Math.ceil((_.slideCount - _.options.slidesToShow) / _.options.slidesToScroll);
+        }else {
+            while (breakPoint < _.slideCount) {
+                ++pagerQty;
+                breakPoint = counter + _.options.slidesToScroll;
+                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+            }
+        }
+
+        return pagerQty - 1;
+
+    };
+
+    Slick.prototype.getLeft = function(slideIndex) {
+
+        var _ = this,
+            targetLeft,
+            verticalHeight,
+            verticalOffset = 0,
+            targetSlide;
+
+        _.slideOffset = 0;
+        verticalHeight = _.$slides.first().outerHeight(true);
+
+        if (_.options.infinite === true) {
+            if (_.slideCount > _.options.slidesToShow) {
+                _.slideOffset = (_.slideWidth * _.options.slidesToShow) * -1;
+                verticalOffset = (verticalHeight * _.options.slidesToShow) * -1;
+            }
+            if (_.slideCount % _.options.slidesToScroll !== 0) {
+                if (slideIndex + _.options.slidesToScroll > _.slideCount && _.slideCount > _.options.slidesToShow) {
+                    if (slideIndex > _.slideCount) {
+                        _.slideOffset = ((_.options.slidesToShow - (slideIndex - _.slideCount)) * _.slideWidth) * -1;
+                        verticalOffset = ((_.options.slidesToShow - (slideIndex - _.slideCount)) * verticalHeight) * -1;
+                    } else {
+                        _.slideOffset = ((_.slideCount % _.options.slidesToScroll) * _.slideWidth) * -1;
+                        verticalOffset = ((_.slideCount % _.options.slidesToScroll) * verticalHeight) * -1;
+                    }
+                }
+            }
+        } else {
+            if (slideIndex + _.options.slidesToShow > _.slideCount) {
+                _.slideOffset = ((slideIndex + _.options.slidesToShow) - _.slideCount) * _.slideWidth;
+                verticalOffset = ((slideIndex + _.options.slidesToShow) - _.slideCount) * verticalHeight;
+            }
+        }
+
+        if (_.slideCount <= _.options.slidesToShow) {
+            _.slideOffset = 0;
+            verticalOffset = 0;
+        }
+
+        if (_.options.centerMode === true && _.slideCount <= _.options.slidesToShow) {
+            _.slideOffset = ((_.slideWidth * Math.floor(_.options.slidesToShow)) / 2) - ((_.slideWidth * _.slideCount) / 2);
+        } else if (_.options.centerMode === true && _.options.infinite === true) {
+            _.slideOffset += _.slideWidth * Math.floor(_.options.slidesToShow / 2) - _.slideWidth;
+        } else if (_.options.centerMode === true) {
+            _.slideOffset = 0;
+            _.slideOffset += _.slideWidth * Math.floor(_.options.slidesToShow / 2);
+        }
+
+        if (_.options.vertical === false) {
+            targetLeft = ((slideIndex * _.slideWidth) * -1) + _.slideOffset;
+        } else {
+            targetLeft = ((slideIndex * verticalHeight) * -1) + verticalOffset;
+        }
+
+        if (_.options.variableWidth === true) {
+
+            if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
+                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
+            } else {
+                targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
+            }
+
+            if (_.options.rtl === true) {
+                if (targetSlide[0]) {
+                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+                } else {
+                    targetLeft =  0;
+                }
+            } else {
+                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+            }
+
+            if (_.options.centerMode === true) {
+                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
+                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
+                } else {
+                    targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
+                }
+
+                if (_.options.rtl === true) {
+                    if (targetSlide[0]) {
+                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+                    } else {
+                        targetLeft =  0;
+                    }
+                } else {
+                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+                }
+
+                targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
+            }
+        }
+
+        return targetLeft;
+
+    };
+
+    Slick.prototype.getOption = Slick.prototype.slickGetOption = function(option) {
+
+        var _ = this;
+
+        return _.options[option];
+
+    };
+
+    Slick.prototype.getNavigableIndexes = function() {
+
+        var _ = this,
+            breakPoint = 0,
+            counter = 0,
+            indexes = [],
+            max;
+
+        if (_.options.infinite === false) {
+            max = _.slideCount;
+        } else {
+            breakPoint = _.options.slidesToScroll * -1;
+            counter = _.options.slidesToScroll * -1;
+            max = _.slideCount * 2;
+        }
+
+        while (breakPoint < max) {
+            indexes.push(breakPoint);
+            breakPoint = counter + _.options.slidesToScroll;
+            counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+        }
+
+        return indexes;
+
+    };
+
+    Slick.prototype.getSlick = function() {
+
+        return this;
+
+    };
+
+    Slick.prototype.getSlideCount = function() {
+
+        var _ = this,
+            slidesTraversed, swipedSlide, centerOffset;
+
+        centerOffset = _.options.centerMode === true ? _.slideWidth * Math.floor(_.options.slidesToShow / 2) : 0;
+
+        if (_.options.swipeToSlide === true) {
+            _.$slideTrack.find('.slick-slide').each(function(index, slide) {
+                if (slide.offsetLeft - centerOffset + ($(slide).outerWidth() / 2) > (_.swipeLeft * -1)) {
+                    swipedSlide = slide;
+                    return false;
+                }
+            });
+
+            slidesTraversed = Math.abs($(swipedSlide).attr('data-slick-index') - _.currentSlide) || 1;
+
+            return slidesTraversed;
+
+        } else {
+            return _.options.slidesToScroll;
+        }
+
+    };
+
+    Slick.prototype.goTo = Slick.prototype.slickGoTo = function(slide, dontAnimate) {
+
+        var _ = this;
+
+        _.changeSlide({
+            data: {
+                message: 'index',
+                index: parseInt(slide)
+            }
+        }, dontAnimate);
+
+    };
+
+    Slick.prototype.init = function(creation) {
+
+        var _ = this;
+
+        if (!$(_.$slider).hasClass('slick-initialized')) {
+
+            $(_.$slider).addClass('slick-initialized');
+
+            _.buildRows();
+            _.buildOut();
+            _.setProps();
+            _.startLoad();
+            _.loadSlider();
+            _.initializeEvents();
+            _.updateArrows();
+            _.updateDots();
+            _.checkResponsive(true);
+            _.focusHandler();
+
+        }
+
+        if (creation) {
+            _.$slider.trigger('init', [_]);
+        }
+
+        if (_.options.accessibility === true) {
+            _.initADA();
+        }
+
+        if ( _.options.autoplay ) {
+
+            _.paused = false;
+            _.autoPlay();
+
+        }
+
+    };
+
+    Slick.prototype.initADA = function() {
+        var _ = this;
+        _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
+            'aria-hidden': 'true',
+            'tabindex': '-1'
+        }).find('a, input, button, select').attr({
+            'tabindex': '-1'
+        });
+
+        _.$slideTrack.attr('role', 'listbox');
+
+        _.$slides.not(_.$slideTrack.find('.slick-cloned')).each(function(i) {
+            $(this).attr('role', 'option');
+            
+            //Evenly distribute aria-describedby tags through available dots.
+            var describedBySlideId = _.options.centerMode ? i : Math.floor(i / _.options.slidesToShow);
+            
+            if (_.options.dots === true) {
+                $(this).attr('aria-describedby', 'slick-slide' + _.instanceUid + describedBySlideId + '');
+            }
+        });
+
+        if (_.$dots !== null) {
+            _.$dots.attr('role', 'tablist').find('li').each(function(i) {
+                $(this).attr({
+                    'role': 'presentation',
+                    'aria-selected': 'false',
+                    'aria-controls': 'navigation' + _.instanceUid + i + '',
+                    'id': 'slick-slide' + _.instanceUid + i + ''
+                });
+            })
+                .first().attr('aria-selected', 'true').end()
+                .find('button').attr('role', 'button').end()
+                .closest('div').attr('role', 'toolbar');
+        }
+        _.activateADA();
+
+    };
+
+    Slick.prototype.initArrowEvents = function() {
+
+        var _ = this;
+
+        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+            _.$prevArrow
+               .off('click.slick')
+               .on('click.slick', {
+                    message: 'previous'
+               }, _.changeSlide);
+            _.$nextArrow
+               .off('click.slick')
+               .on('click.slick', {
+                    message: 'next'
+               }, _.changeSlide);
+        }
+
+    };
+
+    Slick.prototype.initDotEvents = function() {
+
+        var _ = this;
+
+        if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
+            $('li', _.$dots).on('click.slick', {
+                message: 'index'
+            }, _.changeSlide);
+        }
+
+        if ( _.options.dots === true && _.options.pauseOnDotsHover === true ) {
+
+            $('li', _.$dots)
+                .on('mouseenter.slick', $.proxy(_.interrupt, _, true))
+                .on('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+        }
+
+    };
+
+    Slick.prototype.initSlideEvents = function() {
+
+        var _ = this;
+
+        if ( _.options.pauseOnHover ) {
+
+            _.$list.on('mouseenter.slick', $.proxy(_.interrupt, _, true));
+            _.$list.on('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+        }
+
+    };
+
+    Slick.prototype.initializeEvents = function() {
+
+        var _ = this;
+
+        _.initArrowEvents();
+
+        _.initDotEvents();
+        _.initSlideEvents();
+
+        _.$list.on('touchstart.slick mousedown.slick', {
+            action: 'start'
+        }, _.swipeHandler);
+        _.$list.on('touchmove.slick mousemove.slick', {
+            action: 'move'
+        }, _.swipeHandler);
+        _.$list.on('touchend.slick mouseup.slick', {
+            action: 'end'
+        }, _.swipeHandler);
+        _.$list.on('touchcancel.slick mouseleave.slick', {
+            action: 'end'
+        }, _.swipeHandler);
+
+        _.$list.on('click.slick', _.clickHandler);
+
+        $(document).on(_.visibilityChange, $.proxy(_.visibility, _));
+
+        if (_.options.accessibility === true) {
+            _.$list.on('keydown.slick', _.keyHandler);
+        }
+
+        if (_.options.focusOnSelect === true) {
+            $(_.$slideTrack).children().on('click.slick', _.selectHandler);
+        }
+
+        $(window).on('orientationchange.slick.slick-' + _.instanceUid, $.proxy(_.orientationChange, _));
+
+        $(window).on('resize.slick.slick-' + _.instanceUid, $.proxy(_.resize, _));
+
+        $('[draggable!=true]', _.$slideTrack).on('dragstart', _.preventDefault);
+
+        $(window).on('load.slick.slick-' + _.instanceUid, _.setPosition);
+        $(document).on('ready.slick.slick-' + _.instanceUid, _.setPosition);
+
+    };
+
+    Slick.prototype.initUI = function() {
+
+        var _ = this;
+
+        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+
+            _.$prevArrow.show();
+            _.$nextArrow.show();
+
+        }
+
+        if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
+
+            _.$dots.show();
+
+        }
+
+    };
+
+    Slick.prototype.keyHandler = function(event) {
+
+        var _ = this;
+         //Dont slide if the cursor is inside the form fields and arrow keys are pressed
+        if(!event.target.tagName.match('TEXTAREA|INPUT|SELECT')) {
+            if (event.keyCode === 37 && _.options.accessibility === true) {
+                _.changeSlide({
+                    data: {
+                        message: _.options.rtl === true ? 'next' :  'previous'
+                    }
+                });
+            } else if (event.keyCode === 39 && _.options.accessibility === true) {
+                _.changeSlide({
+                    data: {
+                        message: _.options.rtl === true ? 'previous' : 'next'
+                    }
+                });
+            }
+        }
+
+    };
+
+    Slick.prototype.lazyLoad = function() {
+
+        var _ = this,
+            loadRange, cloneRange, rangeStart, rangeEnd;
+
+        function loadImages(imagesScope) {
+
+            $('img[data-lazy]', imagesScope).each(function() {
+
+                var image = $(this),
+                    imageSource = $(this).attr('data-lazy'),
+                    imageToLoad = document.createElement('img');
+
+                imageToLoad.onload = function() {
+
+                    image
+                        .animate({ opacity: 0 }, 100, function() {
+                            image
+                                .attr('src', imageSource)
+                                .animate({ opacity: 1 }, 200, function() {
+                                    image
+                                        .removeAttr('data-lazy')
+                                        .removeClass('slick-loading');
+                                });
+                            _.$slider.trigger('lazyLoaded', [_, image, imageSource]);
+                        });
+
+                };
+
+                imageToLoad.onerror = function() {
+
+                    image
+                        .removeAttr( 'data-lazy' )
+                        .removeClass( 'slick-loading' )
+                        .addClass( 'slick-lazyload-error' );
+
+                    _.$slider.trigger('lazyLoadError', [ _, image, imageSource ]);
+
+                };
+
+                imageToLoad.src = imageSource;
+
+            });
+
+        }
+
+        if (_.options.centerMode === true) {
+            if (_.options.infinite === true) {
+                rangeStart = _.currentSlide + (_.options.slidesToShow / 2 + 1);
+                rangeEnd = rangeStart + _.options.slidesToShow + 2;
+            } else {
+                rangeStart = Math.max(0, _.currentSlide - (_.options.slidesToShow / 2 + 1));
+                rangeEnd = 2 + (_.options.slidesToShow / 2 + 1) + _.currentSlide;
+            }
+        } else {
+            rangeStart = _.options.infinite ? _.options.slidesToShow + _.currentSlide : _.currentSlide;
+            rangeEnd = Math.ceil(rangeStart + _.options.slidesToShow);
+            if (_.options.fade === true) {
+                if (rangeStart > 0) rangeStart--;
+                if (rangeEnd <= _.slideCount) rangeEnd++;
+            }
+        }
+
+        loadRange = _.$slider.find('.slick-slide').slice(rangeStart, rangeEnd);
+        loadImages(loadRange);
+
+        if (_.slideCount <= _.options.slidesToShow) {
+            cloneRange = _.$slider.find('.slick-slide');
+            loadImages(cloneRange);
+        } else
+        if (_.currentSlide >= _.slideCount - _.options.slidesToShow) {
+            cloneRange = _.$slider.find('.slick-cloned').slice(0, _.options.slidesToShow);
+            loadImages(cloneRange);
+        } else if (_.currentSlide === 0) {
+            cloneRange = _.$slider.find('.slick-cloned').slice(_.options.slidesToShow * -1);
+            loadImages(cloneRange);
+        }
+
+    };
+
+    Slick.prototype.loadSlider = function() {
+
+        var _ = this;
+
+        _.setPosition();
+
+        _.$slideTrack.css({
+            opacity: 1
+        });
+
+        _.$slider.removeClass('slick-loading');
+
+        _.initUI();
+
+        if (_.options.lazyLoad === 'progressive') {
+            _.progressiveLazyLoad();
+        }
+
+    };
+
+    Slick.prototype.next = Slick.prototype.slickNext = function() {
+
+        var _ = this;
+
+        _.changeSlide({
+            data: {
+                message: 'next'
+            }
+        });
+
+    };
+
+    Slick.prototype.orientationChange = function() {
+
+        var _ = this;
+
+        _.checkResponsive();
+        _.setPosition();
+
+    };
+
+    Slick.prototype.pause = Slick.prototype.slickPause = function() {
+
+        var _ = this;
+
+        _.autoPlayClear();
+        _.paused = true;
+
+    };
+
+    Slick.prototype.play = Slick.prototype.slickPlay = function() {
+
+        var _ = this;
+
+        _.autoPlay();
+        _.options.autoplay = true;
+        _.paused = false;
+        _.focussed = false;
+        _.interrupted = false;
+
+    };
+
+    Slick.prototype.postSlide = function(index) {
+
+        var _ = this;
+
+        if( !_.unslicked ) {
+
+            _.$slider.trigger('afterChange', [_, index]);
+
+            _.animating = false;
+
+            _.setPosition();
+
+            _.swipeLeft = null;
+
+            if ( _.options.autoplay ) {
+                _.autoPlay();
+            }
+
+            if (_.options.accessibility === true) {
+                _.initADA();
+            }
+
+        }
+
+    };
+
+    Slick.prototype.prev = Slick.prototype.slickPrev = function() {
+
+        var _ = this;
+
+        _.changeSlide({
+            data: {
+                message: 'previous'
+            }
+        });
+
+    };
+
+    Slick.prototype.preventDefault = function(event) {
+
+        event.preventDefault();
+
+    };
+
+    Slick.prototype.progressiveLazyLoad = function( tryCount ) {
+
+        tryCount = tryCount || 1;
+
+        var _ = this,
+            $imgsToLoad = $( 'img[data-lazy]', _.$slider ),
+            image,
+            imageSource,
+            imageToLoad;
+
+        if ( $imgsToLoad.length ) {
+
+            image = $imgsToLoad.first();
+            imageSource = image.attr('data-lazy');
+            imageToLoad = document.createElement('img');
+
+            imageToLoad.onload = function() {
+
+                image
+                    .attr( 'src', imageSource )
+                    .removeAttr('data-lazy')
+                    .removeClass('slick-loading');
+
+                if ( _.options.adaptiveHeight === true ) {
+                    _.setPosition();
+                }
+
+                _.$slider.trigger('lazyLoaded', [ _, image, imageSource ]);
+                _.progressiveLazyLoad();
+
+            };
+
+            imageToLoad.onerror = function() {
+
+                if ( tryCount < 3 ) {
+
+                    /**
+                     * try to load the image 3 times,
+                     * leave a slight delay so we don't get
+                     * servers blocking the request.
+                     */
+                    setTimeout( function() {
+                        _.progressiveLazyLoad( tryCount + 1 );
+                    }, 500 );
+
+                } else {
+
+                    image
+                        .removeAttr( 'data-lazy' )
+                        .removeClass( 'slick-loading' )
+                        .addClass( 'slick-lazyload-error' );
+
+                    _.$slider.trigger('lazyLoadError', [ _, image, imageSource ]);
+
+                    _.progressiveLazyLoad();
+
+                }
+
+            };
+
+            imageToLoad.src = imageSource;
+
+        } else {
+
+            _.$slider.trigger('allImagesLoaded', [ _ ]);
+
+        }
+
+    };
+
+    Slick.prototype.refresh = function( initializing ) {
+
+        var _ = this, currentSlide, lastVisibleIndex;
+
+        lastVisibleIndex = _.slideCount - _.options.slidesToShow;
+
+        // in non-infinite sliders, we don't want to go past the
+        // last visible index.
+        if( !_.options.infinite && ( _.currentSlide > lastVisibleIndex )) {
+            _.currentSlide = lastVisibleIndex;
+        }
+
+        // if less slides than to show, go to start.
+        if ( _.slideCount <= _.options.slidesToShow ) {
+            _.currentSlide = 0;
+
+        }
+
+        currentSlide = _.currentSlide;
+
+        _.destroy(true);
+
+        $.extend(_, _.initials, { currentSlide: currentSlide });
+
+        _.init();
+
+        if( !initializing ) {
+
+            _.changeSlide({
+                data: {
+                    message: 'index',
+                    index: currentSlide
+                }
+            }, false);
+
+        }
+
+    };
+
+    Slick.prototype.registerBreakpoints = function() {
+
+        var _ = this, breakpoint, currentBreakpoint, l,
+            responsiveSettings = _.options.responsive || null;
+
+        if ( $.type(responsiveSettings) === 'array' && responsiveSettings.length ) {
+
+            _.respondTo = _.options.respondTo || 'window';
+
+            for ( breakpoint in responsiveSettings ) {
+
+                l = _.breakpoints.length-1;
+                currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
+
+                if (responsiveSettings.hasOwnProperty(breakpoint)) {
+
+                    // loop through the breakpoints and cut out any existing
+                    // ones with the same breakpoint number, we don't want dupes.
+                    while( l >= 0 ) {
+                        if( _.breakpoints[l] && _.breakpoints[l] === currentBreakpoint ) {
+                            _.breakpoints.splice(l,1);
+                        }
+                        l--;
+                    }
+
+                    _.breakpoints.push(currentBreakpoint);
+                    _.breakpointSettings[currentBreakpoint] = responsiveSettings[breakpoint].settings;
+
+                }
+
+            }
+
+            _.breakpoints.sort(function(a, b) {
+                return ( _.options.mobileFirst ) ? a-b : b-a;
+            });
+
+        }
+
+    };
+
+    Slick.prototype.reinit = function() {
+
+        var _ = this;
+
+        _.$slides =
+            _.$slideTrack
+                .children(_.options.slide)
+                .addClass('slick-slide');
+
+        _.slideCount = _.$slides.length;
+
+        if (_.currentSlide >= _.slideCount && _.currentSlide !== 0) {
+            _.currentSlide = _.currentSlide - _.options.slidesToScroll;
+        }
+
+        if (_.slideCount <= _.options.slidesToShow) {
+            _.currentSlide = 0;
+        }
+
+        _.registerBreakpoints();
+
+        _.setProps();
+        _.setupInfinite();
+        _.buildArrows();
+        _.updateArrows();
+        _.initArrowEvents();
+        _.buildDots();
+        _.updateDots();
+        _.initDotEvents();
+        _.cleanUpSlideEvents();
+        _.initSlideEvents();
+
+        _.checkResponsive(false, true);
+
+        if (_.options.focusOnSelect === true) {
+            $(_.$slideTrack).children().on('click.slick', _.selectHandler);
+        }
+
+        _.setSlideClasses(typeof _.currentSlide === 'number' ? _.currentSlide : 0);
+
+        _.setPosition();
+        _.focusHandler();
+
+        _.paused = !_.options.autoplay;
+        _.autoPlay();
+
+        _.$slider.trigger('reInit', [_]);
+
+    };
+
+    Slick.prototype.resize = function() {
+
+        var _ = this;
+
+        if ($(window).width() !== _.windowWidth) {
+            clearTimeout(_.windowDelay);
+            _.windowDelay = window.setTimeout(function() {
+                _.windowWidth = $(window).width();
+                _.checkResponsive();
+                if( !_.unslicked ) { _.setPosition(); }
+            }, 50);
+        }
+    };
+
+    Slick.prototype.removeSlide = Slick.prototype.slickRemove = function(index, removeBefore, removeAll) {
+
+        var _ = this;
+
+        if (typeof(index) === 'boolean') {
+            removeBefore = index;
+            index = removeBefore === true ? 0 : _.slideCount - 1;
+        } else {
+            index = removeBefore === true ? --index : index;
+        }
+
+        if (_.slideCount < 1 || index < 0 || index > _.slideCount - 1) {
+            return false;
+        }
+
+        _.unload();
+
+        if (removeAll === true) {
+            _.$slideTrack.children().remove();
+        } else {
+            _.$slideTrack.children(this.options.slide).eq(index).remove();
+        }
+
+        _.$slides = _.$slideTrack.children(this.options.slide);
+
+        _.$slideTrack.children(this.options.slide).detach();
+
+        _.$slideTrack.append(_.$slides);
+
+        _.$slidesCache = _.$slides;
+
+        _.reinit();
+
+    };
+
+    Slick.prototype.setCSS = function(position) {
+
+        var _ = this,
+            positionProps = {},
+            x, y;
+
+        if (_.options.rtl === true) {
+            position = -position;
+        }
+        x = _.positionProp == 'left' ? Math.ceil(position) + 'px' : '0px';
+        y = _.positionProp == 'top' ? Math.ceil(position) + 'px' : '0px';
+
+        positionProps[_.positionProp] = position;
+
+        if (_.transformsEnabled === false) {
+            _.$slideTrack.css(positionProps);
+        } else {
+            positionProps = {};
+            if (_.cssTransitions === false) {
+                positionProps[_.animType] = 'translate(' + x + ', ' + y + ')';
+                _.$slideTrack.css(positionProps);
+            } else {
+                positionProps[_.animType] = 'translate3d(' + x + ', ' + y + ', 0px)';
+                _.$slideTrack.css(positionProps);
+            }
+        }
+
+    };
+
+    Slick.prototype.setDimensions = function() {
+
+        var _ = this;
+
+        if (_.options.vertical === false) {
+            if (_.options.centerMode === true) {
+                _.$list.css({
+                    padding: ('0px ' + _.options.centerPadding)
+                });
+            }
+        } else {
+            _.$list.height(_.$slides.first().outerHeight(true) * _.options.slidesToShow);
+            if (_.options.centerMode === true) {
+                _.$list.css({
+                    padding: (_.options.centerPadding + ' 0px')
+                });
+            }
+        }
+
+        _.listWidth = _.$list.width();
+        _.listHeight = _.$list.height();
+
+
+        if (_.options.vertical === false && _.options.variableWidth === false) {
+            _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
+            _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
+
+        } else if (_.options.variableWidth === true) {
+            _.$slideTrack.width(5000 * _.slideCount);
+        } else {
+            _.slideWidth = Math.ceil(_.listWidth);
+            _.$slideTrack.height(Math.ceil((_.$slides.first().outerHeight(true) * _.$slideTrack.children('.slick-slide').length)));
+        }
+
+        var offset = _.$slides.first().outerWidth(true) - _.$slides.first().width();
+        if (_.options.variableWidth === false) _.$slideTrack.children('.slick-slide').width(_.slideWidth - offset);
+
+    };
+
+    Slick.prototype.setFade = function() {
+
+        var _ = this,
+            targetLeft;
+
+        _.$slides.each(function(index, element) {
+            targetLeft = (_.slideWidth * index) * -1;
+            if (_.options.rtl === true) {
+                $(element).css({
+                    position: 'relative',
+                    right: targetLeft,
+                    top: 0,
+                    zIndex: _.options.zIndex - 2,
+                    opacity: 0
+                });
+            } else {
+                $(element).css({
+                    position: 'relative',
+                    left: targetLeft,
+                    top: 0,
+                    zIndex: _.options.zIndex - 2,
+                    opacity: 0
+                });
+            }
+        });
+
+        _.$slides.eq(_.currentSlide).css({
+            zIndex: _.options.zIndex - 1,
+            opacity: 1
+        });
+
+    };
+
+    Slick.prototype.setHeight = function() {
+
+        var _ = this;
+
+        if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
+            var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
+            _.$list.css('height', targetHeight);
+        }
+
+    };
+
+    Slick.prototype.setOption =
+    Slick.prototype.slickSetOption = function() {
+
+        /**
+         * accepts arguments in format of:
+         *
+         *  - for changing a single option's value:
+         *     .slick("setOption", option, value, refresh )
+         *
+         *  - for changing a set of responsive options:
+         *     .slick("setOption", 'responsive', [{}, ...], refresh )
+         *
+         *  - for updating multiple values at once (not responsive)
+         *     .slick("setOption", { 'option': value, ... }, refresh )
+         */
+
+        var _ = this, l, item, option, value, refresh = false, type;
+
+        if( $.type( arguments[0] ) === 'object' ) {
+
+            option =  arguments[0];
+            refresh = arguments[1];
+            type = 'multiple';
+
+        } else if ( $.type( arguments[0] ) === 'string' ) {
+
+            option =  arguments[0];
+            value = arguments[1];
+            refresh = arguments[2];
+
+            if ( arguments[0] === 'responsive' && $.type( arguments[1] ) === 'array' ) {
+
+                type = 'responsive';
+
+            } else if ( typeof arguments[1] !== 'undefined' ) {
+
+                type = 'single';
+
+            }
+
+        }
+
+        if ( type === 'single' ) {
+
+            _.options[option] = value;
+
+
+        } else if ( type === 'multiple' ) {
+
+            $.each( option , function( opt, val ) {
+
+                _.options[opt] = val;
+
+            });
+
+
+        } else if ( type === 'responsive' ) {
+
+            for ( item in value ) {
+
+                if( $.type( _.options.responsive ) !== 'array' ) {
+
+                    _.options.responsive = [ value[item] ];
+
+                } else {
+
+                    l = _.options.responsive.length-1;
+
+                    // loop through the responsive object and splice out duplicates.
+                    while( l >= 0 ) {
+
+                        if( _.options.responsive[l].breakpoint === value[item].breakpoint ) {
+
+                            _.options.responsive.splice(l,1);
+
+                        }
+
+                        l--;
+
+                    }
+
+                    _.options.responsive.push( value[item] );
+
+                }
+
+            }
+
+        }
+
+        if ( refresh ) {
+
+            _.unload();
+            _.reinit();
+
+        }
+
+    };
+
+    Slick.prototype.setPosition = function() {
+
+        var _ = this;
+
+        _.setDimensions();
+
+        _.setHeight();
+
+        if (_.options.fade === false) {
+            _.setCSS(_.getLeft(_.currentSlide));
+        } else {
+            _.setFade();
+        }
+
+        _.$slider.trigger('setPosition', [_]);
+
+    };
+
+    Slick.prototype.setProps = function() {
+
+        var _ = this,
+            bodyStyle = document.body.style;
+
+        _.positionProp = _.options.vertical === true ? 'top' : 'left';
+
+        if (_.positionProp === 'top') {
+            _.$slider.addClass('slick-vertical');
+        } else {
+            _.$slider.removeClass('slick-vertical');
+        }
+
+        if (bodyStyle.WebkitTransition !== undefined ||
+            bodyStyle.MozTransition !== undefined ||
+            bodyStyle.msTransition !== undefined) {
+            if (_.options.useCSS === true) {
+                _.cssTransitions = true;
+            }
+        }
+
+        if ( _.options.fade ) {
+            if ( typeof _.options.zIndex === 'number' ) {
+                if( _.options.zIndex < 3 ) {
+                    _.options.zIndex = 3;
+                }
+            } else {
+                _.options.zIndex = _.defaults.zIndex;
+            }
+        }
+
+        if (bodyStyle.OTransform !== undefined) {
+            _.animType = 'OTransform';
+            _.transformType = '-o-transform';
+            _.transitionType = 'OTransition';
+            if (bodyStyle.perspectiveProperty === undefined && bodyStyle.webkitPerspective === undefined) _.animType = false;
+        }
+        if (bodyStyle.MozTransform !== undefined) {
+            _.animType = 'MozTransform';
+            _.transformType = '-moz-transform';
+            _.transitionType = 'MozTransition';
+            if (bodyStyle.perspectiveProperty === undefined && bodyStyle.MozPerspective === undefined) _.animType = false;
+        }
+        if (bodyStyle.webkitTransform !== undefined) {
+            _.animType = 'webkitTransform';
+            _.transformType = '-webkit-transform';
+            _.transitionType = 'webkitTransition';
+            if (bodyStyle.perspectiveProperty === undefined && bodyStyle.webkitPerspective === undefined) _.animType = false;
+        }
+        if (bodyStyle.msTransform !== undefined) {
+            _.animType = 'msTransform';
+            _.transformType = '-ms-transform';
+            _.transitionType = 'msTransition';
+            if (bodyStyle.msTransform === undefined) _.animType = false;
+        }
+        if (bodyStyle.transform !== undefined && _.animType !== false) {
+            _.animType = 'transform';
+            _.transformType = 'transform';
+            _.transitionType = 'transition';
+        }
+        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
+    };
+
+
+    Slick.prototype.setSlideClasses = function(index) {
+
+        var _ = this,
+            centerOffset, allSlides, indexOffset, remainder;
+
+        allSlides = _.$slider
+            .find('.slick-slide')
+            .removeClass('slick-active slick-center slick-current')
+            .attr('aria-hidden', 'true');
+
+        _.$slides
+            .eq(index)
+            .addClass('slick-current');
+
+        if (_.options.centerMode === true) {
+
+            centerOffset = Math.floor(_.options.slidesToShow / 2);
+
+            if (_.options.infinite === true) {
+
+                if (index >= centerOffset && index <= (_.slideCount - 1) - centerOffset) {
+
+                    _.$slides
+                        .slice(index - centerOffset, index + centerOffset + 1)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
+                } else {
+
+                    indexOffset = _.options.slidesToShow + index;
+                    allSlides
+                        .slice(indexOffset - centerOffset + 1, indexOffset + centerOffset + 2)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
+                }
+
+                if (index === 0) {
+
+                    allSlides
+                        .eq(allSlides.length - 1 - _.options.slidesToShow)
+                        .addClass('slick-center');
+
+                } else if (index === _.slideCount - 1) {
+
+                    allSlides
+                        .eq(_.options.slidesToShow)
+                        .addClass('slick-center');
+
+                }
+
+            }
+
+            _.$slides
+                .eq(index)
+                .addClass('slick-center');
+
+        } else {
+
+            if (index >= 0 && index <= (_.slideCount - _.options.slidesToShow)) {
+
+                _.$slides
+                    .slice(index, index + _.options.slidesToShow)
+                    .addClass('slick-active')
+                    .attr('aria-hidden', 'false');
+
+            } else if (allSlides.length <= _.options.slidesToShow) {
+
+                allSlides
+                    .addClass('slick-active')
+                    .attr('aria-hidden', 'false');
+
+            } else {
+
+                remainder = _.slideCount % _.options.slidesToShow;
+                indexOffset = _.options.infinite === true ? _.options.slidesToShow + index : index;
+
+                if (_.options.slidesToShow == _.options.slidesToScroll && (_.slideCount - index) < _.options.slidesToShow) {
+
+                    allSlides
+                        .slice(indexOffset - (_.options.slidesToShow - remainder), indexOffset + remainder)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
+                } else {
+
+                    allSlides
+                        .slice(indexOffset, indexOffset + _.options.slidesToShow)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
+                }
+
+            }
+
+        }
+
+        if (_.options.lazyLoad === 'ondemand') {
+            _.lazyLoad();
+        }
+
+    };
+
+    Slick.prototype.setupInfinite = function() {
+
+        var _ = this,
+            i, slideIndex, infiniteCount;
+
+        if (_.options.fade === true) {
+            _.options.centerMode = false;
+        }
+
+        if (_.options.infinite === true && _.options.fade === false) {
+
+            slideIndex = null;
+
+            if (_.slideCount > _.options.slidesToShow) {
+
+                if (_.options.centerMode === true) {
+                    infiniteCount = _.options.slidesToShow + 1;
+                } else {
+                    infiniteCount = _.options.slidesToShow;
+                }
+
+                for (i = _.slideCount; i > (_.slideCount -
+                        infiniteCount); i -= 1) {
+                    slideIndex = i - 1;
+                    $(_.$slides[slideIndex]).clone(true).attr('id', '')
+                        .attr('data-slick-index', slideIndex - _.slideCount)
+                        .prependTo(_.$slideTrack).addClass('slick-cloned');
+                }
+                for (i = 0; i < infiniteCount; i += 1) {
+                    slideIndex = i;
+                    $(_.$slides[slideIndex]).clone(true).attr('id', '')
+                        .attr('data-slick-index', slideIndex + _.slideCount)
+                        .appendTo(_.$slideTrack).addClass('slick-cloned');
+                }
+                _.$slideTrack.find('.slick-cloned').find('[id]').each(function() {
+                    $(this).attr('id', '');
+                });
+
+            }
+
+        }
+
+    };
+
+    Slick.prototype.interrupt = function( toggle ) {
+
+        var _ = this;
+
+        if( !toggle ) {
+            _.autoPlay();
+        }
+        _.interrupted = toggle;
+
+    };
+
+    Slick.prototype.selectHandler = function(event) {
+
+        var _ = this;
+
+        var targetElement =
+            $(event.target).is('.slick-slide') ?
+                $(event.target) :
+                $(event.target).parents('.slick-slide');
+
+        var index = parseInt(targetElement.attr('data-slick-index'));
+
+        if (!index) index = 0;
+
+        if (_.slideCount <= _.options.slidesToShow) {
+
+            _.setSlideClasses(index);
+            _.asNavFor(index);
+            return;
+
+        }
+
+        _.slideHandler(index);
+
+    };
+
+    Slick.prototype.slideHandler = function(index, sync, dontAnimate) {
+
+        var targetSlide, animSlide, oldSlide, slideLeft, targetLeft = null,
+            _ = this, navTarget;
+
+        sync = sync || false;
+
+        if (_.animating === true && _.options.waitForAnimate === true) {
+            return;
+        }
+
+        if (_.options.fade === true && _.currentSlide === index) {
+            return;
+        }
+
+        if (_.slideCount <= _.options.slidesToShow) {
+            return;
+        }
+
+        if (sync === false) {
+            _.asNavFor(index);
+        }
+
+        targetSlide = index;
+        targetLeft = _.getLeft(targetSlide);
+        slideLeft = _.getLeft(_.currentSlide);
+
+        _.currentLeft = _.swipeLeft === null ? slideLeft : _.swipeLeft;
+
+        if (_.options.infinite === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
+            if (_.options.fade === false) {
+                targetSlide = _.currentSlide;
+                if (dontAnimate !== true) {
+                    _.animateSlide(slideLeft, function() {
+                        _.postSlide(targetSlide);
+                    });
+                } else {
+                    _.postSlide(targetSlide);
+                }
+            }
+            return;
+        } else if (_.options.infinite === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
+            if (_.options.fade === false) {
+                targetSlide = _.currentSlide;
+                if (dontAnimate !== true) {
+                    _.animateSlide(slideLeft, function() {
+                        _.postSlide(targetSlide);
+                    });
+                } else {
+                    _.postSlide(targetSlide);
+                }
+            }
+            return;
+        }
+
+        if ( _.options.autoplay ) {
+            clearInterval(_.autoPlayTimer);
+        }
+
+        if (targetSlide < 0) {
+            if (_.slideCount % _.options.slidesToScroll !== 0) {
+                animSlide = _.slideCount - (_.slideCount % _.options.slidesToScroll);
+            } else {
+                animSlide = _.slideCount + targetSlide;
+            }
+        } else if (targetSlide >= _.slideCount) {
+            if (_.slideCount % _.options.slidesToScroll !== 0) {
+                animSlide = 0;
+            } else {
+                animSlide = targetSlide - _.slideCount;
+            }
+        } else {
+            animSlide = targetSlide;
+        }
+
+        _.animating = true;
+
+        _.$slider.trigger('beforeChange', [_, _.currentSlide, animSlide]);
+
+        oldSlide = _.currentSlide;
+        _.currentSlide = animSlide;
+
+        _.setSlideClasses(_.currentSlide);
+
+        if ( _.options.asNavFor ) {
+
+            navTarget = _.getNavTarget();
+            navTarget = navTarget.slick('getSlick');
+
+            if ( navTarget.slideCount <= navTarget.options.slidesToShow ) {
+                navTarget.setSlideClasses(_.currentSlide);
+            }
+
+        }
+
+        _.updateDots();
+        _.updateArrows();
+
+        if (_.options.fade === true) {
+            if (dontAnimate !== true) {
+
+                _.fadeSlideOut(oldSlide);
+
+                _.fadeSlide(animSlide, function() {
+                    _.postSlide(animSlide);
+                });
+
+            } else {
+                _.postSlide(animSlide);
+            }
+            _.animateHeight();
+            return;
+        }
+
+        if (dontAnimate !== true) {
+            _.animateSlide(targetLeft, function() {
+                _.postSlide(animSlide);
+            });
+        } else {
+            _.postSlide(animSlide);
+        }
+
+    };
+
+    Slick.prototype.startLoad = function() {
+
+        var _ = this;
+
+        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+
+            _.$prevArrow.hide();
+            _.$nextArrow.hide();
+
+        }
+
+        if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
+
+            _.$dots.hide();
+
+        }
+
+        _.$slider.addClass('slick-loading');
+
+    };
+
+    Slick.prototype.swipeDirection = function() {
+
+        var xDist, yDist, r, swipeAngle, _ = this;
+
+        xDist = _.touchObject.startX - _.touchObject.curX;
+        yDist = _.touchObject.startY - _.touchObject.curY;
+        r = Math.atan2(yDist, xDist);
+
+        swipeAngle = Math.round(r * 180 / Math.PI);
+        if (swipeAngle < 0) {
+            swipeAngle = 360 - Math.abs(swipeAngle);
+        }
+
+        if ((swipeAngle <= 45) && (swipeAngle >= 0)) {
+            return (_.options.rtl === false ? 'left' : 'right');
+        }
+        if ((swipeAngle <= 360) && (swipeAngle >= 315)) {
+            return (_.options.rtl === false ? 'left' : 'right');
+        }
+        if ((swipeAngle >= 135) && (swipeAngle <= 225)) {
+            return (_.options.rtl === false ? 'right' : 'left');
+        }
+        if (_.options.verticalSwiping === true) {
+            if ((swipeAngle >= 35) && (swipeAngle <= 135)) {
+                return 'down';
+            } else {
+                return 'up';
+            }
+        }
+
+        return 'vertical';
+
+    };
+
+    Slick.prototype.swipeEnd = function(event) {
+
+        var _ = this,
+            slideCount,
+            direction;
+
+        _.dragging = false;
+        _.interrupted = false;
+        _.shouldClick = ( _.touchObject.swipeLength > 10 ) ? false : true;
+
+        if ( _.touchObject.curX === undefined ) {
+            return false;
+        }
+
+        if ( _.touchObject.edgeHit === true ) {
+            _.$slider.trigger('edge', [_, _.swipeDirection() ]);
+        }
+
+        if ( _.touchObject.swipeLength >= _.touchObject.minSwipe ) {
+
+            direction = _.swipeDirection();
+
+            switch ( direction ) {
+
+                case 'left':
+                case 'down':
+
+                    slideCount =
+                        _.options.swipeToSlide ?
+                            _.checkNavigable( _.currentSlide + _.getSlideCount() ) :
+                            _.currentSlide + _.getSlideCount();
+
+                    _.currentDirection = 0;
+
+                    break;
+
+                case 'right':
+                case 'up':
+
+                    slideCount =
+                        _.options.swipeToSlide ?
+                            _.checkNavigable( _.currentSlide - _.getSlideCount() ) :
+                            _.currentSlide - _.getSlideCount();
+
+                    _.currentDirection = 1;
+
+                    break;
+
+                default:
+
+
+            }
+
+            if( direction != 'vertical' ) {
+
+                _.slideHandler( slideCount );
+                _.touchObject = {};
+                _.$slider.trigger('swipe', [_, direction ]);
+
+            }
+
+        } else {
+
+            if ( _.touchObject.startX !== _.touchObject.curX ) {
+
+                _.slideHandler( _.currentSlide );
+                _.touchObject = {};
+
+            }
+
+        }
+
+    };
+
+    Slick.prototype.swipeHandler = function(event) {
+
+        var _ = this;
+
+        if ((_.options.swipe === false) || ('ontouchend' in document && _.options.swipe === false)) {
+            return;
+        } else if (_.options.draggable === false && event.type.indexOf('mouse') !== -1) {
+            return;
+        }
+
+        _.touchObject.fingerCount = event.originalEvent && event.originalEvent.touches !== undefined ?
+            event.originalEvent.touches.length : 1;
+
+        _.touchObject.minSwipe = _.listWidth / _.options
+            .touchThreshold;
+
+        if (_.options.verticalSwiping === true) {
+            _.touchObject.minSwipe = _.listHeight / _.options
+                .touchThreshold;
+        }
+
+        switch (event.data.action) {
+
+            case 'start':
+                _.swipeStart(event);
+                break;
+
+            case 'move':
+                _.swipeMove(event);
+                break;
+
+            case 'end':
+                _.swipeEnd(event);
+                break;
+
+        }
+
+    };
+
+    Slick.prototype.swipeMove = function(event) {
+
+        var _ = this,
+            edgeWasHit = false,
+            curLeft, swipeDirection, swipeLength, positionOffset, touches;
+
+        touches = event.originalEvent !== undefined ? event.originalEvent.touches : null;
+
+        if (!_.dragging || touches && touches.length !== 1) {
+            return false;
+        }
+
+        curLeft = _.getLeft(_.currentSlide);
+
+        _.touchObject.curX = touches !== undefined ? touches[0].pageX : event.clientX;
+        _.touchObject.curY = touches !== undefined ? touches[0].pageY : event.clientY;
+
+        _.touchObject.swipeLength = Math.round(Math.sqrt(
+            Math.pow(_.touchObject.curX - _.touchObject.startX, 2)));
+
+        if (_.options.verticalSwiping === true) {
+            _.touchObject.swipeLength = Math.round(Math.sqrt(
+                Math.pow(_.touchObject.curY - _.touchObject.startY, 2)));
+        }
+
+        swipeDirection = _.swipeDirection();
+
+        if (swipeDirection === 'vertical') {
+            return;
+        }
+
+        if (event.originalEvent !== undefined && _.touchObject.swipeLength > 4) {
+            event.preventDefault();
+        }
+
+        positionOffset = (_.options.rtl === false ? 1 : -1) * (_.touchObject.curX > _.touchObject.startX ? 1 : -1);
+        if (_.options.verticalSwiping === true) {
+            positionOffset = _.touchObject.curY > _.touchObject.startY ? 1 : -1;
+        }
+
+
+        swipeLength = _.touchObject.swipeLength;
+
+        _.touchObject.edgeHit = false;
+
+        if (_.options.infinite === false) {
+            if ((_.currentSlide === 0 && swipeDirection === 'right') || (_.currentSlide >= _.getDotCount() && swipeDirection === 'left')) {
+                swipeLength = _.touchObject.swipeLength * _.options.edgeFriction;
+                _.touchObject.edgeHit = true;
+            }
+        }
+
+        if (_.options.vertical === false) {
+            _.swipeLeft = curLeft + swipeLength * positionOffset;
+        } else {
+            _.swipeLeft = curLeft + (swipeLength * (_.$list.height() / _.listWidth)) * positionOffset;
+        }
+        if (_.options.verticalSwiping === true) {
+            _.swipeLeft = curLeft + swipeLength * positionOffset;
+        }
+
+        if (_.options.fade === true || _.options.touchMove === false) {
+            return false;
+        }
+
+        if (_.animating === true) {
+            _.swipeLeft = null;
+            return false;
+        }
+
+        _.setCSS(_.swipeLeft);
+
+    };
+
+    Slick.prototype.swipeStart = function(event) {
+
+        var _ = this,
+            touches;
+
+        _.interrupted = true;
+
+        if (_.touchObject.fingerCount !== 1 || _.slideCount <= _.options.slidesToShow) {
+            _.touchObject = {};
+            return false;
+        }
+
+        if (event.originalEvent !== undefined && event.originalEvent.touches !== undefined) {
+            touches = event.originalEvent.touches[0];
+        }
+
+        _.touchObject.startX = _.touchObject.curX = touches !== undefined ? touches.pageX : event.clientX;
+        _.touchObject.startY = _.touchObject.curY = touches !== undefined ? touches.pageY : event.clientY;
+
+        _.dragging = true;
+
+    };
+
+    Slick.prototype.unfilterSlides = Slick.prototype.slickUnfilter = function() {
+
+        var _ = this;
+
+        if (_.$slidesCache !== null) {
+
+            _.unload();
+
+            _.$slideTrack.children(this.options.slide).detach();
+
+            _.$slidesCache.appendTo(_.$slideTrack);
+
+            _.reinit();
+
+        }
+
+    };
+
+    Slick.prototype.unload = function() {
+
+        var _ = this;
+
+        $('.slick-cloned', _.$slider).remove();
+
+        if (_.$dots) {
+            _.$dots.remove();
+        }
+
+        if (_.$prevArrow && _.htmlExpr.test(_.options.prevArrow)) {
+            _.$prevArrow.remove();
+        }
+
+        if (_.$nextArrow && _.htmlExpr.test(_.options.nextArrow)) {
+            _.$nextArrow.remove();
+        }
+
+        _.$slides
+            .removeClass('slick-slide slick-active slick-visible slick-current')
+            .attr('aria-hidden', 'true')
+            .css('width', '');
+
+    };
+
+    Slick.prototype.unslick = function(fromBreakpoint) {
+
+        var _ = this;
+        _.$slider.trigger('unslick', [_, fromBreakpoint]);
+        _.destroy();
+
+    };
+
+    Slick.prototype.updateArrows = function() {
+
+        var _ = this,
+            centerOffset;
+
+        centerOffset = Math.floor(_.options.slidesToShow / 2);
+
+        if ( _.options.arrows === true &&
+            _.slideCount > _.options.slidesToShow &&
+            !_.options.infinite ) {
+
+            _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+            _.$nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
+            if (_.currentSlide === 0) {
+
+                _.$prevArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
+            } else if (_.currentSlide >= _.slideCount - _.options.slidesToShow && _.options.centerMode === false) {
+
+                _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
+            } else if (_.currentSlide >= _.slideCount - 1 && _.options.centerMode === true) {
+
+                _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
+            }
+
+        }
+
+    };
+
+    Slick.prototype.updateDots = function() {
+
+        var _ = this;
+
+        if (_.$dots !== null) {
+
+            _.$dots
+                .find('li')
+                .removeClass('slick-active')
+                .attr('aria-hidden', 'true');
+
+            _.$dots
+                .find('li')
+                .eq(Math.floor(_.currentSlide / _.options.slidesToScroll))
+                .addClass('slick-active')
+                .attr('aria-hidden', 'false');
+
+        }
+
+    };
+
+    Slick.prototype.visibility = function() {
+
+        var _ = this;
+
+        if ( _.options.autoplay ) {
+
+            if ( document[_.hidden] ) {
+
+                _.interrupted = true;
+
+            } else {
+
+                _.interrupted = false;
+
+            }
+
+        }
+
+    };
+
+    $.fn.slick = function() {
+        var _ = this,
+            opt = arguments[0],
+            args = Array.prototype.slice.call(arguments, 1),
+            l = _.length,
+            i,
+            ret;
+        for (i = 0; i < l; i++) {
+            if (typeof opt == 'object' || typeof opt == 'undefined')
+                _[i].slick = new Slick(_[i], opt);
+            else
+                ret = _[i].slick[opt].apply(_[i].slick, args);
+            if (typeof ret != 'undefined') return ret;
+        }
+        return _;
+    };
+
+}));
+;
+/**
+ * @file
+ * Adapted from underscore.js with the addition Drupal namespace.
+ */
+
+/**
+ * Limits the invocations of a function in a given time frame.
+ *
+ * The debounce function wrapper should be used sparingly. One clear use case
+ * is limiting the invocation of a callback attached to the window resize event.
+ *
+ * Before using the debounce function wrapper, consider first whether the
+ * callback could be attached to an event that fires less frequently or if the
+ * function can be written in such a way that it is only invoked under specific
+ * conditions.
+ *
+ * @param {function} func
+ *   The function to be invoked.
+ * @param {number} wait
+ *   The time period within which the callback function should only be
+ *   invoked once. For example if the wait period is 250ms, then the callback
+ *   will only be called at most 4 times per second.
+ * @param {bool} immediate
+ *   Whether we wait at the beginning or end to execute the function.
+ *
+ * @return {function}
+ *   The debounced function.
+ */
+Drupal.debounce = function (func, wait, immediate) {
+
+  'use strict';
+
+  var timeout;
+  var result;
+  return function () {
+    var context = this;
+    var args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) {
+        result = func.apply(context, args);
+      }
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) {
+      result = func.apply(context, args);
+    }
+    return result;
+  };
+};
+;
+/*! jquery.cookie v1.4.1 | MIT */
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){return h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}function e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return a=decodeURIComponent(a.replace(g," ")),h.json?JSON.parse(a):a}catch(b){}}function f(b,c){var d=h.raw?b:e(b);return a.isFunction(c)?c(d):d}var g=/\+/g,h=a.cookie=function(e,g,i){if(void 0!==g&&!a.isFunction(g)){if(i=a.extend({},h.defaults,i),"number"==typeof i.expires){var j=i.expires,k=i.expires=new Date;k.setTime(+k+864e5*j)}return document.cookie=[b(e),"=",d(g),i.expires?"; expires="+i.expires.toUTCString():"",i.path?"; path="+i.path:"",i.domain?"; domain="+i.domain:"",i.secure?"; secure":""].join("")}for(var l=e?void 0:{},m=document.cookie?document.cookie.split("; "):[],n=0,o=m.length;o>n;n++){var p=m[n].split("="),q=c(p.shift()),r=p.join("=");if(e&&e===q){l=f(r,g);break}e||void 0===(r=f(r))||(l[q]=r)}return l};h.defaults={},a.removeCookie=function(b,c){return void 0===a.cookie(b)?!1:(a.cookie(b,"",a.extend({},c,{expires:-1})),!a.cookie(b))}});;
+/**
+ * @file
+ * Form features.
+ */
+
+/**
+ * Triggers when a value in the form changed.
+ *
+ * The event triggers when content is typed or pasted in a text field, before
+ * the change event triggers.
+ *
+ * @event formUpdated
+ */
+
+(function ($, Drupal, debounce) {
+
+  'use strict';
+
+  /**
+   * Retrieves the summary for the first element.
+   *
+   * @return {string}
+   *   The text of the summary.
+   */
+  $.fn.drupalGetSummary = function () {
+    var callback = this.data('summaryCallback');
+    return (this[0] && callback) ? $.trim(callback(this[0])) : '';
+  };
+
+  /**
+   * Sets the summary for all matched elements.
+   *
+   * @param {function} callback
+   *   Either a function that will be called each time the summary is
+   *   retrieved or a string (which is returned each time).
+   *
+   * @return {jQuery}
+   *   jQuery collection of the current element.
+   *
+   * @fires event:summaryUpdated
+   *
+   * @listens event:formUpdated
+   */
+  $.fn.drupalSetSummary = function (callback) {
+    var self = this;
+
+    // To facilitate things, the callback should always be a function. If it's
+    // not, we wrap it into an anonymous function which just returns the value.
+    if (typeof callback !== 'function') {
+      var val = callback;
+      callback = function () { return val; };
+    }
+
+    return this
+      .data('summaryCallback', callback)
+      // To prevent duplicate events, the handlers are first removed and then
+      // (re-)added.
+      .off('formUpdated.summary')
+      .on('formUpdated.summary', function () {
+        self.trigger('summaryUpdated');
+      })
+      // The actual summaryUpdated handler doesn't fire when the callback is
+      // changed, so we have to do this manually.
+      .trigger('summaryUpdated');
+  };
+
+  /**
+   * Prevents consecutive form submissions of identical form values.
+   *
+   * Repetitive form submissions that would submit the identical form values
+   * are prevented, unless the form values are different to the previously
+   * submitted values.
+   *
+   * This is a simplified re-implementation of a user-agent behavior that
+   * should be natively supported by major web browsers, but at this time, only
+   * Firefox has a built-in protection.
+   *
+   * A form value-based approach ensures that the constraint is triggered for
+   * consecutive, identical form submissions only. Compared to that, a form
+   * button-based approach would (1) rely on [visible] buttons to exist where
+   * technically not required and (2) require more complex state management if
+   * there are multiple buttons in a form.
+   *
+   * This implementation is based on form-level submit events only and relies
+   * on jQuery's serialize() method to determine submitted form values. As such,
+   * the following limitations exist:
+   *
+   * - Event handlers on form buttons that preventDefault() do not receive a
+   *   double-submit protection. That is deemed to be fine, since such button
+   *   events typically trigger reversible client-side or server-side
+   *   operations that are local to the context of a form only.
+   * - Changed values in advanced form controls, such as file inputs, are not
+   *   part of the form values being compared between consecutive form submits
+   *   (due to limitations of jQuery.serialize()). That is deemed to be
+   *   acceptable, because if the user forgot to attach a file, then the size of
+   *   HTTP payload will most likely be small enough to be fully passed to the
+   *   server endpoint within (milli)seconds. If a user mistakenly attached a
+   *   wrong file and is technically versed enough to cancel the form submission
+   *   (and HTTP payload) in order to attach a different file, then that
+   *   edge-case is not supported here.
+   *
+   * Lastly, all forms submitted via HTTP GET are idempotent by definition of
+   * HTTP standards, so excluded in this implementation.
+   *
+   * @type {Drupal~behavior}
+   */
+  Drupal.behaviors.formSingleSubmit = {
+    attach: function () {
+      function onFormSubmit(e) {
+        var $form = $(e.currentTarget);
+        var formValues = $form.serialize();
+        var previousValues = $form.attr('data-drupal-form-submit-last');
+        if (previousValues === formValues) {
+          e.preventDefault();
+        }
+        else {
+          $form.attr('data-drupal-form-submit-last', formValues);
+        }
+      }
+
+      $('body').once('form-single-submit')
+        .on('submit.singleSubmit', 'form:not([method~="GET"])', onFormSubmit);
+    }
+  };
+
+  /**
+   * Sends a 'formUpdated' event each time a form element is modified.
+   *
+   * @param {HTMLElement} element
+   *   The element to trigger a form updated event on.
+   *
+   * @fires event:formUpdated
+   */
+  function triggerFormUpdated(element) {
+    $(element).trigger('formUpdated');
+  }
+
+  /**
+   * Collects the IDs of all form fields in the given form.
+   *
+   * @param {HTMLFormElement} form
+   *   The form element to search.
+   *
+   * @return {Array}
+   *   Array of IDs for form fields.
+   */
+  function fieldsList(form) {
+    var $fieldList = $(form).find('[name]').map(function (index, element) {
+      // We use id to avoid name duplicates on radio fields and filter out
+      // elements with a name but no id.
+      return element.getAttribute('id');
+    });
+    // Return a true array.
+    return $.makeArray($fieldList);
+  }
+
+  /**
+   * Triggers the 'formUpdated' event on form elements when they are modified.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Attaches formUpdated behaviors.
+   * @prop {Drupal~behaviorDetach} detach
+   *   Detaches formUpdated behaviors.
+   *
+   * @fires event:formUpdated
+   */
+  Drupal.behaviors.formUpdated = {
+    attach: function (context) {
+      var $context = $(context);
+      var contextIsForm = $context.is('form');
+      var $forms = (contextIsForm ? $context : $context.find('form')).once('form-updated');
+      var formFields;
+
+      if ($forms.length) {
+        // Initialize form behaviors, use $.makeArray to be able to use native
+        // forEach array method and have the callback parameters in the right
+        // order.
+        $.makeArray($forms).forEach(function (form) {
+          var events = 'change.formUpdated input.formUpdated ';
+          var eventHandler = debounce(function (event) { triggerFormUpdated(event.target); }, 300);
+          formFields = fieldsList(form).join(',');
+
+          form.setAttribute('data-drupal-form-fields', formFields);
+          $(form).on(events, eventHandler);
+        });
+      }
+      // On ajax requests context is the form element.
+      if (contextIsForm) {
+        formFields = fieldsList(context).join(',');
+        // @todo replace with form.getAttribute() when #1979468 is in.
+        var currentFields = $(context).attr('data-drupal-form-fields');
+        // If there has been a change in the fields or their order, trigger
+        // formUpdated.
+        if (formFields !== currentFields) {
+          triggerFormUpdated(context);
+        }
+      }
+
+    },
+    detach: function (context, settings, trigger) {
+      var $context = $(context);
+      var contextIsForm = $context.is('form');
+      if (trigger === 'unload') {
+        var $forms = (contextIsForm ? $context : $context.find('form')).removeOnce('form-updated');
+        if ($forms.length) {
+          $.makeArray($forms).forEach(function (form) {
+            form.removeAttribute('data-drupal-form-fields');
+            $(form).off('.formUpdated');
+          });
+        }
+      }
+    }
+  };
+
+  /**
+   * Prepopulate form fields with information from the visitor browser.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Attaches the behavior for filling user info from browser.
+   */
+  Drupal.behaviors.fillUserInfoFromBrowser = {
+    attach: function (context, settings) {
+      var userInfo = ['name', 'mail', 'homepage'];
+      var $forms = $('[data-user-info-from-browser]').once('user-info-from-browser');
+      if ($forms.length) {
+        userInfo.map(function (info) {
+          var $element = $forms.find('[name=' + info + ']');
+          var browserData = localStorage.getItem('Drupal.visitor.' + info);
+          var emptyOrDefault = ($element.val() === '' || ($element.attr('data-drupal-default-value') === $element.val()));
+          if ($element.length && emptyOrDefault && browserData) {
+            $element.val(browserData);
+          }
+        });
+      }
+      $forms.on('submit', function () {
+        userInfo.map(function (info) {
+          var $element = $forms.find('[name=' + info + ']');
+          if ($element.length) {
+            localStorage.setItem('Drupal.visitor.' + info, $element.val());
+          }
+        });
+      });
+    }
+  };
+
+})(jQuery, Drupal, Drupal.debounce);
+;

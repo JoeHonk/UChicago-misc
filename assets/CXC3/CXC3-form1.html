@@ -1,0 +1,1756 @@
+<div>
+                  <div id="main_col">
+                      <style type="text/css">
+                      #confirmationText div {
+                          margin: 0px 0px 10px 0px;
+                      }
+                      #ccError {
+                          color: red
+                      }
+                      .req {
+                          color: red;
+                          font-family: Verdana, Arial, Helvetica, sans-serif;
+                          font-size: 11px;
+                      }
+                      .Alert {
+                          color: red;
+                          font-family: Verdana, Arial, Helvetica, sans-serif;
+                          font-size: 11px;
+                      }
+                      .expand {
+                          display: none;
+                      }
+                      .large {
+                          width: 300px;
+                      }
+                      .medium {
+                          width: 150px;
+                      }
+                      .small {
+                          width: 75px;
+                      }
+                      .mdlarge {
+                          width: 225px
+                      }
+                      .align {
+                          margin-left: 0px;
+                      }
+                      .form-field {
+                          margin-bottom: 10px;
+                      }
+                      label.error {
+                          background-color: #FFCCCC;
+                      }
+                      .tooltip {
+                          display: none;
+                          width: 220px;
+                          padding: 10px;
+                          color: #000;
+                          display: none;
+                          z-index: 1;
+                          position: absolute;
+                          border: 3px solid #cdcdcd;
+                          border-radius: 10px;
+                          margin-top: -75px;
+                          margin-left: 470px;
+                          -moz-box-shadow: 0 0 8px #888;
+                          -webkit-box-shadow: 0 0 8px#888;
+                          box-shadow: 0 0 10px #888;
+                          background-color: #ffffff;
+                      }
+                      .tooltip-close {
+                          display: block;
+                          text-indent: -9999px;
+                          background-image: url('/atf/cf/{f596283c-2cf8-497a-9322-9d202bc39bee}/LIGHTBOX_CLOSE.GIF');
+                          width: 16px;
+                          height: 16px;
+                          float: right;
+                      }
+                      .tooltip-close:hover {
+                          background-position: 0 -16px;
+                      }
+                      .tooltip-link {
+                          font-size: 9px;
+                          text-decoration: none;
+                          display: block;
+                          text-indent: -9999px;
+                          background-image: url('/atf/cf/{f596283c-2cf8-497a-9322-9d202bc39bee}/TOOLTIP-LINK.GIF');
+                          width: 18px;
+                          height: 18px;
+                          float: right;
+                          margin-right: 8px;
+                      }
+                      .tooltip-fix {
+                          margin-bottom: 18px;
+                          float: left;
+                          margin-right: 8px;
+                      }
+                      /* classes for the matching gift window/iframe */
+
+                      .centerwindow {
+                          width: 460px;
+                          margin-left: -10px;
+                          margin-top: 0px;
+                          z-index: 999;
+                          background-color: #ffffff;
+                      }
+                      .companysearch {
+                          border: none;
+                          margin: 0;
+                          padding: 0;
+                          width: 460px;
+                          height: 300px;
+                      }
+                      #contentArea table {
+                          background: #fff;
+                          margin-bottom: 0;
+                      }
+                      #contentArea table td {
+                          border: 0;
+                          background: #fff;
+                      }
+                      #contentArea h3 {
+                          border-bottom: 0 none;
+                          color: #FFA319;
+                          font: 300 1.85714em'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+                          margin-bottom: 10px;
+                          margin-top: 20px;
+                          padding: 0;
+                      }
+                      #contentArea .form-control {
+                          color: #474747
+                      }
+                      #contentArea input.btn {
+                          background: #800000;
+                          border-color: #4f0101;
+                          color: #fff;
+                          padding: 15px 20px;
+                      }
+                      #contentArea input.btn:hover {
+                          background: #9b1313;
+                          box-shadow: none;
+                          color: #fff;
+                      }
+                      #contentArea input {
+                          background: #fff;
+                          box-shadow: none;
+                      }
+                      #contentArea select {
+                          background: #fff;
+                          box-shadow: none;
+                      }
+
+body {
+font-size: 14px;
+line-height: 1.875em;
+color: #333;
+background-color: #fff;
+}
+
+
+                      </style>
+
+                      <!--
+<script type="text/javascript" src="https://www.kintera.org/site/layout/util.js"></script> -->
+                      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+                      <script type="text/javascript" src="https://www.kintera.org/atf/cf/%7B25C2541E-96EB-4E70-947F-ABA13CD89DCD%7D/sessvars.js"></script>
+                      <div id="container">
+
+                          <!--javascript common lib-->
+                          <script src="https://www.kintera.org/CommonLib/lib/INC_jsFields.js"></script>
+                          <script>
+                          <!--
+                          /* jQuery function for display */
+                          $(document).ready(function() {
+                              //hide certain fields that require interaction prior to display
+                              $(".startHidden").hide();
+                              //show the related fields for the currently selected giving option
+                              if ($('input[name="RecurringOption"]:checked').val() == 'N') {
+                                  $("#recurringGift").hide();
+                                  $("#oneTimeGift").fadeIn();
+                              }
+                              if ($('input[name="RecurringOption"]:checked').val() == 'Y') {
+                                  $("#oneTimeGift").hide();
+                                  $("#recurringGift").fadeIn();
+                              }
+                              //allow toggling between the two giving options
+                              $('input[name="RecurringOption"]').change(function() {
+                                  var selected = $(this).val() == 'N' ? 'oneTimeGift' : 'recurringGift';
+                                  $('.togglePayOpt').hide();
+                                  $('#' + selected).fadeIn();
+                                  CheckRecurring($('form[name=SUPPORTER287377]')[0], $(this).val());
+                              });
+                              //display and allow toggling of additional giving options
+                              $('input.addOptions:checked').each(function() {
+                                  var checkedBox = $(this).val();
+                                  $('#' + checkedBox).fadeIn();
+                              });
+                              $('input.addOptions').change(function() {
+                                  var checkedBox = $(this).val();
+                                  $('#' + checkedBox).toggle('slow');
+                              });
+                              //tooltip
+                              $('a.tooltip-link').hover(
+                                  function() {
+                                      $('.tooltip').hide();
+                                      $(this).next('.tooltip').show();
+                                  }
+                                  //,function() {$(this).next('.tooltip').hide();}
+                              );
+                              $('a.tooltip-link').click(function() {
+                                  return false;
+                              });
+                              $('.tooltip-close').click(function() {
+                                  $(this).parent().hide()
+                              });
+                          });
+                          //-->
+                          </script>
+
+
+
+                          <form name="SUPPORTER287377" action="https://www.kintera.org/site/apps/ka/sd/donorcustom.asp?c=**cindex**&b=**bindex**" method="POST" onsubmit="return CheckForm287377(this);" id="FormDonation">
+                              <input type="hidden" value="" name="Reload" id="Reload">
+                              <input type="hidden" value="https://www.kintera.org/site/apps/ka/sd/donorcustom.asp?c=**cindex**&amp;b=**bindex**" name="Caller" id="Caller">
+                              <input type="hidden" value="" name="ParticipantSupporterID" id="ParticipantSupporterID">
+                              <input type="hidden" value="" name="CreditTeamID" id="CreditTeamID">
+                              <input type="hidden" value="" name="SupporterID" id="SupporterID">
+                              <input type="hidden" value="" name="LoginID" id="LoginID">
+                              <input type="hidden" value="5" name="FormID" id="FormID">
+                              <input type="hidden" value="" name="RelationSupporterID" id="RelationSupporterID">
+                              <input value="Y" name="Individual" id="Individual" type="hidden">
+                              <input type="hidden" value="" name="PledgeLevelID" id="PledgeLevelIDY">
+
+
+                              <p class="help-block">Fields marked with an asterisk (<b>*</b>) are required.</p>
+
+                              <div class="form-field form-group">
+                                                                        <label width="100%" style="display:inline;"><span class="labelIE6">Area of Giving<span class="red"><b>*</b></span></span>
+          <input type="hidden" value="1" name="DesignationOption" id="DesignationOption" />
+          <select name="BeneficiaryID" size="1" class="form-control input-sm">
+               <option  value="388511" selected>College Fund</option>
+            <option  value="385828">Dean's Fund for Student Life</option>
+            <option  value="906697">Jeff Metcalf Internships</option>
+            <option  value="377544">Odyssey Scholarship Challenge</option>
+          </select>
+<input type=hidden name='BeneficiaryFund388511' value='47889' />
+<input type=hidden name='BeneficiaryFund385828' value='47889' />
+<input type=hidden name='BeneficiaryFund906697' value='47889' />
+<input type=hidden name='BeneficiaryFund377544' value='47889' />
+
+<a href="https://www.kintera.org/site/c.8gKMJYMvF9LWG/b.9202493/k.913F/Donation_Form__UChicago_Campaign_Main/apps/ka/sd/donorcustom.asp">Don't see the area you want to give to? Click here for more choices.</a>
+                              </div>
+                              <div class="form-field row">
+                                  <div class="form-group col-sm-6">
+                                      <label class="radio-inline control-label">
+                                          <input type="radio" name="RecurringOption" id="RecurringOptionN" value="N" checked="">I would like to make a one-time gift.</label>
+                                  </div>
+                                  <div class="form-group col-sm-6">
+                                      <label class="radio-inline control-label">
+                                          <input type="radio" name="RecurringOption" id="RecurringOptionY" value="Y">I would like to make a recurring gift.</label>
+                                  </div>
+                              </div>
+
+                              <!-- One Time Gift -->
+                              <div id="oneTimeGift" class="togglePayOpt form-group">
+                                  <label for="Amount" class="control-label">Gift Amount<b>*</b>
+                                  </label>
+                                  <div class="input-group">
+                                      <span class="input-group-addon">$</span>
+                                      <input type="text" name="Amount" id="Amount" class="form-control input-sm" onblur="return CheckAmtLevel(form, this);" value="">
+                                  </div>
+                                  <p class="help-block">
+                                      <strong>NOTE:</strong> We accept gifts of up to $100,000 online. If you wish to make a gift larger than this, please call our toll-free number: 888.824.4224.
+                                  </p>
+                              </div>
+
+                              <!-- Recurring Gift -->
+                              <div id="recurringGift" class="startHidden togglePayOpt" style="display: none;">
+
+                                  <div class="form-group col-sm-3" id="TableInstallmentGift">
+                                      <input type="hidden" value="" name="RecurringDate" id="RecurringDate">
+
+                                      <label for="RecurringAmount" class="control-label">Gift Amount<b>*</b>
+                                      </label>
+                                      <div class="input-group">
+                                          <span class="input-group-addon">$</span>
+                                          <input type="text" name="RecurringAmount" id="RecurringAmount" onblur="ChangeNumber(form,this);CountTotal(this,form.NumberOfPayments,form.TotalAmount);" class="form-control input-sm" novalidate="" value="">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group col-sm-3">
+                                      <label for="NumberOfPayments" class="control-label"># of Payments</label>
+                                      <select name="NumberOfPayments" class="form-control input-sm" onchange="return ChangeNumber(form,this)" id="NumberOfPayments">
+                                          <option value="1" selected="">2</option>
+                                          <option value="2">3</option>
+                                          <option value="3">4</option>
+                                          <option value="4">5</option>
+                                          <option value="5">6</option>
+                                          <option value="6">7</option>
+                                          <option value="7">8</option>
+                                          <option value="8">9</option>
+                                          <option value="9">10</option>
+                                          <option value="10">11</option>
+                                          <option value="11">12</option>
+                                          <option value="12">13</option>
+                                          <option value="13">14</option>
+                                          <option value="14">15</option>
+                                          <option value="15">16</option>
+                                          <option value="16">17</option>
+                                          <option value="17">18</option>
+                                          <option value="18">19</option>
+                                          <option value="19">20</option>
+                                          <option value="20">21</option>
+                                          <option value="21">22</option>
+                                          <option value="22">23</option>
+                                          <option value="23">24</option>
+                                          <option value="24">25</option>
+                                          <option value="25">26</option>
+                                          <option value="26">27</option>
+                                          <option value="27">28</option>
+                                          <option value="28">29</option>
+                                          <option value="29">30</option>
+                                          <option value="30">31</option>
+                                          <option value="31">32</option>
+                                          <option value="32">33</option>
+                                          <option value="33">34</option>
+                                          <option value="34">35</option>
+                                          <option value="35">36</option>
+                                          <option value="36">37</option>
+                                          <option value="37">38</option>
+                                          <option value="38">39</option>
+                                          <option value="39">40</option>
+                                          <option value="40">41</option>
+                                          <option value="41">42</option>
+                                          <option value="42">43</option>
+                                          <option value="43">44</option>
+                                          <option value="44">45</option>
+                                          <option value="45">46</option>
+                                          <option value="46">47</option>
+                                          <option value="47">48</option>
+                                          <option value="48">49</option>
+                                          <option value="49">50</option>
+                                          <option value="50">51</option>
+                                          <option value="51">52</option>
+                                          <option value="52">53</option>
+                                          <option value="53">54</option>
+                                          <option value="54">55</option>
+                                          <option value="55">56</option>
+                                          <option value="56">57</option>
+                                          <option value="57">58</option>
+                                          <option value="58">59</option>
+                                          <option value="59">60</option>
+                                      </select>
+
+                                  </div>
+
+                                  <div class="form-group col-sm-3">
+                                      <label for="BillingScheduleID" class="control-label">Payment Frequency</label>
+                                      <select name="BillingScheduleID" id="BillingScheduleID" onchange="ChangeSchedule(form,this);" class="form-control input-sm">
+                                          <option value="" selected="" disabled="">--</option>
+                                          <option value="1201">Monthly</option>
+                                          <option value="1301">Quarterly</option>
+                                          <option value="1401">Annually</option>
+                                      </select>
+                                  </div>
+
+                                  <div class="form-group col-sm-3">
+                                      <label for="TotalAmount" class="control-label">Total Gift Amount</label>
+                                      <div class="input-group">
+                                          <span class="input-group-addon">$</span>
+                                          <input type="number" name="TotalAmount" id="TotalAmount" class="form-control input-sm" novalidate="" value="">
+                                      </div>
+                                  </div>
+                                  <p class="help-block col-sm-12">
+                                      <strong>NOTE:</strong>This transaction will count as the first payment toward your total gift amount.</p>
+                              </div>
+
+                              <script>
+                              <!--
+                              function ChangeNumber(thisform, ptr) {
+                                  if (thisform.BillingScheduleID.value == "0") {
+                                      thisform.Reload.value = 'Y';
+                                      thisform.submit();
+                                      return false;
+                                  } else
+                                      return CountTotal(thisform.RecurringAmount, ptr, thisform.TotalAmount);
+                              }
+
+                              function ChangeSchedule(thisform, ptr) {
+                                      if ((thisform.BillingScheduleID.value != "0" && thisform.Amount1 != null) || (thisform.BillingScheduleID.value == "0" && thisform.Amount1 == null)) {
+                                          thisform.Reload.value = 'Y';
+                                          thisform.submit();
+                                      }
+                                      return false;
+                                  }
+                                  //-->
+                              </script>
+
+
+                              <!-- -------------------- Contact Information -->
+
+                              <h3>Contact Information</h3>
+                              <div class="form-field">
+                                  <label for="first_name" class="control-label">First Name<b>*</b>
+                                  </label>
+                                  <input type="text" name="first_name" value="" class="form-control input-sm">
+                                  <input type="hidden" name="lock_first_name" value="">
+                              </div>
+                              <div class="form-field">
+                                  <label for="last_name" class="control-label">Last Name<b>*</b>
+                                  </label>
+                                  <input type="text" name="last_name" value="" class="form-control input-sm">
+                                  <input type="hidden" name="lock_last_name" value="">
+                              </div>
+                              <div class="form-field">
+                                  <label for="address_line_1" class="control-label">Address Line 1<b>*</b>
+                                  </label>
+                                  <input type="text" name="address_line_1" value="" class="form-control input-sm">
+                              </div>
+                              <div class="form-field">
+                                  <label for="address_line_2" class="control-label">Address Line 2</label>
+                                  <input type="text" name="address_line_2" value="" class="form-control input-sm">
+                              </div>
+                              <div class="row">
+                                  <div class="form-group col-sm-3 zipcode">
+                                      <label for="zip" class="control-label">ZIP/Postal Code<b>*</b>
+                                      </label>
+                                      <input type="text" name="zip" id="prefzip" value="" class="form-control input-sm" onblur="return checkZip(this);">
+                                  </div>
+                              </div>
+
+                              <div id="prefcitystatecountry" class="row">
+
+                                  <div class="form-group col-sm-6">
+                                      <label for="city" class="control-label">City<b>*</b>
+                                      </label>
+                                      <input type="text" autocapitalize="words" name="city" id="prefcity" value="" class="form-control input-sm">
+                                  </div>
+
+                                  <div class="form-group col-sm-3">
+                                      <label for="state" class="control-label">State<b>*</b>
+                                      </label>
+                                      <select name="state" id="prefstate" class="form-control input-sm">
+                                          <option value="" selected=""></option>
+                                          <option value="AL">Alabama</option>
+                                          <option value="AK">Alaska</option>
+                                          <option value="AS">American Samoa</option>
+                                          <option value="AZ">Arizona</option>
+                                          <option value="AR">Arkansas</option>
+                                          <option value="AA">Armed Forces Americas</option>
+                                          <option value="AE">Armed Forces Europe</option>
+                                          <option value="AP">Armed Forces Pacific</option>
+                                          <option value="CA">California</option>
+                                          <option value="CO">Colorado</option>
+                                          <option value="CT">Connecticut</option>
+                                          <option value="DE">Delaware</option>
+                                          <option value="DC">District of Columbia</option>
+                                          <option value="FM">F.S. Micronesia</option>
+                                          <option value="FL">Florida</option>
+                                          <option value="GA">Georgia</option>
+                                          <option value="GU">Guam</option>
+                                          <option value="HI">Hawaii</option>
+                                          <option value="ID">Idaho</option>
+                                          <option value="IL">Illinois</option>
+                                          <option value="IN">Indiana</option>
+                                          <option value="IA">Iowa</option>
+                                          <option value="KS">Kansas</option>
+                                          <option value="KY">Kentucky</option>
+                                          <option value="LA">Louisiana</option>
+                                          <option value="ME">Maine</option>
+                                          <option value="MH">Marshall Islands</option>
+                                          <option value="MD">Maryland</option>
+                                          <option value="MA">Massachusetts</option>
+                                          <option value="MI">Michigan</option>
+                                          <option value="MN">Minnesota</option>
+                                          <option value="MS">Mississippi</option>
+                                          <option value="MO">Missouri</option>
+                                          <option value="MT">Montana</option>
+                                          <option value="NE">Nebraska</option>
+                                          <option value="NV">Nevada</option>
+                                          <option value="NH">New Hampshire</option>
+                                          <option value="NJ">New Jersey</option>
+                                          <option value="NM">New Mexico</option>
+                                          <option value="NY">New York</option>
+                                          <option value="NC">North Carolina</option>
+                                          <option value="ND">North Dakota</option>
+                                          <option value="MP">Northern Mariana Islands</option>
+                                          <option value="OH">Ohio</option>
+                                          <option value="OK">Oklahoma</option>
+                                          <option value="OR">Oregon</option>
+                                          <option value="PW">Palau</option>
+                                          <option value="PA">Pennsylvania</option>
+                                          <option value="PR">Puerto Rico</option>
+                                          <option value="RI">Rhode Island</option>
+                                          <option value="SC">South Carolina</option>
+                                          <option value="SD">South Dakota</option>
+                                          <option value="TN">Tennessee</option>
+                                          <option value="TX">Texas</option>
+                                          <option value="UT">Utah</option>
+                                          <option value="VT">Vermont</option>
+                                          <option value="VI">Virgin Islands</option>
+                                          <option value="VA">Virginia</option>
+                                          <option value="WA">Washington</option>
+                                          <option value="WV">West Virginia</option>
+                                          <option value="WI">Wisconsin</option>
+                                          <option value="WY">Wyoming</option>
+                                          <option value="XX">Not in USA</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group col-sm-3">
+                                      <label for="country" class="control-label">Country<b>*</b>
+                                      </label>
+                                      <select name="country" id="prefcountry" class="form-control input-sm">
+                                          <option value="" selected=""></option>
+                                          <option value="AF">Afghanistan</option>
+                                          <option value="AX">Aland Islands</option>
+                                          <option value="AL">Albania</option>
+                                          <option value="DZ">Algeria</option>
+                                          <option value="AS">American Samoa</option>
+                                          <option value="AD">Andorra</option>
+                                          <option value="AO">Angola</option>
+                                          <option value="AI">Anguilla</option>
+                                          <option value="AQ">Antarctica</option>
+                                          <option value="AG">Antigua and Barbuda</option>
+                                          <option value="AR">Argentina</option>
+                                          <option value="AM">Armenia</option>
+                                          <option value="AW">Aruba</option>
+                                          <option value="AU">Australia</option>
+                                          <option value="AT">Austria</option>
+                                          <option value="AZ">Azerbaijan</option>
+                                          <option value="BS">Bahamas</option>
+                                          <option value="BH">Bahrain</option>
+                                          <option value="BD">Bangladesh</option>
+                                          <option value="BB">Barbados</option>
+                                          <option value="BY">Belarus</option>
+                                          <option value="BE">Belgium</option>
+                                          <option value="BZ">Belize</option>
+                                          <option value="BJ">Benin</option>
+                                          <option value="BM">Bermuda</option>
+                                          <option value="BT">Bhutan</option>
+                                          <option value="BO">Bolivia, Plurinational State of</option>
+                                          <option value="BA">Bosnia and Herzegovina</option>
+                                          <option value="BW">Botswana</option>
+                                          <option value="BV">Bouvet Island</option>
+                                          <option value="BR">Brazil</option>
+                                          <option value="IO">British Indian Ocean Territory</option>
+                                          <option value="BN">Brunei Darussalam</option>
+                                          <option value="BG">Bulgaria</option>
+                                          <option value="BF">Burkina Faso</option>
+                                          <option value="BI">Burundi</option>
+                                          <option value="KH">Cambodia</option>
+                                          <option value="CM">Cameroon</option>
+                                          <option value="CA">Canada</option>
+                                          <option value="CV">Cape Verde</option>
+                                          <option value="KY">Cayman Islands</option>
+                                          <option value="CF">Central African Republic</option>
+                                          <option value="TD">Chad</option>
+                                          <option value="CL">Chile</option>
+                                          <option value="CN">China</option>
+                                          <option value="CX">Christmas Island</option>
+                                          <option value="CC">Cocos (Keeling) Islands</option>
+                                          <option value="CO">Colombia</option>
+                                          <option value="KM">Comoros</option>
+                                          <option value="CG">Congo</option>
+                                          <option value="CD">Congo, The Democratic Republic of the</option>
+                                          <option value="CK">Cook Islands</option>
+                                          <option value="CR">Costa Rica</option>
+                                          <option value="CI">Cote d'Ivoire</option>
+                                          <option value="HR">Croatia</option>
+                                          <option value="CU">Cuba</option>
+                                          <option value="CY">Cyprus</option>
+                                          <option value="CZ">Czech Republic</option>
+                                          <option value="DK">Denmark</option>
+                                          <option value="DJ">Djibouti</option>
+                                          <option value="DM">Dominica</option>
+                                          <option value="DO">Dominican Republic</option>
+                                          <option value="EC">Ecuador</option>
+                                          <option value="EG">Egypt</option>
+                                          <option value="SV">El Salvador</option>
+                                          <option value="GQ">Equatorial Guinea</option>
+                                          <option value="ER">Eritrea</option>
+                                          <option value="EE">Estonia</option>
+                                          <option value="ET">Ethiopia</option>
+                                          <option value="FK">Falkland Islands (Malvinas)</option>
+                                          <option value="FO">Faroe Islands</option>
+                                          <option value="FJ">Fiji</option>
+                                          <option value="FI">Finland</option>
+                                          <option value="FR">France</option>
+                                          <option value="GF">French Guiana</option>
+                                          <option value="PF">French Polynesia</option>
+                                          <option value="TF">French Southern Territories</option>
+                                          <option value="GA">Gabon</option>
+                                          <option value="GM">Gambia</option>
+                                          <option value="GE">Georgia</option>
+                                          <option value="DE">Germany</option>
+                                          <option value="GH">Ghana</option>
+                                          <option value="GI">Gibraltar</option>
+                                          <option value="GR">Greece</option>
+                                          <option value="GL">Greenland</option>
+                                          <option value="GD">Grenada</option>
+                                          <option value="GP">Guadeloupe</option>
+                                          <option value="GU">Guam</option>
+                                          <option value="GT">Guatemala</option>
+                                          <option value="GG">Guernsey</option>
+                                          <option value="GN">Guinea</option>
+                                          <option value="GW">Guinea-Bissau</option>
+                                          <option value="GY">Guyana</option>
+                                          <option value="HT">Haiti</option>
+                                          <option value="HM">Heard Island and McDonald Islands</option>
+                                          <option value="VA">Holy See (Vatican City State)</option>
+                                          <option value="HN">Honduras</option>
+                                          <option value="HK">Hong Kong</option>
+                                          <option value="HU">Hungary</option>
+                                          <option value="IS">Iceland</option>
+                                          <option value="IN">India</option>
+                                          <option value="ID">Indonesia</option>
+                                          <option value="IR">Iran, Islamic Republic of</option>
+                                          <option value="IQ">Iraq</option>
+                                          <option value="IE">Ireland</option>
+                                          <option value="IM">Isle of Man</option>
+                                          <option value="IL">Israel</option>
+                                          <option value="IT">Italy</option>
+                                          <option value="JM">Jamaica</option>
+                                          <option value="JP">Japan</option>
+                                          <option value="JE">Jersey</option>
+                                          <option value="JO">Jordan</option>
+                                          <option value="KZ">Kazakhstan</option>
+                                          <option value="KE">Kenya</option>
+                                          <option value="KI">Kiribati</option>
+                                          <option value="KP">Korea, Democratic People's Republic of</option>
+                                          <option value="KR">Korea, Republic of</option>
+                                          <option value="KW">Kuwait</option>
+                                          <option value="KG">Kyrgyzstan</option>
+                                          <option value="LA">Lao People's Democratic Republic</option>
+                                          <option value="LV">Latvia</option>
+                                          <option value="LB">Lebanon</option>
+                                          <option value="LS">Lesotho</option>
+                                          <option value="LR">Liberia</option>
+                                          <option value="LY">Libyan Arab Jamahiriya</option>
+                                          <option value="LI">Liechtenstein</option>
+                                          <option value="LT">Lithuania</option>
+                                          <option value="LU">Luxembourg</option>
+                                          <option value="MO">Macao</option>
+                                          <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+                                          <option value="MG">Madagascar</option>
+                                          <option value="MW">Malawi</option>
+                                          <option value="MY">Malaysia</option>
+                                          <option value="MV">Maldives</option>
+                                          <option value="ML">Mali</option>
+                                          <option value="MT">Malta</option>
+                                          <option value="MH">Marshall Islands</option>
+                                          <option value="MQ">Martinique</option>
+                                          <option value="MR">Mauritania</option>
+                                          <option value="MU">Mauritius</option>
+                                          <option value="YT">Mayotte</option>
+                                          <option value="MX">Mexico</option>
+                                          <option value="FM">Micronesia, Federated States of</option>
+                                          <option value="MD">Moldova, Republic of</option>
+                                          <option value="MC">Monaco</option>
+                                          <option value="MN">Mongolia</option>
+                                          <option value="ME">Montenegro</option>
+                                          <option value="MS">Montserrat</option>
+                                          <option value="MA">Morocco</option>
+                                          <option value="MZ">Mozambique</option>
+                                          <option value="MM">Myanmar</option>
+                                          <option value="NA">Namibia</option>
+                                          <option value="NR">Nauru</option>
+                                          <option value="NP">Nepal</option>
+                                          <option value="NL">Netherlands</option>
+                                          <option value="AN">Netherlands Antilles</option>
+                                          <option value="NC">New Caledonia</option>
+                                          <option value="NZ">New Zealand</option>
+                                          <option value="NI">Nicaragua</option>
+                                          <option value="NE">Niger</option>
+                                          <option value="NG">Nigeria</option>
+                                          <option value="NU">Niue</option>
+                                          <option value="NF">Norfolk Island</option>
+                                          <option value="MP">Northern Mariana Islands</option>
+                                          <option value="NO">Norway</option>
+                                          <option value="OM">Oman</option>
+                                          <option value="PK">Pakistan</option>
+                                          <option value="PW">Palau</option>
+                                          <option value="PS">Palestinian Territories</option>
+                                          <option value="PA">Panama</option>
+                                          <option value="PG">Papua New Guinea</option>
+                                          <option value="PY">Paraguay</option>
+                                          <option value="PE">Peru</option>
+                                          <option value="PH">Philippines</option>
+                                          <option value="PN">Pitcairn</option>
+                                          <option value="PL">Poland</option>
+                                          <option value="PT">Portugal</option>
+                                          <option value="PR">Puerto Rico</option>
+                                          <option value="QA">Qatar</option>
+                                          <option value="RE">Reunion</option>
+                                          <option value="RO">Romania</option>
+                                          <option value="RU">Russian Federation</option>
+                                          <option value="RW">Rwanda</option>
+                                          <option value="BL">Saint Barthelemy</option>
+                                          <option value="SH">Saint Helena</option>
+                                          <option value="KN">Saint Kitts and Nevis</option>
+                                          <option value="LC">Saint Lucia</option>
+                                          <option value="MF">Saint Martin</option>
+                                          <option value="PM">Saint Pierre and Miquelon</option>
+                                          <option value="VC">Saint Vincent and the Grenadines</option>
+                                          <option value="WS">Samoa</option>
+                                          <option value="SM">San Marino</option>
+                                          <option value="ST">Sao Tome and Principe</option>
+                                          <option value="SA">Saudi Arabia</option>
+                                          <option value="SN">Senegal</option>
+                                          <option value="RS">Serbia</option>
+                                          <option value="SC">Seychelles</option>
+                                          <option value="SL">Sierra Leone</option>
+                                          <option value="SG">Singapore</option>
+                                          <option value="SK">Slovakia</option>
+                                          <option value="SI">Slovenia</option>
+                                          <option value="SB">Solomon Islands</option>
+                                          <option value="SO">Somalia</option>
+                                          <option value="ZA">South Africa</option>
+                                          <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                          <option value="ES">Spain</option>
+                                          <option value="LK">Sri Lanka</option>
+                                          <option value="SD">Sudan</option>
+                                          <option value="SR">Suriname</option>
+                                          <option value="SJ">Svalbard and Jan Mayen</option>
+                                          <option value="SZ">Swaziland</option>
+                                          <option value="SE">Sweden</option>
+                                          <option value="CH">Switzerland</option>
+                                          <option value="SY">Syrian Arab Republic</option>
+                                          <option value="TW">Taiwan</option>
+                                          <option value="TJ">Tajikistan</option>
+                                          <option value="TZ">Tanzania, United Republic of</option>
+                                          <option value="TH">Thailand</option>
+                                          <option value="TL">Timor-Leste</option>
+                                          <option value="TG">Togo</option>
+                                          <option value="TK">Tokelau</option>
+                                          <option value="TO">Tonga</option>
+                                          <option value="TT">Trinidad and Tobago</option>
+                                          <option value="TN">Tunisia</option>
+                                          <option value="TR">Turkey</option>
+                                          <option value="TM">Turkmenistan</option>
+                                          <option value="TC">Turks and Caicos Islands</option>
+                                          <option value="TV">Tuvalu</option>
+                                          <option value="UG">Uganda</option>
+                                          <option value="UA">Ukraine</option>
+                                          <option value="AE">United Arab Emirates</option>
+                                          <option value="GB">United Kingdom</option>
+                                          <option value="US" selected="">United States</option>
+                                          <option value="UM">United States Minor Outlying Islands</option>
+                                          <option value="UY">Uruguay</option>
+                                          <option value="UZ">Uzbekistan</option>
+                                          <option value="VU">Vanuatu</option>
+                                          <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                          <option value="VN">Viet Nam</option>
+                                          <option value="VG">Virgin Islands, British</option>
+                                          <option value="VI">Virgin Islands, U.S.</option>
+                                          <option value="WF">Wallis and Futuna</option>
+                                          <option value="EH">Western Sahara</option>
+                                          <option value="YE">Yemen</option>
+                                          <option value="ZM">Zambia</option>
+                                          <option value="ZW">Zimbabwe</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-field">
+                                  <label for="phone_number" class="control-label">Daytime Phone</label>
+                                  <input type="tel" name="phone_number" value="" class="form-control input-sm" onblur="this.value=phoneCheck(this.value);">
+                              </div>
+                              <div class="form-field">
+                                  <label for="email_address" class="control-label">Email Address<b>*</b>
+                                  </label>
+                                  <input type="email" name="email_address" value="" class="form-control input-sm">
+                                  <input type="hidden" name="lock_email_address" value="">
+                              </div>
+
+                              <script>
+                              <!--
+                              function ProfileFieldLock(thisform) {
+                                      if (thisform.FieldLock != null)
+                                          if (thisform.FieldLock.checked == true) {
+                                              if (thisform.first_name != null) thisform.first_name.disabled = false;
+                                              if (thisform.last_name != null) thisform.last_name.disabled = false;
+                                              if (thisform.email_address != null) thisform.email_address.disabled = false;
+                                          } else {
+                                              if (thisform.first_name != null) {
+                                                  thisform.first_name.value = thisform.lock_first_name.value;
+                                                  thisform.first_name.disabled = true;
+                                              }
+                                              if (thisform.last_name != null) {
+                                                  thisform.last_name.value = thisform.lock_last_name.value;
+                                                  thisform.last_name.disabled = true;
+                                              }
+                                              if (thisform.email_address != null) {
+                                                  thisform.email_address.value = thisform.lock_email_address.value;
+                                                  thisform.email_address.disabled = true;
+                                              }
+                                          }
+                                      return true;
+                                  }
+                                  -->
+                              </script>
+
+                              <!-- ------------------------ Payment Information -->
+                              <a name="Payment"></a>
+                              <h3>Payment Information</h3>
+                              <div id="ccError"></div>
+                              <script>
+                              function getPaymentType() {
+                                  var thisform
+                                  thisform = document.SUPPORTER287377;
+                                  for (i = 0; i < thisform.elements['paymentTypeSelector'].options.length; i++) {
+                                      if (thisform.elements['paymentTypeSelector'].options[i].selected == true)
+                                          return thisform.elements['paymentTypeSelector'].options[i].value;
+                                  }
+                              }
+
+                              function ChangePay2() {
+                                  ChangePay(getPaymentType());
+                              }
+
+                              function ChangePay3() {
+                                  var paymentStatus
+                                  var thisform
+                                  thisform = document.SUPPORTER287377;
+                                  for (i = 0; i < thisform.elements['PaymentStatusSelector'].options.length; i++) {
+                                      if (thisform.elements['PaymentStatusSelector'].options[i].selected == true)
+                                          paymentStatus = thisform.elements['PaymentStatusSelector'].options[i].value;
+                                  }
+                                  thisform.PaymentStatus.value = paymentStatus
+                                  if (paymentStatus == "H") {
+                                      thisform.PaymentType.value = "BILLME"
+                                  } else {
+                                      thisform.PaymentType.value = "CREDIT"
+                                  }
+                                  thisform.Reload.value = 'Y';
+                                  thisform.action = "https://www.kintera.org/site/apps/ka/sd/donorcustom.asp?c=**cindex**&b=**bindex**#Payment";
+                                  thisform.submit();
+                              }
+                              </script>
+
+
+                              <input type="hidden" name="PaymentStatus" value="P">
+                              <input type="hidden" name="PaymentType" value="CREDIT" id="PaymentType0">
+                              <script src="https://www.kintera.org/CommonLib/lib/INC_jsCcValid1.js"></script>
+                              <div class="form-field">
+                                  <label for="CardName">Cardholder's Name<b>*</b>
+                                  </label>
+                                  <input type="text" name="CardName" value="" class="form-control input-sm" id="CardName">
+                              </div>
+                              <div class="row">
+                                  <div class="form-group col-sm-6">
+                                      <label for="CardNumber" class="control-label">Credit Card Number<b>*</b>
+                                      </label>
+                                      <input type="text" name="CardNumber" maxlength="20" value="" class="form-control input-sm" id="CardNumber" pattern="[0-9]*" novalidate="" autocorrect="off">
+                                  </div>
+                                  <div class="form-group col-sm-2">
+                                      <label for="CardSecNumberclass=" control-label="" ""="">CVV<b>*</b>
+                                      </label>
+                                      <input type="text" maxlength="4" name="CardSecNumber" value="" id="CardSecNumber" class="form-control input-sm" pattern="[0-9]*">
+                                      <a href="#CVV" data-toggle="modal" data-target="#CVV">Explain</a>
+                                      <!-- CVV HELP MODAL BEGINS HERE -->
+                                      <div class="modal fade" id="CVV" tabindex="-1" role="dialog" aria-labelledby="CVVLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <button type="button" class="close" data-dismiss="modal">
+                                                          <span aria-hidden="true">×</span>
+                                                          <span class="sr-only">Close</span>
+                                                      </button>
+                                                      <h4 class="modal-title" id="CVVLabel">CVV Digits Explained</h4>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <p>To make a payment with your credit/debit card, we need to know the CVV number from the reverse of the card. This is used by the credit card company to identify you as having the card in your possession when placing the order. Your card will not be authorised and hence your order will be rejected if you do not enter the correct digits.</p>
+
+                                                      <p>Depending on the age of the card the CVV number is the 3 or 4 digit number printed on the signature strip on the reverse of the card as shown below.</p>
+                                                      <img src="https://www.kintera.org/CommonLib/Field/images/image001.gif" alt="Visa, mastercard, Discover CVV location">
+
+                                                      <p>American Express cards show the card security code (also referred to as the CID number) printed above the imprinted card number on the front of the card (on either the left or right)**.</p>
+                                                      <img src="https://www.kintera.org/CommonLib/Field/images/image003.jpg" alt="AMEX CVV location">
+
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <!-- CVV HELP MODAL ENDS HERE -->
+                                  </div>
+
+                                  <div class="form-group col-sm-4">
+                                      <label for="CardExpmn" class="control-label">Credit Card Expiration<b>*</b>
+                                      </label>
+                                      <div class="row">
+                                          <div class="col-sm-6">
+                                              <select name="CardExpmn" id="CardExpmn" title="Credit Card Expiration Month" class="form-control input-sm">
+                                                  <option value="" selected=""></option>
+                                                  <option value="01">01 January</option>
+                                                  <option value="02">02 February</option>
+                                                  <option value="03">03 March</option>
+                                                  <option value="04">04 April</option>
+                                                  <option value="05">05 May</option>
+                                                  <option value="06">06 June</option>
+                                                  <option value="07">07 July</option>
+                                                  <option value="08">08 August</option>
+                                                  <option value="09">09 September</option>
+                                                  <option value="10">10 October</option>
+                                                  <option value="11">11 November</option>
+                                                  <option value="12">12 December</option>
+                                              </select>
+                                          </div>
+                                          <div class="col-sm-6">
+                                              <select name="CardExpyr" id="CardExpyr" title="Credit Card Expiration Year" class="form-control input-sm">
+                                  <option value="" selected></option>
+                                  <option value="2016">2016</option>
+                                  <option value="2017">2017</option>
+                                  <option value="2018">2018</option>
+                                  <option value="2019">2019</option>
+                                  <option value="2020">2020</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2022">2022</option>
+                                  <option value="2023">2023</option>
+                                  <option value="2024">2024</option>
+                                  <option value="2025">2025</option>
+                                  <option value="2026">2026</option>
+                                  <option value="2027">2027</option>
+                                  <option value="2028">2028</option>
+                                  <option value="2029">2029</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                              </div>
+                              <div class="form-field form-group">
+                                  <label for="CardType" class="control-label">Credit Card Type<b>*</b>
+                                  </label>
+                                  <br>
+                                  <select name="CardType" id="CardType" title="Credit Card Types" onchange="ChangeCreditCardType(form, this);" class="form-control input-sm">
+                                      <option value="" selected=""></option>
+                                      <option value="Visa">Visa</option>
+                                      <option value="MasterCard">MasterCard</option>
+                                      <option value="American Express">American Express</option>
+                                      <option value="Discover">Discover</option>
+                                  </select>
+                                  <script>
+                                  <!--
+                                  function ChangeCreditCardType(thisform, pointer) {
+                                          var typeval;
+                                          for (var i = 0; i < pointer.length; i++)
+                                              if (pointer[i].selected) typeval = pointer[i].value;
+                                          var r = false;
+                                          if (thisform.CardStart != null || thisform.IssueNumber != null) {
+                                              if (typeval != "Maestro" && typeval != "Solo" && typeval != "Switch/UK Maestro") r = true;
+                                          } else {
+                                              if (typeval == "Maestro" || typeval == "Solo" || typeval == "Switch/UK Maestro") r = true;
+                                          }
+                                          if (r) {
+                                              if (thisform.Reload != null) thisform.Reload.value = 'Y';
+                                              thisform.action = "https://www.kintera.org/site/apps/ka/sd/donorcustom.asp?c=**cindex**&b=**bindex**&js=true#Payment";
+                                              thisform.submit();
+                                          }
+                                      }
+                                      //-->
+                                  </script>
+                                  <img src="https://www.kintera.org/atf/cf/%7Bf596283c-2cf8-497a-9322-9d202bc39bee%7D/ACCEPTED.PNG">
+
+                              </div>
+                              <fieldset class="credit-card-group">
+                                  <legend>Billing Address</legend>
+                                  <div class="form-group no-js-hide">
+                                      <label class="checkbox-inline">
+                                          <input type="checkbox" name="CheckAddress" value="on" onclick="ChangeAddress(form);" id="CheckAddress">Same as contact information</label>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="BillAddress1" class="control-label">Billing Address Line 1<b>*</b>
+                                      </label>
+                                      <input type="text" autocapitalize="words" autocorrect="off" id="BillAddress1" name="BillAddress1" value="" class="form-control input-sm">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="BillAddress2" class="control-label">Billing Address Line 2</label>
+                                      <input type="text" autocapitalize="words" autocorrect="off" id="BillAddress2" name="BillAddress2" value="" class="form-control input-sm">
+                                  </div>
+
+                                  <div class="row">
+                                      <div class="form-group col-sm-3 zipcode">
+                                          <label for="BillZip" class="control-label">Zip/Postal Code<b>*</b>
+                                          </label>
+                                          <input type="text" id="BillZip" name="BillZip" value="" class="form-control input-sm" onblur="return checkZip(this);">
+                                      </div>
+                                  </div>
+
+                                  <div id="billcitystatecountry" class="row">
+                                      <div class="form-group col-sm-6">
+                                          <label for="BillCity" class="control-label">City<b>*</b>
+                                          </label>
+                                          <input type="text" autocapitalize="words" id="BillCity" name="BillCity" value="" class="form-control input-sm">
+                                      </div>
+                                      <div class="form-group col-sm-3">
+                                          <label for="BillState" class="control-label">State<b>*</b>
+                                          </label>
+                                          <select name="BillState" id="BillState" title="State" class="form-control input-sm">
+                                              <option value=""></option>
+                                              <option value="AL">Alabama</option>
+                                              <option value="AK">Alaska</option>
+                                              <option value="AS">American Samoa</option>
+                                              <option value="AZ">Arizona</option>
+                                              <option value="AR">Arkansas</option>
+                                              <option value="AA">Armed Forces Americas</option>
+                                              <option value="AE">Armed Forces Europe</option>
+                                              <option value="AP">Armed Forces Pacific</option>
+                                              <option value="CA">California</option>
+                                              <option value="CO">Colorado</option>
+                                              <option value="CT">Connecticut</option>
+                                              <option value="DE">Delaware</option>
+                                              <option value="DC">District of Columbia</option>
+                                              <option value="FM">F.S. Micronesia</option>
+                                              <option value="FL">Florida</option>
+                                              <option value="GA">Georgia</option>
+                                              <option value="GU">Guam</option>
+                                              <option value="HI">Hawaii</option>
+                                              <option value="ID">Idaho</option>
+                                              <option value="IL">Illinois</option>
+                                              <option value="IN">Indiana</option>
+                                              <option value="IA">Iowa</option>
+                                              <option value="KS">Kansas</option>
+                                              <option value="KY">Kentucky</option>
+                                              <option value="LA">Louisiana</option>
+                                              <option value="ME">Maine</option>
+                                              <option value="MH">Marshall Islands</option>
+                                              <option value="MD">Maryland</option>
+                                              <option value="MA">Massachusetts</option>
+                                              <option value="MI">Michigan</option>
+                                              <option value="MN">Minnesota</option>
+                                              <option value="MS">Mississippi</option>
+                                              <option value="MO">Missouri</option>
+                                              <option value="MT">Montana</option>
+                                              <option value="NE">Nebraska</option>
+                                              <option value="NV">Nevada</option>
+                                              <option value="NH">New Hampshire</option>
+                                              <option value="NJ">New Jersey</option>
+                                              <option value="NM">New Mexico</option>
+                                              <option value="NY">New York</option>
+                                              <option value="NC">North Carolina</option>
+                                              <option value="ND">North Dakota</option>
+                                              <option value="MP">Northern Mariana Islands</option>
+                                              <option value="OH">Ohio</option>
+                                              <option value="OK">Oklahoma</option>
+                                              <option value="OR">Oregon</option>
+                                              <option value="PW">Palau</option>
+                                              <option value="PA">Pennsylvania</option>
+                                              <option value="PR">Puerto Rico</option>
+                                              <option value="RI">Rhode Island</option>
+                                              <option value="SC">South Carolina</option>
+                                              <option value="SD">South Dakota</option>
+                                              <option value="TN">Tennessee</option>
+                                              <option value="TX">Texas</option>
+                                              <option value="UT">Utah</option>
+                                              <option value="VT">Vermont</option>
+                                              <option value="VI">Virgin Islands</option>
+                                              <option value="VA">Virginia</option>
+                                              <option value="WA">Washington</option>
+                                              <option value="WV">West Virginia</option>
+                                              <option value="WI">Wisconsin</option>
+                                              <option value="WY">Wyoming</option>
+                                              <option value="XX">Not in USA</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-group col-sm-3">
+                                          <label for="BillCountry" class="control-label">Country<b>*</b>
+                                          </label>
+                                          <select name="BillCountry" title="Country" class="form-control input-sm">
+                                              <option value="">-</option>
+                                              <option value="AF">Afghanistan</option>
+                                              <option value="AX">Aland Islands</option>
+                                              <option value="AL">Albania</option>
+                                              <option value="DZ">Algeria</option>
+                                              <option value="AS">American Samoa</option>
+                                              <option value="AD">Andorra</option>
+                                              <option value="AO">Angola</option>
+                                              <option value="AI">Anguilla</option>
+                                              <option value="AQ">Antarctica</option>
+                                              <option value="AG">Antigua and Barbuda</option>
+                                              <option value="AR">Argentina</option>
+                                              <option value="AM">Armenia</option>
+                                              <option value="AW">Aruba</option>
+                                              <option value="AU">Australia</option>
+                                              <option value="AT">Austria</option>
+                                              <option value="AZ">Azerbaijan</option>
+                                              <option value="BS">Bahamas</option>
+                                              <option value="BH">Bahrain</option>
+                                              <option value="BD">Bangladesh</option>
+                                              <option value="BB">Barbados</option>
+                                              <option value="BY">Belarus</option>
+                                              <option value="BE">Belgium</option>
+                                              <option value="BZ">Belize</option>
+                                              <option value="BJ">Benin</option>
+                                              <option value="BM">Bermuda</option>
+                                              <option value="BT">Bhutan</option>
+                                              <option value="BO">Bolivia, Plurinational State of</option>
+                                              <option value="BA">Bosnia and Herzegovina</option>
+                                              <option value="BW">Botswana</option>
+                                              <option value="BV">Bouvet Island</option>
+                                              <option value="BR">Brazil</option>
+                                              <option value="IO">British Indian Ocean Territory</option>
+                                              <option value="BN">Brunei Darussalam</option>
+                                              <option value="BG">Bulgaria</option>
+                                              <option value="BF">Burkina Faso</option>
+                                              <option value="BI">Burundi</option>
+                                              <option value="KH">Cambodia</option>
+                                              <option value="CM">Cameroon</option>
+                                              <option value="CA">Canada</option>
+                                              <option value="CV">Cape Verde</option>
+                                              <option value="KY">Cayman Islands</option>
+                                              <option value="CF">Central African Republic</option>
+                                              <option value="TD">Chad</option>
+                                              <option value="CL">Chile</option>
+                                              <option value="CN">China</option>
+                                              <option value="CX">Christmas Island</option>
+                                              <option value="CC">Cocos (Keeling) Islands</option>
+                                              <option value="CO">Colombia</option>
+                                              <option value="KM">Comoros</option>
+                                              <option value="CG">Congo</option>
+                                              <option value="CD">Congo, The Democratic Republic of the</option>
+                                              <option value="CK">Cook Islands</option>
+                                              <option value="CR">Costa Rica</option>
+                                              <option value="CI">Cote d'Ivoire</option>
+                                              <option value="HR">Croatia</option>
+                                              <option value="CU">Cuba</option>
+                                              <option value="CY">Cyprus</option>
+                                              <option value="CZ">Czech Republic</option>
+                                              <option value="DK">Denmark</option>
+                                              <option value="DJ">Djibouti</option>
+                                              <option value="DM">Dominica</option>
+                                              <option value="DO">Dominican Republic</option>
+                                              <option value="EC">Ecuador</option>
+                                              <option value="EG">Egypt</option>
+                                              <option value="SV">El Salvador</option>
+                                              <option value="GQ">Equatorial Guinea</option>
+                                              <option value="ER">Eritrea</option>
+                                              <option value="EE">Estonia</option>
+                                              <option value="ET">Ethiopia</option>
+                                              <option value="FK">Falkland Islands (Malvinas)</option>
+                                              <option value="FO">Faroe Islands</option>
+                                              <option value="FJ">Fiji</option>
+                                              <option value="FI">Finland</option>
+                                              <option value="FR">France</option>
+                                              <option value="GF">French Guiana</option>
+                                              <option value="PF">French Polynesia</option>
+                                              <option value="TF">French Southern Territories</option>
+                                              <option value="GA">Gabon</option>
+                                              <option value="GM">Gambia</option>
+                                              <option value="GE">Georgia</option>
+                                              <option value="DE">Germany</option>
+                                              <option value="GH">Ghana</option>
+                                              <option value="GI">Gibraltar</option>
+                                              <option value="GR">Greece</option>
+                                              <option value="GL">Greenland</option>
+                                              <option value="GD">Grenada</option>
+                                              <option value="GP">Guadeloupe</option>
+                                              <option value="GU">Guam</option>
+                                              <option value="GT">Guatemala</option>
+                                              <option value="GG">Guernsey</option>
+                                              <option value="GN">Guinea</option>
+                                              <option value="GW">Guinea-Bissau</option>
+                                              <option value="GY">Guyana</option>
+                                              <option value="HT">Haiti</option>
+                                              <option value="HM">Heard Island and McDonald Islands</option>
+                                              <option value="VA">Holy See (Vatican City State)</option>
+                                              <option value="HN">Honduras</option>
+                                              <option value="HK">Hong Kong</option>
+                                              <option value="HU">Hungary</option>
+                                              <option value="IS">Iceland</option>
+                                              <option value="IN">India</option>
+                                              <option value="ID">Indonesia</option>
+                                              <option value="IR">Iran, Islamic Republic of</option>
+                                              <option value="IQ">Iraq</option>
+                                              <option value="IE">Ireland</option>
+                                              <option value="IM">Isle of Man</option>
+                                              <option value="IL">Israel</option>
+                                              <option value="IT">Italy</option>
+                                              <option value="JM">Jamaica</option>
+                                              <option value="JP">Japan</option>
+                                              <option value="JE">Jersey</option>
+                                              <option value="JO">Jordan</option>
+                                              <option value="KZ">Kazakhstan</option>
+                                              <option value="KE">Kenya</option>
+                                              <option value="KI">Kiribati</option>
+                                              <option value="KP">Korea, Democratic People's Republic of</option>
+                                              <option value="KR">Korea, Republic of</option>
+                                              <option value="KW">Kuwait</option>
+                                              <option value="KG">Kyrgyzstan</option>
+                                              <option value="LA">Lao People's Democratic Republic</option>
+                                              <option value="LV">Latvia</option>
+                                              <option value="LB">Lebanon</option>
+                                              <option value="LS">Lesotho</option>
+                                              <option value="LR">Liberia</option>
+                                              <option value="LY">Libyan Arab Jamahiriya</option>
+                                              <option value="LI">Liechtenstein</option>
+                                              <option value="LT">Lithuania</option>
+                                              <option value="LU">Luxembourg</option>
+                                              <option value="MO">Macao</option>
+                                              <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+                                              <option value="MG">Madagascar</option>
+                                              <option value="MW">Malawi</option>
+                                              <option value="MY">Malaysia</option>
+                                              <option value="MV">Maldives</option>
+                                              <option value="ML">Mali</option>
+                                              <option value="MT">Malta</option>
+                                              <option value="MH">Marshall Islands</option>
+                                              <option value="MQ">Martinique</option>
+                                              <option value="MR">Mauritania</option>
+                                              <option value="MU">Mauritius</option>
+                                              <option value="YT">Mayotte</option>
+                                              <option value="MX">Mexico</option>
+                                              <option value="FM">Micronesia, Federated States of</option>
+                                              <option value="MD">Moldova, Republic of</option>
+                                              <option value="MC">Monaco</option>
+                                              <option value="MN">Mongolia</option>
+                                              <option value="ME">Montenegro</option>
+                                              <option value="MS">Montserrat</option>
+                                              <option value="MA">Morocco</option>
+                                              <option value="MZ">Mozambique</option>
+                                              <option value="MM">Myanmar</option>
+                                              <option value="NA">Namibia</option>
+                                              <option value="NR">Nauru</option>
+                                              <option value="NP">Nepal</option>
+                                              <option value="NL">Netherlands</option>
+                                              <option value="AN">Netherlands Antilles</option>
+                                              <option value="NC">New Caledonia</option>
+                                              <option value="NZ">New Zealand</option>
+                                              <option value="NI">Nicaragua</option>
+                                              <option value="NE">Niger</option>
+                                              <option value="NG">Nigeria</option>
+                                              <option value="NU">Niue</option>
+                                              <option value="NF">Norfolk Island</option>
+                                              <option value="MP">Northern Mariana Islands</option>
+                                              <option value="NO">Norway</option>
+                                              <option value="OM">Oman</option>
+                                              <option value="PK">Pakistan</option>
+                                              <option value="PW">Palau</option>
+                                              <option value="PS">Palestinian Territories</option>
+                                              <option value="PA">Panama</option>
+                                              <option value="PG">Papua New Guinea</option>
+                                              <option value="PY">Paraguay</option>
+                                              <option value="PE">Peru</option>
+                                              <option value="PH">Philippines</option>
+                                              <option value="PN">Pitcairn</option>
+                                              <option value="PL">Poland</option>
+                                              <option value="PT">Portugal</option>
+                                              <option value="PR">Puerto Rico</option>
+                                              <option value="QA">Qatar</option>
+                                              <option value="RE">Reunion</option>
+                                              <option value="RO">Romania</option>
+                                              <option value="RU">Russian Federation</option>
+                                              <option value="RW">Rwanda</option>
+                                              <option value="BL">Saint Barthelemy</option>
+                                              <option value="SH">Saint Helena</option>
+                                              <option value="KN">Saint Kitts and Nevis</option>
+                                              <option value="LC">Saint Lucia</option>
+                                              <option value="MF">Saint Martin</option>
+                                              <option value="PM">Saint Pierre and Miquelon</option>
+                                              <option value="VC">Saint Vincent and the Grenadines</option>
+                                              <option value="WS">Samoa</option>
+                                              <option value="SM">San Marino</option>
+                                              <option value="ST">Sao Tome and Principe</option>
+                                              <option value="SA">Saudi Arabia</option>
+                                              <option value="SN">Senegal</option>
+                                              <option value="RS">Serbia</option>
+                                              <option value="SC">Seychelles</option>
+                                              <option value="SL">Sierra Leone</option>
+                                              <option value="SG">Singapore</option>
+                                              <option value="SK">Slovakia</option>
+                                              <option value="SI">Slovenia</option>
+                                              <option value="SB">Solomon Islands</option>
+                                              <option value="SO">Somalia</option>
+                                              <option value="ZA">South Africa</option>
+                                              <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                              <option value="ES">Spain</option>
+                                              <option value="LK">Sri Lanka</option>
+                                              <option value="SD">Sudan</option>
+                                              <option value="SR">Suriname</option>
+                                              <option value="SJ">Svalbard and Jan Mayen</option>
+                                              <option value="SZ">Swaziland</option>
+                                              <option value="SE">Sweden</option>
+                                              <option value="CH">Switzerland</option>
+                                              <option value="SY">Syrian Arab Republic</option>
+                                              <option value="TW">Taiwan</option>
+                                              <option value="TJ">Tajikistan</option>
+                                              <option value="TZ">Tanzania, United Republic of</option>
+                                              <option value="TH">Thailand</option>
+                                              <option value="TL">Timor-Leste</option>
+                                              <option value="TG">Togo</option>
+                                              <option value="TK">Tokelau</option>
+                                              <option value="TO">Tonga</option>
+                                              <option value="TT">Trinidad and Tobago</option>
+                                              <option value="TN">Tunisia</option>
+                                              <option value="TR">Turkey</option>
+                                              <option value="TM">Turkmenistan</option>
+                                              <option value="TC">Turks and Caicos Islands</option>
+                                              <option value="TV">Tuvalu</option>
+                                              <option value="UG">Uganda</option>
+                                              <option value="UA">Ukraine</option>
+                                              <option value="AE">United Arab Emirates</option>
+                                              <option value="GB">United Kingdom</option>
+                                              <option value="US" selected="">United States</option>
+                                              <option value="UM">United States Minor Outlying Islands</option>
+                                              <option value="UY">Uruguay</option>
+                                              <option value="UZ">Uzbekistan</option>
+                                              <option value="VU">Vanuatu</option>
+                                              <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                              <option value="VN">Viet Nam</option>
+                                              <option value="VG">Virgin Islands, British</option>
+                                              <option value="VI">Virgin Islands, U.S.</option>
+                                              <option value="WF">Wallis and Futuna</option>
+                                              <option value="EH">Western Sahara</option>
+                                              <option value="YE">Yemen</option>
+                                              <option value="ZM">Zambia</option>
+                                              <option value="ZW">Zimbabwe</option>
+                                          </select>
+
+                                      </div>
+                                  </div>
+                              </fieldset>
+                              <!-- ------------------------ Additional Information -->
+                              <h3>Additional Information</h3>
+                              <div class="form-group form-field">
+                                  <input type="checkbox" name="Field4708172" value="Yes">
+                                  <label for="pledge" class="checkbox-inline">This is a pledge payment.</label>
+                              </div>
+                              <!-- <div class="form-group form-field">
+                                  <input type="checkbox" name="Field4708179" value="Yes">
+                                  <label for="anonymous" class="checkbox-inline">I/we wish to remain anonymous.</label>
+                              </div> -->
+                              <div class="form-group form-field">
+
+                                  <input type="checkbox" name="Field4708173" value="Yes">
+                                  <label for="jointgift" class="checkbox-inline">This is a joint gift.</label>
+                              </div>
+                              <!-- Matching Gift -->
+                              <div class="form-group form-field">
+                                  <input name="addOptions" type="checkbox" value="companyMatch" class="addOptions align">
+                                  <label for="match" class="checkbox-inline">My company will match this gift.</label>
+                              </div>
+                              <div id="companyMatch" class="form-group" style="display: none;">
+                                  <label name="MatchingName" class="control-label">Name of company</label>
+                                  <input type="text" maxlength="250" name="MatchingName" disabled="">
+                                  <p class="help-block"><a href="https://www.matchinggifts.com/uchicago/" data-toggle="modal" data-target="#findCompany">Search for your company</a>
+                                  </p>
+
+                                  <!-- COMPANY SEARCH MODAL BEGINS HERE -->
+                                  <div class="modal fade" id="findCompany" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <button type="button" class="close" data-dismiss="modal">
+                                                      <span aria-hidden="true">×</span>
+                                                      <span class="sr-only">Close</span>
+                                                  </button>
+                                                  <h4 class="modal-title" id="ModalLabel">Search for your company</h4>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <p>The impact of your gift may be doubled or possibly tripled!</p>
+                                                  <p>
+                                                      <strong>Mail form to:</strong>
+                                                      <br>Associate Director, Gift and Record Services
+                                                      <br>The University of Chicago
+                                                      <br>5235 S. Harper Court, Suite 431, Chicago, Illinois 60615</p>
+                                                  <p>
+                                                      <strong>Questions?</strong>
+                                                      <br>Contact us at 773.702.1021 or <a href="mailto:Matching_gifts@uchicago.edu">Matching_gifts@uchicago.edu</a>
+                                                  </p>
+                                                  <p>Enter your employer's name to find out if your company has a matching gift policy.</p>
+                                                  <iframe src="https://www.matchinggifts.com/uchicago2_iframe/"></iframe>
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- COMPANY SEARCH MODAL ENDS HERE -->
+                              </div>
+                              <div class="form-field">
+                                  <h3>Special Instructions</h3>
+                                  <label for="first_name" class="control-label">Comments<b></b>
+                                  </label>
+                                  <textarea name="Field4708184" rows="5" cols="70" wrap="PHYSICAL" onblur="checkLength(this,255);" class="form-control input-sm" maxlength="254"></textarea>
+                                  <p class="help-block">255 character maximum</p>
+                              </div>
+                              <div class="form-field" style="display:none;">
+                                  <label>Guest Degree/Class Year:</label>
+                                  <input type="text" size="25" maxlength="10" name="gift_note" name="gift_note" value="CXC3 | ">
+                              </div>
+
+                              <script>
+                              <!--
+                              function CheckAll(thisform, IdList) {
+                                      var arrIdList = IdList.split(",");
+                                      var allchecked = true;
+                                      for (var i = 0; i < thisform.elements.length; i++)
+                                          if (thisform.elements[i].type == "checkbox" && thisform.elements[i].name == "SegmentID")
+                                              for (var j = 0; j < arrIdList.length; j++)
+                                                  if (thisform.elements[i].value == arrIdList[j] && thisform.elements[i].checked == false)
+                                                      allchecked = false;
+                                      for (var i = 0; i < thisform.elements.length; i++)
+                                          if (thisform.elements[i].type == "checkbox" && thisform.elements[i].name == "SegmentID")
+                                              for (var j = 0; j < arrIdList.length; j++)
+                                                  if (thisform.elements[i].value == arrIdList[j])
+                                                      if (allchecked == false)
+                                                          thisform.elements[i].checked = true;
+                                                      else
+                                                          thisform.elements[i].checked = false;
+                                  }
+                                  //-->
+                              </script>
+                              <div class="form-field">
+                                  <input type="button" name="SubmitButton2" id="SubmitButton2" class="btn btn-default HtmlButton" value="Give Now" onclick="SubmitForm287377(form);">
+                                  <span id="Processing"></span>
+                              </div>
+
+                          </form>
+                      </div>
+
+                      <script>
+                      <!--
+                      history.go(1);
+                      formSetmain(document.SUPPORTER287377);
+                      onunload = fileClose;
+
+                      var recurring_type = "N";
+
+                      function reloadForm() {
+                          document.SUPPORTER287377.Reload.value = 'Y';
+                          document.SUPPORTER287377.action = "https://www.kintera.org/site/apps/ka/sd/donorcustom.asp?c=**cindex**&b=**bindex**";
+                          document.SUPPORTER287377.submit();
+                      }
+
+                      function SubmitForm287377(thisform) {
+                          if (thisform.SubmitButton != null) thisform.SubmitButton.disabled = true;
+                          if (thisform.RestartButton != null) thisform.RestartButton.disabled = true;
+                          if (CheckForm287377(thisform)) thisform.submit();
+                          else {
+                              if (thisform.SubmitButton != null) thisform.SubmitButton.disabled = false;
+                              if (thisform.RestartButton != null) thisform.RestartButton.disabled = false;
+                          }
+                      }
+
+                      function CheckForm287377(thisform) {
+                          focus_field = "";
+                          warning = "";
+
+                          if (recurring_type == 'Y') {
+
+                              thisform.RecurringAmount.value = jsDV_strTrim(thisform.RecurringAmount.value);
+                              CheckAmount(thisform.RecurringAmount);
+                              warning = checkField(thisform.RecurringAmount, "Amount", warning);
+
+                          } else {
+                              thisform.Amount.value = jsDV_strTrim(thisform.Amount.value);
+                              CheckAmount(thisform.Amount);
+                              warning = checkField(thisform.Amount, "Amount", warning);
+                          }
+                          warning = checkField(thisform.BeneficiaryID, "Area of Support", warning);
+                          warning = checkField(thisform.first_name, "First Name", warning);
+                          warning = checkField(thisform.last_name, "Last Name", warning);
+                          warning = checkField(thisform.address_line_1, "Address Line 1", warning);
+                          warning = checkField(thisform.city, "City", warning);
+                          warning = checkSelect(thisform.state, "State", warning);
+                          warning = checkField(thisform.zip, "ZIP/Postal Code", warning);
+                          warning = checkSelect(thisform.country, "Country", warning);
+                          warning = checkField(thisform.email_address, "Primary Email", warning);
+                          warning = checkField(thisform.CardName, "Cardholder's Name", warning);
+                          warning = checkField(thisform.CardNumber, "Credit Card Number", warning);
+                          warning = checkField(thisform.CardSecNumber, "CVV Number", warning);
+                          warning = checkField(thisform.CardType, "Card Type", warning);
+                          warning = checkField(thisform.BillAddress1, "Billing Address Line 1", warning);
+                          warning = checkField(thisform.BillCity, "Billing City", warning);
+                          warning = checkField(thisform.BillZip, "Billing ZIP/Postal Code", warning);
+                          warning = checkSelect(thisform.BillCountry, "Billing ", warning);
+                          //warning = checkField(thisform.Field4708184, "Comments / Sock Size", warning);
+                          if (warning != "") {
+                              warning = "Please enter the following fields to continue:\n- " + warning + "";
+                              alert(warning);
+                              if (focus_field != "") focus_field.focus();
+                              return false;
+                          }
+
+                          if (thisform.email_address != null)
+                              if (thisform.email_address.value != "")
+                                  if (validEmail(thisform.email_address.value) == false) {
+                                      thisform.email_address.focus();
+                                      return false;
+                                  }
+                          if (thisform.email_address_1 != null)
+                              if (thisform.email_address_1.value != "")
+                                  if (validEmail(thisform.email_address_1.value, "You have entered an invalid email address.") == false) {
+                                      thisform.email_address_1.focus();
+                                      return false;
+                                  }
+                          if (thisform.email_address_2 != null)
+                              if (thisform.email_address_2.value != "")
+                                  if (validEmail(thisform.email_address_2.value, "You have entered an invalid email address.") == false) {
+                                      thisform.email_address_2.focus();
+                                      return false;
+                                  }
+                          if ((thisform.zip != null) && (thisform.country != null))
+                              if (checkCountryZip(thisform.zip, thisform.country) == false) {
+                                  thisform.zip.focus();
+                                  return false;
+                              }
+
+                          if (!ccTypeValid(thisform.CardNumber, thisform.CardType)) {
+                              alert("Your credit card number is invalid - please reenter");
+                              thisform.CardNumber.focus();
+                              return false;
+                          }
+                          if (!((null == thisform.CardSecNumber) || ("undefined" == typeof(thisform.CardSecNumber)))) {
+                              if (!ccCVVCheck(thisform.CardSecNumber.value)) {
+                                  alert("Your CVV number is invalid - please reenter");
+                                  thisform.CardSecNumber.focus();
+                                  return false;
+                              }
+                          }
+                          for (i = 0; i < thisform.CardExpyr.options.length; i++)
+                              if (thisform.CardExpyr.options[i].selected) expyear = thisform.CardExpyr.options[i].value;
+                          for (i = 0; i < thisform.CardExpmn.options.length; i++)
+                              if (thisform.CardExpmn.options[i].selected) expmonth = thisform.CardExpmn.options[i].value;
+                          if ((expyear < 2012) || (expyear == 2012 && expmonth < 5)) {
+                              thisform.CardExpmn.focus();
+                              alert("Your credit card is expired - please reenter");
+                              return false;
+                          }
+
+                          if ((thisform.BillZip != null) && (thisform.BillCountry != null))
+                              if (checkCountryZip(thisform.BillZip, thisform.BillCountry) == false) {
+                                  //alert("Please enter a valid zip code");
+                                  thisform.BillZip.focus();
+                                  return false;
+                              }
+
+                          thisform.action = "https://www.kintera.org/site/apps/ka/sd/donateprocess.asp?c=**cindex**&b=**bindex**&targetURL=**targetURL**";
+                          if (document.all) //IE
+                              document.all["Processing"].innerHTML = "<font class='Alert' ><i> Processing...</i></font>";
+                          else if (!document.all && document.getElementById) //NN6
+                              document.getElementById("Processing").innerHTML = "<font class='Alert' ><i> Processing...</i></font>";
+
+                          //DH - 07/25/2011
+                          sessvars.allfields = $('form').serializeArray();
+                          return true;
+
+                      }
+
+                      function CountTotal(ptrAmt, ptrNum, ptrTotal) {
+                          var thisform, numGift, i, j;
+                          thisform = document.SUPPORTER287377;
+                          CheckAmount(ptrAmt);
+                          for (i = 0; i < ptrNum.length; i++)
+                              if (ptrNum[i].selected) numGift = Math.round(ptrNum.options[i].value) + 1;
+                          ptrTotal.value = ptrAmt.value * numGift;
+
+                      }
+
+                      function CountTerm(ptrAmt, ptrNum, ptrTotal) {
+                          var numGift;
+                          CheckAmount(ptrAmt);
+                          for (var i = 0; i < ptrNum.length; i++)
+                              if (ptrNum[i].selected) numGift = Math.round(ptrNum.options[i].value) + 1;
+                          ptrAmt.value = ptrTotal.value / numGift;
+                      }
+
+                      function SetAmount(thisform, amt) {
+                          if (recurring_type == 'Y') {
+
+                              thisform.TotalAmount.value = amt;
+                              CountTerm(thisform.RecurringAmount, thisform.NumberOfPayments, thisform.TotalAmount);
+
+                          } else thisform.Amount.value = amt;
+                      }
+
+                      function CheckAmtLevel(thisform, pointer) {
+                          var i, j;
+                          CheckAmount(pointer);
+
+                          return false;
+                      }
+
+                      function CheckAmount(pointer) {
+                          var returnValue, amountValue;
+                          for (i = 0; i <= pointer.value.length - 1; i++);
+                          pointer.value = pointer.value.replace(",", "");
+                          amountValue = jsDV_strTrim(pointer.value);
+                          if (amountValue != "") {
+                              returnValue = jsDV_isValidMoney(amountValue);
+                              if (returnValue == "-1") {
+                                  alert("Please enter a valid amount");
+                                  pointer.value = "";
+                                  pointer.focus();
+                                  return false;
+                              } else pointer.value = returnValue;
+
+                              if (amountValue < 1) {
+                                  alert("Please enter a minimum donation amount of $1");
+                                  pointer.value = "";
+                                  //pointer.focus();
+                                  return false;
+                              }
+                              if (amountValue > 100000) {
+                                  alert("Please enter a maximum donation amount of $100,000");
+                                  pointer.value = "";
+                                  pointer.focus();
+                                  return false;
+                              }
+                          }
+                      }
+
+                      function ChangeName(thisform) {
+                          thisform.CardName.value = thisform.FirstName.value + " " + thisform.LastName.value;
+                          return true;
+                      }
+
+                      function ChangeAddress(thisform) {
+                          if (thisform.CheckAddress.value == "on") {
+                              if (thisform.address_line_1 != null) thisform.BillAddress1.value = thisform.address_line_1.value;
+                              if (thisform.address_line_2 != null) thisform.BillAddress2.value = thisform.address_line_2.value;
+                              if (thisform.city != null) thisform.BillCity.value = thisform.city.value;
+                              if (thisform.province != null) thisform.BillProvince.value = thisform.province.value;
+                              if (thisform.zip != null) thisform.BillZip.value = thisform.zip.value;
+                              if (thisform.state != null) setSelectValue(thisform.BillState, thisform.state.value);
+                              if (thisform.country != null) setSelectValue(thisform.BillCountry, thisform.country.value);
+                              thisform.CheckAddress.value = "off";
+                          } else {
+                              thisform.BillAddress1.value = "";
+                              thisform.BillAddress2.value = "";
+                              thisform.BillCity.value = "";
+                              thisform.BillProvince.value = "";
+                              thisform.BillZip.value = "";
+                              setSelectValue(thisform.BillState, "");
+                              setSelectValue(thisform.BillCountry, "");
+                              thisform.CheckAddress.value = "on";
+                          }
+                          return true;
+                      }
+
+                      function CheckRecurring(thisform, thetype) {
+                          recurring_type = thetype;
+                          if (recurring_type == 'Y') {
+
+                              thisform.TotalAmount.value = thisform.Amount.value;
+                              CountTerm(thisform.RecurringAmount, thisform.NumberOfPayments, thisform.TotalAmount);
+
+                              thisform.Amount.disabled = true;
+                              if (thisform.RecurringAmount != null) thisform.RecurringAmount.disabled = false;
+                              if (thisform.BillingScheduleID != null) thisform.BillingScheduleID.disabled = false;
+                              if (thisform.NumberOfPayments != null) thisform.NumberOfPayments.disabled = false;
+                              if (thisform.BillingScheduleID.value == "0") {
+                                  if (thisform.Amount1 != null) thisform.Amount1.disabled = false;
+
+                              }
+                          } else {
+
+                              thisform.Amount.value = thisform.TotalAmount.value;
+
+                              thisform.Amount.disabled = false;
+                              if (thisform.RecurringAmount != null) thisform.RecurringAmount.disabled = true;
+                              if (thisform.BillingScheduleID != null) thisform.BillingScheduleID.disabled = true;
+                              if (thisform.NumberOfPayments != null) thisform.NumberOfPayments.disabled = true;
+                          }
+                      }
+
+                      function RefreshCaptcha() {
+                          document.getElementById('imgCaptcha').src = 'pagelet/captcha/CaptchaRenderer.aspx?s=&r=' + Math.random() + '';
+                      }
+
+                      function toggleUKTaxpayerStatus(checkedVal) {
+                              var declareGiftRadio;
+
+                              if (document.getElementById("Declare_Gift_Aid") == "undefined")
+                                  return false;
+
+                              if (document.getElementById("Declare_Gift_Aid") == null)
+                                  return false;
+
+                              declareGiftRadio = document.getElementsByName("Declare_Gift_Aid");
+                              if (checkedVal == "Y") {
+                                  declareGiftRadio[0].checked = true;
+                                  declareGiftRadio[0].disabled = false;
+                                  declareGiftRadio[1].disabled = false;
+                              } else {
+                                  declareGiftRadio[1].checked = true;
+                                  declareGiftRadio[0].disabled = true;
+                                  declareGiftRadio[1].disabled = true;
+                              }
+                              return false;
+                          }
+                          //-->
+                      </script>
+
+                      <script>
+                      <!--
+                      function getValue(name) {
+                          try {
+                              var q = unescape(location.search.substring(1)).split(/[=&]/);
+                              for (var j = 0; j < q.length; j += 2) {
+                                  if (q[j] == name) {
+                                      return q[j + 1];
+                                  }
+                              }
+                              return null;
+                          } catch (err) {}
+                      }
+
+                      function setValue(obj) {
+                          try {
+                              var myValue = getValue("BeneficiaryID");
+                              for (var i = 0; i < obj.options.length; i++) {
+                                  if (obj.options[i].value == myValue) {
+                                      obj.selectedIndex = i;
+                                  }
+                              }
+                          } catch (err) {}
+                      }
+
+                      setValue(document.SUPPORTER287377.BeneficiaryID);
+                      //-->
+                      $.extend({
+                          getUrlVars: function() {
+                              var vars = [],
+                                  hash;
+                              var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                              for (var i = 0; i < hashes.length; i++) {
+
+                                  hash = hashes[i].split('=');
+                                  vars.push(hash[0]);
+                                  vars[hash[0]] = hash[1];
+                              }
+                              return vars;
+                          },
+                          getUrlVar: function(name) {
+                              return $.getUrlVars()[name];
+                          }
+                      });
+                      var amt = $.getUrlVar("amount");
+                      if (amt != undefined) {
+                          amt = $.getUrlVar("amount").split("#"); //remove possible hash tag
+                          $('input[name=Amount]').val(amt[0]);
+                      }
+                      </script>
+
+                      <script type="text/javascript" src="https://www.kintera.org/atf/cf/%7B25C2541E-96EB-4E70-947F-ABA13CD89DCD%7D/jquery.url.packed.JS"></script>
+                      <script type="text/javascript" src="https://www.kintera.org/atf/cf/%7B25C2541E-96EB-4E70-947F-ABA13CD89DCD%7D/custom-form-validation.JS"></script>
+
+                      <script type="text/javascript">
+                      $(document).ready(function() {
+
+                          $("#addthis").css({
+                              display: "none",
+                              visibility: "hidden"
+                          });
+                      });
+                      </script>
+
+
+                  </div>
+
+              </div>

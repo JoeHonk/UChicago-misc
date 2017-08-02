@@ -1,0 +1,13 @@
+name = highlight
+description = Highlights search terms on content pages.
+package = Search Toolkit
+core = 7.x
+configure = admin/config/search/highlight/settings
+
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "highlight"
+datestamp = "1380581906"
+

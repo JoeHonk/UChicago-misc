@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class=" js no-touch svg inlinesvg placeholder" lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<meta property="og:title" content="The University of Chicago Campaign: Inquiry and Impact">
+<meta property="og:type" content="school">
+<meta property="og:url" content="http://campaign.uchicago.edu">
+<meta property="og:image" content="https://www.kintera.org/atf/cf/%7Bf596283c-2cf8-497a-9322-9d202bc39bee%7D/CAMPAIGN_LOGO_1200.PNG">
+<meta property="og:description" content="The University of Chicago Campaign: Inquiry and Impact will raise $4.5 billion to support priorities across the University.">
+<link rel="shortcut icon" href="https://www.kintera.org/atf/cf/%7Bf596283c-2cf8-497a-9322-9d202bc39bee%7D/FAVICON-CAMPAIGN.ICO">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Make a Gift | The University of Chicago Campaign Inquiry and Impact</title>
+    <meta name="description" content="The University of Chicago Campaign: Inquiry and Impact will raise $4.5 billion to support priorities across the University.">
+    <meta name="keywords" content="University of Chicago Campaign, Inquiry, Impact, priorities, fundraising, UChicago, higher education">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <script src="https://campaign.uchicago.edu/js/libs/modernizr.js"></script><style type="text/css"></style>
+    <link href="https://alumnidev.uchicago.edu/ktf/socks1/fonts.css" rel="stylesheet">
+    <link href="https://campaign.uchicago.edu/css/site.css" rel="stylesheet" media="screen">
+    <link href="https://alumnidev.uchicago.edu/ktf/socks1/style.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+    setTimeout(function() {
+        var a = document.createElement("script");
+        var b = document.getElementsByTagName("script")[0];
+        a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/9416.js?" + Math.floor(new Date().getTime() / 3600000);
+        a.async = true;
+        a.type = "text/javascript";
+        b.parentNode.insertBefore(a, b)
+    }, 1);
+    </script>
+
+
+    <style type="text/css">
+    .navbar-header {
+        display: none;
+    }
+
+
+    .navbar-default {
+padding: 15px 0 0 0;
+margin: 0 0 15px 0;
+background-color: #fff;
+border-color: #fff;
+}
+
+nav.navbar {
+padding-left: 15px !important;
+padding-right: 15px !important;
+margin: 0 auto 15px auto !important;
+}
+    </style>
+    <!-- Munchkin -->
+    <script type="text/javascript">
+    (function() {
+      var didInit = false;
+      function initMunchkin() {
+        if(didInit === false) {
+          didInit = true;
+          Munchkin.init('250-CQH-936');
+        }
+      }
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//munchkin.marketo.net/munchkin.js';
+      s.onreadystatechange = function() {
+        if (this.readyState == 'complete' || this.readyState == 'loaded') {
+          initMunchkin();
+        }
+      };
+      s.onload = initMunchkin;
+      document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+    </script>
+    <!-- End Munchkin -->
+</head>
+
+<body id="forms">
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WK9W5W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WK9W5W');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="row fixed">
+            <div class="navbar-header">
+                <button style="display:none;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="https://campaign.uchicago.edu/">
+                    <h1 id="site_heading">The University of Chicago Campaign Inquiry and Impact</h1>
+                </a>
+            </div>
+            <div class="container collapse navbar-collapse navbar-ex1-collapse">
+
+                <ul style="display:none;" id="utility_nav" class="nav navbar-nav">
+                    <li><a href="https://campaign.uchicago.edu/about/contact/">Contact</a>
+                    </li>
+                    <li>
+                        <form id="sitesearch" class="navbar-form searchform" role="search" method="get" action="https://campaign.uchicago.edu/search/">
+                            <input type="hidden" name="sitesearch" value="campaign.uchicago.edu">
+                            <div class="form-group">
+                                <label for="searchtext" class="hidden">Search:</label>
+                                <input name="GSAq" id="searchtext" type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <input class="svg" type="submit" value="submit" disabled="">
+                            <input class="png" type="submit" value="submit" disabled="">
+                        </form>
+                    </li>
+                    <li>
+                        <a href="https://www.kintera.org/site/c.8gKMJYMvF9LWG/b.9202493/k.913F/Donation_Form__UChicago_Campaign_Main/apps/ka/sd/donorcustom.asp" class="gift small-caps">
+                            <span>Make a Gift</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid top">
+        <div class="row fixed">
+            <div class="main_content col-sm-5">
+                <!-- CONTENT BEFORE FORM BEGINS HERE -->
+
+                <img style="padding-bottom:30px;" src="https://alumnidev.uchicago.edu/assets/march-incentive/journal1.jpg">
+                <p>Make a gift of $50 or more to the University of Chicago by March 18, and get a one-of-a-kind UChicago journal to capture what&rsquo;s important now. It&rsquo;s the perfect size to go (or sit) anywhere.</p>
+
+<p>You won&rsquo;t find this special journal anywhere else&mdash;except in the hands of other College alums who get in on this deal.</p>
+
+<p><small><em>Please allow 4-6 weeks for delivery.</em></small></p>
+
+            </div>
+
+
+
+
+            <div class="sidebar col-sm-7 floatright" role="complementary">
+                <!-- GIVING FORM BEGINS HERE -->
+                <kintera:webFeature htmlBefore='<div id="contentArea">' htmlAfter='</div>' />
+
+            <!-- GIVING FORM ENDS HERE -->
+
+</div>
+
+            <div class="col-sm-5 main_content">
+                <div class="related-links">
+                    <h2 class="small-caps">Questions &amp; Technical Support</h2>
+                    Call 888.824.4224 or 773.834.8803.
+                    <br>Submit your comments to <a href="mailto:participate@uchicago.edu">participate@uchicago.edu</a>.
+                    <br>
+                </div>
+                <div class="related-links">
+                    <h2 class="small-caps">Safe &amp; Secure</h2>
+                    <p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+                </div>
+
+<div class="related-links">
+                                    <h2 class="small-caps">Share your support</h2>
+                                    <p>When you share your support you magnify the impact of your gift by inspiring others to give. The details of your gift and private information will not be shared.</p>
+
+                                    <div>
+                                      <!-- AddThis Button BEGIN -->
+                                      <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://campaign.uchicago.edu/makeagift/" addthis:title="I made a gift to the University of Chicago. Join me." addthis:description="I just made a gift to the University of Chicago. Will you consider joining me in supporting the University? You can do so at http://campaign.uchicago.edu/makeagift/.">
+                                          <a class="addthis_button_twitter"></a>
+                                          <a class="addthis_button_facebook"></a>
+                                          <a class="addthis_button_linkedin"></a>
+                                          <a class="addthis_button_email"></a>
+                                          <a class="addthis_button_compact"></a>
+                                      </div>
+                                      <script>
+                                          var addthis_config = {
+                                              "data_track_addressbar": true
+                                          };
+                                      </script>
+                                      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54493da551e048a0" async="async"></script>
+                                      <!-- AddThis Button END -->
+                                    </div>
+
+                            </div>
+            </div>
+
+        </div>
+    </div>
+<footer role="contentinfo" class="container-fluid">
+        <div style="display:none;" class="row fixed red">
+            <div class="col-sm-12">
+                <ul class="small-caps">
+                    <li><a href="http://campaign.uchicago.edu/about/">About</a>
+                    </li>
+                    <li><a href="http://campaign.uchicago.edu/join-the-campaign/">Join the Campaign</a>
+                    </li>
+                    <li><a href="http://campaign.uchicago.edu/priorities/">Campaign Priorities</a>
+                    </li>
+                    <li><a href="http://campaign.uchicago.edu/donor-recognition/">Donor Recognition</a>
+                    </li>
+                    <li><a href="http://campaign.uchicago.edu/contact/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row fixed">
+            <div class="col-sm-8">
+                <a href="http://www.uchicago.edu/" id="uchicago-wordmark">The University of Chicago</a>
+                <p style="padding-top:15px;">The University of Chicago
+                    <br>Edward H. Levi Hall
+                    <br>5801 South Ellis Avenue
+                    <br>Chicago, Illinois 60637
+                    <br>
+                    <a href="mailto:campaign@uchicago.edu">campaign@uchicago.edu</a>
+                </p>
+            </div>
+
+            <div class="col-sm-4" style="float:right;">
+                <p align="right" style="padding-bottom:15px;">
+                    <a href="http://campaign.uchicago.edu"><img src="https://campaign.uchicago.edu/i/template/campaign_logo.svg">
+                    </a>
+                </p>
+                <p align="right">©2016 The University of Chicago</p>
+            </div>
+        </div>
+
+        <div class="row fixed">
+            <div class="address col-sm-8">
+
+
+                <ul class="social-media" style="padding-top:05px;float:left;">
+                    <li><a href="http://www.facebook.com/uchicago" class="ss-social ss-icon">Facebook</a>
+                    </li>
+                    <li><a href="https://twitter.com/UChicago" class="ss-social ss-icon">Twitter</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/user/UChicago" class="ss-social ss-icon">YouTube</a>
+                    </li>
+                    <li><a href="http://www.linkedin.com/groups/University-Chicago-Alumni-39123/about" class="ss-social ss-icon">LinkedIn</a>
+                    </li>
+                    <li><a href="http://instagram.com/uchicago" class="ss-social ss-icon">Instagram</a>
+                    </li>
+                </ul>
+                <p></p>
+
+
+            </div>
+            <div class="copyright col-sm-4">
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://alumnidev.uchicago.edu/assets/shared/givingform1.js"></script>
+    <!--[if lte IE 8]><script src="./selectivizr.js"></script><![endif]-->
+    <!--[if lte IE 9]><script src="./symbolset.js"></script><![endif]-->
+
+    <!-- INSERT GOOGLE ANALYTICS CODE HERE -->
+
+
+
+
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"></div></body></html>

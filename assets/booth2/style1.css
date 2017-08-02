@@ -1,0 +1,11 @@
+p.monthly{
+	border-bottom: none;
+	font-style: normal;
+text-decoration: none;
+border-image-width: 0;
+}
+
+*{
+	font-style: normal;
+	text-decoration: none;
+}

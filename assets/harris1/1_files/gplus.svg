@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="16px" viewBox="0 0 25 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Content-Detail,-Spare" transform="translate(-858.000000, -2272.000000)" fill="#FFFFFF">
+            <g id="Footer" transform="translate(0.000000, 2118.000000)">
+                <g id="Group-11" transform="translate(778.000000, 119.000000)">
+                    <g id="Group-9" transform="translate(0.000000, 33.000000)">
+                        <path d="M102.5,8.75 L102.5,6.5 L100.25,6.5 L100.25,8.75 L98,8.75 L98,11 L100.25,11 L100.25,13.25 L102.5,13.25 L102.5,11 L104.75,11 L104.75,8.75 L102.5,8.75 Z M87.875,8.75 L87.875,11.45 L92.34125,11.45 C92.16125,12.60875 90.99125,14.8475 87.875,14.8475 C85.18625,14.8475 82.9925,12.62 82.9925,9.875 C82.9925,7.13 85.18625,4.9025 87.875,4.9025 C89.405,4.9025 90.42875,5.555 91.01375,6.1175 L93.15125,4.05875 C91.77875,2.77625 90.00125,2 87.875,2 C83.52125,2 80,5.52125 80,9.875 C80,14.22875 83.52125,17.75 87.875,17.75 C92.42,17.75 95.435,14.555 95.435,10.055 C95.435,9.5375 95.37875,9.14375 95.31125,8.75 L87.875,8.75 Z" id="Fill-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

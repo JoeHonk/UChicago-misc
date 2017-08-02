@@ -1,0 +1,89 @@
+p, h1, h2, h3, h4, li, a {
+	letter-spacing: 0;
+	font-weight: normal;
+	/*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+    zoom: 1;*/
+	}
+
+#block-system-main-menu div.block-inner div.content {
+	width: 100%;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu {
+	margin: 0 0 0 10px;
+	padding: 0;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li {
+	list-style: none;
+	display: block;
+	min-width: 75px;
+	max-width: 175px;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	float: left;
+	}
+	
+
+#block-system-main-menu div.block-inner div.content ul.menu li a {
+	/*float: left;*/
+	font-family: 'ProximaNova-Semibold';
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 11px;
+	font-size: 15px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li:hover a, #block-system-main-menu div.block-inner div.content ul.menu li:hover ul li:hover a {
+	color: #f7a11a;
+	}
+	
+	/*reunion submenu*/
+	
+
+
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul li a {
+	color: #ffffff;
+	margin: 0;
+	}
+	
+
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul {
+	display: none;
+	position: absolute;
+	top: 20px;
+	background-color: #333333;
+	width: 340px;
+	margin: 0 0 0 -80px;
+	padding: 10px;
+	z-index: 999;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul li {
+	width: 80px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul {
+	display: block;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li.last {
+	float: right;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li.last a {
+	color: #000;
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/register-bg-flag-yellow.png');
+	background-repeat: no-repeat;
+	padding: 10px 32px 40px 32px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul li.last { float: none; }
+#block-system-main-menu div.block-inner div.content ul.menu li ul li.last a {
+	color: #fff;
+	background-image: none;
+	padding: 10px 11px;
+	}
+

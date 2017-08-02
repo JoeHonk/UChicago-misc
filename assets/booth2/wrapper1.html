@@ -1,0 +1,138 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="/atf/cf/{887EF0A7-2D24-4488-BCD9-FFB505317419}/sessvars.js"></script>
+
+
+<script>
+function getElementsByClassName(strClass, strTag, objContElm) {
+  strTag = strTag || "*";
+  objContElm = objContElm || document;
+  var objColl = objContElm.getElementsByTagName(strTag);
+  if (!objColl.length &&  strTag == "*" &&  objContElm.all) objColl = objContElm.all;
+  var arr = new Array();
+  var delim = strClass.indexOf('|') != -1  ? '|' : ' ';
+  var arrClass = strClass.split(delim);
+  for (var i = 0, j = objColl.length; i < j; i++) {
+    var arrObjClass = objColl[i].className.split(' ');
+    if (delim == ' ' && arrClass.length > arrObjClass.length) continue;
+    var c = 0;
+    comparisonLoop:
+    for (var k = 0, l = arrObjClass.length; k < l; k++) {
+      for (var m = 0, n = arrClass.length; m < n; m++) {
+        if (arrClass[m] == arrObjClass[k]) c++;
+        if (( delim == '|' && c == 1) || (delim == ' ' && c == arrClass.length)) {
+          arr.push(objColl[i]);
+          break comparisonLoop;
+        }
+      }
+    }
+  }
+  return arr;
+}
+
+// To cover IE 5.0's lack of the push method
+Array.prototype.push = function(value) {
+  this[this.length] = value;
+}
+
+//clear technical question link
+if (document.location.href.indexOf("donateok.asp") > -1) {
+    var font = getElementsByClassName("CT");
+    for (x=0;x<font.length;x++) {
+       if (font[x].innerHTML.indexOf("If you have technical questions regarding this website, please submit them ") == 0) {
+           font[x].innerHTML = "";
+           break;
+       }
+    }
+}
+</script>
+
+<script type="text/javascript" language="JavaScript">
+<!--  
+function replaceText(nt,regStr,newText){
+    try {
+        var nt = nt;
+        var re = new RegExp(regStr,"g");
+        var textStr = newText;
+        var objX = document.getElementsByTagName(nt);
+        for (var x=0; x<objX.length; x++){
+            var str = objX[x].innerHTML;
+            if (re.test(str)){
+                var obj = objX[x];
+                obj.innerHTML = textStr;
+            }
+        }
+    } catch(err){}        
+}
+
+function hideFieldRowII(nt,regStr,ntStop){
+    try {
+        var nt = nt;
+        var re = new RegExp(regStr,"g");
+        var objX = document.getElementsByTagName(nt);
+        for (var x=0; x<objX.length; x++){
+            var str = objX[x].innerHTML;
+            if (re.test(str)){
+                //alert (str);
+                var obj = objX[x];
+                do {
+                    objName = obj.parentNode.nodeName;
+                    obj = obj.parentNode;
+                    if (objName == ntStop){
+                        obj.style.display = "none";
+                        }
+                } while (objName != ntStop);        
+            }
+        }
+
+    } catch(err){}        
+}
+
+function getNode(nt,regStr,ntStop){
+    try {
+        var nt = nt;
+        var re = new RegExp(regStr,"g");
+        var objX = document.getElementsByTagName(nt);
+        for (var x=0; x<objX.length; x++){
+            var str = objX[x].innerHTML;
+            if (re.test(str)){
+                var obj = objX[x];
+                do {
+                    objName = obj.parentNode.nodeName;
+                    obj = obj.parentNode;
+                    if (objName == ntStop){
+                        obj.id = "myTDCell";
+                    }
+                } while (objName != ntStop);
+            }
+        }
+    } catch(err){}        
+}
+
+function rearrangeText(){
+    var output = 0;
+    getNode("font","The following summarizes your contribution","TD");
+    var x = document.getElementById('myTDCell');
+    var str = escape(x.innerHTML);
+    var string = str.replace(/%3Cbr%3E%3Cbr%3E/gi,"");
+    x.innerHTML = unescape(string);
+    var myConfirmationText = document.getElementById('confirmationText');
+    x.appendChild(myConfirmationText);
+    replaceText("font","^University of Chicago","University of Chicago<br><br>");
+    replaceText("font","^The following summarizes your contribution:","<br><br>The following summarizes your contribution:");
+}
+
+if (document.location.href.indexOf("donateok.asp") > -1){
+     hideFieldRowII("font","^Confirmation","TR");
+     replaceText("font","^University of Chicago contact information","");
+     replaceText("font","^Email Address","");
+     rearrangeText();
+}
+
+   //on confirmation remove extract top gold borders
+   if (location.href.indexOf("donateok.asp") > 0) {
+      $('#myc_custom_form table').css({"border-top": "0 none"});
+   }
+//-->
+</script>
+<script type="text/javascript" src="https://www.kintera.org/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/jquery.url.packed.JS"></script>
+<script type="text/javascript" src="https://www.kintera.org/atf/cf/{0ab15c50-09f6-4076-91ba-c03cf9a2d4d8}/custom-form-validation.JS?v=1"></script>

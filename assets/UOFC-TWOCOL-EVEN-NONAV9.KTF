@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- sphere hack: remove advocacy css <head>--><head>
+
+	<title><kintera:var name=bin_pagetitle htmlremove=true /> | <kintera:var name=community_name htmlremove=true /></title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<meta name="description" content="<kintera:var name=bin_description htmlRemove=true /> <kintera:var name=community_description htmlRemove=true />">
+	<meta name="keywords" content="<kintera:var name=bin_keywords htmlRemove=true /> <kintera:var name=community_keywords htmlRemove=true />">
+	<meta name="reply-to" content="<kintera:var name=community_email />">
+	<meta name="copyright" content="<kintera:var name=community_copyright />">
+
+	<kintera:FileExists id=2><link href="<kintera:file id=2 />" rel="stylesheet" type="text/css"></kintera:FileExists>
+	<kintera:FileExists id=3><link href="<kintera:file id=3 />" rel="stylesheet" type="text/css"></kintera:FileExists>	
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/IE7.CSS" media="screen" /><![endif]-->
+  	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/IE6.CSS" media="screen" /><![endif]-->  
+  
+	<script type="text/javascript" src="<kintera:pageSOptURL path=layout/util.js />"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
+	<kintera:FileExists id=4><script type="text/javascript" src="<kintera:file id=4 />"></script></kintera:FileExists>	    
+	<kintera:FileExists id=5><script type="text/javascript" src="<kintera:file id=5 />"></script></kintera:FileExists>
+	<script type="text/javascript" src="/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/dropdown_4level.js"></script>
+
+</head>
+
+<body id="twocoleven">
+<!-- skip links -->
+<div class="skip">
+	<p><a href="#content" accesskey="1">Skip to Main Content</a></p>
+	<p><a href="#navigation" accesskey="2">Skip to Navigation</a></p>
+	<p><a name="viewastext" href="#viewastext" accesskey="3" onclick="toggleTextOnly(); return false;" onkeypress="return keyboardTextOnly(event);">Toggle plain text</a></p>
+</div>
+<div id="headerbg">
+	<div id="container">
+	
+		<div id="header">
+			<div id="logo">
+				<a href="<kintera:var name=HomePageFullURL />"><kintera:logo><img src="<kintera:file id=1 />" alt="" /></kintera:logo></a>
+			</div>
+			<ul id="headersearch">
+				<li id="search">	
+				<kintera:navigation level="1" location="4">
+					<kintera:links htmlLink="[[LINK]]" />
+				</kintera:navigation>	
+				</li>
+			</ul>
+			
+			<br style="clear:both" />
+			
+		</div> <!-- close #header -->
+	
+		<a name="content"></a>
+		
+       <kintera:webFeature htmlbefore='<table border="0" cellspacing="0" cellpadding="0" class="Content">' htmlafter='</table>' />
+		
+        <div id="footer">  
+			<ul id="footer-nav">
+				
+			</ul>  
+	   </div><!-- close #footer -->	
+		
+		<div id="copyright">  
+			<ul id="copyright">
+				<kintera:navigation level="1" location="30" htmlBefore="<li>"  htmlafter="</li>"> 		
+					<kintera:links styleselected="class="current_item"" htmlLink="[[LINK]]"  htmlseparator="</li><li>" />          
+				</kintera:navigation>	    
+				<li id="footer-logo" style="float:right;margin:0;padding:0"><a href="http://www.uchicago.edu/"><img alt="" src="/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/UOFC-LOGO.gif" border="0" /></a></li>				
+			</ul>
+		</div><!-- close copyright -->
+        	</div><!-- close #container -->
+</div> <!-- close #headerbg -->
+
+</body>
+</html>

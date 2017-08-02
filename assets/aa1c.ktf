@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://alumnidev.uchicago.edu/aa10/aa10.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" class="js js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://alumniandfriends.uchicago.edu/misc/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="Events must be relevant to the University of Chicago alumni community and are subject to approval by a member of the Alumni Association staff. The appropriate staff member will follow up with you within two business days. Approved events will usually appear on the Alumni, Friends &amp; Families website within one week of submission.">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="shortlink" href="https://alumniandfriends.uchicago.edu/node/4248">
+<meta property="og:site_name" content="Alumni Association: Alumni, Parents, Families &amp; Friends">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://alumniandfriends.uchicago.edu/events/submit-event">
+<meta property="og:title" content="Submit an Event">
+<meta property="og:description" content="Events must be relevant to the University of Chicago alumni community and are subject to approval by a member of the Alumni Association staff. The appropriate staff member will follow up with you within two business days. Approved events will usually appear on the Alumni, Friends &amp; Families website within one week of submission.">
+<meta property="og:updated_time" content="2015-01-06T13:20:12-08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://alumniandfriends.uchicago.edu/events/submit-event">
+<meta name="twitter:title" content="Submit an Event">
+<meta name="twitter:description" content="Events must be relevant to the University of Chicago alumni community and are subject to approval by a member of the Alumni Association staff. The appropriate staff member will follow up with you within two business days. Approved events will usually appear on the Alumni, Friends &amp; Families website within one week of submission.">
+<meta property="article:published_time" content="2014-11-20T14:29:00-08:00">
+<meta property="article:modified_time" content="2015-01-06T13:20:12-08:00">
+  <title>Submit an Event | Alumni Association: Alumni, Parents, Families &amp; Friends</title>
+  <link rel="stylesheet" type="text/css" href="https://www.kintera.org/atf/cf/%7B10e0f431-a3ae-435b-976b-b63f250ea585%7D/FONTS.CSS">
+  <link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/ss-social-regular.css">
+  <link rel="stylesheet" type="text/css" href="https://alumnidev.uchicago.edu/assets/aa1/fonts.css">
+  <link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/ss-social-regular.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/chosen.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/chosen-drupal.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/field.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/radix_layouts.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/location.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/radix-livestyle.css">
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/screen.css">
+
+<link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/aa1/print.css">
+  <script type="text/javascript" async="" src="https://alumnidev.uchicago.edu/assets/aa1/ga.js"></script><script type="text/javascript" async="" src="https://alumnidev.uchicago.edu/assets/aa1/ga(1).js"></script><script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.js"></script><style type="text/css"></style><style type="text/css"></style>
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.once.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/drupal.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.core.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.tabs.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.accordion.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.timeentry.pack.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.cookie.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.form.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/vertical-tabs.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/states.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/form.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/ajax.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-admin.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-magic.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-accordion.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/caption-filter.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/tabledrag.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/uchicago_admin_date_popup.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/jquery.timepicker.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/date_popup.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/location_autocomplete.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/progress.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/modal.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/location_gmap_find_address.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/autocomplete.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/text.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/filter.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/tableheader.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/textarea.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/collapse.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/field_group.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/googleanalytics.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/chosen.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/modernizr.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-script.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/script.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-progress.js"></script>
+<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/radix-modal.js"></script>
+
+  <!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4248 node-type-panopoly-page region-content">
+  <div id="skip-link">
+    <a href="https://alumniandfriends.uchicago.edu/events/submit-event#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="header" class="header navbar-fixed-top" role="header">
+
+	<div class="tactical-bar">
+		<div class="container">			
+		    <div class="search-form">
+			    <div class="search-toggle">Search</div>
+			    <div class="search-alt-submit">&nbsp;</div>
+				<form class="search-form navbar-form" action="https://alumniandfriends.uchicago.edu/search/node" method="post" id="search-form--2" accept-charset="UTF-8" role="form"><div><div class="container-inline form-inline form-wrapper" id="edit-basic--2"><div class="form-item form-type-textfield form-item-keys form-group">
+  <input placeholder="Enter Keyword(s)" class="form-control form-text" type="text" id="edit-keys--2" name="keys" value="" size="30" maxlength="255">
+</div>
+<input type="submit" id="edit-submit--3" name="op" value="Search" class="form-submit btn btn-default btn-primary"></div><input type="hidden" name="form_build_id" value="form-ZD5Q90iYst0d-pdHGrTmPTiX35UjTpQBXKpmuN9ytlE">
+<input type="hidden" name="form_id" value="search_form">
+</div></form>				<div class="search-close"></div>
+			</div>
+		    <div class="tactical-nav hidden-xs">
+				<ul>
+					<li><a href="http://campaign.uchicago.edu/" target="_blank">Campaign</a></li>
+					<li><a href="http://www.uchicagoalumni.org/directory.html" target="_blank">Alumni Directory</a></li>
+					<li><a href="http://www.uchicago.edu/parents/" target="_blank">Parents &amp; Families</a></li>
+				</ul>		      
+		    </div>
+		    <div class="give-button visible-xs"><a href="https://www.kintera.org/site/c.8gKMJYMvF9LWG/b.9202493/k.913F/Donation_Form__UChicago_Campaign_Main/apps/ka/sd/donorcustom.asp?_ga=1.19601402.393171143.1414701811#.VFKj9lvD4T4" target="_blank">Give</a></div>
+		</div>
+  	</div>
+  	 
+  	<div class="branding-bar">
+  		<div class="container">
+  		     <div class="aff-logo"><a href="https://alumniandfriends.uchicago.edu/" id="logo" class="navbar-brand"><img src="https://alumnidev.uchicago.edu/assets/aa1/logo-aa-tagline.svg" alt="Alumni Association: Alumni, Parents, Families &amp; Friends"></a></div>
+  		     <div class="key-links pull-right">
+  		     	<div class="uc-logo"><a href="http://www.uchicago.edu/" target="_blank"><img src="https://alumnidev.uchicago.edu/assets/aa1/uchicago.svg" alt="The University of Chicago"></a></div>
+  			 	<div class="give-button hidden-xs"><a href="https://www.kintera.org/site/c.8gKMJYMvF9LWG/b.9202493/k.913F/Donation_Form__UChicago_Campaign_Main/apps/ka/sd/donorcustom.asp?_ga=1.19601402.393171143.1414701811#.VFKj9lvD4T4" target="_blank">Give</a></div>
+			 </div> 		
+  		</div>  	
+  	</div>
+
+    <nav class="navbar" role="navigation">
+		<div class="container">    
+        
+	      <!-- Brand and toggle get grouped for better mobile display -->
+	      <div class="navbar-header">
+		    <div class="search-toggle-fixed"></div>
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>	        	        
+	      </div> <!-- /.navbar-header -->
+	
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+	      <div class="collapse navbar-collapse" id="navbar-collapse">
+	        	          <ul id="main-menu" class="menu nav navbar-nav">
+	            <li class="first collapsed menu-link-about"><a href="https://alumniandfriends.uchicago.edu/alumni-association">About</a></li>
+<li class="collapsed menu-link-career-resources"><a href="https://alumniandfriends.uchicago.edu/career-resources">Career Resources</a></li>
+<li class="collapsed menu-link-lifelong-learning"><a href="https://alumniandfriends.uchicago.edu/lifelong-learning">Lifelong Learning</a></li>
+<li class="expanded active-trail dropdown active menu-link-events radix-dropdown-processed"><a href="https://alumniandfriends.uchicago.edu/events" class="active-trail dropdown-toggle radix-dropdown-processed" data-target="#">Events<span class="caret"></span></a><ul class="lower-level nav"><li class="first leaf menu-link-find-an-event"><a href="https://alumniandfriends.uchicago.edu/events/upcoming">Find an Event</a></li>
+<li class="leaf menu-link-past-events"><a href="https://alumniandfriends.uchicago.edu/events/past" title="">Past Events</a></li>
+<li class="collapsed menu-link-signature-events"><a href="https://alumniandfriends.uchicago.edu/events/signature">Signature Events</a></li>
+<li class="last leaf active-trail active active menu-link-submit-an-event"><a href="http://alumnidev.uchicago.edu/aa10/aa10_files/aa10.html" class="active-trail active-trail active">Submit an Event</a></li>
+</ul></li>
+<li class="collapsed menu-link-philanthropic-societies"><a href="https://alumniandfriends.uchicago.edu/philanthropic-societies">Philanthropic Societies</a></li>
+<li class="collapsed menu-link-volunteer"><a href="https://alumniandfriends.uchicago.edu/volunteer">Volunteer</a></li>
+<li class="last collapsed menu-link-clubs--groups"><a href="https://alumniandfriends.uchicago.edu/clubs-groups">Clubs &amp; Groups</a></li>
+	          </ul>
+	        	        <div class="mobile-nav-arrow visible-xs"></div>
+	      </div><!-- /.navbar-collapse -->
+	  </div> <!-- /.container -->
+    </nav><!-- /.navbar -->
+
+</header>
+
+<div id="main-wrapper">
+  <div id="main" class="main">
+    <div class="container">                
+            <div id="page-header">
+                  <div class="page-header">
+<!-- TOP CONTENT 
+            <h1 class="title">Submit an Event</h1>
+          </div>
+                                      </div>
+    </div>
+    <div id="content" class="">
+        <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="panel-display aff-landing-page clearfix aff-landing-page" id="page-page">
+  
+
+<div id="top-content">
+
+</div>
+  <div class="grey-stripe">
+	  <div class="container">  
+	    <div class="row">
+		  <div class="col-sm-8 col-sm-push-4 content panel-panel">
+	        <div class="panel-panel-inner">
+	          <div class="panel-pane pane-block pane-afb-1">
+  <div class="pane-content"> -->
+      
+<kintera:webFeature  />
+       </div>
+
+  
+  </div>
+	        </div>
+	      </div>
+	      <div class="col-sm-4 col-sm-pull-8 sidebar panel-panel">
+	        <div class="panel-panel-inner">
+	          <div class="panel-pane pane-fieldable-panels-pane pane-fpid-95 pane-bundle-sidebar-teaser">
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col fieldable-panels-pane view-mode-Full clearfix">
+
+  
+  
+  <div class="field-title-ds">
+    <h3 class="teaser-title">UChicago Community Online</h3>  </div>
+
+  <div class="field-teaser-body">
+    <p>Some of our alumni clubs have moved to the UChicago Community Online. Please use the appropriate links below to submit an event for each location’s club site. If you do not see your club or group in the following list, please use the form to the right.</p>
+  </div>
+
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoarizona.org/" target="_blank">Alumni Club of Arizona</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoatlanta.org/" target="_blank">Alumni Club of Atlanta</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoaussa.org/" target="_blank">Alumni Club of Austin/San Antonio</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagobayarea.org/" target="_blank">Alumni Club of the Bay Area </a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoboston.org/" target="_blank">Alumni Club of Boston</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uccochicago.org/" target="_blank">Alumni Club of Chicago</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagocolorado.org/" target="_blank">Alumni Club of Colorado</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagocolumbus.org/" target="_blank">Alumni Club of Columbus</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoct.org/" target="_blank">Alumni Club of Connecticut</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagodfw.org/index.html" target="_blank">Alumni Club of Dallas-Fort Worth</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagofrance.org/" target="_blank">Alumni Club of France</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagohouston.org/" target="_blank">Alumni Club of Houston</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoindiana.org/" target="_blank">Alumni Club of Indiana</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagola.org/" target="_blank">Alumni Club of Los Angeles</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagolouisiana.org/" target="_blank">Alumni Club of Louisiana </a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagomaryland.org/" target="_blank">Alumni Club of Maryland</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagomidfl.org/" target="_blank">Alumni Club of Mid Florida</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagonj.org/" target="_blank">Alumni Club of New Jersey</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagonyc.org/" target="_blank">Alumni Club of New York City</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagonystate.org/" target="_blank">Alumni Club of New York State</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagonc.org/?pg=home" target="_blank">Alumni Club of North Carolina</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoneohio.org/" target="_blank">Alumni Club of Northeast Ohio</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagophiladelphia.org/" target="_blank">Alumni Club of Philadelphia</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagopittsburgh.org/" target="_blank">Alumni Club of Pittsburgh</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoportland.org/" target="_blank">Alumni Club of Portland</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagosandiego.org/" target="_blank">Alumni Club of San Diego</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoseattle.org/" target="_blank">Alumni Club of Seattle</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagosouthfl.org/" target="_blank">Alumni Club of South Florida</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagotc.org/" target="_blank">Alumni Club of the Twin Cities</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagouk.org/" target="_blank">Alumni Club of the UK</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagodc.org/" target="_blank">Alumni Club of Washington, DC</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagowisconsin.org/" target="_blank">Alumni Club of Wisconsin</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagolawsociety.org/" target="_blank">Alumni Law Society</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoartsalumni.org/" target="_blank">Arts Alumni Group</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoaba.org/" target="_blank">Association of Black Alumni</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagocwa.org/" target="_blank">Chicago Women’s Alliance</a>  </div>
+  <div class="field-teaser-link">
+    <a href="https://affinity.uchicago.edu/latino" target="_blank">Latino Alumni Network</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagolsa.org/" target="_blank">Life Sciences Alumni Group</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagolgbtalumni.org/" target="_blank">LGBT Alumni Network</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagomag.org/" target="_blank">Military Affinity Group</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.uchicagoparents.org/" target="_blank">UChicago Parents Community</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.careers.uchicagoalumni.org/" target="_blank">Alumni Career Services</a>  </div>
+  <div class="field-teaser-link">
+    <a href="http://www.volunteerleaders.uchicagoalumni.org/" target="_blank">Volunteer Network</a>  </div>
+</div>
+
+  </div>
+
+  
+  </div>
+	        </div>
+	      </div>
+	    </div>
+	       
+	    <div class="row">
+	      <div class="col-sm-8 col-sm-push-4 content panel-panel">
+	        <div class="panel-panel-inner">
+	          	        </div>
+	      </div>
+	      <div class="col-sm-4 col-sm-pull-8 sidebar panel-panel">
+	        <div class="panel-panel-inner">
+	          	        </div>
+	      </div>
+	    </div>
+	
+	  </div>  
+  </div><!-- /.grey-stripe -->
+ 
+</div><!-- /.aff-landing-page -->
+  </div>
+</div>
+  </div>
+    </div>
+  </div> <!-- /#main -->
+</div> <!-- /#main-wrapper -->
+
+<footer id="footer" class="footer" role="footer">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-sm-4">
+	  		<div class="logo-alumni"><a href="https://alumniandfriends.uchicago.edu/alumni-association"><img src="https://alumnidev.uchicago.edu/assets/aa1/alumni-association.svg" alt="University of Chicago Alumni Association"></a></div>
+	  		<div class="logo-campaign"><a href="http://campaign.uchicago.edu/" target="_blank"><img src="https://alumnidev.uchicago.edu/assets/aa1/campaign.svg" alt="University of Chicago Campaign"></a></div>
+  		</div>
+  		<div class="col-sm-8">
+	  		  <div class="region region-footer">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <div class="row">
+   <div class="col-sm-4">
+      <h5>Alumni Links</h5>
+      <ul><li><a href="http://campaign.uchicago.edu/" target="_blank">Campaign</a></li>
+         <li><a href="http://www.uchicagoalumni.org/directory.html" target="_blank">Directory</a></li>
+         <li><a href="http://news.uchicago.edu/for/alumni" target="_blank">News</a></li>
+         <li><a href="http://mag.uchicago.edu/" target="_blank">Publications</a></li>
+      </ul></div>
+   <div class="col-sm-4">
+      <h5>Action Items</h5>
+      <ul><li><a href="https://www.kintera.org/site/c.8gKMJYMvF9LWG/b.9202493/k.913F/Donation_Form__UChicago_Campaign_Main/apps/ka/sd/donorcustom.asp" target="_blank">Make a Gift</a></li>
+         <li><a href="http://campaign.uchicago.edu/join-the-campaign/annual-gifts/" target="_blank">Annual Gifts</a></li>
+         <li><a href="http://alumniweekend.uchicago.edu/reunion/college" target="_blank">Reunions &amp; College <br>Class Giving</a></li>
+         <li><a href="http://alumniweekend.uchicago.edu/reunion" target="_blank">Find a Reunion</a></li>
+         <li><a href="http://uchicago.bncollege.com/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=40000&catalogId=10001&langId=-1&storeId=15063&top=Y" target="_blank">Purchase Apparel</a></li>
+      </ul></div>
+   <div class="col-sm-4">
+      <h5>Related Alumni Associations</h5>
+      <ul><li><a href="http://www.chicagobooth.edu/alumni/" target="_blank">Chicago Booth</a></li>
+         <li><a href="http://divinity.uchicago.edu/alumni-and-friends" target="_blank">Divinity School</a></li>
+         <li><a href="http://harris.uchicago.edu/about/our-alumni" target="_blank">Chicago Harris</a></li>
+         <li><a href="http://www.ucls.uchicago.edu/alumni/index.aspx" target="_blank">Laboratory Schools</a></li>
+         <li><a href="http://www.law.uchicago.edu/alumni" target="_blank">Law School</a></li>
+         <li><a href="https://medbsd.uchicago.edu/alumni/" target="_blank">Medical and <br>Biological Sciences</a></li>
+         <li><a href="http://www.ssa.uchicago.edu/alumni" target="_blank">Social Service Administration</a></li>
+      </ul></div>
+</div>   </div>
+</div>
+  </div>
+  		</div>
+  	</div>
+  	<div class="row footer-bottom">
+  		<div class="col-sm-4">
+		      <ul class="social-media-buttons">
+		         <li><a href="https://www.facebook.com/UChicagoAlumni" target="_blank" class="ss-icon">Facebook</a></li>
+		         <li><a href="http://www.linkedin.com/groups?about=&gid=39123" target="_blank" class="ss-icon">LinkedIn</a></li>
+		         <li><a href="https://twitter.com/uchicagoalumni" target="_blank" class="ss-icon">Twitter</a></li>
+		         <li><a href="http://www.youtube.com/user/UChicago" target="_blank" class="ss-icon">YouTube</a></li>
+		         <li><a href="http://www.flickr.com/photos/uofcard/" target="_blank" class="ss-icon">Flickr</a></li>
+		         <li><a href="http://instagram.com/uchicagoalumni" target="_blank" class="ss-icon">Instagram</a></li>
+		         <li><a href="https://plus.google.com/101692036031759644882/?prsrc=3" target="_blank" class="ss-icon">Google+</a></li>
+		      </ul>
+  		</div>
+  		<div class="col-sm-8">
+  		  	<div class="footer-contact">
+	  		  	<div class="footer-copyright"><a href="http://www.uchicago.edu/" target="_blank">©2015 The University of Chicago</a></div>
+  		  		<div class="footer-address">5801 South Ellis Avenue, Chicago, IL 60637</div>
+  		  		<div class="footer-phone"><a href="tel:18009550065">1.800.955.0065</a> (8am–5pm CST)</div>
+  		  		<div class="footer-email"><a href="mailto:alumniprogramsupport@uchicago.edu">Program Support</a></div>
+	  		  	<div class="footer-email"><a href="mailto:alumnitechsupport@uchicago.edu">Tech Support</a></div>
+  		  	</div>
+  		  	<div class="footer-tactical-links">
+  		  		<a href="https://maps.uchicago.edu/" target="_blank">Campus Map</a>
+  		  		<a href="https://alumniandfriends.uchicago.edu/alumni-association/staff">Staff Directory</a>
+  		  	</div>
+  		</div>
+  	</div>
+
+  </div>
+</footer>  <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/aa1/panopoly-widgets.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-8514578-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+</body></html>

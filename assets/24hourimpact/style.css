@@ -1,0 +1,269 @@
+   #confirmationText div {
+       margin: 0px 0px 10px 0px;
+   }
+   
+   #ccError {
+       color: red
+   }
+   
+   .req {
+       color: red;
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: 11px;
+   }
+   
+   .Alert {
+       color: red;
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: 11px;
+   }
+   
+   .expand {
+       display: none;
+   }
+   
+   .large {
+       width: 300px;
+   }
+   
+   .medium {
+       width: 150px;
+   }
+   
+   .small {
+       width: 75px;
+   }
+   
+   .mdlarge {
+       width: 225px
+   }
+   
+   .align {
+       margin-left: 0px;
+   }
+   
+   .form-field {
+       margin-bottom: 10px;
+   }
+   
+   label.error {
+       background-color: #FFCCCC;
+   }
+   
+   .tooltip {
+       display: none;
+       width: 220px;
+       padding: 10px;
+       color: #000;
+       display: none;
+       z-index: 1;
+       position: absolute;
+       border: 3px solid #cdcdcd;
+       border-radius: 10px;
+       margin-top: -75px;
+       margin-left: 470px;
+       -moz-box-shadow: 0 0 8px #888;
+       -webkit-box-shadow: 0 0 8px#888;
+       box-shadow: 0 0 10px #888;
+       background-color: #ffffff;
+   }
+   
+   .tooltip-close {
+       display: block;
+       text-indent: -9999px;
+       background-image: url('/atf/cf/{f596283c-2cf8-497a-9322-9d202bc39bee}/LIGHTBOX_CLOSE.GIF');
+       width: 16px;
+       height: 16px;
+       float: right;
+   }
+   
+   .tooltip-close:hover {
+       background-position: 0 -16px;
+   }
+   
+   .tooltip-link {
+       font-size: 9px;
+       text-decoration: none;
+       display: block;
+       text-indent: -9999px;
+       background-image: url('/atf/cf/{f596283c-2cf8-497a-9322-9d202bc39bee}/TOOLTIP-LINK.GIF');
+       width: 18px;
+       height: 18px;
+       float: right;
+       margin-right: 8px;
+   }
+   
+   .tooltip-fix {
+       margin-bottom: 18px;
+       float: left;
+       margin-right: 8px;
+   }
+   /* classes for the matching gift window/iframe */
+   
+   .centerwindow {
+       width: 460px;
+       margin-left: -10px;
+       margin-top: 0px;
+       z-index: 999;
+       background-color: #ffffff;
+   }
+   
+   .companysearch {
+       border: none;
+       margin: 0;
+       padding: 0;
+       width: 460px;
+       height: 300px;
+   }
+   
+   #contentArea table {
+       background: #fff;
+       margin-bottom: 0;
+   }
+   
+   #contentArea table td {
+       border: 0;
+       background: #fff;
+   }
+   
+   #contentArea h3 {
+       border-bottom: 0 none;
+       color: #FFA319;
+       font: 300 1.85714em'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+       margin-bottom: 10px;
+       margin-top: 20px;
+       padding: 0;
+   }
+   
+   #contentArea .form-control {
+       color: #474747
+   }
+   
+   #contentArea input.btn {
+       background: #800000;
+       border-color: #4f0101;
+       color: #fff;
+       padding: 15px 20px;
+   }
+   
+   #contentArea input.btn:hover {
+       background: #9b1313;
+       box-shadow: none;
+       color: #fff;
+   }
+   
+   #contentArea input {
+       background: #fff;
+       box-shadow: none;
+   }
+   
+   #contentArea select {
+       background: #fff;
+       box-shadow: none;
+   }
+   
+   input[type=number] {
+       -moz-appearance: textfield;
+   }
+   
+   .related-links p,
+   .address p,
+   .form-heading p,
+   footer .address p,
+   footer .copyright p {
+       line-height: 1.875em;
+       font-size: 14px;
+   }
+   
+   @media only screen and (max-width: 480px) {
+       footer .address p,
+       footer .copyright p,
+       .form-heading p {
+           font-size: 1.25em;
+       }
+   }
+   
+   .navbar {
+       display: none;
+   }
+   
+   .top {
+       padding-top: 30px;
+   }
+   
+   .givingform {
+       float: right;
+   }
+   
+   .form-heading {
+       padding-bottom: 30px;
+   }
+   
+   .form-heading h1 {
+       font: normal 300 2.92857143em 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+       color: #800000;
+   }
+   
+   footer .row.fixed.red {
+       display: none;
+   }
+   
+   #FormDonation input.btn {
+       background: #800000;
+       border-color: #4f0101;
+       color: #fff;
+       padding: 15px 20px;
+   }
+   
+
+   
+   .form-heading p {}
+   
+   .special-instructions {
+       padding-top: 30px;
+   }
+   
+   footer .social-media {
+       text-align: left;
+   }
+   
+   footer {
+       line-height: 1.875em;
+   }
+   
+   .footerlogo {
+       text-align: right;
+   }
+   
+   a#uchicago-wordmark {
+       margin-bottom: 15px;
+   }
+   
+   @media only screen and (max-width: 767px) {
+       footer.container-fluid p,
+       footer.container-fluid a {
+           text-align: center;
+           font-size: 1em;
+           margin-left: auto;
+           margin-right: auto;
+       }
+       .footerlogo {
+           text-align: center;
+           padding-top: 15px;
+       }
+       footer .social-media {
+           text-align: center;
+       }
+       a#uchicago-wordmark {
+           margin: 0 auto;
+           width: 200px;
+           height: 41px;
+           margin-bottom: 15px;
+       }
+       .sidebar {
+           z-index: 0;
+       }
+          .givingform {
+       z-index: 1;
+   }
+   }

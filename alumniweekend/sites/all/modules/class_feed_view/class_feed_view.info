@@ -1,0 +1,4 @@
+name = Class Feed View
+description = This adds a custom filters based on the taxonomy term mapped for the class page
+core = 7.x
+files[]=class_feed_view.module 

@@ -1,0 +1,166 @@
+.fullheader {
+    background-color: #800000;
+}
+
+.redheader {
+    background-color: #800000;
+    color: #fff;
+    min-height: 200px;
+    padding-top: 20px;
+}
+
+.gdlogotop {
+    text-align: center;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.datetop {
+    text-align: right;
+    min-height: 100px;
+    line-height: 100px;
+}
+
+.form-heading img {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .redheader {
+        padding-top: 10px;
+        background-color: #800000;
+        color: #fff;
+        min-height: 100%;
+    }
+    .gdlogotop {
+        text-align: center;
+        padding: 10px !important;
+    }
+    .datetop {
+        text-align: center;
+        padding: 10px !important;
+        min-height: 100%;
+        line-height: 2em;
+    }
+}
+
+.morechoices {
+    color: #800000;
+    font-weight: bold;
+}
+
+.gdfooter {
+    background-color: #141414;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    margin-bottom: 0;
+}
+
+
+
+.gdfooter a {
+    color: #fff;
+}
+
+.footerlogos {
+    width: 200px;
+    margin-left: 15px;
+    float: left;
+}
+
+.campaignlogo,
+.uclogo {
+    padding: 20px;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+footer {
+    margin: 0;
+}
+
+.address {
+    padding-top: 40px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+.address {
+    padding-top: 70px;
+    font-size: 15px;
+    line-height: 20px;
+}
+}
+
+
+@media only screen and (max-width: 767px) {
+    footer.container-fluid {
+        padding: 0;
+        margin-top: 45px;
+        margin-bottom: 0;
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer.container-fluid {
+        padding: 0;
+        margin-top: 60px;
+        margin-bottom: 0;
+        padding-top: 30px;
+    }
+    .footerlogos {
+        width: 200px;
+        margin-left: 45px;
+        float: none;
+    }
+
+    .footerfull{
+        text-align: center;
+    }
+
+
+
+.footerlogos {
+        text-align: center;
+   margin-left: auto;
+    margin-right: auto;
+}
+
+.address {
+  padding-top: 15px;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 0;
+}
+
+footer .address{
+    margin-top: 0;
+}
+}
+
+    .main_content {
+ 
+  margin-bottom: 45px;
+}
+
+
+input,
+button,
+select,
+textarea {
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+
+.input-sm {
+    height: 3em;
+    padding: 5px 10px;
+    font-size: 1.0em;
+    line-height: 1.5;
+    border-radius: 3px
+}

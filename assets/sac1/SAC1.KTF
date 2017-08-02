@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="js svg inlinesvg placeholder Linux x86_64" lang="en" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="Generator" content="Drupal 7 (http://drupal.org)">
+    <title>Student Alumni Committee | The University of Chicago</title>
+
+    <!--
+  /* @license
+   * MyFonts Webfont Build ID 1316338, 2011-10-03T10:50:35-0400
+   *
+   * The fonts listed in this notice are subject to the End User License
+   * Agreement(s) entered into by the website owner. All other parties are
+   * explicitly restricted from using the Licensed Webfonts(s).
+   *
+   * You may obtain a valid license at the URLs below.
+   *
+   * Webfont: Proxima Nova Thin by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/thin/
+   * Licensed pageviews: 10,000,000
+   *
+   * Webfont: Proxima Nova Regular by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+   * Licensed pageviews: unspecified
+   *
+   * Webfont: Proxima Nova Semibold by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+   * Licensed pageviews: 10,000,000
+   *
+   * Webfont: Proxima Nova Light by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light/
+   * Licensed pageviews: 10,000,000
+   *
+   * Webfont: Proxima Nova Bold by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+   * Licensed pageviews: 10,000,000
+   *
+   *
+   * License: http://www.myfonts.com/viewlicense?type=web&buildid=1316338
+   * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+   *
+   * © 2011 Bitstream Inc
+  */
+  -->
+    <link href="https://campaign.uchicago.edu/css/site.css" rel="stylesheet" media="screen">
+    <link href="https://www.kintera.org/site/layout/default.css" rel="stylesheet" type="text/css">
+    <link href="https://www.kintera.org/site/layout/content.css" rel="stylesheet" type="text/css">
+
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <!-- <meta http-equiv="cleartype" content="on"> -->
+    <link rel="stylesheet" href="https://identity.uchicago.edu/c/fonts/proximanova.css">
+    <link type="text/css" rel="stylesheet" href="https://alumnidev.uchicago.edu/ktf/sac1/style1.css" media="all">
+
+
+    <script src="https://sac.uchicago.edu/sites/all/themes/plaisance/js/libs/modernizr.js"></script>
+
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.uchicago.edu/favicon.ico">
+
+</head>
+
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-directories page-directories-full page-directories-full-executive-board section-about page-views">
+
+    <div id="wrapper">
+        <div class="container-fluid">
+            <div class="navbar uchicago-wordmark" role="banner">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="row-fluid topnav">
+                            <div class="visible-phone mobile-branding">
+                                <div class="uc-wordmark-mobile">The University of Chicago</div>
+                            </div>
+                        </div>
+                        <div class="row wordmark" role="navigation">
+                            <div class="left-edge">
+                                <a href="https://sac.uchicago.edu/" title="Home" rel="home" class="site-name column-width-8"><h1 class="large">Student Alumni Committee</h1></a>
+                                <div class="uc-wordmark-container">
+                                    <a href="http://www.uchicago.edu/" title="University of Chicago" class="uc-wordmark">University of Chicago</a>
+                                    <img src="https://sac.uchicago.edu/sites/all/themes/plaisance/i/template/uc_wordmark_hires.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid wordmark phone" role="navigation">
+                <div class="left-edge">
+                    <a href="https://sac.uchicago.edu/" title="Home" rel="home" class="site-name"><h1 class="large">Student Alumni Committee</h1></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid top">
+            <div class="row fixed">
+                <div id="leftcol" class="main_content col-sm-5" role="complementary">
+                    <div class="main_image">
+                        <div class="block-content">
+                            <p><img alt="" src="https://alumnidev.uchicago.edu/ktf/sac1/sactop1.png">
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="maincontent">
+                        <p class="intro">Welcome to OneUChicago, UChicago’s official philanthropy week! OneUChicago supports programs, events, and projects around campus that improve the lives of students and community members. Together we can make a huge, positive impact on the well-being of our peers (and ourselves) by giving to the Dean’s Fund for Student Life. Join your friends in supporting one another by giving a buck about student life.
+                        </p>
+                        <p class="intro">Why should you give a buck? For starters, the Dean’s Fund allows students to do awesome things like attend conferences, conduct intensive research, host events, and carry out projects that better both the UChicago and South Side communities. Give a buck about your campus experience—donate to the Dean’s Fund for Student Life.</p>
+                    </div>
+
+
+                    <div id="block-block-11" class="block block-block first last odd module clearfix">
+
+
+                        <div class="block-content subnav-collapse">
+                            <p><img alt="Logo sans white space_0.png" src="https://sac.uchicago.edu/sites/sac.uchicago.edu/files/uploads/Logo%20sans%20white%20space_0.png">
+                            </p>
+                            <p>
+                                <br>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="giving-form main_content col-sm-7 floatright container-fluid " style="z-index:1;" role="complementary">
+                    <!-- BEGIN GIVING FORM -->
+                    
+    <kintera:webFeature />
+
+                <!-- END GIVING FORM -->
+
+
+
+                <div class="main_content col-sm-5 related" style="z-index:0;" >
+                    <div class="related-links">
+                        <h2 class="small-caps">Questions &amp; Technical Support</h2> Call 773.834.8803
+                        <br>Toll-Free 888.824.4224
+                        <br>Submit your comments using our <a target="_blank" href="https://sac.uchicago.edu/contact">contact page</a>.
+                        <br>
+                    </div>
+                    <div class="related-links">
+                        <h2 class="small-caps">Safe &amp; Secure</h2>
+                        <p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+                    </div>
+
+
+                    <div id="addthis" class="related-links" style="display: none; visibility: hidden;">
+                        <h2 class="small-caps">Share your support</h2>
+                        <p>When you share your support you magnify the impact of your gift by inspiring others to give. The details of your gift and private information will not be shared.</p>
+                        <div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="#" addthis:title="I made a gift to the University of Chicago. Join me." addthis:description="I just made a gift to the University of Chicago. Will you consider joining me in supporting the University? You can do so at /.">
+                                <a class="addthis_button_twitter at300b" title="Tweet" href="#"><span class=" at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+                                <a class="addthis_button_facebook at300b" title="Facebook" href="#"><span class=" at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+                                <a class="addthis_button_linkedin at300b" href="http://www.addthis.com/bookmark.php?v=300&amp;winname=addthis&amp;pub=ra-54493da551e048a0&amp;source=tbx32-300&amp;lng=en-US&amp;s=linkedin&amp;url=%23&amp;title=I%20made%20a%20gift%20to%20the%20University%20of%20Chicago.%20Join%20me.&amp;ate=AT-ra-54493da551e048a0/-/-/5491be59a6de91d9/2&amp;frommenu=1&amp;uid=5491be599b3db2b8&amp;description=I%20just%20made%20a%20gift%20to%20the%20University%20of%20Chicago.%20Will%20you%20consider%20joining%20me%20in%20supporting%20the%20University%3F%20You%20can%20do%20so%20at%20%2F.&amp;ct=1&amp;uct=1&amp;tt=0&amp;captcha_provider=nucaptcha" target="_blank" title="LinkedIn"><span class=" at300bs at15nc at15t_linkedin"><span class="at_a11y">Share on linkedin</span></span></a>
+                                <a class="addthis_button_email at300b" target="_blank" title="Email" href="#"><span class=" at300bs at15nc at15t_email"><span class="at_a11y">Share on email</span></span></a>
+                                <a class="addthis_button_compact at300m" href="#"><span class=" at300bs at15nc at15t_compact"><span class="at_a11y">More Sharing Services</span></span></a>
+                                <div class="atclear"></div>
+                            </div>
+                            <script>
+                            var addthis_config = {
+                                "data_track_addressbar": true
+                            };
+                            </script>
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54493da551e048a0" async="async"></script>
+                            <!-- AddThis Button END -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer role="contentinfo">
+        <div class="container-fluid">
+            <div class="row-fluid footer">
+                <div class="left-edge">
+                    <div class="column-width-3">
+                        <div class="shield">
+                            <a href="http://www.uchicago.edu/" title="The University of Chicago">The University of Chicago</a>
+                        </div>
+                        <p><a href="https://sac.uchicago.edu/user?destination=directories/full/executive-board">©</a>2014 <span class="url fn org"><a href="http://www.uchicago.edu/">The University of Chicago</a></span>
+                        </p>
+                        <div class="region region-footer-column1">
+                            <div id="block-views-footer-socialmedia" class="block block-views first last odd module clearfix">
+
+
+                                <div class="block-content">
+                                    <div class="view view-footer view-id-footer view-display-id-socialmedia view-dom-id-b97b350f8aee3052a9f3a32a4925bb7a">
+
+
+
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content">
+                                                        <a href="https://www.facebook.com/#!/StudentAlumniCommittee" class="facebook ss-social ss-facebook" target="_blank"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="views-field views-field-entity-id-1">
+                                                    <div class="field-content">
+                                                        <a href="http://www.twitter.com/sacuchicago" class="twitter ss-social ss-twitter" target="_blank"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.block -->
+                        </div>
+                    </div>
+                    <div class="column-width-3 right hidden-phone">
+                        <p><a href="https://sac.uchicago.edu/" title="Home" rel="home">Student Alumni Committee</a>
+                        </p>
+                        <div class="region region-footer-column2">
+                            <div id="block-views-footer-address" class="block block-views first last odd module clearfix">
+
+
+                                <div class="block-content">
+                                    <div class="view view-footer view-id-footer view-display-id-address view-dom-id-fe207db371bafb732d5e2e6fde92892e">
+
+
+
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content">5555 South Woodlawn Avenue</div>
+                                                </div>
+                                            </div>
+                                            <div class="views-row views-row-2 views-row-even">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content">Chicago, IL 60637</div>
+                                                </div>
+                                            </div>
+                                            <div class="views-row views-row-3 views-row-odd views-row-last">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content">StudentAlumniCommittee@uchicago.edu</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.block -->
+                        </div>
+                    </div>
+                    <div class="column-width-3 right hidden-phone">
+                        <div class="region region-footer-column3">
+                            <div id="block-views-footer-links1" class="block block-views first last odd module clearfix">
+
+
+                                <div class="block-content">
+                                    <div class="view view-footer view-id-footer view-display-id-links1 view-dom-id-de3959551176b66c20ad9cbb96d93d05">
+
+
+
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content"><a href="http://www.uchicago.edu/">The University of Chicago</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="views-row views-row-2 views-row-even views-row-last">
+
+                                                <div class="views-field views-field-entity-id">
+                                                    <div class="field-content"><a href="http://www.alumniandfriends.uchicago.edu/">Alumni and Friends</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.block -->
+                        </div>
+                    </div>
+                    <div class="column-width-3 right hidden-phone">
+                        <div class="region region-footer-column4">
+                            <div id="block-views-footer-links2" class="block block-views first last odd module clearfix">
+
+
+                                <div class="block-content">
+                                    <div class="view view-footer view-id-footer view-display-id-links2 view-dom-id-1c143b9be3ce09b74fb5fa9efc7d9ec4">
+
+
+
+                                        <div class="view-content">
+                                            <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.block -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=webserv"></script>
+    <div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;">
+
+    </div>
+    <!--[if lte IE 8]>
+  <script src="https://sac.uchicago.edu/sites/all/themes/plaisance/js/ie_fixes/update_png.js"></script>
+  <script src="https://sac.uchicago.edu/sites/all/themes/plaisance/js/libs/respond.min.js"></script>
+  <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="https://campaign.uchicago.edu/js/libs/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src="https://campaign.uchicago.edu/js/givingform-min.js"></script>
+
+    <div id="cboxOverlay" style="display: none;"></div>
+    <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+        <div id="cboxWrapper">
+            <div>
+                <div id="cboxTopLeft" style="float: left;"></div>
+                <div id="cboxTopCenter" style="float: left;"></div>
+                <div id="cboxTopRight" style="float: left;"></div>
+            </div>
+            <div style="clear: left;">
+                <div id="cboxMiddleLeft" style="float: left;"></div>
+                <div id="cboxContent" style="float: left;">
+                    <div id="cboxTitle" style="float: left;"></div>
+                    <div id="cboxCurrent" style="float: left;"></div>
+                    <button type="button" id="cboxPrevious"></button>
+                    <button type="button" id="cboxNext"></button>
+                    <button id="cboxSlideshow"></button>
+                    <div id="cboxLoadingOverlay" style="float: left;"></div>
+                    <div id="cboxLoadingGraphic" style="float: left;"></div>
+                </div>
+                <div id="cboxMiddleRight" style="float: left;"></div>
+            </div>
+            <div style="clear: left;">
+                <div id="cboxBottomLeft" style="float: left;"></div>
+                <div id="cboxBottomCenter" style="float: left;"></div>
+                <div id="cboxBottomRight" style="float: left;"></div>
+            </div>
+        </div>
+        <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+    </div>
+</body>
+
+</html>

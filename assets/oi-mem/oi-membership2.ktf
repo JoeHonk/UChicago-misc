@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="https://oi.uchicago.edu/sites/oi.uchicago.edu/themes/oi/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://oi.uchicago.edu/support/join-today" />
+<link rel="shortlink" href="https://oi.uchicago.edu/node/3001" />
+  <title>Join Today | The Oriental Institute of the University of Chicago</title>
+
+
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/bootstrap.min.css">
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1.css" media="all" />
+
+  <!--[if lt IE 9]>
+  <script src="/sites/all/themes/zen/js/respond.js"></script>
+  <![endif]-->
+
+  <script src="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/modern.js"></script>
+
+  <script type="text/javascript">
+    // For preventing flash of unstyled content
+    document.documentElement.className += ' foucjs';
+  </script>
+
+  <!--
+  /**
+   * @license
+   * MyFonts Webfont Build ID 2820740, 2014-05-30T11:22:32-0400
+   *
+   * The fonts listed in this notice are subject to the End User License
+   * Agreement(s) entered into by the website owner. All other parties are
+   * explicitly restricted from using the Licensed Webfonts(s).
+   *
+   * You may obtain a valid license at the URLs below.
+   *
+   * Webfont: Proxima Nova Light by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light/
+   *
+   * Webfont: Proxima Nova Regular by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+   *
+   * Webfont: Proxima Nova Bold by Mark Simonson
+   * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+   *
+   *
+   * License: http://www.myfonts.com/viewlicense?type=web&buildid=2820740
+   * Licensed pageviews: 20,000,000
+   * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+   *
+   * © 2014 MyFonts Inc
+  */
+  -->
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-3001 node-type-interior-page section-support" >
+  <p id="skip-link">
+    <a href="#main-content">Skip to main content</a>
+    <a href="#left-nav">Skip to internal navigation</a>
+  </p>
+
+<div class="header-container">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+        <div class="mobile-branding">
+          <div class="uc-wordmark-mobile">The University of Chicago</div>
+        </div>
+        <button type="button" class="btn btn-navbar nav-button" title="Toggle Sub-navigation"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <div class="mobile-top-nav-container">
+          <ul class="mobile-top-nav">
+            <li><a href="https://oi.uchicago.edu/visit">Plan Your Visit</a></li>
+            <li><a href="https://oi.uchicago.edu/programs-events">Programs &amp; Events</a></li>
+            <li><a href="https://oi.uchicago.edu/museum-exhibits">Museum &amp; Exhibits</a></li>
+            <li><a href="https://oi.uchicago.edu/collections">Collections</a></li>
+            <li><a href="https://oi.uchicago.edu/research">Research</a></li>
+            <li><a href="https://oi.uchicago.edu/support-us">Support Us</a></li>
+            <li><a href="https://oi.uchicago.edu/about">About</a></li>
+            <li><a href="https://oi.uchicago.edu/contact">Contact</a></li>
+          </ul>
+          <form method="get" class="mobile-search" action="/search">
+            <input type="text" size="15" name="GSAq" placeholder="Search" />
+          </form>
+        </div>
+    </div>
+  </div>
+
+    <div class="region region-utility-nav">
+    <div id="block-block-7" class="block block-block first odd">
+
+
+  <ul><li><a href="https://oi.uchicago.edu/visit/museum-shop-suq">Museum Shop</a></li>
+<li><a href="https://oi.uchicago.edu/programs">Events</a></li>
+<li><a href="https://oi.uchicago.edu/educators">For Educators</a></li>
+</ul>
+</div>
+<div id="block-block-8" class="block block-block last even">
+
+
+  <ul><li><a href="https://oi.uchicago.edu/contact">Contact</a></li>
+<li><a href="https://oi.uchicago.edu/about">About</a></li>
+<li><a href="https://oi.uchicago.edu/support/become-member-0">Membership</a></li>
+<li><a href="https://oi.uchicago.edu/register">Register </a></li>
+</ul>
+</div>
+  </div>
+  <header class="header" id="header" role="banner">
+    <h1 id="site-name">
+      <a href="https://oi.uchicago.edu/" title="Home" rel="home"><span>The Oriental Institute of the University of Chicago</span></a>
+    </h1>
+    <a href="http://www.uchicago.edu" class="uc-wordmark">University of Chicago</a>
+  </header>
+</div>
+
+<div class="top-nav-container clearfix" role="navigation">
+  <div class="top-nav-inner">
+    <ul class="top-nav">
+      <li><a href="https://oi.uchicago.edu/visit" id="nav-visit">Plan Your Visit</a></li>
+      <li><a href="https://oi.uchicago.edu/programs-events" id="nav-programs-events">Programs &amp; Events</a></li>
+      <li><a href="https://oi.uchicago.edu/museum-exhibits" id="nav-museum-exhibits">Museum &amp; Exhibits</a></li>
+      <li><a href="https://oi.uchicago.edu/collections" id="nav-collections">Collections</a></li>
+      <li><a href="https://oi.uchicago.edu/research" id="nav-research">Research</a></li>
+      <li><a href="https://oi.uchicago.edu/support-us" id="nav-support-us">Support Us</a></li>
+    </ul>
+    <form method="get" id="search" action="/search">
+      <input type="text" size="15" id="searchterm" name="GSAq" placeholder="Search" />
+    </form>
+  </div>
+</div>
+
+<div id="page">
+  <div id="main">
+
+              <div id="content-top">
+                          <h1 class="page__title title" id="page-title">Join Today</h1>
+                        <nav class="breadcrumb" role="navigation"><h2 class="element-invisible">You are here</h2><ol><li><a href="https://oi.uchicago.edu/">Home</a> / </li><li><a href="https://oi.uchicago.edu/support">Support Us</a> / </li><li><a href="https://oi.uchicago.edu/support/become-member-0">Become a Member</a> / </li><li>Join Today</li></ol></nav>              </div>
+
+          <aside class="sidebars">
+        <a id="left-nav"></a>
+        <div class="mobile-section-navigation"><a href="#">Section Navigation <span class="ss-icon ss-standard">navigateright</span></a></div>
+                    <section class="region region-sidebar-first column sidebar">
+    <div id="block-menu-block-3" class="block block-menu-block first last odd" role="navigation">
+
+
+  <div class="menu-block-wrapper menu-block-3 menu-name-menu-support-us parent-mlid-0 menu-level-2">
+  <ul class="menu"><li class="menu__item first"><a href="https://oi.uchicago.edu/support/research-archives-adopt-book-campaign" title="" class="menu__link">Adopt-a-Book</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/adopt-dig" class="menu__link">Adopt-a-Dig</a></li>
+<li class="menu__item is-active-trail active-trail"><a href="https://oi.uchicago.edu/support/become-member-0" class="menu__link is-active-trail active-trail">Become a Member</a><ul class="menu"><li class="menu__item is-active is-active-trail first active-trail active"><a href="https://oi.uchicago.edu/support/join-today" title="" class="menu__link is-active-trail active-trail active">Join or Renew Today</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/friends-oriental-institute" class="menu__link">Friends of the Oriental Institute</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/associates-oriental-institute" class="menu__link">Associates of the Oriental Institute</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/james-henry-breasted-society" class="menu__link">James Henry Breasted Society</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/educator-pass-membership" title="" class="menu__link">Educator Pass </a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/uchicago-arts-pass-student-membership" title="" class="menu__link">UChicago Arts Pass</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/ypl" title="" class="menu__link">Young Professional </a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/support/upcoming-events" class="menu__link">Upcoming Events</a></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/programs-events/members-events" title="" class="menu__link">Members Events</a></li>
+<li class="menu__item last"><a href="https://oi.uchicago.edu/programs-events/travel-programs" title="" class="menu__link">Travel Program</a></li>
+</ul></li>
+<li class="menu__item"><a href="https://oi.uchicago.edu/volunteer" class="menu__link">Become a Volunteer</a></li>
+<li class="menu__item last"><a href="https://oi.uchicago.edu/support/how-give" title="" class="menu__link">Make a Gift</a></li>
+</ul></div>
+
+</div>
+  </section>
+              </aside>
+
+    <a id="main-content"></a>
+    <div id="content" class="column" role="main">
+
+
+
+
+
+<article class="node-3001 node node-interior-page view-mode-full clearfix">
+
+
+
+
+  <div class="content-inner one-column">
+    <div class="content-inner-left">
+
+
+
+              <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+          <p class="clearfix">
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_email"></a>
+            <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+          </p>
+        </div>
+        <!-- AddThis Button END -->
+
+      <script>
+if (typeof jQuery == 'undefined') {
+    document.write('<script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/jquery.js"><\/script>');
+}
+</script>
+
+
+<!--BEGIN GIVING FORM-->
+      <kintera:webFeature/>
+<!--END GIVING FORM-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+      </div>
+
+</article>
+          </div>
+
+
+  </div>
+</div>
+
+<div class="footer-container">
+  <footer id="footer">
+      <div class="region region-footer-first">
+    <div id="block-block-2" class="block block-block first last odd">
+
+
+  <p>Museum:<br />
+773.702.9520<br /><a href="mailto:oi-museum@uchicago.edu">oi-museum@uchicago.edu</a></p>
+
+<p>Administration:<br />
+773.702.9514<br /><a href="mailto:oi-administration@uchicago.edu">oi-administration@uchicago.edu</a></p>
+
+</div>
+  </div>
+      <div class="region region-footer-second">
+    <div id="block-block-3" class="block block-block first last odd">
+
+
+  <p><a href="https://oi.uchicago.edu/visit">Plan Your Visit</a><br /><a href="https://oi.uchicago.edu/programs">Programs &amp; Events</a><br /><a href="https://oi.uchicago.edu/museum-exhibits">Museum &amp; Exhibits</a><br /><a href="https://oi.uchicago.edu/collections">Collections</a><br /><a href="https://oi.uchicago.edu/research">Research</a><br /><a href="https://oi.uchicago.edu/support-us2">Support Us</a><br /><a href="https://oi.uchicago.edu/support/oriental-institute-volunteer-program">Volunteer Information</a></p>
+
+</div>
+  </div>
+      <div class="region region-footer-third">
+    <div id="block-block-4" class="block block-block first last odd">
+
+
+  <p class="ss-icon ss-social-regular"><a href="https://app.e2ma.net/app/view:Join/signupId:1702534/acctId:1701634" title="Newsletter">mail</a> <a href="http://www.facebook.com/OrientalInstitute" title="Facebook">facebook</a> <a href="http://twitter.com/orientalinst" title="Twitter">twitter</a> <a href="http://www.youtube.com/user/JamesHenryBreasted" title="YouTube">youtube</a> <a href="https://oi.uchicago.edu/about/subscribe-rss-feeds" title="RSS">rss</a></p>
+
+</div>
+  </div>
+      <div class="region region-footer-fourth">
+    <div id="block-block-5" class="block block-block first last odd">
+
+
+  <p><a href="https://oi.uchicago.edu/visit/museum-shop-suq">Museum Shop</a><br /><a href="https://oi.uchicago.edu/programs">Events</a><br /><a href="https://oi.uchicago.edu/educators">For Educators</a><br /><a href="https://oi.uchicago.edu/support/become-member">Membership</a><br /><a href="https://oi.uchicago.edu/about">About</a><br /><a href="https://oi.uchicago.edu/contact">Contact</a></p>
+
+</div>
+  </div>
+      <div class="region region-footer-fifth">
+    <div id="block-block-6" class="block block-block first odd">
+
+
+  <p><a href="https://oi.uchicago.edu/visit/admission-hours">Museum Hours</a><br /><a href="https://oi.uchicago.edu/visit/directions-parking">Map &amp; Directions</a></p>
+
+</div>
+<div id="block-block-10" class="block block-block last even">
+
+
+  <p><a href="https://oi.uchicago.edu/user?destination=node/3001" class="login-link">&copy;</a> 2014 The Oriental Institute of<br />The University of Chicago<br />1155 E 58th St.<br />Chicago, IL 60637</p>
+</div>
+  </div>
+  </footer>
+</div>
+
+    <script src="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
+<script src="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/js_rv_BKYv7yieH0IgHddhWHDC-bWGan8yiJbusyOpr0mw.js"></script>
+<script src="https://alumnidev.uchicago.edu/assets/oi-mem/oimem1_files/js_kZxgqMQRZd9NG52C6WtL_IxFrO50W5-cp-gOnVfdvGY.js"></script>
+
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=webserv"></script>
+  </body>
+</html>

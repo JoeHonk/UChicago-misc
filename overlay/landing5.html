@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <!-- Activate responsiveness in the "child" page -->
+    <script src="jquery.responsiveiframe.js"></script>
+    <script>
+      var ri = responsiveIframe();
+      ri.allowResponsiveEmbedding();
+    </script>
+
+    <!-- Corresponding code in the "parent" page -->
+    <script src="jquery.responsiveiframe.js"></script>
+    <script>
+      ;
+      (function($) {
+        $(function() {
+          $('#Iframe1').responsiveIframe({xdomain: '*'});
+        });
+      })(jQuery);
+    </script>
+
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+
+    <footer class="section section-danger">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Brand</h1>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Share Your Support With Your Own Image</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p><img src="http://alumnidev.uchicago.edu/dev/overlay/overlay-both1.jpg" class="img-responsive"></p>
+          </div>
+          <div class="col-md-12">
+            <p>
+              <h4>Upload an image to share your support on Facebook and Twitter and download a custom profile photo!</h4>
+            </p>
+            <form id="share1" method="post" enctype="multipart/form-data" action="both3.php">
+              <span id="uploadlabel" class="file-input btn btn-block btn-danger btn-lg btn-file btn-file-share1">
+                Upload your own image (.jpg)…
+                <input type="file" name="Image1" accept=".jpg" id="upload">
+              </form>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row"><div class="col-md-12"><h1>Or Share Our Standard Image</h1></div>
+          <div class="col-md-6">
+
+            <img class="img-responsive"
+            src="http://alumnidev.uchicago.edu/dev/overlay/hull-gate1.jpg">
+            </div>
+            <div class="col-md-6">
+            <p>
+              <a target="_blank" href="https://www.facebook.com/dialog/feed?app_id=405878179473368&amp;link=http%3A%2F%2F24hourimpact.uchicago.edu&amp;picture=http://alumnidev.uchicago.edu/dev/overlay/i/UCHICAGO_GIVINGDAY_SHARE_9492e8f6dfb2f2e86912aec08a90580a_2902027998.jpg&amp;name=This%20was%20created%20with%20the%20overlay%20generator&amp;caption=%20&amp;description=Progressively%20scale%20technically%20sound%20innovation%20via%20visionary%20materials.%20Quickly%20visualize%20B2B%20initiatives%20after%20mission-critical%20networks.%20Progressively%20orchestrate%20professional%20data%20after%20stand-alone%20imperatives.%20Interactively%20predominate%20granular%20architectures%20before%20go%20forward%20e-commerce.%20Compe&amp;redirect_uri=http%3A%2F%2Fwww.facebook.com%2F"><i class="fa fa-3x fa-fw fa-facebook"></i>SHARE ON FACEBOOK</a>
+            </p>
+            <p><a target="_blank" href="http://twitter.com/intent/tweet?text=This%20is%20a%20test%20%23hashtag%20http://alumnidev.uchicago.edu/dev/overlay/i/UCHICAGO_GIVINGDAY_SHARE_9492e8f6dfb2f2e86912aec08a90580a_2902027998.jpg.html"><i class="fa fa-3x fa-fw fa-twitter"></i>SHARE ON TWITTER</a></p>
+            <p><a target="_blank" href="http://alumnidev.uchicago.edu/dev/overlay/i/UCHICAGO_GIVINGDAY_SHARE_9492e8f6dfb2f2e86912aec08a90580a_2902027998.jpg" download=""><i class="fa fa-3x fa-fw fa-image"></i>DOWNLOAD</a></p>
+            <p><a target="_blank" href="http://alumnidev.uchicago.edu/dev/overlay/i/UCHICAGO_GIVINGDAY_PROFILE_9492e8f6dfb2f2e86912aec08a90580a_45871.jpg" download=""><i class="fa fa-3x fa-fw fa-file-image-o"></i>DOWNLOAD PROFILE IMAGE</a></p><img style="padding-top:54px;" class="img-responsive"
+            src="http://alumnidev.uchicago.edu/dev/overlay/hull-gate2.jpg">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="section section-danger">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Footer header</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
+              <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+              <br>Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br><br></p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-instagram text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-twitter text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-facebook text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-github text-inverse"></i>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-instagram text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-twitter text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-facebook text-inverse"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-3x fa-fw fa-github text-inverse"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="pym.js" type="text/javascript"></script>
+    <script>
+      var pymChild = new pym.Child();
+    </script>
+
+  </body>
+</html>

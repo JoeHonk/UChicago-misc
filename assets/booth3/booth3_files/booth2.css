@@ -1,0 +1,103 @@
+input[type=checkbox] {
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+#BeneficiaryID {
+    /*display: none;*/
+}
+
+
+
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    #BeneficiaryID{
+    	width: 75%;
+    }
+
+    #Amount{
+    	/*width:33%;*/
+    }
+
+    #Textarea2{
+    	width: 100%;
+    }
+
+    #CardName, #billaddress1, #billaddress2 , #bcity, #bzip, #BillState, #BillCountry, #Country{
+    	width: 100%
+    }
+
+    select[multiple], select[size] {
+  height: auto;
+  width: 100%;
+}
+
+#newAmount{
+    min-width: 50px;
+}
+}
+
+
+@media (max-width: 900px) {
+ #BeneficiaryID{
+    width: 90%;
+ }
+}
+
+#sitesearch{
+
+  display: none;
+}
+
+#contentArea{
+
+}
+
+#contentArea h3 {
+    font: normal 400 1.85714286em 'Trade Gothic Condensed 20', Helvetica, Arial, sans-serif;
+    color: #9b1115;
+}
+
+label{
+  font-weight: bold;
+}
+
+.checkbox-inline, .radio-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+  font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group{
+  margin-bottom: 0;
+}
+
+#CardType{
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 767px){
+
+
+  .deans{
+    width: 100%;
+
+  }
+
+
+}
+.deans label{
+  padding-right: 5px;
+}
+
+
+#TableInstallmentGiftM{
+ word-break: normal;
+}

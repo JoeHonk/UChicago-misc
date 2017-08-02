@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>Odyssey Scholarship Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">-->
+
+  <link rel="stylesheet" type="text/css" href="//alumnidev.uchicago.edu/assets/odyssey/assets/css/fonts.css" />
+
+    <!-- Bootstrap -->
+    <link href="https://alumnidev.uchicago.edu/assets/odyssey/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://alumnidev.uchicago.edu/assets/odyssey/assets/css2/style.css" rel="stylesheet">
+	<link href="https://alumnidev.uchicago.edu/assets/odyssey/assets/css2/responsive.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<body id="scroll">
+	<!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span>Menu</span>
+        </button>
+        <a href="http://odyssey.uchicago.edu/index.html"><img src="https://alumnidev.uchicago.edu/assets/odyssey/assets/img/odyssey-logo.svg" alt="The University of Chicago Oddysey Scholarship Challenge" class="logo"></a>
+        <a href="http://odyssey.uchicago.edu/index.html"><img src="https://alumnidev.uchicago.edu/assets/odyssey/assets/img/odyssey-logo-small-new.svg" alt="The University of Chicago Oddysey Scholarship Challenge" class="logo-small"></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://odyssey.uchicago.edu/journeys.html"><span>Student</span> <span>Journeys</span></a></li>
+          <li><a href="http://odyssey.uchicago.edu/challenge.html"><span>Giving</span> <span>Challenge</span></a></li>
+          <li><a href="http://odyssey.uchicago.edu/model.html"><span>A Proven</span> <span>Model</span></a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="centered-margin">
+            <h1 class="makeagift">Make a Gift</h1>
+<!--GIVING FORM BEGIN-->
+  <kintera:webFeature/>
+<!--GIVING FORM END-->
+</div></div>
+<!--SIDEBAR BEGIN-->
+    <div class="col-md-3">
+
+      <div class="sidebar1">
+          <h2 class="block-title">Questions</h2>
+          <div class="content clearfix">
+            <p>Marla Layton<br>
+            773.702.7343<br>
+<a href="mlayton@uchicago.edu">mlayton@uchicago.edu</a><br>
+The College<br>
+1116 East 59th Street<br>
+Chicago, IL 60637</p>
+          </div>
+      </div>
+
+                                      <div class="sidebar1">
+                                          <h2 class="block-title">Technical Support</h2>
+                                          <div class="content clearfix">
+                                          <p>Call 773.834.8803
+                                                    <br> Toll-Free 888.824.4224
+                                                    <br> E-mail <a href="mailto:alumnitechsupport@uchicago.edu">alumnitechsupport@uchicago.edu</a></p>
+                                          </div>
+                                      </div>
+
+                                      <div class="sidebar1">
+                                          <h2 class="block-title">Safe &amp; Secure</h2>
+                                          <div class="content clearfix">
+                                             <p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+                                          </div>
+
+                                          <div class="sidebar1">
+                                              <h2 class="block-title">Share your support</h2>
+                        <p>When you share your support you magnify the impact of your gift by inspiring others to give. The details of your gift and private information will not be shared.
+                        <div>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://campaign.uchicago.edu/makeagift/" addthis:title="I made a gift to the University of Chicago. Join me." addthis:description="I just made a gift to the University of Chicago. Will you consider joining me in supporting the University? You can do so at http://campaign.uchicago.edu/makeagift/.">
+                                <a class="addthis_button_twitter at300b" title="Tweet" href="#"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(85, 172, 238);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 32px; height: 32px;"><g><path d="M26.67 9.38c-.78.35-1.63.58-2.51.69.9-.54 1.6-1.4 1.92-2.42-.85.5-1.78.87-2.78 1.06a4.38 4.38 0 0 0-7.57 3c0 .34.04.68.11 1-3.64-.18-6.86-1.93-9.02-4.57-.38.65-.59 1.4-.59 2.2 0 1.52.77 2.86 1.95 3.64-.72-.02-1.39-.22-1.98-.55v.06c0 2.12 1.51 3.89 3.51 4.29a4.37 4.37 0 0 1-1.97.07c.56 1.74 2.17 3 4.09 3.04a8.82 8.82 0 0 1-5.44 1.87c-.35 0-.7-.02-1.04-.06a12.43 12.43 0 0 0 6.71 1.97c8.05 0 12.45-6.67 12.45-12.45 0-.19-.01-.38-.01-.57.84-.62 1.58-1.39 2.17-2.27z"></path></g></svg></span></a>
+                                <a class="addthis_button_facebook at300b" title="Facebook" href="#"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(59, 89, 152);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="width: 32px; height: 32px;"><g><path d="M21 6.144C20.656 6.096 19.472 6 18.097 6c-2.877 0-4.85 1.66-4.85 4.7v2.62H10v3.557h3.247V26h3.895v-9.123h3.234l.497-3.557h-3.73v-2.272c0-1.022.292-1.73 1.858-1.73h2V6.143z" fill-rule="evenodd"></path></g></svg></span></a>
+                                <a class="addthis_button_linkedin at300b" target="_blank" title="LinkedIn" href="#"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(0, 119, 181);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="LinkedIn" alt="LinkedIn" class="at-icon at-icon-linkedin" style="width: 32px; height: 32px;"><g><path d="M25 24.967h-3.77v-5.902c0-1.407-.025-3.217-1.96-3.217-1.963 0-2.263 1.534-2.263 3.117v6.002H13.24V12.832h3.615v1.66h.053c.502-.955 1.733-1.96 3.567-1.96 3.82 0 4.525 2.512 4.525 5.78v6.655zM8.988 11.174a2.186 2.186 0 0 1 0-4.374 2.187 2.187 0 0 1 0 4.374zm-1.89 1.658h3.777v12.135H7.1V12.832z" fill-rule="evenodd"></path></g></svg></span></a>
+                                <a class="addthis_button_email at300b" target="_blank" title="Email" href="#"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(115, 138, 141);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Email" alt="Email" class="at-icon at-icon-email" style="width: 32px; height: 32px;"><g><path d="M26.19 9.55H6.04l10.02 7.57 10.13-7.57zM16.06 19.67l-10.28-8.8v11.58h20.57V10.96l-10.29 8.71z"></path></g></svg></span></a>
+                                <a class="addthis_button_compact at300m" href="#"><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px; background-color: rgb(252, 109, 76);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Compact" alt="Compact" class="at-icon at-icon-addthis" style="width: 32px; height: 32px;"><g><path d="M25.07 13.74h-6.71V7.03h-4.47v6.71H7.18v4.47h6.71v6.71h4.47v-6.71h6.71z"></path></g></svg></span></a>
+                            <div class="atclear" tabindex="1000"></div></div>
+                            <script>
+                                var addthis_config = {
+                                    "data_track_addressbar": true
+                                };
+                            </script>
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54493da551e048a0" async="async"></script>
+                            <!-- AddThis Button END -->
+                        </div></p>
+                    </div>
+
+</div></div>
+<!--SIDEBAR END-->
+  </div></div>
+  <div class="white-section" style="display:none">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="centered-margin">
+            <p>Odyssey is UChicago’s comprehensive model for dismantling obstacles to education and careers for talented, hardworking students with financial need. With a new five-year, $100 million plan, we will enhance access to education and close the gap between merit and achievement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<img src="https://alumnidev.uchicago.edu/assets/odyssey/assets/img/uchicago-logo.svg" alt="University of Chicago" class="img-responsive footer-logo" />
+					<img src="https://alumnidev.uchicago.edu/assets/odyssey/assets/img/uchicago-campaign.svg" alt="Chicago Campaign" class="img-responsive footer-logo campaign-logo" />
+					<p>&#169; 2016 University of Chicago</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="column-padding">
+						<p>For more information<br />
+						Marla Layton<br />
+						773.702.7343<br />
+						<a href="mailto:mlayton@uchicago.edu">mlayton@uchicago.edu</a></p>
+
+						<p>The University of Chicago<br />
+						Edward H. Levi Hall<br />
+						5801 South Ellis Avenue<br />
+						Chicago, Illinois 60637</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="column-padding">
+						<p style="margin-bottom:0;">Related Links:</p>
+						<ul>
+							<li><a href="#">Make a Gift</a></li>
+							<li><a href="http://campaign.uchicago.edu/join-the-campaign">Campaign</a></li>
+							<li><a href="https://college.uchicago.edu">The College</a></li>
+							<li><a href="http://collegeadmissions.uchicago.edu">College Admissions</a></li>
+							<li><a href="https://collegiatescholars.uchicago.edu/">Collegiate Scholars</a></li>
+							<li><a href="https://alumniandfriends.uchicago.edu/philanthropic-societies">Philanthropic Societies</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://alumnidev.uchicago.edu/assets/odyssey/assets/js/bootstrap.min.js"></script>
+	<script src="https://alumnidev.uchicago.edu/assets/odyssey/assets/js/jquery.sticky.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#sticky").sticky({topSpacing:70});
+  });
+
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+            $(".navbar").addClass("nav-shrink");
+            $(".logo").addClass("hidden");
+            $(".logo-small").addClass("appear");
+        $(".navbar-right").addClass("navbar-padding");
+        } else {
+            $(".navbar").removeClass("nav-shrink");
+        $(".logo").removeClass("hidden");
+        $(".logo-small").removeClass("appear");
+        $(".navbar-right").removeClass("navbar-padding");
+        }
+
+    if ($(window).width() >= 1000) {
+        if (scroll >= 1750) {
+            $("#sticky").addClass("gift-bar");
+        } else {
+            $("#sticky").removeClass("gift-bar");
+        }
+    } else if ($(window).width() < 1000) {
+        if (scroll >= 1500) {
+            $("#sticky").addClass("gift-bar");
+        } else {
+            $("#sticky").removeClass("gift-bar");
+        }
+    } else if ($(window).width() < 600) {
+        if (scroll >= 1400) {
+            $("#sticky").addClass("gift-bar");
+        } else {
+            $("#sticky").removeClass("gift-bar");
+        }
+    }
+  });
+</script>
+
+	</body>
+</html>

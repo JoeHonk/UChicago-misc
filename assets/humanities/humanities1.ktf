@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html class="js" dir="ltr" version="HTML+RDFa 1.1" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" lang="en">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="https://alumnidev.uchicago.edu/assets/humanities/files/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="canonical" href="https://humanities.uchicago.edu/">
+    <link rel="shortlink" href="https://humanities.uchicago.edu/">
+    <title>Make a Gift | Division of the Humanities</title>
+    <link type="text/css" rel="stylesheet" href="https://alumnidev.uchicago.edu/assets/humanities/style1.css" media="all">
+    <script type="text/javascript" async="" src="https://alumnidev.uchicago.edu/assets/humanities/files/5225.js"></script>
+    <script src="https://alumnidev.uchicago.edu/assets/humanities/files/ga.js" async="" type="text/javascript"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/admin_devel.js"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/jquery-ui-autocomplete.js"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/sidebar.js"></script>
+    <script type="text/javascript" src="https://alumnidev.uchicago.edu/assets/humanities/files/jquery.formalize.js"></script>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body class="html not-front not-logged-in page-node page-node- page-node-2 node-type-page menu-level-2 section-landing secondary-color-primary has-right-sidebar context-students omega-mediaqueries-processed responsive-layout-wide">
+    <div id="omega-media-query-dummy">
+        <style media="all">
+        #omega-media-query-dummy {
+            position: relative;
+            z-index: -1;
+        }
+        </style>
+        <!--[if (lt IE 9)&(!IEMobile)]><style media="all">#omega-media-query-dummy { z-index: 1; }</style><![endif]-->
+        <style media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+        #omega-media-query-dummy {
+            z-index: 0;
+        }
+        </style>
+        <style media="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+        #omega-media-query-dummy {
+            z-index: 1;
+        }
+        </style>
+        <style media="all and (min-width: 1220px)">
+        #omega-media-query-dummy {
+            z-index: 2;
+        }
+        </style>
+    </div>
+    <div id="skip-link">
+        <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    </div>
+    <div class="page clearfix" id="page">
+        <header id="section-header" class="section section-header">
+            <div id="zone-header-first" class="zone zone-header-first clearfix container-12">
+                <div class="grid-12 region region-header-top" id="region-header-top">
+                    <div class="region-inner region-header-top-inner">
+                        <div class="block block-menu-block block-6 block-menu-block-6 odd block-without-title" id="block-menu-block-6">
+                            <div class="block-inner clearfix">
+                                <div class="content clearfix">
+                                    <div class="menu-block-wrapper menu-block-6 menu-name-main-menu parent-mlid-0 menu-level-1">
+                                        <ul class="menu">
+                                            <li class="first leaf has-children active-trail active menu-mlid-358"><a href="https://humanities.uchicago.edu/students" class="active-trail active">Students</a></li>
+                                            <li class="leaf has-children menu-mlid-360"><a href="https://humanities.uchicago.edu/faculty">Faculty and Academic Personnel</a></li>
+                                            <li class="leaf has-children menu-mlid-764"><a href="https://humanities.uchicago.edu/staff">Staff</a></li>
+                                            <li class="last leaf has-children menu-mlid-361"><a href="https://humanities.uchicago.edu/alumnifriends">Alumni and Friends</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-menu-block block-3 block-menu-block-3 even block-without-title" id="block-menu-block-3">
+                            <div class="block-inner clearfix">
+                                <div class="content clearfix">
+                                    <div class="menu-block-wrapper menu-block-3 menu-name-menu-quick-links-menu parent-mlid-0 menu-level-1">
+                                        <ul class="menu">
+                                            <li class="first leaf menu-mlid-844"><a href="https://humanities.uchicago.edu/" title="">Home</a></li>
+                                            <li class="leaf has-children menu-mlid-357"><a href="https://humanities.uchicago.edu/about">About</a></li>
+                                            <li class="leaf menu-mlid-599"><a href="https://humanities.uchicago.edu/directories">Directories</a></li>
+                                            <li class="leaf menu-mlid-600"><a href="https://humanities.uchicago.edu/quicklinks">Quick Links</a></li>
+                                            <li class="last leaf has-children menu-mlid-645"><a href="https://humanities.uchicago.edu/newsevents" title="">News and Events</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="zone-header-second" class="zone zone-header-second clearfix container-12">
+                <div class="grid-6 region region-header-middle-first" id="region-header-middle-first">
+                    <div class="region-inner region-header-middle-first-inner">
+                        <div class="block block-block block-4 block-block-4 odd block-without-title" id="block-block-4">
+                            <div class="block-inner clearfix">
+                                <div class="content clearfix">
+                                    <div id="humdiv">
+                                        <!--<a href="https://humanities.uchicago.edu/"><p><img src="//humstatic.uchicago.edu/wordmarks/humanities_h.svg" id="humh" /></a><br />
+<a href="https://humanities.uchicago.edu/"><img src="//humstatic.uchicago.edu/wordmarks/humanities_type2.svg" id="humwords" /></a>-->
+                                        <br>
+                                        <a href="https://humanities.uchicago.edu/"><img src="https://alumnidev.uchicago.edu/assets/humanities/files/humanities_logo_2013-02.svg" id="humh"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-6 region region-header-middle-second" id="region-header-middle-second">
+                    <div class="region-inner region-header-middle-second-inner">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="section-content" class="section section-content">
+            <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">
+                <div id="zone-content" class="zone zone-content clearfix container-12">
+                    <div class="grid-9 region region-content" id="region-content">
+                        <h1>Your Gift to the Humanities</h1>
+
+<p>Donors like you fuel every aspect of education and discovery at the University of Chicago. Please complete the form below to make a one-time or recurring gift, or prepare for the future with a <a href="http://campaign.uchicago.edu/join-the-campaign/gift-planning">planned gift</a>.</p>
+                        <kintera:webFeature/>
+                    </div>
+                    <div class="grid-3 region region-content-bottom-right" id="region-content-bottom-right">
+                        <div class="region-inner region-content-bottom-right-inner">
+                            <section class="block odd" id="">
+                                <div class="block-inner clearfix">
+                                    <h2 class="block-title">Why Give?</h2>
+                                    <div class="content clearfix">
+                                       <p>Our Division&rsquo;s students and faculty are boldly developing new scholarly approaches in their respective fields and contributing to the global exchange of ideas. Your support allows us to build on past successes, as we continue to support the intellectual ambitions of our gifted scholars. There are many ways to give to the Humanities, including donations of cash, gifts of securities, employer&rsquo;s matching gifts program, or through a planned gift. Please contact us directly for more information.</p>
+
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="block odd" id="">
+                                <div class="block-inner clearfix">
+                                    <h2 class="block-title">Questions</h2>
+                                    <div class="content clearfix">
+                                       <p>If you have questions about how philanthropy supports the Humanities at the University of Chicago, or where to direct a specific gift, please contact:</p>
+
+<p>Dana Treglia, AM&rsquo;14<br />
+Development Associate<br />
+<a href="mailto:dtreglia@uchicago.edu">dtreglia@uchicago.edu</a><br />
+773.702.9290</p>
+
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="block odd" id="">
+                                <div class="block-inner clearfix">
+                                    <h2 class="block-title">Safe &amp; Secure</h2>
+                                    <div class="content clearfix">
+                                       <p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer id="section-footer" class="section section-footer">
+            <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">
+                <div id="zone-footer" class="zone zone-footer clearfix container-12">
+                    <div class="grid-6 region region-footer-first" id="region-footer-first">
+                        <div class="region-inner region-footer-first-inner">
+                            <div class="block block-block block-1 block-block-1 odd block-without-title" id="block-block-1">
+                                <div class="block-inner clearfix">
+                                    <div class="content clearfix">
+                                        <p><img src="https://alumnidev.uchicago.edu/assets/humanities/files/uclogo_2012_gray.svg" height="60px" width="300px"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-3 region region-footer-second" id="region-footer-second">
+                        <div class="region-inner region-footer-second-inner">
+                            <div class="block block-block block-26 block-block-26 odd block-without-title" id="block-block-26">
+                                <div class="block-inner clearfix">
+                                    <div class="content clearfix">
+                                        <div class="social-media-links">
+                                            <a href="https://www.facebook.com/uchicagohumanities"><img title="Follow UChicago Humanities on Facebook" alt="Follow UChicago Humanities on Facebook" src="https://alumnidev.uchicago.edu/assets/humanities/files/FB-f-Logo__blue_50.png" height="25" width="25"></a>
+                                            <a href="https://twitter.com/uchicagohum"><img src="https://alumnidev.uchicago.edu/assets/humanities/files/twitter_62_50.png" alt="Follow UChicago Humanities on Twitter" title="Follow UChicago Humanities on Twitter" height="25" width="31"></a>
+                                            <a href="http://www.youtube.com/user/UChicagoHumanities"><img src="https://alumnidev.uchicago.edu/assets/humanities/files/youtube_120_50.png" alt="UChicago Humanities YouTube channel" title="UChicago Humanities YouTube channel" height="25" width="40"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block block-menu-block block-4 block-menu-block-4 even block-without-title" id="block-menu-block-4">
+                                <div class="block-inner clearfix">
+                                    <div class="content clearfix">
+                                        <div class="menu-block-wrapper menu-block-4 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+                                            <ul class="menu">
+                                                <li class="first leaf active-trail active menu-mlid-639"><a href="https://humanities.uchicago.edu/students" title="" class="active-trail active">For Students</a></li>
+                                                <li class="leaf menu-mlid-640"><a href="https://humanities.uchicago.edu/faculty" title="">For Faculty and OAA</a></li>
+                                                <li class="leaf menu-mlid-830"><a href="https://humanities.uchicago.edu/staff" title="">For Staff</a></li>
+                                                <li class="leaf menu-mlid-641"><a href="https://humanities.uchicago.edu/alumnifriends" title="">For Alumni and Friends</a></li>
+                                                <li class="last leaf menu-mlid-859"><a href="https://humanities.uchicago.edu/contact" title="">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-3 region region-footer-third" id="region-footer-third">
+                        <div class="region-inner region-footer-third-inner">
+                            <div class="block block-block block-3 block-block-3 odd block-without-title" id="block-block-3">
+                                <div class="block-inner clearfix">
+                                    <div class="content clearfix">
+                                        <p><a href="https://humanities.uchicago.edu/">Division of the Humanities</a>
+                                            <br><a href="http://www.uchicago.edu/">The University of Chicago</a>
+                                            <br> 1115 East 58th Street
+                                            <br> Chicago, Illinois 60637
+                                            <br> 773.702.8512 - Main Office
+                                            <br> 773.702.1552 - Dean of Students</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://campaign.uchicago.edu/js/givingform-min.js"></script>
+    <!--[if lte IE 8]><script src="./selectivizr.js"></script><![endif]-->
+    <!--[if lte IE 9]><script src="./symbolset.js"></script><![endif]-->
+
+    <!-- INSERT GOOGLE ANALYTICS CODE HERE -->
+
+
+
+
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"></div></body></html>

@@ -1,0 +1,18 @@
+<script>
+var eid = 1128292;
+var lwcmin = 20;
+</script>
+<link type="text/css" rel="stylesheet" href="https://alumnidev.uchicago.edu/rsvp/css/rsvp-aff1.css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<h4 class="pane-title">Look Who's Coming</h4>
+<div class="look-whos-coming">
+    <div ng-app="myApp" ng-controller="lookWhosComing">
+        <ul>
+            <li ng-cloak ng-repeat="x in names">
+                {{ x }}
+            </li>
+        </ul>
+    </div>
+    <div class="light-gradient"></div>
+</div>
+<script src="https://alumnidev.uchicago.edu/rsvp/rsvp-aff1.js"></script>

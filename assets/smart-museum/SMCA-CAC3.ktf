@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class=" js svg inlinesvg placeholder" lang="en">
+  <!--<![endif]-->
+  <head>
+    <link href="/site/layout/default.css" rel="stylesheet" type="text/css">
+    <link href="/site/layout/content.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Smart Museum of Art</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <script src="https://alumnidev.uchicago.edu/assets/shared/modernizr.js"></script>
+    <link href="https://alumnidev.uchicago.edu/assets/smart-museum/site.css" rel="stylesheet" media="screen">
+    <link href="https://alumnidev.uchicago.edu/assets/smart-museum/smart-form1.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://alumnidev.uchicago.edu/assets/smart-museum/fonts.css">
+    <link src="https://alumnidev.uchicago.edu/lightbox2/css/lightbox.css" rel="stylesheet">
+    <!--[if lt IE 9]> <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> <![endif]-->
+    <body id="exhibitions">
+      <!--[if lte IE 7]><div id="ie_upgrade"><a href="https://www.microsoft.com/windows/internet-explorer/default.aspx">Internet Explorer is missing updates required to properly view this site. Click here to update&#8230;</a></div><![endif]-->
+      <header>
+        <div class="wrapper">
+          <div class="logo-wrapper">
+            <div class="smart-logo right-logo">
+              <a href="http://smartmuseum.uchicago.edu/"></a>
+            </div>
+            <div class="site-wordmark">
+              <a href="http://smartmuseum.uchicago.edu/">
+                <h1 class="smart-wordmark">Smart Museum of Art</h1>
+              </a>
+              <a href="http://www.uchicago.edu/">
+                <h2 class="uc-wordmark">The University of Chicago</h2>
+              </a>
+            </div>
+            <div class="smart-logo center-logo">
+              <a href="http://smartmuseum.uchicago.edu/"></a>
+            </div>
+          </div>
+          <div class="visitor-wrapper">
+            <div class="visitor-information">
+              <p class="free-open">Free and open to the public</p>
+              <div class="visitor-message">
+                <p>
+                  Galleries&nbsp;open&nbsp;Tuesday–Sunday</p>
+              </div>
+              &nbsp;
+            </div>
+          </div>
+          <div class="nav-toggle">
+            <button type="button" class="nav-toggle mast" data-toggle="collapse" data-target="#nav-drawer">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <a class="sr-only" href="http://smartmuseum.uchicago.edu/exhibitions/#content">Skip navigation</a>
+      <div class="cal-wrapper collapse" id="cal-drawer">
+        <div class="cal-drawer">
+          <ul>
+            <li class="upcoming-event-drawer">
+              <h5 class="event-date">
+                <span class="date">Wed. September 30</span>
+                <span class="dot">
+                  •
+                </span>
+                <span class="time">6 PM - 7 PM</span>
+              </h5>
+              <h3>
+                <a href="http://smartmuseum.uchicago.edu/events/135/smartpartner-preview-expressionist-impulses/">Preview: Expressionist Impulses</a>
+              </h3>
+            </li>
+            <li class="upcoming-event-drawer">
+              <h5 class="event-date">
+                <span class="date">Wed. September 30</span>
+                <span class="dot">
+                  •
+                </span>
+                <span class="time">7 PM - 9 PM</span>
+              </h5>
+              <h3>
+                <a href="http://smartmuseum.uchicago.edu/events/137/opening-reception-expressionist-impulses/">Opening Reception</a>
+              </h3>
+            </li>
+            <li class="upcoming-event-drawer">
+              <h5 class="event-date">
+                <span class="date">Sat. October 3</span>
+                <span class="dot">
+                  •
+                </span>
+                <span class="time">1 PM - 4 PM</span>
+              </h5>
+              <h3>
+                <a href="http://smartmuseum.uchicago.edu/events/139/family-day-rainbow-faces/">Family Day: Rainbow Faces</a>
+              </h3>
+            </li>
+            <h3 class="full-cal-link">
+              <a href="http://smartmuseum.uchicago.edu/programs-events/calendar-of-events/">View Full Calendar</a>
+            </h3>
+          </ul>
+        </div>
+      </div>
+      <nav class="main-navbar navbar navbar-default" role="navigation">
+        <ul id="nav-sub" class="main-nav">
+          <li class="first">
+            <a href="http://smartmuseum.uchicago.edu/visit/">Visit</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/exhibitions">Exhibitions</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/programs-events/">Programs &amp; Events</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/research/">Research</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/collections/">Collections</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/support/">Support</a>
+          </li>
+          <li class="last">
+            <a href="http://smartmuseum.uchicago.edu/about/">About</a>
+          </li>
+        </ul>
+        <ul class="util-nav">
+          <li class="util-toggle">
+            <button type="button" class="nav-toggle" data-toggle="collapse" data-target="#nav-drawer">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </li>
+          <li class="util-cal">
+            <a href="http://smartmuseum.uchicago.edu/programs-events/calendar-of-events/">Calendar</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="nav-drawer" class="nav-drawer collapse">
+        <ul id="nav-sub" class="nav-small">
+          <li class="first">
+            <a href="http://smartmuseum.uchicago.edu/visit/">Visit</a>
+          </li>
+          <li class="here">
+            <a href="http://smartmuseum.uchicago.edu/exhibitions">Exhibitions</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/programs-events/">Programs &amp; Events</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/research/">Research</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/collections/">Collections</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/support/">Support</a>
+          </li>
+          <li class="last">
+            <a href="http://smartmuseum.uchicago.edu/about/">About</a>
+          </li>
+        </ul>
+        <div class="visitor-information drawer">
+          <p class="free-open">Free and open to the public</p>
+          <div class="visitor-message">
+            <p>
+              Galleries closed today</p>
+          </div>
+          &nbsp;
+        </div>
+      </div>
+      <div class="sub-nav-wrap">
+        <ul id="nav-sub" class="sub-nav">
+          <li class="first">
+            <a href="http://smartmuseum.uchicago.edu/exhibitions/current-exhibitions/">Current Exhibitions</a>
+          </li>
+          <li>
+            <a href="http://smartmuseum.uchicago.edu/exhibitions/upcoming-exhibtions/">Upcoming Exhibitions</a>
+          </li>
+          <li class="last">
+            <a href="http://smartmuseum.uchicago.edu/exhibitions/past-exhibitions/">Past Exhibitions</a>
+          </li>
+        </ul>
+      </div>
+      <div class="exhibition-content">
+        <div class='exhibition-archive-wrap'>
+          <div class='exhibition-archive-content'>
+            <h1>Contemporary Art Council</h1>
+            <p>Join a select group of individuals who are committed to contemporary art at the Smart Museum and to fostering daring new work by emerging and established artists from around the globe.</p>
+            <div style="clear:both;">
+              <p>&nbsp;</p>
+            </div>
+            <h2>Join the Contemporary Art Council</h2>
+            <!-- BEGIN GIVING FORM -->
+                  <kintera:webFeature htmlBefore='<div id="contentArea1">' htmlAfter='</div>' />
+            <!-- END GIVING FORM -->
+          </div>
+          <div>
+            <style>
+
+a{
+  color: #ED3123;
+}
+            a:active, a:focus, a:hover {
+                color: #ED3123;
+            }
+
+              .sidebar {
+                padding: 0;
+              }
+              .sidebar-section {
+                float: left;
+                display: block;
+                margin-right: 2.1276595745%;
+                width: 33%;
+              }
+              .exhibition-archive-history {
+                float: left;
+                display: block;
+                margin-right: 2%;
+                width: 100%;
+                margin-right: 0;
+              }
+              @media only screen and (max-width:950px) {
+                .sidebar-section {
+                  width: 100%;
+                }
+              }
+            </style>
+            <div class="sidebar-wrap_">
+              <div class="sidebar">
+                <div class="sidebar-section">
+                  <div class="exhibition-archive-history">
+                    <h3 class="blog-util-head">Benefits</h3>
+                    <p></p>
+                    <ul>
+                      <li>Exclusive dinners with Threshold artists</li>
+                      <li>Invitation to Smart Salons and exhibition previews</li>
+                      <li>Behind-the-scenes programming</li>
+                      <li><a href="http://smartmuseum.uchicago.edu/support/smartpartners/" target="_blank">SmartPartner+</a> automatic enrollment at the $2,500 level</li>
+                      <li>Recognition in print and e-communications</li>
+                    </ul>
+                    <p></p>
+                  </div>
+                  <div class="exhibition-archive-history">
+                    <h3 class="blog-util-head">Questions</h3>
+                    <p>Bill Lynerd
+                      <br/>
+                      Director of Development and External Relations
+                      <br/>
+                      Smart Museum of Art
+                      <br/>
+                      773.834.1960
+                      <br/>
+                      <a href="mailto:blynerd@uchicago.edu">blynerd@uchicago.edu</a>
+                    </p>
+                  </div>
+                  <div class="exhibition-archive-history">
+                    <h3 class="blog-util-head">Technical Support</h3>
+                    <p>Call 773.834.8803
+                      <br/>
+                      Toll-Free 888.824.4224
+                      <br/>
+                      E-mail
+                      <a href="mailto:alumnitechsupport@uchicago.edu">alumnitechsupport@uchicago.edu</a>
+                    </p>
+                  </div>
+                  <div class="exhibition-archive-history">
+                    <h3 class="blog-util-head">Safe &amp; Secure</h3>
+                    <p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer role="contentinfo">
+        <div class="f-wrap">
+          <div class="f-row">
+            <div class="f-contact">
+              <address class="vcard">
+                <span class="museum-name">Smart Museum</span>
+                <br>
+                <span class="url fn org">The University of Chicago</span>
+                <br>
+                <span class="adr">
+                  <span class="street-address">5550 S. Greenwood Ave.</span>
+                  <br>
+                  <span class="locality">Chicago</span>,
+                  <span class="region">Illinois</span>
+                  <span class="postal-code">60637</span>
+                </span>
+              </address>
+              <p class="dir">
+                <a href="http://smartmuseum.uchicago.edu/visit/directions">Directions</a>
+              </p>
+              <p class="contact-link">
+                <a class="tel" href="tel:1-773-702-0200">773.702.0200</a>
+              </p>
+              <p class="contact-link">
+                <a class="email" href="mailto:smart-museum@uchicago.edu">smart-museum@uchicago.edu</a>
+              </p>
+            </div>
+            <div class="f-visit">
+              <ul class="open-hours">
+                <li>
+                  <span class="day">Monday</span>
+                  <span class="hours">Galleries closed</span>
+                </li>
+                <li>
+                  <span class="day">Tuesday</span>
+                  <span class="hours">10 am–5 pm</span>
+                </li>
+                <li>
+                  <span class="day">Wednesday</span>
+                  <span class="hours">10 am–5 pm</span>
+                </li>
+                <li>
+                  <span class="day">Thursday</span>
+                  <span class="hours">10 am–8 pm</span>
+                </li>
+                <li>
+                  <span class="day">Friday</span>
+                  <span class="hours">10 am–5 pm</span>
+                </li>
+                <li>
+                  <span class="day">Saturday</span>
+                  <span class="hours">10 am–5 pm</span>
+                </li>
+                <li>
+                  <span class="day">Sunday</span>
+                  <span class="hours">10 am–5 pm</span>
+                </li>
+              </ul>
+              <h4>Free and Open to the Public</h4>
+            </div>
+            <div class="f-support">
+              <h3>Join Us</h3>
+              <p>
+                Be part of the Smart. Your donation supports the visual arts and helps keep our programs and galleries free for everyone.</p>
+              <h4 class="support-link">
+                <a href="">Become a Member</a>
+              </h4>
+            </div>
+            <div class="f-links">
+              <ul class="foot-nav">
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Tours</a>
+                </li>
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Rent the Smart</a>
+                </li>
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Calendar</a>
+                </li>
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Press</a>
+                </li>
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Image Services</a>
+                </li>
+                <li>
+                  <a href="http://smartmuseum.uchicago.edu/exhibitions/#">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="f-row">
+          <h3 class="arts-wordmark f-wordmark">
+            <a href="http://arts.uchicago.edu/">UChicago Arts</a>
+          </h3>
+          <div class="f-soc">
+            <ul class="social-media">
+              <li>
+                <a href="http://www.twitter.com/SmartUChicago">Twitter</a>
+              </li>
+              <li>
+                <a href="http://www.facebook.com/smartmuseum">Facebook</a>
+              </li>
+              <li>
+                <a href="https://instagram.com/smartmuseum">Instagram</a>
+              </li>
+              <li>
+                <a href="https://vimeo.com/smartmuseum">Vimeo</a>
+              </li>
+              <li>
+                <a href="http://smartmuseum.uchicago.edu/contact/newsletter/">Mail</a>
+              </li>
+            </ul>
+          </div>
+          <div class="f-mail">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="https://uchicago.us2.list-manage.com/subscribe/post?u=aba2086a45b4ee8391b89447b&id=a22e468517" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                <div id="mc_embed_signup_scroll">
+                  <div class="mc-field-group">
+                    <input type="email" value="" placeholder="Sign Up for E-News" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                  <div id="mce-responses">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;">
+                    <input type="text" name="b_aba2086a45b4ee8391b89447b_a22e468517" tabindex="-1" value="">
+                  </div>
+                  <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
+        </div>
+      </footer>
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/jquery.min.js"></script>
+      <script>
+        window.jQuery || document.write('<script src="https://alumnidev.uchicago.edu/assets/smart-museum/jquery-1.9.1.min.js"><\/script>')
+      </script>
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/bootstrap.min.js"></script>
+      <!--[if lte IE 8]><script src="https://alumnidev.uchicago.edu/assets/smart-museum/selectivizr.js"></script><![endif]-->
+      <!--[if lte IE 9]><script src="https://alumnidev.uchicago.edu/assets/smart-museum/symbolset.js"></script><![endif]-->
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/jquery.lifestream.min.js"></script>
+      <!-- Lazy Load -->
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/jquery_lazy_load_min.js"></script>
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/script.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="https://alumnidev.uchicago.edu/assets/smart-museum/jquery_lazy_load_min.js"></script>
+      <script src="https://alumnidev.uchicago.edu/assets/shared/givingform1.js"></script>
+      <script>
+        window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"><\/script>')
+      </script>
+      <link rel="stylesheet" type="text/css" href="https://alumnidev.uchicago.edu/assets/pledge-recurring/tooltipster.css"/>
+      <script src="https://alumnidev.uchicago.edu/assets/pledge-recurring/jquery.tooltipster.js"></script>
+      <script>
+        $("img.lazy").lazyload({effect: "fadeIn"});
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html id="Html1" xmlns="http://www.w3.org/1999/xhtml">
+<!-- Template: LAB -->
+<!-- sphere hack: remove advocacy css <head>--><head id="Head1"><meta http-equiv="X-UA-Compatible" content="IE=9" /><title>
+	University of Chicago Laboratory Schools: Support Lab &#187; Recognition
+
+</title><link href="https://www.kintera.org/atf/cf/%7Bf596283c-2cf8-497a-9322-9d202bc39bee%7D/print.css" rel="stylesheet" type="text/css" media="print" /><link href="https://www.kintera.org/atf/cf/%7Bf596283c-2cf8-497a-9322-9d202bc39bee%7D/base.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="https://www.kintera.org/atf/cf/{f596283c-2cf8-497a-9322-9d202bc39bee}/JQUERY-1.4.3.MIN.JS"></script>
+
+<meta name="keywords" content="The University of Chicago Laboratory Schools, Lab, Chicago, IL, independent school, private school, K-12, Nursery, college preparatory, Hyde Park, Illinois" />
+<meta name="description" content="Learning by doing has guided the efforts of the University of Chicago Laboratory Schools since Professor John Dewey first began testing his educational theories in 1896. Beginning with a handful of children and growing to over 1770 students Lab has earned a well-deserved international reputation for excellence." />
+<style type="text/css">
+	.AboveLeftColumn1_SQLSiteMapMenu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.AboveLeftColumn1_SQLSiteMapMenu1_1 { text-decoration:none; }
+	.AboveLeftColumn1_SQLSiteMapMenu1_2 {  }
+	.LeftColumnZone_0 { border-color:#CCCCCC;border-width:1px;border-style:Solid; }
+	.LeftColumnZone_1 {  }
+	.LeftColumnZone_2 {  }
+	.PrimaryZone_0 { border-color:#CCCCCC;border-width:1px;border-style:Solid; }
+	.PrimaryZone_1 {  }
+	.PrimaryZone_2 {  }
+	.SecondaryZone_0 { border-color:#CCCCCC;border-width:1px;border-style:Solid; }
+	.SecondaryZone_1 {  }
+	.SecondaryZone_2 {  }
+	.Footer1_UtilityMenu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+.Footer1_UtilityMenu1_1 { text-decoration:none; }
+.Footer1_UtilityMenu1_2 {  }
+
+</style>
+
+<kintera:FileExists id=2><link href="<kintera:file id=2 />" rel="stylesheet" type="text/css"></kintera:FileExists><!-- template styles -->
+        <kintera:FileExists id=3><link href="<kintera:file id=3 />" rel="stylesheet" type="text/css"></kintera:FileExists><!-- content styles -->
+        <kintera:FileExists id=4><link href="<kintera:file id=4 />" rel="stylesheet" type="text/css"></kintera:FileExists><!-- print styles -->
+        <kintera:FileExists id=5><link href="<kintera:file id=5 />" rel="stylesheet" type="text/css"></kintera:FileExists><!-- custom styles -->
+	
+        <kintera:FileExists id=6><script type="text/javascript" src="<kintera:file id=6 />"></script></kintera:FileExists><!-- JS Library 1 -->
+        <kintera:FileExists id=7><script type="text/javascript" src="<kintera:file id=7 />"></script></kintera:FileExists><!-- JS Library 2 -->	
+		
+		<script language="JavaScript" src="https://www.kintera.org/site/layout/util.js"></script>
+
+
+<style>
+
+#header {
+  padding: 115px 0 0 0;
+  z-index: 100;
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  background: url(https://www.ucls.uchicago.edu/images/common/bg-header.jpg) no-repeat;
+}
+
+
+#nav-main #nav-li-quicklinks:hover, #nav-main #nav-li-quicklinks.hover, #nav-main #nav-link-quicklinks.active, #nav-main #nav-link-quicklinks:hover {
+  background: url(https://www.ucls.uchicago.edu/images/navigation/main-quicklinks.gif) 0 0 no-repeat;
+}
+
+#nav-main #nav-link-quicklinks {
+  width: 195px;
+  height: 26px;
+  background: url(https://www.ucls.uchicago.edu/images/navigation/main-quicklinks.gif) 0 0 no-repeat;
+}
+</style>
+
+</head>
+
+<body id="support-lab" class="layout-n1-p1-s1">
+<!--
+<form name="form1" method="post" action="http://www.ucls.uchicago.edu/support-lab/recognition/index.aspx" id="form1">
+<div>
+<input type="hidden" name="__WPPS" id="__WPPS" value="s" />
+<input type="hidden" name="PageScriptManager_HiddenField" id="PageScriptManager_HiddenField" value="" />
+
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg4NjU1OTU1Nw8PZBUBJi9faW5mcmFzdHJ1Y3R1cmUvdGhpY2tib3gvdGhpY2tib3guY3NzFgICAQ9kFgQCAQ9kFgICAQ9kFgJmD2QWAmYQPCsABQEAD2QWAh4UVXNlU0VPRnJpZW5kbHlUaXRsZXMFBHRydWVkZAIDDxYCHgVjbGFzcwUPbGF5b3V0LW4xLXAxLXMxFgICARBkZBYEAgcPZBYCZg9kFgoCAQ9kFgQFIFNlY29uZGFyeVpvbmVfQ29udGVudEVkaXRvclBhcnQxDw9kaGQFEkNvbnRlbnRFZGl0b3JQYXJ0MQ8PZGhkAgMPDxYCHgdWaXNpYmxlaGQWAmYPZBYMAgEPZBYCAgEPDxYCHgtQb3N0QmFja1VybAUxL3N1cHBvcnQtbGFiL3JlY29nbml0aW9uL2luZGV4LmFzcHg/dmlldz1yZXZpc2lvbmRkAgMPFgIfAmgWAgIBDw8WAh8DBTEvc3VwcG9ydC1sYWIvcmVjb2duaXRpb24vaW5kZXguYXNweD92aWV3PXJldmlzaW9uZGQCBQ8WAh8CaGQCBw8WAh8CaBYCAgEPDxYCHg1PbkNsaWVudENsaWNrBUxyZXR1cm4gY29uZmlybSgiQXJlIHlvdSBzdXJlIHlvdSB3YW50IHRvIGRpc2NhcmQgYWxsIHVucHVibGlzaGVkIGNoYW5nZXM/Iik7ZGQCCQ8WAh8CaGQCCw8WAh8CaBYCAgEPFgQeBGhyZWYFgAEvX2luZnJhc3RydWN0dXJlL0FkZFBhZ2VEaWFsb2cuYXNweD9QYXJlbnRJZD1iNTVlMjg5Ny04ZTVmLTQyM2ItODQyOS05YzZiMDBlZDg5ZWUmVEJfaWZyYW1lPXRydWUmaGVpZ2h0PTQ4NSZ3aWR0aD02MDAmbW9kYWw9dHJ1ZR8CaGQCBw9kFgJmDxQrABIUKwAJDxYCHgdQYWRkaW5nAgZkZGQWBB4IQ3NzQ2xhc3MFBFBhcnQeBF8hU0ICAhYKHwcFClBhcnRDaHJvbWUeC0JvcmRlcldpZHRoGwAAAAAAAPA/AQAAAB4LQm9yZGVyU3R5bGULKiVTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkJvcmRlclN0eWxlBB4LQm9yZGVyQ29sb3IJzMzM/x8IAnIWBB8HBQxQYXJ0VGl0bGVCYXIfCAICFgQfBwURV2ViUGFydFpvbmVIZWFkZXIfCAICZGQWBB8HBRJTZWxlY3RlZFBhcnRDaHJvbWUfCAICFgYeCEltYWdlVXJsBTd+L19pbmZyYXN0cnVjdHVyZS9pbWFnZXMvaWNvbnMvMTZ4MTYvaWNvbl93cHJlY3ljbGUuZ2lmHgRUZXh0BRNNb3ZlIHRvIFJlY3ljbGUgQmluHgtEZXNjcmlwdGlvbgVmTW92ZXMgd2ViIHBhcnQgdG8gdGhlIHBhZ2UncyBSZWN5Y2xlIEJpbi4gVGhlIHdlYiBwYXJ0IGNhbiBiZSBsYXRlciByZXN0b3JlZCBieSBhZGRpbmcgaXQgdG8gdGhlIHBhZ2UuFgIfDAU3fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3Bjb25uZWN0LmdpZhYCHwwFNn4vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9pY29uX3dwZGVsZXRlLmdpZhYCHwwFNH4vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9pY29uX3dwZWRpdC5naWYWAh8MBS1+L19pbmZyYXN0cnVjdHVyZS9pbWFnZXMvaWNvbnMvMTZ4MTYvaGVscC5wbmdkZBYEHwwFNn4vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9pY29uX3dwZXhwb3J0LmdpZh8CaGQWBB8HBQ1QYXJ0TWVudUxhYmVsHwgCAhYEHwcFElBhcnRNZW51TGFiZWxIb3Zlch8IAgJkFg4fCRsAAAAAAADwPwEAAAAfCwn19fX/HwoLKwQEHgpGb250X05hbWVzFQQHVmVyZGFuYQZUYWhvbWEFQXJpYWwKU2Fucy1zZXJpZh4JRm9udF9TaXplKCoiU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5Gb250VW5pdAUwLjZlbR4JRm9yZUNvbG9yCnsfCAL0DBYMHglCYWNrQ29sb3IJi+D//x8JGwAAAAAAAPA/AQAAAB8LCRt+0P8fCgsrBAQfEQp7HwgCfGQWBB8QKCsFBDEwcHgfCAKACGQCDQ9kFgJmDxQrABIUKwAJDxYCHwYCBmRkZBYEHwcFBFBhcnQfCAICFgofBwUKUGFydENocm9tZR8JGwAAAAAAAPA/AQAAAB8KCysEBB8LCczMzP8fCAJyFgQfBwUMUGFydFRpdGxlQmFyHwgCAhYEHwcFEVdlYlBhcnRab25lSGVhZGVyHwgCAmRkFgQfBwUSU2VsZWN0ZWRQYXJ0Q2hyb21lHwgCAhYGHwwFN34vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9pY29uX3dwcmVjeWNsZS5naWYfDQUTTW92ZSB0byBSZWN5Y2xlIEJpbh8OBWZNb3ZlcyB3ZWIgcGFydCB0byB0aGUgcGFnZSdzIFJlY3ljbGUgQmluLiBUaGUgd2ViIHBhcnQgY2FuIGJlIGxhdGVyIHJlc3RvcmVkIGJ5IGFkZGluZyBpdCB0byB0aGUgcGFnZS4WAh8MBTd+L19pbmZyYXN0cnVjdHVyZS9pbWFnZXMvaWNvbnMvMTZ4MTYvaWNvbl93cGNvbm5lY3QuZ2lmFgIfDAU2fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BkZWxldGUuZ2lmFgIfDAU0fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BlZGl0LmdpZhYCHwwFLX4vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9oZWxwLnBuZ2RkFgQfDAU2fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BleHBvcnQuZ2lmHwJoZBYEHwcFDVBhcnRNZW51TGFiZWwfCAICFgQfBwUSUGFydE1lbnVMYWJlbEhvdmVyHwgCAmQWDh8JGwAAAAAAAPA/AQAAAB8LCfX19f8fCgsrBAQfDxUEB1ZlcmRhbmEGVGFob21hBUFyaWFsClNhbnMtc2VyaWYfECgrBQUwLjZlbR8RCnsfCAL0DBYMHxIJi+D//x8JGwAAAAAAAPA/AQAAAB8LCRt+0P8fCgsrBAQfEQp7HwgCfGQWBB8QKCsFBDEwcHgfCAKACGQCEw9kFgJmDxQrABIUKwAJDxYCHwYCBmRkZBYEHwcFBFBhcnQfCAICFgofBwUKUGFydENocm9tZR8JGwAAAAAAAPA/AQAAAB8KCysEBB8LCczMzP8fCAJyFgQfBwUMUGFydFRpdGxlQmFyHwgCAhYEHwcFEVdlYlBhcnRab25lSGVhZGVyHwgCAmRkFgQfBwUSU2VsZWN0ZWRQYXJ0Q2hyb21lHwgCAhYGHwwFN34vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9pY29uX3dwcmVjeWNsZS5naWYfDQUTTW92ZSB0byBSZWN5Y2xlIEJpbh8OBWZNb3ZlcyB3ZWIgcGFydCB0byB0aGUgcGFnZSdzIFJlY3ljbGUgQmluLiBUaGUgd2ViIHBhcnQgY2FuIGJlIGxhdGVyIHJlc3RvcmVkIGJ5IGFkZGluZyBpdCB0byB0aGUgcGFnZS4WAh8MBTd+L19pbmZyYXN0cnVjdHVyZS9pbWFnZXMvaWNvbnMvMTZ4MTYvaWNvbl93cGNvbm5lY3QuZ2lmFgIfDAU2fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BkZWxldGUuZ2lmFgIfDAU0fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BlZGl0LmdpZhYCHwwFLX4vX2luZnJhc3RydWN0dXJlL2ltYWdlcy9pY29ucy8xNngxNi9oZWxwLnBuZ2RkFgQfDAU2fi9faW5mcmFzdHJ1Y3R1cmUvaW1hZ2VzL2ljb25zLzE2eDE2L2ljb25fd3BleHBvcnQuZ2lmHwJoZBYEHwcFDVBhcnRNZW51TGFiZWwfCAICFgQfBwUSUGFydE1lbnVMYWJlbEhvdmVyHwgCAmQWDh8JGwAAAAAAAPA/AQAAAB8LCfX19f8fCgsrBAQfDxUEB1ZlcmRhbmEGVGFob21hBUFyaWFsClNhbnMtc2VyaWYfECgrBQUwLjZlbR8RCnsfCAL0DBYMHxIJi+D//x8JGwAAAAAAAPA/AQAAAB8LCRt+0P8fCgsrBAQfEQp7HwgCfGQWBB8QKCsFBDEwcHgfCAKACGQCDQ9kFgJmD2QWAmYPDxYCHwJoZGRkOkeXs6kxgCgG+P3bZyU23WNCCOFXFa7fh2GFE9//GB0=" />
+</div>
+
+
+
+    <div id="PageUpdateProgress" style="display:none;">
+	
+            <div id="PageUpdateProgressMessage">
+                Page loading...
+            </div>
+        
+</div>-->
+	<div id="container">
+		<div id="inner-container">
+
+<div id="header">
+				
+<meta http-equiv="imagetoolbar" content="no">
+<div id="masthead">
+	<h1><a href="http://www.ucls.uchicago.edu/index.aspx"><img src="/images/common/logo.gif" alt="University of Chicago Laboratory Schools"></a></h1>
+</div>
+
+
+<div class="nav" id="nav-const">
+		<ul>
+			<li class="first-child more" id="nav-li-labnet">
+				<a id="nav-link-labnet" href="http://www.ucls.uchicago.edu/labnet/index.aspx" target="_self">LabNet<span class="icon"></span></a>
+				<ul>
+					<li class="first-child more">
+						<a href="http://www.ucls.uchicago.edu/labnet/cafe-lab/index.aspx">Café Lab<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/registrar/index.aspx" target="_self">Registrar</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/labnet/school-nurse/index.aspx">School Nurse</a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/labnet/tech-support-center/index.aspx">Tech Support Center<span class="icon"></span></a>
+					</li>
+					<li class="last-child">
+						<a href="http://www.ucls.uchicago.edu/labnet/reporting-an-absence/index.aspx">Reporting an Absence<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-students">
+				<a id="nav-link-students" href="http://www.ucls.uchicago.edu/students/index.aspx">Students<span class="icon"></span></a>
+				<ul>
+					<li class="first-child secure lock">
+						<a href="http://www.ucls.uchicago.edu/students-center/index.aspx" target="_self">Students' LabNet<span class="icon"></span></a>
+					</li>
+					<li class="int" id="nav-li-athletics">
+						<a id="nav-link-athletics" href="http://www.ucls.uchicago.edu/athletics/index.aspx" target="_self">Athletics<span class="icon"></span></a>
+					</li>
+					<li class="last-child ext" id="nav-li-powerschool">
+						<a id="nav-link-powerschool" href="http://sis.ucls.uchicago.edu/" target="_blank">PowerSchool<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-parents">
+				<a id="nav-link-parents" href="http://www.ucls.uchicago.edu/parents/index.aspx">Parents<span class="icon"></span></a>
+				<ul>
+					<li class="first-child">
+						<a href="http://www.ucls.uchicago.edu/labnet/tech-support-center/KnowledgeBase/parents-faq/index.aspx" target="_self">Parent Tech FAQ<span class="icon"></span></a>
+					</li>
+					<li class="secure lock">
+						<a href="http://www.ucls.uchicago.edu/parents-center/index.aspx" target="_self">Parents' LabNet<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/parents/pa-main/index.aspx">Parents' Association<span class="icon"></span></a>
+					</li>
+					<li class="int">
+						<a href="http://www.ucls.uchicago.edu/labnet/reporting-an-absence/index.aspx" target="_self">Attendance &amp; Absences<span class="icon"></span></a>
+					</li>
+					<li class="int lock">
+						<a href="http://www.ucls.uchicago.edu/about-ucls/maps-transportation-parking/bus-service/index.aspx" target="_self">Bus Service<span class="icon"></span></a>
+					</li>
+					<li class="int lock">
+						<a href="http://www.ucls.uchicago.edu/labnet/cafe-lab/index.aspx" target="_self">Café Lab<span class="icon"></span></a>
+					</li>
+					<li class="secure">
+						<a href="http://www.ucls.uchicago.edu/parents-center/carpool.aspx" target="_self">Carpool Service<span class="icon"></span></a>
+					</li>
+					<li class="ext lock" id="nav-li-powerschool">
+						<a id="nav-link-powerschool" href="http://sis.ucls.uchicago.edu/public/" target="_blank">PowerSchool<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/registrar/index.aspx" target="_self">Registrar</a>
+					</li>
+					<li class="int lock">
+						<a href="http://www.ucls.uchicago.edu/labnet/school-nurse/index.aspx" target="_self">School Nurse<span class="icon"></span></a>
+					</li>
+					<li class="ext lock">
+						<a href="http://www.directgear.net/ucls/default.aspx" target="_blank">Spirit Wear<span class="icon"></span></a>
+					</li>
+					<li class="last-child int">
+						<a href="http://www.ucls.uchicago.edu/admission/tuition/index.aspx" target="_self">Tuition<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-faculty__staff">
+				<a id="nav-link-faculty__staff" href="http://www.ucls.uchicago.edu/faculty-staff/index.aspx">Faculty &amp; Staff<span class="icon"></span></a>
+				<ul>
+					<li class="first-child secure lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-center/index.aspx" target="_self">Faculty &amp; Staff LabNet<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/labnet/room-use-form/index.aspx" target="_self">Common Space Reservation</a>
+					</li>
+					<li class="ext lock" id="nav-li-atomic_learning">
+						<a id="nav-link-atomic_learning" href="https://www.atomiclearning.com/login/ucls" target="_blank">Atomic Learning<span class="icon"></span></a>
+					</li>
+					<li class="lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/faculty-substitution-service/index.aspx">Faculty Substitution Service<span class="icon"></span></a>
+					</li>
+					<li class="ext lock" id="nav-li-powerschool">
+						<a id="nav-link-powerschool" href="http://sis.ucls.uchicago.edu/teachers/pw.html" target="_blank">PowerSchool (for teachers)<span class="icon"></span></a>
+					</li>
+					<li class="lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/icart-reservations/index.aspx">iCart Reservations<span class="icon"></span></a>
+					</li>
+					<li class="int lock">
+						<a href="http://www.ucls.uchicago.edu/labnet/tech-support-center/index.aspx" target="_self">About Information Systems<span class="icon"></span></a>
+					</li>
+					<li class="ext lock">
+						<a href="http://helpdesk.ucls.uchicago.edu:8081/helpdesk/WebObjects/Helpdesk" target="_blank">IS Help Desk<span class="icon"></span></a>
+					</li>
+					<li class="ext lock">
+						<a href="http://webmail.ucls.uchicago.edu" target="_blank">Webmail<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/directory/directoryfull_faculty.aspx" target="_self">Faculty &amp; Staff Directory</a>
+					</li>
+					<li>
+						<a href="https://docs.google.com/a/ucls.uchicago.edu/forms/d/1IfPI4tos2CQ2gJuf3lrONk8G7tfUYkVnMVuoAg6TSzI/viewform" target="_blank">Report a Health of Safety Concern</a>
+					</li>
+					<li>
+						<a href="http://www.directgear.net/ucls/" target="_self">Spirit Wear</a>
+					</li>
+					<li class="lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/new-teacher-resources/index.aspx">New Teacher Resources<span class="icon"></span></a>
+					</li>
+					<li class="lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/professional-development/index.aspx">Professional Development<span class="icon"></span></a>
+					</li>
+					<li class="more lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/professional-development-board/index.aspx">Professional Growth Bulletin Board<span class="icon"></span></a>
+					</li>
+					<li class="last-child lock">
+						<a href="http://www.ucls.uchicago.edu/faculty-staff/evaluation-forms/index.aspx">Evaluation Forms<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="last-child open more" id="nav-li-alumni">
+				<a id="nav-link-alumni" href="http://www.ucls.uchicago.edu/alumni/index.aspx" class="active">Alumni<span class="icon"></span></a>
+				<ul>
+					<li class="first-child">
+						<a href="http://www.ucls.uchicago.edu/alumni/alumni-weekend/alumni-weekend-2014/index.aspx" target="_self">Alumni Weekend<span class="icon"></span></a>
+					</li>
+					<li id="nav-li-update_lab_notes">
+						<a id="nav-link-update_lab_notes" href="mailto:webmaster@ucls.uchicago.edu" target="_self">Submit a Class Note</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/alumni/volunteer/index.aspx">Volunteer</a>
+					</li>
+					<li class="active int" id="nav-li-giving_to_lab_schools">
+						<a id="nav-link-giving_to_lab_schools" href="http://www.ucls.uchicago.edu/support-lab/index.aspx" class="active" target="_self">Give to Lab<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/alumni/alumni-awards/index.aspx">Alumni Awards</a>
+					</li>
+					<li id="nav-li-class_page">
+						<a id="nav-link-class_page" href="http://www.ucls.uchicago.edu/alumni-center/classpage.aspx" target="_self">Class Pages</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/registrar/index.aspx" target="_self">Order Transcripts/Records</a>
+					</li>
+					<li class="last-child" id="nav-li-directory">
+						<a id="nav-link-directory" href="http://www.ucls.uchicago.edu/alumni-center/directory.aspx" target="_self">Directory<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+</div>      
+<div id="nav">
+    <div class="hidden">
+        <p><a href="#nav-sub">Skip to Section Subnavigation</a>&nbsp;<a href="#primary-content">Skip to Page Content</a></p>
+    </div>
+        
+    
+<div class="nav" id="nav-main">
+		<ul>
+			<li class="first-child more" id="nav-li-about_lab">
+				<a id="nav-link-about_lab" href="http://www.ucls.uchicago.edu/about-lab/index.aspx">About Lab<span class="icon"></span></a>
+				<ul>
+					<li class="first-child">
+						<a href="http://www.ucls.uchicago.edu/about-lab/directors-office/index.aspx">Director's Office<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/board-of-directors/index.aspx">Board of Directors</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/mission-statement/index.aspx">Mission Statement</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/diversity-statement/index.aspx">Diversity Statement</a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/about-lab/esh-info/index.aspx">ESH Information<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/about-lab/maps-transportation-parking/index.aspx">Maps, Transportation &amp; Parking<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/about-lab/current-publications/index.aspx">Publications and History<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/employment/index.aspx">Employment</a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/about-lab/contact-us/index.aspx">Contact Us<span class="icon"></span></a>
+					</li>
+					<li class="last-child">
+						<a href="http://www.ucls.uchicago.edu/about-lab/weather/index.aspx">Weather<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-admission">
+				<a id="nav-link-admission" href="http://www.ucls.uchicago.edu/admission/index.aspx">Admissions<span class="icon"></span></a>
+				<ul>
+					<li class="first-child more">
+						<a href="http://www.ucls.uchicago.edu/admission/index.aspx" target="_self">Welcome<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/admission/financial-aid/index.aspx">Financial Aid</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/admission/tuition/index.aspx">Tuition</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/admission/faqs/index.aspx">FAQs</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/admission/international-students/index.aspx">International Students</a>
+					</li>
+					<li class="last-child">
+						<a href="http://www.ucls.uchicago.edu/admission/directions-parking/index.aspx">Directions &amp; Parking<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-schools">
+				<a id="nav-link-schools" href="http://www.ucls.uchicago.edu/schools/index.aspx">Schools<span class="icon"></span></a>
+				<ul>
+					<li class="first-child more">
+						<a href="http://www.ucls.uchicago.edu/schools/nursery-school-kindergarten/index.aspx">Nursery School &amp; Kindergarten<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/schools/primary-school/index.aspx">Primary School<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/schools/lower-school/index.aspx">Lower School<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/schools/middle-school/index.aspx">Middle School<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/schools/high-school/index.aspx">High School<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/schools/libraries/index.aspx">Libraries<span class="icon"></span></a>
+					</li>
+					<li class="last-child more">
+						<a href="http://www.ucls.uchicago.edu/schools/service-learning/index.aspx">Service Learning<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-athletics">
+				<a id="nav-link-athletics" href="http://www.ucls.uchicago.edu/athletics/index.aspx" target="_self">Athletics<span class="icon"></span></a>
+				<ul>
+					<li class="first-child" id="nav-li-athletics_today">
+						<a id="nav-link-athletics_today" href="http://www.ucls.uchicago.edu/athletics/index.aspx" target="_self">Athletics Today<span class="icon"></span></a>
+					</li>
+					<li class="more">
+						<a href="http://www.ucls.uchicago.edu/athletics/athletics-directors-page/index.aspx">Athletics Director's Page<span class="icon"></span></a>
+					</li>
+					<li id="nav-li-scoreboards">
+						<a id="nav-link-scoreboards" href="http://www.ucls.uchicago.edu/athletics/scoreboards.aspx" target="_self">Scoreboards</a>
+					</li>
+					<li id="nav-li-teams__schedules">
+						<a id="nav-link-teams__schedules" href="http://www.ucls.uchicago.edu/athletics/teamlist.aspx" target="_self">Teams &amp; Schedules</a>
+					</li>
+					<li class="ext">
+						<a href="http://www.teamunify.com/Home.jsp?team=ilmdwy" target="_blank">Midway Aquatics Club<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/athletics/maroon-mall/index.aspx">Maroon Mall</a>
+					</li>
+					<li id="nav-li-coaches">
+						<a id="nav-link-coaches" href="http://www.ucls.uchicago.edu/athletics/coaches.aspx" target="_self">Coaches</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/athletics/forms-downloads/index.aspx">Forms &amp; Downloads</a>
+					</li>
+					<li class="last-child ext">
+						<a href="http://ihsa.org" target="_blank">IHSA<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="more" id="nav-li-activities">
+				<a id="nav-link-activities" href="http://www.ucls.uchicago.edu/activities/index.aspx">Activities<span class="icon"></span></a>
+				<ul>
+					<li class="first-child more">
+						<a href="http://www.ucls.uchicago.edu/activities/extendedday/index.aspx">Extended Day<span class="icon"></span></a>
+					</li>
+					<li class="int">
+						<a href="http://www.ucls.uchicago.edu/summer/index.aspx" target="_self">Summer Lab<span class="icon"></span></a>
+					</li>
+					<li class="last-child">
+						<a href="http://www.ucls.uchicago.edu/activities/swim-programs/index.aspx">Swim Programs<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="active open more" id="nav-li-support_lab">
+				<a id="nav-link-support_lab" href="http://www.ucls.uchicago.edu/support-lab/index.aspx" class="">Why give<span class="icon"></span></a>
+				<ul>
+					<li class="first-child">
+						<a href="http://www.kintera.org/site/c.8gKMJYMvF9LWG/b.7874003/k.BFBB/Donation_Form__Lab/apps/ka/sd/donorcustom.asp?BeneficiaryID=377502" target="_self">Give online now<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/support-lab/ways-to-give/index.aspx">Ways to give</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/support-lab/connections/index.aspx">Connections, Lab's annual gala</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/support-lab/recognition/index.aspx">Recognition societies</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/support-lab/senior-class-gift/index.aspx">Senior Parent Gift</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/support-lab/planned-giving/index.aspx">Planned giving</a>
+					</li>
+					<li class="last-child">
+						<a href="http://www.ucls.uchicago.edu/support-lab/meet-the-team/index.aspx">Contact us<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="last-child more" id="nav-li-quicklinks">
+				<a id="nav-link-quicklinks">Quicklinks<span class="icon"></span></a>
+				<ul>
+					<li class="first-child">
+						<a href="http://www.ucls.uchicago.edu/about-lab/contact-us/index.aspx?" target="_self">Faculty &amp; Staff Directory<span class="icon"></span></a>
+					</li>
+					<li class="int" id="nav-li-allschools_calendar">
+						<a id="nav-link-allschools_calendar" href="http://www.ucls.uchicago.edu/calendars/index.aspx?" target="_self">All-Schools Calendar<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/lab-e-news.aspx" target="_self">Current E-News</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/about-lab/esh-info/index.aspx" target="_self">Earl Shapiro Hall Info</a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/data/files/gallery/ContentGallery/AllSchoolsDailyScheduleFinal1.pdf" target="_self">School Hours</a>
+					</li>
+					<li class="int" id="nav-li-publications__bulletins">
+						<a id="nav-link-publications__bulletins" href="http://www.ucls.uchicago.edu/about-lab/current-publications/index.aspx?" target="_self">Publications &amp; Bulletins<span class="icon"></span></a>
+					</li>
+					<li class="ext">
+						<a href="http://sis.ucls.uchicago.edu/teachers/pw.html" target="_blank">Teacher PowerSchool<span class="icon"></span></a>
+					</li>
+					<li class="ext">
+						<a href="http://sis.ucls.uchicago.edu/public/" target="_blank">Parent PowerSchool<span class="icon"></span></a>
+					</li>
+					<li class="int" id="nav-li-libraries">
+						<a id="nav-link-libraries" href="http://www.ucls.uchicago.edu/schools/libraries/index.aspx" target="_self">Libraries<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://ucls.uchicago.edu/registrar" target="_self">Tuition and Student Records</a>
+					</li>
+					<li>
+						<a href="http://ucls.school-pass.net/" target="_self">School Pass</a>
+					</li>
+					<li class="int" id="nav-li-summer_lab">
+						<a id="nav-link-summer_lab" href="http://www.ucls.uchicago.edu/summer/index.aspx" target="_self">Summer Lab<span class="icon"></span></a>
+					</li>
+					<li>
+						<a href="http://www.ucls.uchicago.edu/quicklinks/purchase-books-online/index.aspx">Online Bookstore</a>
+					</li>
+					<li class="int">
+						<a href="http://www.ucls.uchicago.edu/labnet/tech-support-center/index.aspx" target="_self">Tech Support Center<span class="icon"></span></a>
+					</li>
+					<li class="last-child">
+						<a href="http://labcam.uchicago.edu/view/viewer_index.shtml?id=1372">Arts Hall Construction Cam<span class="icon"></span></a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+</div>
+	
+
+
+
+<div class="search" style="display:none;">	
+	<input type="hidden" id="cx" value="014383028874368578447:dceigoksw78">
+	<div>
+	    <input type="text" id="q" class="input" value="Search Lab">
+	    <input type="image" id="searchButton" title="Search" src="/images/navigation/search-button.gif" alt="Search" class="submit" onclick="return false;">
+	</div>
+    <input type="hidden" id="cof" value="FORID:11">
+</div>   
+</div>
+<script type="text/javascript">
+	var query = document.URL.substr(document.URL.indexOf("?"));
+	if (!query.match("view=revision")){
+	 document.write("<scr" + "ipt src=\"\/js\/sifr.js\" type=\"text\/javascript\"><\/scr" + "ipt>");
+	 document.write("<scr" + "ipt src=\"\/js\/sifr-config.js\" type=\"text\/javascript\"><\/scr" + "ipt>");
+	}
+</script><script src="/js/sifr.js" type="text/javascript"></script><script src="/js/sifr-config.js" type="text/javascript"></script>
+<!--[if IE 8]><link href="http://www.ucls.uchicago.edu/css/filter/ie8.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+<div class="ivy" id="ivy-left"></div>
+<div class="ivy" id="ivy-right"></div>
+<noscript>
+	&lt;div id="noscriptmessage"&gt;
+		&lt;div&gt;
+			&lt;p&gt;Our website uses JavaScript to achieve certain sophisticated features and visual cues and styles. &lt;br /&gt;
+			Please ensure that JavaScript is enabled when visiting our website for best results.  Help:
+			&lt;a target="_blank" href="http://support.microsoft.com/gp/howtoscript"&gt;Windows&lt;/a&gt; |
+			&lt;a target="_blank" href="http://docs.info.apple.com/article.html?path=Safari/2.0/en/ibr27.html"&gt;Mac&lt;/a&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</noscript>
+
+
+<div id="breadcrumbs">
+	<ul>
+		<li class="first-child"><a href="http://www.ucls.uchicago.edu/">Home</a></li><li class="last-child">Why give</li>
+	</ul>
+</div>
+			</div>
+			<div id="PageUpdatePanel">
+	
+                    
+                    
+			        <div id="content" class="clearfix">
+				        <div class="hidden">
+					        <p> <a href="#primary-content">Skip to Page Content</a> </p>
+				        </div>
+
+				        <div id="tertiary-content" class="tc">
+					        
+
+<div id="nav-sub" class="nav">
+	<!--<h2 class="section"><span>Why give</span></h2>-->
+
+	
+	
+	
+
+	
+	
+		<ul>
+			<li class="first-child">
+				<a href="http://www.kintera.org/site/c.8gKMJYMvF9LWG/b.7874003/k.BFBB/Donation_Form__Lab/apps/ka/sd/donorcustom.asp?BeneficiaryID=377502" target="_self">Give online now<span class="icon"></span></a>
+			</li>
+			<li>
+				<a href="http://www.ucls.uchicago.edu/support-lab/ways-to-give/index.aspx">Ways to give</a>
+			</li>
+			<li>
+				<a href="http://www.ucls.uchicago.edu/support-lab/connections/index.aspx">Connections, Lab's annual gala</a>
+			</li>
+			<li>
+				<a href="http://www.ucls.uchicago.edu/support-lab/recognition/index.aspx">Recognition societies</a>
+			</li>
+			<li>
+				<a href="http://www.ucls.uchicago.edu/support-lab/senior-class-gift/index.aspx">Senior Parent Gift</a>
+			</li>
+			<li>
+				<a href="http://www.ucls.uchicago.edu/support-lab/planned-giving/index.aspx">Planned giving</a>
+			</li>
+			<li class="last-child">
+				<a href="http://www.ucls.uchicago.edu/support-lab/meet-the-team/index.aspx">Contact us<span class="icon"></span></a>
+			</li>
+		</ul>
+	
+	
+	
+	
+	
+	
+	    
+</div>
+					        <div class="webpartzone" id="LeftColumnZone">
+		<div id="LeftContentZone_Body">
+
+		</div>
+	</div>
+					        
+				        </div>
+
+				        <div id="primary-content" class="pc">
+					        <h1 id="AbovePrimary1_PageName1">Make a Gift</h1>
+
+					        <div class="webpartzone" id="PrimaryZone">
+		<div id="PrimaryContentZone_Body">
+			<div id="PageWebPartManager_ContentEditorPart1">
+			
+			
+<kintera:webfeature htmlBefore="<table cellspacing='0' cellpadding='0' width='100%' border='0'>"  htmlafter="</table>" />
+
+
+
+
+</div>
+
+		</div>
+	</div>
+					        
+				        </div>
+				        <div id="secondary-content" class="sc">
+					        <div class="webpartzone" id="SecondaryZone">
+		<div id="SecondaryContentZone_Body">
+			<div id="PageWebPartManager_SecondaryZone_ContentEditorPart1">
+
+				<div class="inner">
+					<div style="margin-left:20px;">
+ <h2 class="safe-secure">Safe &amp; Secure</h2>
+<p>The security of your information is very important to us. We use Secure Socket Layer (SSL) technology to protect the security of your online gift information.</p>
+<h2>Questions?</h2>
+<p>
+Call 773.834.8803
+<br>
+Toll-Free 888.824.4224
+</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+					        
+				        </div>
+			        </div>
+
+			    
+</div>
+		</div>
+		<div id="warning">
+			<div id="warning-icon"> <a href="#" onclick="CloseWarning();return false;"> </a></div>
+			<div id="warning-content"></div>
+		</div>
+	</div>
+	<div id="footer-container">
+
+		<div id="footer">
+			
+
+<div class="nav" id="nav-util">
+		<ul>
+			<li class="first-child" id="nav-li-map__directions">
+				<a id="nav-link-map__directions" href="http://www.ucls.uchicago.edu/about-lab/maps-transportation-parking/index.aspx" target="_self">Map & Directions<span class="icon"></span></a>
+			</li>
+			<li id="nav-li-site_map">
+				<a id="nav-link-site_map" href="http://www.ucls.uchicago.edu/sitemap/index.aspx" target="_self">Site Map</a>
+
+			</li>
+			<li id="nav-li-contact_us">
+				<a id="nav-link-contact_us" href="http://www.ucls.uchicago.edu/about-lab/contact-us/index.aspx" target="_self">Contact Us</a>
+			</li>
+			<li id="nav-li-web_mail">
+				<a id="nav-link-web_mail" href="http://www.ucls.uchicago.edu/labnet/webmail/index.aspx" target="_self">Web Mail</a>
+			</li>
+			<li id="nav-li-calendars">
+
+				<a id="nav-link-calendars" href="http://www.ucls.uchicago.edu/calendars/index.aspx" target="_self">Calendars</a>
+			</li>
+			<li class="last-child" id="nav-li-news">
+				<a id="nav-link-news" href="http://www.ucls.uchicago.edu/about-lab/current-publications/news/index.aspx" target="_self">News<span class="icon"></span></a>
+			</li>
+		</ul>
+
+</div>
+<div id="validators">
+
+	<a href="http://classic.ucls.uchicago.edu" target="_blank" class="classic">classic.ucls.uchicago.edu</a>				
+</div>
+<address class="vcard">
+	<a href="http://www.uchicago.edu" target="_blank" class="UC-link">University of Chicago</a>
+	<span class="org">University of Chicago Laboratory Schools</span>
+	<span class="adr">
+		<span class="street-address">1362 E. 59th St.</span> <span class="locality">Chicago</span>,  <span class="region">Il</span>. <span class="postal-code">60637</span>
+
+	</span>
+	P. <span class="tel">773.702.9450</span> F. <span class="fax">773.702.7455</span>
+</address>
+<!--
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-23382446-1']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://www.kintera.org/_infrastructure/HttpCombineHandler.ashx?s=CommonJS&t=text/javascript&v=1"></script>
+    <script type="text/javascript" src="https://www.kintera.org/_infrastructure/javascript/DivWebPartZone.js"></script>
+	
+<div id="ToolZoneUpdatePanel">
+	<input type="hidden" name="cpe1_ClientState" id="cpe1_ClientState" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+                $(function(){
+                    $('input#searchButton').click(function() {
+                        var q = escape($('#q').val());
+                        var cx = escape($('#cx').val());
+                        var cof = escape($('#cof').val());
+
+                        window.location = '/search/index.aspx?q=' + q + '&cx=' + cx + '&cof=' + cof;
+                    });
+
+                    function doSearch(event){
+                      if(event.keyCode == 13){
+                        $('input#searchButton').click();
+                        return false;
+                      }
+                    }
+
+                    $('input#q').keydown(doSearch);
+                });(function() {var fn = function() {$get("PageScriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("PageUpdateProgress"));
+});
+//]]>
+</script>
+</form>-->
+</body>
+</html>

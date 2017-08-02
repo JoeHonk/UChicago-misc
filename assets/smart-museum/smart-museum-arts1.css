@@ -1,0 +1,18 @@
+ .navbar-header {
+     display: none;
+ }
+ 
+ .navbar-default {
+     padding: 15px 0 0 0;
+     margin: 0 0 15px 0;
+     background-color: #fff;
+     border-color: #fff;
+ }
+ 
+ nav.navbar {
+     padding-left: 15px !important;
+     padding-right: 15px !important;
+     margin: 0 auto 15px auto !important;
+ }
+
+

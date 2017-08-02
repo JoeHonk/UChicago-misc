@@ -1,0 +1,635 @@
+@charset "UTF-8";
+
+
+
+
+body, h1, h2, h3, h4, h5, h6, p {
+	font-family: 'ProximaNova-Regular';
+	/*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+    zoom: 1;*/
+	}
+	
+body {
+	background-color: #fbfbf7;
+	}
+	
+#zone-user-wrapper {
+	background-color: #333333;
+	min-height: 30px;
+	padding-top: 10px;
+	}
+	
+#zone-branding-wrapper, #section-content {
+	margin-top: 40px;
+	}
+
+#region-branding {
+	margin-left: 30px;
+	margin-bottom: -20px;
+	}
+	
+#block-block-82 {margin-bottom: -20px; margin-left: -3px;}
+	
+body.context-reunions #region-branding {
+	margin-left: 26px;
+	margin-bottom: 0px;
+	margin-left: 30px;
+	}
+
+#block-system-main-menu div.block-inner div.content {
+	width: 100%;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu {
+	margin: 0 0 0 10px;
+	padding: 0;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li a {
+	/*float: left;*/
+	font-family: 'ProximaNova-Semibold';
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 11px;
+	font-size: 15px;
+	}
+
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul li a {
+	color: #ffffff;
+	}
+	
+
+	
+#block-system-main-menu div.block-inner div.content ul.menu li:hover a, #block-system-main-menu div.block-inner div.content ul.menu li:hover ul li:hover a {
+	color: #f7a11a;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	background-color: #333333;
+	width: 260px;
+	margin: 0 0 0 -75px;
+	padding: 10px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul li {
+	width: 60px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul {
+	display: block;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li.last {
+	float: right;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li.last a {
+	color: #000;
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/register-bg-flag-yellow.png');
+	background-repeat: no-repeat;
+	padding: 10px 32px 40px 32px;
+	}
+	
+#block-system-main-menu div.block-inner div.content ul.menu li ul li.last { float: none; }
+#block-system-main-menu div.block-inner div.content ul.menu li ul li.last a {
+	color: #fff;
+	background-image: none;
+	padding: 10px 11px;
+	}
+	
+#breadcrumb, #first-time {display: none;}
+
+#block-search-form div.block-inner div.content {
+	text-align: right;
+	}
+	
+#zone-footer-wrapper {
+	background-color: #313131;
+	color: #cdcdcd;
+	font-size: 12px;
+	}
+	
+#zone-footer-wrapper a {
+	color: #cdcdcd;
+	}
+	
+#block-block-5 div.block-inner div.content ul, #block-block-6 div.block-inner div.content ul, #block-block-8 div.block-inner div.content ul {
+	list-style-type: none;
+	}
+	
+#block-block-5 div.block-inner div.content ul li a, #block-block-6 div.block-inner div.content ul li a {
+	display: block;
+	margin: 15px 0 0 0;
+	text-decoration: none;
+	font-family: 'ProximaNova-Semibold';
+	}
+	
+#block-block-5 div.block-inner div.content ul li a:hover, #block-block-6 div.block-inner div.content ul li a:hover {
+	color: #ffffff;
+	}
+	
+#block-block-8 div.block-inner div.content ul {
+	margin-top: 20px;
+	}
+	
+#block-block-8 div.block-inner div.content ul li {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	}
+	
+#block-block-8 div.block-inner div.content ul li a {
+	display: block;
+	width: 100%;
+	height: 20px;
+	padding: 10px 0;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	background-color: #454444;
+	color: #ffffff;
+	font-family: 'ProximaNova-Semibold';
+	}
+
+#block-block-8 div.block-inner div.content ul li a:hover {
+	background-color: #6d6e71;
+	}
+	
+#block-block-4 div.block-inner div.content {
+	padding-top: 16px;
+	padding-bottom: 20px;
+	}
+
+#block-block-4 div.block-inner div.content p {
+	margin-bottom: 10px;
+	font-size: 10px;
+	line-height: 12px;
+	}
+	
+#zone-reunion-top, #block-views-front-page-slideshow-block, #block-block-89, #block-block-88, #block-block-87, #block-block-86, #block-block-91 {
+	background-color: #ffffff;
+	margin-top: 20px;
+	padding-top: 20px;
+	margin-bottom: 30px;
+	width: 940px;
+	-moz-box-shadow: 0px 1px 4px #333;
+	-webkit-box-shadow: 0px 1px 4px #333;
+	box-shadow: 0px 1px 4px #333;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#333333')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#333333');
+	}
+	
+#block-block-89, #block-block-88, #block-block-87, #block-block-86, #block-block-91 {
+	margin-left: -20px;
+	}
+	
+#block-block-89 div.block-inner, #block-block-88 div.block-inner, #block-block-87 div.block-inner, #block-block-86 div.block-inner, #block-block-91 div.block-inner {
+	margin-left: 20px;
+	}
+	
+#block-views-front-page-slideshow-block { }
+#views_slideshow_cycle_main_front_page_slideshow-block { }
+	
+#views_slideshow_cycle_teaser_section_front_page_slideshow-block { margin-left: 20px;}
+#block-views-front-page-slideshow-block { width: 940px; margin-left: -20px;} 
+	
+.reunion-header-text {
+	font-family: 'ProximaNova-Semibold';
+	font-size: 32px;
+	text-transform: uppercase;
+	position: relative;
+	left: 20px;
+	margin-bottom: 0;
+	top: 58px;
+	
+	color: #ffffff;
+	-moz-text-shadow: 1px 1px 2px #333;
+	-webkit-text-shadow: 1px 1px 2px #333;
+	text-shadow: 1px 1px 2px #333;
+	/*display: block;
+	
+	top: 58px;
+	*/
+	}
+	
+.reunion-header-text span {
+	color: #f7a11a;
+	}
+	
+#region-reunion-top-first { margin-left: 0; padding-left: 20px; width: 200px;}
+
+#region-reunion-top-first div.region-inner { 
+	height: 260px; 
+	background-color: #eaeae6;
+	padding: 20px;
+	} 
+
+#block-block-80 div.block-inner div.content p a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	background-color: #800000;
+	color: #ffffff;
+	text-decoration: none;
+	font-family: 'ProximaNova-Bold';
+	text-transform: uppercase;
+	padding: 10px 0;
+	font-size: 16px;
+	}
+
+#region-reunion-top-second { margin-right: 0px; margin-top: -48px; margin-left: 10px; padding: 0;}
+
+body.context-reunions h1#page-title {display: none;}
+
+body.context-reunions ul.committee-leaders {width: 220px; float: left; margin: 0;}
+body.context-reunions ul.reunion-committee {width: 720px; float: left; margin:0; }
+body.context-reunions p.reunion-committee {width: 700px; float: left; margin:0; margin-left: 20px; }
+
+body.context-reunions ul.committee-leaders, body.context-reunions ul.reunion-committee {
+	list-style-type: none;
+	padding: 0;
+	}
+	
+body.context-reunions ul.committee-leaders li, body.context-reunions ul.reunion-committee li {
+	margin: 0;
+	padding: 0;
+	}
+	
+/* reunion class year buttons on front page */
+	
+#block-block-2 div.block-inner div.content { margin-left: -2px;}
+#block-block-2 div.block-inner div.content p {margin-left: 3px;}
+	
+#block-block-2 div.block-inner div.content ul { 
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	} 
+	
+#block-block-2 div.block-inner div.content ul li {
+	display: block;
+	width: 102px;
+	float: left;
+	margin: 0 4px 4px 0;
+	padding: 0;
+	text-align: center;
+	border: 3px solid #eaeae6;
+	border-right: 5px solid #eaeae6;
+	}
+	
+#block-block-2 div.block-inner div.content ul li a {
+	display: block;
+	text-decoration: none;
+	background-color: #fff;
+	padding: 4px 0;
+	margin: 0;
+	width: 100%;
+	color: #333;
+	font-size: 14px;
+	font-family: 'ProximaNova-Semibold';
+	border: 1px solid #cdcdcd;
+	}
+	
+#block-block-2 div.block-inner div.content ul li a:hover {
+	color: #fff;
+	background-color: #800000;
+	}
+	
+body.context-reunions ul.reunion-committee li {width: 220px; float: left; margin-left: 20px;}
+body.context-reunions ul.committee-leaders li strong, body.context-reunions p.reunion-committee strong {
+	font-family: 'ProximaNova-Semibold';
+	font-weight: normal;
+	}
+	
+h4, h2.block-title, h1#page-title, h1#reunion-fix { 
+	color: #333; 
+	font-family: 'ProximaNova-Semibold'; 
+	text-transform: uppercase; 
+	font-weight: normal; 
+	margin-bottom: 10px; 
+	font-size: 25px;
+	letter-spacing: 0.02em;
+	line-height: 26px;
+	}
+
+h3 {
+	font-family: 'ProximaNova-Semibold'; 
+	font-weight: normal; 
+	color: #f7a11a;
+	font-size: 18px;
+	margin-bottom: 0;
+	}
+	
+h1#page-title {
+	
+	}
+	
+#footer-social-icons {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 19px;
+	}
+	
+#footer-social-icons li {
+	margin: 0;
+	padding: 0;
+	height: 32px;
+	width: 32px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	}
+	
+#footer-social-icons li a {
+	display: block;
+	height: 32px;
+	width: 32px;
+	padding-left: 200px;
+	}
+	
+#footer-social-icons li.tw-icon {
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/twitter-icon.png');
+	background-repeat: no-repeat;
+	}
+	
+#footer-social-icons li.fb-icon {
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/facebook-icon.png');
+	background-repeat: no-repeat;
+	}
+
+/*this is the registration is now open flag on the home page	*/
+#block-block-78 {
+	text-align: right;
+	position: relative;
+	top: -120px;
+	left: 5px;
+	z-index: 99;
+	}
+	
+#block-block-78 div.block-inner div.content p a {
+	width: 222px;
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/red-flag-right.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	font-size: 22px;
+	padding: 20px 18px 40px 20px;
+	text-align: right;
+	}
+	
+
+	
+.slide-text {
+	width: 610px;
+	position: relative;
+	top: -84px;
+	left: 20px;	
+	background: transparent;
+	}
+	
+.slide-text div.field-content p {
+	font-size: 32px;
+	line-height: 34px;
+	font-family: 'ProximaNova-Semibold';
+	text-transform: uppercase;
+	color: #ffffff;
+	-moz-text-shadow: 1px 1px 2px #333;
+	-webkit-text-shadow: 1px 1px 2px #333;
+	text-shadow: 1px 1px 2px #333;
+	background: transparent;
+	}
+	
+.slide-text div.field-content p strong {
+	font-weight: normal;
+	color: #f7a11a;
+	}
+	
+#views_slideshow_cycle_main_front_page_slideshow-block {
+	height: 420px;
+	overflow: hidden;
+	}
+	
+body.context-reunions div#page section#section-content div#zone-content-wrapper div#zone-content div#region-content {
+	border-bottom: 1px #cdcdcd solid;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	}
+	
+/* css for thermometers on reunion pages */
+
+.vertical-graph-wrapper {
+	width: 160px;
+	height:260px;
+	padding: 0;
+	margin: 10px;
+	margin-top: 0;
+	}
+	
+.graph {
+	height: 100%;
+	width: 70px;
+	padding: 0;
+	margin: 0 10px;
+	float: left;
+	}
+	
+.graph-reg1, graph-reg2 {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #cccccc;
+	}
+
+.graph-reg2 { background-color: #800000; }
+
+/*#block-views-front-page-slideshow-block {
+	position: relative;
+	top: -80px;
+	z-index: -10;
+	}
+	
+body.front div.branding-data {
+	position: relative;
+	top: 50px;
+	left: 20px;
+	}
+	
+#region-branding div.region-inner {
+	margin-bottom: -160px;
+	}*/
+
+/*Make a gift flag on homepage*/
+
+#block-block-81 {
+	text-align: left;
+	position: relative;
+	left: -25px;
+	top: 10px;
+	z-index: 99;
+	}
+	
+#block-block-81 div.block-inner div.content p a {
+	display: block;
+	width: 210px;
+	background-image: url('/sites/all/themes/alumni_weekend_2013/images/red-flag-left.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	font-size: 22px;
+	padding: 22px 12px 25px 25px;
+	text-align: center;
+	}
+	
+/*styling event listings*/
+
+body.context-events div.item-list ul li.views-row, body.context-reunions div.item-list ul li.views-row, body.context-event div.item-list ul li.views-row, body.context-schedule div.item-list ul li.views-row {
+	margin-left: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #eaeae6;
+	}
+	
+body.context-events li div.views-field-title, body.context-reunions li div.views-field-title, body.context-event li div.views-field-title, body.context-schedule li div.views-field-title {
+	font-family: 'ProximaNova-Semibold';
+	font-size: 15px;
+	}
+	
+body.context-events h2.block-title, body.context-schedule h2.block-title {
+	text-transform: none;
+	color: #f7a11a;
+	font-family: 'ProximaNova-Semibold';
+	font-size: 18px;
+	}
+	
+body.context-events div.view-header, body.context-reunions div.view-header, body.context-event div.view-header, body.context-schedule div.view-header {
+	text-align: right;
+	margin-top: -44px;
+	}
+	
+	
+/*this is the logo that floats over the images*/
+#block-block-83 {
+	margin-top: -200px;
+	margin-left: 16px;
+	}
+	
+/*placeholder class gift block*/
+#block-block-79 p {
+	text-transform: uppercase;
+	font-size: 22px;
+	color: #800000;
+	}
+	
+	
+#block-system-main-menu div.block-inner div.content ul.menu li a.active-trail, #block-system-main-menu div.block-inner div.content ul.menu li a.active { color: #f7a11a; }
+
+body.context-event div#region-content div.region-content-inner {
+	margin-top: 80px;
+	}
+	
+body.context-event #region-sidebar-second {
+	margin-top: 100px;
+	}
+	
+#block-block-84 h2 {
+	text-transform: none;
+	color: #f7a11a;
+	font-family: 'ProximaNova-Semibold';
+	font-size: 18px;
+	}
+	
+
+/* Controls for front page slideshow */	
+#views_slideshow_controls_text_pause_front_page_slideshow-block { display: none; }
+
+#views_slideshow_controls_text_previous_front_page_slideshow-block { display: block; width: 75px; float: left; text-align: left; }
+
+#views_slideshow_controls_text_next_front_page_slideshow-block { display: block; width: 75px;; float: right; text-align: right;}
+
+#block-views-front-page-slideshow-block div.views-slideshow-controls-top { position: relative; top: 240px; margin-top: -75px; z-index: 99; }
+
+#views_slideshow_controls_text_previous_front_page_slideshow-block a {
+	background: url('/sites/all/themes/alumni_weekend_2013/images/arrow-left.png') no-repeat;
+	display: block;
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+	position: relative;
+	left: -30px;
+	text-indent: -500px;
+	}
+
+#views_slideshow_controls_text_next_front_page_slideshow-block a {
+	background: url('/sites/all/themes/alumni_weekend_2013/images/arrow-right.png') no-repeat;
+	display: block;
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+	position: relative;
+	left: 30px;
+	text-indent: 500px;
+	}
+	
+	
+	/*Event key styles */
+#block-block-84 table {
+	border: none;
+	}
+	
+#block-block-84 tr:hover td,
+#block-block-84 tr:hover td,
+#block-block-84 tr.even:hover td.active,
+#block-block-84 tr.odd:hover td.active {
+	background: none;
+	}
+	
+#block-block-84 table td {
+	vertical-align: top;
+	padding: 0px 10px 2px 0px;
+	}
+	
+#block-block-84 table td a {
+	text-decoration: none;
+	}
+	
+#block-block-84 table td a:hover {
+	border-bottom: 1px dotted #155f83;
+	color: #155f83;
+	}
+	
+/* schedule day headers */
+
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 h2.block-title, #block-views-all-events-thursday-block h2.block-title, #block-views-all-events-friday-block h2.block-title, #block-views-all-events-sunday-block h2.block-title {
+	background-color: #454444;
+	padding-left: 4px;
+	padding-top: 2px;
+	}
+	
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p, #block-views-all-events-thursday-block div.view-header p, #block-views-all-events-friday-block div.view-header p, #block-views-all-events-sunday-block div.view-header p {
+	color: #999;
+	padding-right: 10px;
+	}
+	
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p a, #block-views-all-events-thursday-block div.view-header p a, #block-views-all-events-friday-block div.view-header p a, #block-views-all-events-sunday-block div.view-header p a {
+	color: #ffffff;
+	text-decoration: none;
+	}
+	
+#block-views-d59bffb27d6a3322ea30eecc67df9a66 div.view-header p a:hover, #block-views-all-events-thursday-block div.view-header p a:hover, #block-views-all-events-friday-block div.view-header p a:hover, #block-views-all-events-sunday-block div.view-header p a:hover {
+	border-bottom: #ffffff 1px dotted;
+	}

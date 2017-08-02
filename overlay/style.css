@@ -1,0 +1,60 @@
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: #800000;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+.section-danger {
+  background-color: #800000 !important;
+  color: #ffffff;
+}
+.btn-danger {
+  color: #ffffff;
+  background-color: #f8a428;
+  border-color: #f8a428;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.btn-danger:hover {
+  color: #ffffff;
+  background-color: #800000;
+  border-color: #800000;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+body {
+  background:#800000;
+      background-color: #800000;
+}
+
+.section{
+  background:#fff;
+    background-color: #fff;
+}
+
+.overlay-main{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

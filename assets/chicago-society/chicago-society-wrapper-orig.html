@@ -1,0 +1,118 @@
+<style type="text/css"><!--
+#headerbg {
+padding-bottom:30px;
+}
+#page-content {
+width:960px;
+float:left;
+margin-top:40px;
+}
+.half-width {
+width:460px;
+min-height:800px;
+}
+#left {
+float:left;
+margin:0 20px 0 0;
+}
+#left p{
+padding: 0 0 10px;
+}
+#donor-count{
+height:150px;
+width:460px;
+background-image:url('https://www.kintera.org/atf/cf/%7B25c2541e-96eb-4e70-947f-aba13cd89dcd%7D/DONORS.JPG');
+position:relative;
+margin:25px 0 0;
+}
+#count-amount{
+color:#FFFFFF;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:55px;
+line-height: 55px;
+position:absolute;
+top:40px;
+left:280px;
+text-align:center;
+width:160px
+}
+#count-date{
+color:#FFFFFF;
+font-family:Verdana, Geneva, sans-serif;
+margin:0;
+padding:0;
+font-size:12px;
+position:absolute;
+top:100px;
+left:280px;
+text-align:center;
+}
+#right {
+float:left;
+}
+#right td {
+padding:0px;
+}
+#right #myc_custom_form table#TableButton label.lblrt {
+height:80px;
+font-size:11px!important;
+}
+#myc_custom_form td.CTtitle h2 {
+font-size:18px;
+padding-top:0px;
+}
+#myc_custom_form table.CTtablein textarea{
+resize:none!important;
+}
+-->
+</style>
+<div id="page-content">
+<div id="left" class="half-width">
+<hr class="redtborder" />
+***BIN_ID:{831F8BE5-15A5-4693-8D70-DE38B46A0AAC}***
+</div>
+<!-- close #left .half-width -->
+<div id="right" class="half-width">
+<hr class="redtborder" style="margin:0px;" />
+<div id="myc_custom_form">***CONTENT***</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+function replaceText(nt,regStr,newText){
+                                            try {
+                                                var nt = nt;
+                                                var re = new RegExp(regStr,"g");
+                                                var textStr = newText;
+                                                var objX = document.getElementsByTagName(nt);
+                                                for (var x=0; x<objX.length; x++){
+                                                    var str = objX[x].innerHTML;
+                                                    if (re.test(str)){
+                                                        var obj = objX[x];
+                                                        obj.innerHTML = textStr;
+                                                    }
+                                                }
+                                            } catch(err){}
+}
+function setCustomPageFormat(){
+                                            try {
+                                                var obj = document.getElementById('myc_custom_form');
+                                                var obj_table = obj.getElementsByTagName('table');
+                                                var obj_cell = obj_table[1].getElementsByTagName('td')[0];
+                                                obj_cell.align = "left";
+                                            }catch(err){}
+}
+try {
+                                            var site = location.href;
+                                            var confirmation = site.toLowerCase().indexOf("donateok.asp");
+                                            if (confirmation > 0){
+                                                setCustomPageFormat();
+                                                replaceText("font","^Confirmation","<h1>Confirmation</h1>");
+                                                replaceText("font","^University of Chicago contact information","");
+                                                replaceText("font","^Email Address","");
+                                                replaceText("font","^If you have technical questions regarding this website, please submit them","");
+                                            }
+}catch(err){}
+//-->
+</script><script type="text/javascript" src="https://www.kintera.org/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/jquery.url.packed.JS"></script><script type="text/javascript" src="https://www.kintera.org/atf/cf/{25C2541E-96EB-4E70-947F-ABA13CD89DCD}/custom-form-validation.JS"></script></div>
+<!-- close #right .half-width -->
+</div>
+<!-- close #page-content -->

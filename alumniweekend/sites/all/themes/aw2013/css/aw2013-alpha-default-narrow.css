@@ -1,0 +1,276 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal 
+ *  and widescreen CSS files as appropriate. */
+ 
+body {
+	background: url(../images/background720.png) repeat-y center;
+	}
+ 
+#zone-menu-wrapper, #zone-header, #region-header-first, #zone-postscript, #zone-menu { width: 740px; }
+
+img.page-header-image { width: 740px; height: auto; }
+
+#block-system-main-menu div.block-inner div.content ul.menu li:hover ul {
+	display: block;
+	}
+ 
+#region-postscript-first { margin-left: 20px; }
+#region-menu { margin-left: 14px; }
+ 
+#block-system-main-menu div.block-inner div.content ul.menu li a {
+	font-size: 14px;
+	}
+	
+#region-branding-second { display: block; }
+
+#region-header-first { 
+	float: left;
+	margin-top: -175px;
+	margin-bottom: 20px;
+	}
+
+#region-header-second {
+	padding: 10px 0px 0px 0px;
+	float: right;
+	margin-right: 20px;
+	/*margin-bottom: 20px;*/
+	width: 200px;
+	height: 165px;
+	text-align: center;
+	overflow: hidden;
+	z-index: 10;
+	background-image: url(../images/celebrate-background.png);
+	background-repeat: no-repeat;
+	/*background-position: bottom;*/
+}
+
+/* global register/gift stuff */
+
+#global-register, #global-makeagift {
+	padding: 0;
+	margin: 0 20px;
+}
+
+#global-register a, #global-makeagift a {
+	display: block;
+	padding: 10px 0px 0px 0px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'ProximaNova-Bold';
+	height: 41px;
+	width: 160px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	}
+
+#global-register a {
+	background-image: url(../images/yellow-chevron-off.png);
+	}
+	
+#global-makeagift a {
+	background-image: url(../images/red-chevron-off.png);
+	}
+	
+/*#global-register a:hover {
+	background-image: url(../images/yellow-chevron-on.png);
+	}
+	
+#global-makeagift a:hover {
+	background-image: url(../images/red-chevron-on.png);
+	}*/
+
+#block-block-114 h2 {
+	color: #ffffff;
+	font-size: 18px;
+	margin-bottom: 10px;
+	}
+	
+#region-header-first h1 {
+	display: block;
+	width: 80%;
+	vertical-align: bottom;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 60px;
+	margin-top: -105px;
+	margin-left: 20px;
+}
+
+#region-header-first h1.two-lines {
+	margin-top: -150px;
+	line-height: 1em;
+	}
+	
+
+	
+/*body.context-reunion #region-header-first h1 {
+	margin: 0;
+	margin-bottom: 4px;
+	line-height: 1em;
+	}*/
+
+body.context-reunion #region-header-first h1.grad-header-text {
+	margin-top: -84px;
+	line-height: 1.1em;
+	font-size: 24px;
+	margin-left: 20px;
+	font-family: 'ProximaNova-Bold';
+	}
+	
+#reunion-main-header-copy {
+	margin-top: -250px;
+	margin-left: 20px;
+}
+
+#reunion-main-header-copy p {
+	margin-right: 200px;
+	color: #ffffff;
+	font-family: 'ProximaNova-SemiBold';
+}
+
+#reunion-main-header-copy p.reunion-links, #reunion-main-header-copy p.reunion-links a {
+	color: #f7a11a;
+}
+
+#flexslider-1 {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 20px;
+	}
+	
+#flexslider-1 ul.slides li p {
+	margin-top: -68px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	color: #f7a11a;
+	font-family: 'ProximaNova-Bold';
+	font-size: 20px;
+	}
+	
+div.view-front-page-slides-post-event #flexslider-1 ul.slides li p {
+	margin-top: 2px;
+	margin-left: 20px;
+	margin-bottom: 4px;
+	text-transform: none;
+	color: #767676;
+	font-family: 'ProximaNova-Regular';
+	font-size: 13px;
+	}
+	
+#flexslider-1 ul.slides li p span.big {
+	color: #ffffff;
+	font-size: 50px;
+	}
+	
+#flexslider-1 ol.flex-control-nav {
+	bottom: -20px;
+	}
+
+
+/* some homepage stuff */
+
+#homepage-welcome-photos div.homepage-welcome-inner {
+	width: 50%;
+	float: left;
+	/*margin-right: 20px;*/
+	}
+	
+/*#homepage-welcome-photos div.homepage-welcome-inner.last { margin-right: 0;}*/
+	
+#homepage-welcome-photos div.homepage-welcome-inner p {
+	font-size: 11px;
+	margin-right: 20px;
+	}
+	
+#homepage-welcome-photos div.homepage-welcome-inner img {
+	width: 100%;
+	height: auto;
+	margin-right: 20px;
+	margin-bottom: 4px;
+	}
+	
+/* turning things on/off for bigger displays */
+
+#region-header-first, #region-header-second h2 {display: block;}
+
+#block-block-114, #block-block-115, #block-block-123, #block-block-124, #block-block-125 {	
+	width: 100%;
+	float: none;
+}
+
+#page-title { display: none; } 
+
+
+ul#footer-action-items li a {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'ProximaNova-SemiBold';
+	}
+
+ul#footer-action-items li {
+	background-image: url("/sites/all/themes/aw2013/images/footer-chevron.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 48px;
+}	
+	
+ul#footer-action-items li a:hover { border-bottom: none; }
+
+#block-block-7 {margin-top: 20px;}
+
+#block-block-7 div.block-inner h2.block-title {
+	font-size: 14px;
+	float: left;
+	margin-top: 0px;
+	}
+	
+#footer-social-icons ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	}
+
+#footer-social-icons li {
+	display: block;
+	margin: 0px 8px 0px 0px;
+	padding: 0px;
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+	background-color: #d6d6ce;
+	/*float: right;*/
+	}	
+	
+#footer-social-icons li a {
+	display: block;
+	height: 32px; 
+	width: 32px;
+	padding-left: 200px;
+	}
+	
+#footer-social-icons li:hover {
+	background-color: #ffffff;
+	}
+	
+#footer-social-icons li.tw-icon {
+    background-image: url("/sites/all/themes/aw2013/images/icon-twitter.png");
+    background-repeat: no-repeat;
+	}
+	
+#footer-social-icons li.fb-icon {
+    background-image: url("/sites/all/themes/aw2013/images/icon-facebook.png");
+    background-repeat: no-repeat;
+	}
+	
+#footer-social-icons li.ig-icon {
+    background-image: url("/sites/all/themes/aw2013/images/icon-instagram.png");
+    background-repeat: no-repeat;
+	}

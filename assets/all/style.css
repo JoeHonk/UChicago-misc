@@ -1,0 +1,10 @@
+.floatright{float:right;}
+@media (max-width: 768px)
+{    
+    .floatright{float:none;}
+} 
+
+
+.main_content{
+    margin-bottom: 40px;
+}

@@ -1,0 +1,6 @@
+User-agent: zombies
+Disallow: /brains
+
+User-agent: *
+Disallow: /
+

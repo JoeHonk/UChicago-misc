@@ -1,0 +1,227 @@
+
+@charset "utf-8";
+div.module.financial-index {
+    background: url("https://www.chicagobooth.edu/assests/img/financial_trust.jpg") no-repeat scroll 0 0 #569199;
+    color: #FFFFFF;
+    height: 89px;
+}
+div.module.financial-index .module-content img {
+    width: 100%;
+}
+div.module.financial-index .module-footer {
+    color: #FFFFFF;
+    font-family: 'TradeGothic BoldCn 20';
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+div.module.financial-index .module-footer .footer-box {
+    color: #FFFFFF;
+    font-family: 'TradeGothic BoldCn 20';
+    line-height: 1.1em;
+    padding-left: 14px;
+    padding-top: 59px;
+    text-transform: uppercase;
+}
+div.module.financial-index .module-footer .footer-box:after {
+    background: url("https://www.chicagobooth.edu/assests/img/arrow.png") no-repeat scroll right 0 transparent;
+    content: " ";
+    display: inline-block;
+    height: 9px;
+    margin-left: 3px;
+    width: 8px;
+}
+div.module.cap-ideas-news {
+    background: url("https://www.chicagobooth.edu/assests/img/bg.capideas-news.gif") repeat-x scroll 0 0 #EDEDED;
+    color: #FFFFFF;
+    height: inherit;
+}
+div.module.cap-ideas-news a.cap-link, a.cap-link:visited {
+    color: #FFFFFF;
+}
+div.module.module-header {
+    background-color: #2D2D2D;
+    color: #FFFFFF;
+    font-family: "TradeGothic BoldCn 20";
+    font-size: 0.8125em;
+    font-weight: normal;
+    height: 27px;
+    line-height: 0.625em;
+    padding: 10px;
+    text-transform: uppercase;
+}
+div.module.cap-ideas-news .cap-ideas-news-headline {
+    clear: right;
+    display: inline;
+    font-family: "TradeGothic BoldCn 20";
+    font-size: 14px;
+    left: 0;
+    padding-left: 5px;
+    text-align: left;
+}
+div.module.cap-ideas-news .cap-ideas-news-articles {
+    clear: left;
+    display: inline;
+    font-family: "TradeGothic BoldCn 20";
+    font-size: 14px;
+    padding-left: 40px;
+    padding-top: 2px;
+    text-align: right;
+    text-transform: uppercase;
+}
+div.module.cap-ideas-news .cap-ideas-news-footer-link {
+    color: #383838;
+    display: block;
+    padding: 15px 5px 5px 10px;
+    text-decoration: none;
+}
+div.module.cap-ideas-news .cap-ideas-news-footer-header {
+    font-family: "TradeGothic BoldCn 20";
+    font-size: 14px;
+    text-transform: uppercase;
+}
+div.module.cap-ideas-news .module-content .cap-ideas-news-footer-header:after {
+    background: url("https://www.chicagobooth.edu/assests/img/cap-news-arrow.png") no-repeat scroll right 0 transparent;
+    content: " ";
+    display: inline-block;
+    height: 8px;
+    margin-left: 3px;
+    width: 8px;
+}
+div.module.cap-ideas-news .cap-ideas-news-footer-copy {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+}
+div.module.booth-thinking {
+    background: url("https://www.chicagobooth.edu/assests/img/booth_thinking_bg.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    height: 162px;
+}
+div.module.booth-thinking a {
+    display: block;
+    padding-bottom: 5px;
+}
+div.module.booth-thinking .module-footer {
+    color: #FFFFFF;
+    font-family: 'TradeGothic BoldCn 20';
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+div.module.booth-thinking .module-content {
+    left: 190px;
+    top: 50px;
+}
+div.cap-ideas-video .module-header {
+    background: none repeat scroll 0 0 #2D2D2D;
+    color: #FFFFFF;
+    font-family: 'TradeGothic BoldCn 20';
+    font-size: 14px;
+    padding: 0 9px;
+    text-transform: capitalize;
+}
+div.cap-ideas-video .module-header span {
+    background: none repeat scroll 0 0 #2D2D2D;
+    color: #FFFFFF;
+    float: right;
+    font-family: 'TradeGothic BoldCn 20';
+    font-size: 14px;
+    text-transform: uppercase;
+}
+div.cap-ideas-video .module-header span:after {
+    background: url("https://www.chicagobooth.edu/assests/img/cap-idea-video-icon.png") no-repeat scroll right 0 transparent;
+    content: " ";
+    display: inline-block;
+    height: 8px;
+    margin-left: 3px;
+    width: 13px;
+}
+div.cap-ideas-video .module-content .module-footer span {
+    color: #FFFFFF;
+    display: block;
+    font-family: 'TradeGothic BoldCn 20';
+    font-size: 14px;
+    text-transform: uppercase;
+}
+div.cap-ideas-video .module-content .module-footer {
+    background: none repeat scroll 0 0 #484848;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'TradeGothic Cn 18';
+    font-size: 14px;
+    padding: 11px 11px 14px;
+    text-transform: uppercase;
+}
+div.cap-ideas-video .module-content .module-footer:hover, div.cap-ideas-video .module-content .module-footer span:hover {
+    text-decoration: underline;
+}
+.alumni-safesecure {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #545454;
+    font-family: Open Sans,Arial,Sans-Serif;
+    font-size: 12px;
+}
+.alumni-safesecure a:link, .alumni-safesecure a:visited {
+    color: #9B1115;
+    font-weight: bold;
+}
+.alumni-safesecure p {
+    margin: 10px 0 5px;
+}
+.alumni-safesecure .module-header {
+    background: url("https://www.chicagobooth.edu/boothsitecore/css/img/bg.red-texture.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "TradeGothic Cn 18",Open Sans,Arial,Sans-Serif;
+    font-size: 24px;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.alumni-safesecure .module-content {
+    padding: 10px 15px;
+}
+.alumni-safesecure ul {
+    font-weight: bold;
+    list-style: none outside none;
+    margin-top: 0;
+    padding-left: 20px;
+}
+div.module.capIdeas_news .module-header {
+    background: url("https://www.chicagobooth.edu/assests/img/modules/alumni-giving/capIdeas_news_module_hd_bg.png") no-repeat scroll 0 0 transparent;
+    height: 97px;
+    margin: 0;
+    padding: 0;
+    width: 236px;
+}
+div.module.capIdeas_news .module-header p {
+    color: #FFFFFF;
+    font-family: "open-sans",sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 15px 43px 0 20px;
+}
+div.module.capIdeas_news a {
+    border: medium none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.module.capIdeas_news .module-header p span {
+    font-family: "TradeGothic BoldCN 20";
+    font-size: 20px;
+    text-transform: uppercase;
+}
+div.capIdeas_news .module-content {
+    background: none repeat scroll 0 0 #293435;
+    height: 63px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    width: 236px;
+}
+div.capIdeas_news .module-content p {
+    color: #FFFFFF;
+    font-family: "open-sans",sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0;
+    padding: 15px 11px 0 20px;
+}
